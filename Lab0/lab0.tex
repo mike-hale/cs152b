@@ -6,6 +6,7 @@
 \usepackage{bm}
 \usepackage{listings}
 \usepackage{tikz}
+\usepackage[T1]{fontenc}
 \usepackage{courier}
 
 \lstset{xleftmargin=-1cm,
@@ -18,14 +19,38 @@
 	
 \title{\vspace{-0.5in} Com Sci 152B Digital Design \\
 	Lab 0: ISE Introduction \\
-	\author{Michael Hale, 004-620-459 \\ Matt \\ Sinash}}
+	\author{Michael Hale, 004-620-459 \\ Matthew Nuesca \\ Shilin}}
 \date{}
 \maketitle
 
-\section*{Introduction}
-The main purpose for this lab was to get students familiar with the ISE that will be used for future projects. We were tasked with starting a new project and copying verilog code for a counter. While familiarizing ourselves with the code, we noted that none of us knew the purpose of the  ‘timescale keyword was used for. With a quick google search, we learned that the ‘timescale keyword is a compiler directive used to specify the time unit and precision when doing simulations of synthesized code.The first value after the keyword indicates the time unit for the delay. For example, If the timescale is set to 1ns then \#2 would delay for 2 ns. The second value after the forward slash indicates the precision for a delay with decimals. For example if the timescale is set to 1ns / 1ps and you have a delay of 1.1234, the delay would result in 1.123 ns.We were also asked to copy the testbench module and simulate the counter. 
+\section*{Overview}
+The main purpose for this lab was to get students familiar with the ISE that will be used for future projects. We were tasked with starting a new project and copying Verilog code for a counting circuit. 
 
-Our next task was to connect signals to LED’s for the count register and switches for select and reset. One issue that we encountered was not being able to find instructions on what pin to map for the enable signal. As a result, we just decided to use the switch next to the reset in order to control the enable signal. Finally we were tasked with downloading the design onto the FPGA. At first, it seemed like it wasn’t working because all LED’s that corresponded to the count register were on, but we came to the conclusion that the clock was running too fast to notice the LED’s turn on and off. The solution was to downsample the clock signal by adding an additional counter called divider. divider would increment at the positive edge of the clock and the main counter would increment at the positive edge of the most significant bit of divider. After playing around with different bit sizes for divider, we concluded that 26 bits is enough bits to notice a difference in the count signal through the LED pins.
+\section*{Implementation}
+The counter module accepted three inputs and generated one output:
+\begin{itemize}
+	\item \texttt{clock} (input): Pulse signal for which our count increases on a positive edge.
+	
+	\item \texttt{enable} (input): The counter will only increment while this signal is high.
+	
+	\item \texttt{reset} (input): The counter will reset to zero with the next clock pulse. 
+	
+	\item \texttt{counter\_out} (output): The 4-bit unsigned integer representing the current count. After 1111, the counter will overflow to 0000. 
+\end{itemize}
+
+The circuit is essentially an always block with the sensitivity set to execute on a positive \texttt{clock} edge. Inside the always block we investigate three possible cases:
+
+\begin{enumerate}
+	\item \texttt{reset = 1}: The counter is immediately set to 0 with no further action.
+	\item \texttt{enable = 1, reset = 0}: The counter is incremented by one.
+	\item \texttt{enable = 0, reset = 0}: No action is taken whatsoever.
+\end{enumerate}
+
+\section*{Obstacles and Solutions}
+
+While familiarizing ourselves with the code, we discovered that none of us knew the purpose of the  \texttt{timescale} keyword. With a quick google search, we learned that the \texttt{timescale} keyword is a compiler directive used to specify the time unit and precision when performing simulations of synthesized code. The first value after the keyword indicates the time unit for the delay. For example, If the timescale is set to 1ns then \#2 would delay for 2 ns. The second value after the forward slash indicates the precision for a delay with decimals. For example if the timescale is set to 1ns / 1ps and you have a delay of 1.1234, the delay would result in 1.123 ns. We were also asked to copy the testbench module and simulate the counter. 
+
+Our next task was to map the \texttt{counter\_out} signal to a set of LEDs and map the \texttt{reset} and \texttt{enable} signals to a set of switches. One issue that we encountered was not being able to find instructions on what pin to map for the enable signal. As a result, we just decided to use the switch next to the reset in order to control the enable signal. Finally we were tasked with downloading the design onto the FPGA. At first, it seemed like it wasn’t working because all LED’s that corresponded to the count register were on, but we came to the conclusion that the clock was running too fast to notice the LED’s turn on and off. The solution was to downsample the clock signal by adding a clock divider implemented using a separate counter which we will denote \texttt{divider}. \texttt{divider} would increment at the positive edge of the clock and the main counter would increment at the positive edge of the most significant bit of \texttt{divider}. After playing around with different bit sizes for divider, we concluded that 26 bits is enough bits to notice a difference in the count signal through the LED pins.
 
 
 \end{document}
