@@ -4,7 +4,7 @@ module _2to1_mux(in0, in1, sel, out);
 
 input sel;
 
-output reg out;
+output out;
 input in0;
 input in1;
 
