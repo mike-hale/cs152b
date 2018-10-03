@@ -1,0 +1,3 @@
+MO bitwise_ops NULL bit_ops.v vlg10/bitwise__ops.bin 1538590529
+MO _2to1_mux NULL async_mux.v vlg42/__2to1__mux.bin 1538590529
+MO sixteen_bit_alu NULL sixteen_bit_alu.v vlg2B/sixteen__bit__alu.bin 1538590340

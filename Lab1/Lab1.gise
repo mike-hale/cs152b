@@ -21,7 +21,19 @@
 
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="Lab1.xise"/>
 
-  <files xmlns="http://www.xilinx.com/XMLSchema"/>
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="bit_ops.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="bit_ops.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="bit_ops.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="bitwise_ops.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="bitwise_ops.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="bitwise_ops.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="sixteen_bit_alu.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="sixteen_bit_alu.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="sixteen_bit_alu.xst"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
 
