@@ -86,6 +86,7 @@
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
     <transform xil_pn:end_ts="1538416036" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1538416036">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1538418069" xil_pn:in_ck="-1447905991232346684" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1538418069">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -147,6 +148,7 @@
     </transform>
     <transform xil_pn:end_ts="1538416255" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1538416255">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1538416255" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-977433003686338043" xil_pn:start_ts="1538416255">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -176,6 +178,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
@@ -197,6 +200,7 @@
     <transform xil_pn:end_ts="1538418823" xil_pn:in_ck="-1293128037861074030" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="6567690771020643593" xil_pn:start_ts="1538418817">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
       <outfile xil_pn:name="counter.bld"/>
@@ -207,6 +211,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
       <outfile xil_pn:name="counter.pcf"/>
       <outfile xil_pn:name="counter_map.map"/>
@@ -220,6 +227,7 @@
     <transform xil_pn:end_ts="1538418856" xil_pn:in_ck="548570531502834796" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="377729956345640697" xil_pn:start_ts="1538418833">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
       <outfile xil_pn:name="counter.ncd"/>
       <outfile xil_pn:name="counter.pad"/>
@@ -234,6 +242,8 @@
     <transform xil_pn:end_ts="1538418871" xil_pn:in_ck="156947386046789251" xil_pn:name="TRANEXT_bitFile_virtex5" xil_pn:prop_ck="-4008143788065839743" xil_pn:start_ts="1538418856">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="counter.bgn"/>
       <outfile xil_pn:name="counter.bit"/>
@@ -246,10 +256,12 @@
     <transform xil_pn:end_ts="1538418871" xil_pn:in_ck="156947386046776397" xil_pn:name="TRAN_impactProgrammingTool" xil_pn:prop_ck="-2379753801292018389" xil_pn:start_ts="1538418871">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
     <transform xil_pn:end_ts="1538418856" xil_pn:in_ck="-7914143991159287057" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1538418848">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
       <outfile xil_pn:name="counter.twr"/>
       <outfile xil_pn:name="counter.twx"/>
