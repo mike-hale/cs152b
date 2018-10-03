@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.07.0 (MiKTeX 2.9.6630 64-bit)  (format=lualatex 2018.9.25)  3 OCT 2018 09:53
+This is LuaTeX, Version 1.07.0 (MiKTeX 2.9.6630 64-bit)  (format=lualatex 2018.9.25)  3 OCT 2018 10:08
  restricted system commands enabled.
 **lab0.tex
 (./lab0.tex
@@ -33,7 +33,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.780 seconds
+luaotfload | main : initialization completed in 0.785 seconds
 Babel <3.18> and hyphenation patterns for 1 language(s) loaded.
 ("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/article.cls
 "
@@ -634,9 +634,8 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 23.
 ("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/amsfonts/umsb.fd
 "
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)(save: C:/Users/Michael/AppData/Local/MiKTeX/2.9/luatex-cache/generic/fonts/otl
-/lmroman12-bold.lua)(save: C:/Users/Michael/AppData/Local/MiKTeX/2.9/luatex-cach
-e/generic/fonts/otl/lmroman12-bold.luc) [1
+)(load luc: C:/Users/Michael/AppData/Local/MiKTeX/2.9/luatex-cache/generic/fonts
+/otl/lmroman12-bold.luc) [1
 
 {C:/Users/Michael/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (./lab0.a
 ux))
@@ -647,16 +646,16 @@ Here is how much of LuaTeX's memory you used:
  436 words of node memory still in use:
    5 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 6 attribute, 49 glue_spec, 6 attrib
 ute_list, 1 write nodes
-   avail lists: 1:1,2:87,3:10,4:9,5:27,6:4,7:187,8:5,9:25,10:5,11:11
+   avail lists: 1:1,2:89,3:16,4:12,5:135,6:6,7:2351,8:5,9:53,10:7,11:132
  17739 multiletter control sequences out of 65536+200000
  46 fonts using 2925343 bytes
- 55i,6n,54p,404b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,6n,54p,1033b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
 <c:/users/michael/appdata/local/programs/miktex 2.9/fonts/opentype/public/lm/lmr
 oman10-regular.otf><c:/users/michael/appdata/local/programs/miktex 2.9/fonts/ope
 ntype/public/lm/lmroman12-bold.otf><c:/users/michael/appdata/local/programs/mikt
 ex 2.9/fonts/opentype/public/lm/lmroman12-regular.otf><c:/users/michael/appdata/
 local/programs/miktex 2.9/fonts/opentype/public/lm/lmroman17-regular.otf>
-Output written on lab0.pdf (1 page, 14834 bytes).
+Output written on lab0.pdf (1 page, 22509 bytes).
 
 PDF statistics: 37 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
