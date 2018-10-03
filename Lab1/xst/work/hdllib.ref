@@ -1,3 +1,7 @@
+MO addbit NULL addbit.v vlg20/addbit.bin 1538591387
+MO arithmetic_shift_right NULL arithmetic_shift_right.v vlg58/arithmetic__shift__right.bin 1538591478
 MO bitwise_ops NULL bit_ops.v vlg10/bitwise__ops.bin 1538590529
 MO _2to1_mux NULL async_mux.v vlg42/__2to1__mux.bin 1538590529
+MO logical_shift_right NULL logical_shift_right.v vlg2D/logical__shift__right.bin 1538591531
+MO arithmetic_shift_left NULL arithmetic_shift_left.v vlg49/arithmetic__shift__left.bin 1538592541
 MO sixteen_bit_alu NULL sixteen_bit_alu.v vlg2B/sixteen__bit__alu.bin 1538590340

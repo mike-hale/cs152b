@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/TA/Documents/CS152B Team 3/Lab1/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/TA/Documents/CS152B Team 3/Lab1/xst"
+elaborate
+-ifn arithmetic_shift_right.prj
+-ifmt mixed

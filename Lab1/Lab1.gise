@@ -23,12 +23,24 @@
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
     <file xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="addbit.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="addbit.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="addbit.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="arithmetic_shift_left.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="arithmetic_shift_left.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="arithmetic_shift_left.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="arithmetic_shift_right.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="arithmetic_shift_right.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="arithmetic_shift_right.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="bit_ops.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="bit_ops.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="bit_ops.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="bitwise_ops.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="bitwise_ops.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="bitwise_ops.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="logical_shift_right.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="logical_shift_right.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="logical_shift_right.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="sixteen_bit_alu.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="sixteen_bit_alu.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="sixteen_bit_alu.xst"/>
