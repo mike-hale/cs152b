@@ -178,8 +178,28 @@ initial begin
 		$display("LSL Fail 1 (0x55AA << 1 = 0x%x)", alu_out);
 	end	
 	
+	// Set on less than tests
+	op = 4'b1001;
+	alu_a_in = 16'd36;
+	alu_b_in = 16'd45;
+	#10
+	if (alu_out == 'h0001) begin
+		$display("SLT Pass 1");
+	end else begin
+		$display("SLT Fail 1 (36 < 45 = %b)", alu_out);
+	end
+	alu_b_in = 16'd15;
+	#10
+	if (alu_out == 'h0000) begin
+		$display("SLT Pass 1");
+	end else begin
+		$display("SLT Fail 1 (36 < 15 = %b)", alu_out);
+	end
+	
 	// Logical shift right tests
 	op = 4'b1010;
+	alu_a_in = 'h55AA;
+	alu_b_in = 'h0001;
 	#10
 	if (alu_out == 'h2AD5) begin
 		$display("LSR Pass 1");

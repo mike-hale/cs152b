@@ -8,5 +8,8 @@
 <msg type="warning" file="HDLCompiler" num="248" delta="unknown" >"/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/sixteen_bit_adder.v" Line 14: Block identifier is required on this block
 </msg>
 
+<msg type="error" file="Simulator" num="799" delta="unknown" >Unsupported net type
+</msg>
+
 </messages>
 
