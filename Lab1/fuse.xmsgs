@@ -5,28 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="248" delta="unknown" >"/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/sixteen_bit_adder.v" Line 20: Block identifier is required on this block
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="568" delta="unknown" >"/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/tb.v" Line 119: Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">4</arg>&gt; bits.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/twos_comp.v" Line 11: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">a</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">16</arg>-bit.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/twos_comp.v" Line 12: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">b</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/twos_comp.v" Line 13: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">ci</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/twos_comp.v" Line 14: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">sum</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">16</arg>-bit.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/sixteen_bit_alu.v" Line 45: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">b</arg>&gt;. Formal port size is <arg fmt="%d" index="2">16</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/sixteen_bit_alu.v" Line 48: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">ci</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+<msg type="warning" file="HDLCompiler" num="248" delta="unknown" >"/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/sixteen_bit_adder.v" Line 14: Block identifier is required on this block
 </msg>
 
 </messages>

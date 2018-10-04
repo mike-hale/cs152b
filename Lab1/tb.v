@@ -68,17 +68,27 @@ initial begin
 	#10 rst = 1;
 	#10 rst = 0;
 	
-	// Adder Tests
-	alu_a_in = 'd15;
-	alu_b_in = 'd19;
-	op = 4'b0001;
-	#20
-	if (alu_out == 'd34) begin
-		$display("Adder Pass 1");
+	// Subtract tests
+	alu_a_in = 16'd91;
+	alu_b_in = 16'd47;
+	op = 4'b0000;
+	#10
+	if (alu_out == 16'd44) begin
+		$display("SUB Pass 1");
 	end else begin
-		$display("Adder Fail 1 (15 + 19 = %d)", alu_out);
+		$display("SUB Fail 1 (91 - 47 = %d)", alu_out);
 	end
-	#20
+	
+	// Adder tests
+	alu_a_in = 16'd15;
+	alu_b_in = 16'd19;
+	op = 4'b0001;
+	#10
+	if (alu_out == 16'd34) begin
+		$display("ADD Pass 1");
+	end else begin
+		$display("ADD Fail 1 (15 + 19 = %d)", alu_out);
+	end
 	
 	// Bitwise OR tests
 	alu_a_in = 'h55AA;
@@ -107,15 +117,33 @@ initial begin
 		$display("AND Fail 2 (0x55AA & 0x00FF = 0x%x)", alu_out);
 	end	
 	
-	// INC tests
+	// DEC tests
 	op = 4'b0100;
+	alu_a_in = 'h55AA;
+	#10
+	if (alu_out == 'h55A9) begin
+		$display("DEC Pass 1");
+	end else begin
+		$display("DEC Fail 1 (0x55AA-- = 0x%x)", alu_out);
+	end
+	alu_a_in = 'h0000;
+	#10
+	if (alu_out == 'hFFFF) begin
+		$display("DEC Pass 2");
+	end else begin
+		$display("DEC Fail 2 (0xFFFF-- = 0x%x)", alu_out);
+	end
+	
+	// INC tests
+	op = 4'b0101;
+	alu_a_in = 'h55AA;
 	#10
 	if (alu_out == 'h55AB) begin
 		$display("INC Pass 1");
 	end else begin
 		$display("INC Fail 1 (0x55AA++ = 0x%x)", alu_out);
 	end
-	alu_b_in = 4'hFFFF;
+	alu_a_in = 'hFFFF;
 	#10
 	if (alu_out == 'h0000) begin
 		$display("INC Pass 2");
@@ -123,6 +151,60 @@ initial begin
 		$display("INC Fail 2 (0xFFFF++ = 0x%x)", alu_out);
 	end
 	
+	// Bitwise inverse tests
+	op = 4'b0110;
+	alu_a_in = 'h0000;
+	#10
+	if (alu_out == 'hFFFF) begin
+		$display("INV Pass 1");
+	end else begin
+		$display("INV Fail 1 (~0x0000 = 0x%x)", alu_out);
+	end
+	alu_a_in = 'h55AA;
+	#10
+	if (alu_out == 'hAA55) begin
+		$display("INV Pass 2");
+	end else begin
+		$display("INV Fail 2 (~0x55AA = 0x%x)", alu_out);
+	end
+	
+	// Logical shift left tests
+	op = 4'b1000;
+	alu_b_in = 'h0001;
+	#10
+	if (alu_out == 'hAB54) begin
+		$display("LSL Pass 1");
+	end else begin
+		$display("LSL Fail 1 (0x55AA << 1 = 0x%x)", alu_out);
+	end	
+	
+	// Logical shift right tests
+	op = 4'b1010;
+	#10
+	if (alu_out == 'h2AD5) begin
+		$display("LSR Pass 1");
+	end else begin
+		$display("LSR Fail 1 (0x55AA >> 1 = 0x%x)", alu_out);
+	end	
+	
+	// Arithmetic shift left tests
+	op = 4'b1100;
+	#10
+	if (alu_out == 'hAB54) begin
+		$display("ASL Pass 1");
+	end else begin
+		$display("ASL Fail 1 (0x55AA <<< 1 = 0x%x)", alu_out);
+	end	
+	
+	// Arithmetic shift right tests
+	op = 4'b1110;
+	alu_a_in = 'hAA55;
+	#10
+	if (alu_out == 'hD52A) begin
+		$display("ASR Pass 1");
+	end else begin
+		$display("ASR Fail 1 (0xAA55 >>> 1 = 0x%x)", alu_out);
+	end
 	$finish;
 end
 

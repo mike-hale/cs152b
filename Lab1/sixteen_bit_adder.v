@@ -6,28 +6,22 @@ module sixteen_bit_adder_signed(
   output wire[15:0] sum,
   output wire overflow);
 
-  wire[15:0] carry;
-  addbit first_bit(
-      .a(a[0]),
-      .b(b[0]),
-      .ci(ci),
-      .sum(sum[0]),
-      .co(carry[0])
-    );
+  wire[16:0] carry;
+  assign carry[0] = ci;
     //repetitive code
   generate
     genvar i;
-    for(i=1;i<16;i=i+1) begin
+    for(i=0;i<16;i=i+1) begin
         addbit rest_bit(
           .a(a[i]),
           .b(b[i]),
-          .ci(carry[i-1]),
+          .ci(carry[i]),
           .sum(sum[i]),
-          .co(carry[i])
+          .co(carry[i+1])
           );
       end
   endgenerate
 
-  assign overflow = carry[15] & !sum[15];
+  assign overflow = carry[16] ^ sum[15];
 
 endmodule

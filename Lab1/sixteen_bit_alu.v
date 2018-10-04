@@ -30,7 +30,7 @@ wire [15:0] inv_val, and_val, or_val, add_val, sub_val, dec_val, inc_val, asl_va
 wire sub_ovf, add_ovf, inc_ovf, dec_ovf;
 
 //OP 0000
-sixteen_bit_subtract sub_mod(a, b, 1'b0, sub_val, sub_ovf);
+sixteen_bit_subtract sub_mod(a, b, sub_val, sub_ovf);
 
 //OP 0001
 sixteen_bit_adder_signed add_mod(a, b, 1'b0, add_val, add_ovf);
@@ -42,10 +42,10 @@ bitwise_or bwo_mod(a, b, or_val);
 bitwise_and bwa_mod(a, b, and_val);
 
 //OP 0100
-sixteen_bit_adder_signed inc_mod(a, 1, 0, inc_val, inc_ovf);
+sixteen_bit_subtract dec_mod(a, 16'b01, dec_val, dec_ovf);
 
 //OP 0101
-sixteen_bit_subtract dec_mod(a, 16'b01, 0, dec_val, dec_ovf);
+sixteen_bit_adder_signed inc_mod(a, 16'b01, 1'b0, inc_val, inc_ovf);
 
 //OP 0110
 bitwise_inv bwi_mod(a, inv_val);
@@ -65,7 +65,7 @@ arithmetic_shift_right asr_mod(a, b, asr_val);
 //First layer:
 wire [15:0] inter1[7:0];
 
-_2to1_mux mux1a[15:0](add_val, sub_val, op[0], inter1[0]);
+_2to1_mux mux1a[15:0](sub_val, add_val, op[0], inter1[0]);
 _2to1_mux mux1b[15:0](or_val , and_val, op[0], inter1[1]);
 _2to1_mux mux1c[15:0](dec_val, inc_val, op[0], inter1[2]);
 _2to1_mux mux1d[15:0](lsl_val, slt_val, op[0], inter1[4]);

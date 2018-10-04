@@ -8,10 +8,10 @@ module addbit (
 	output co
 );
 
-assign prop = a ^ b;
-assign gen = a & b;
+wire p = a | b;
+wire g = a & b;
 
-assign co = (prop & ci) || gen;
+assign co = g | (ci & p);
 assign sum = ci ^ a ^ b;
 
 endmodule 
