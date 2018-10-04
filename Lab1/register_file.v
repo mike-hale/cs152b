@@ -37,13 +37,13 @@ always @(posedge clk) begin
 		if (wren == 1 && ra == rw) begin
 			bus_a <= write_bus;
 		end else begin
-			bus_a <= registers[ra]
+			bus_a <= registers[ra];
 		end
 
 		// Read from register rb
 		if (wren == 1 && rb == rw) begin
 			bus_b <= write_bus;
-		end else
+		end else begin
 			bus_b <= registers[rb];
 		end
 	end

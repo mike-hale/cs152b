@@ -1,0 +1,63 @@
+ISim log file
+Running: /home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/tb_isim_beh.wdb 
+ISim P.20160913 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+WARNING: File "/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/twos_comp.v" Line 8.  For instance flip_b/first_bit/, width 1 of formal port a is not equal to width 16 of actual signal flipped.
+WARNING:  For instance flip_b/first_bit/, width 1 of formal port b is not equal to width 32 of actual constant.
+WARNING:  For instance flip_b/first_bit/, width 1 of formal port ci is not equal to width 32 of actual constant.
+WARNING: File "/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/twos_comp.v" Line 5.  For instance flip_b/first_bit/, width 1 of formal port sum is not equal to width 16 of actual signal out_a.
+WARNING:  For instance uut_alu/sub_mod/, width 1 of formal port ci is not equal to width 32 of actual constant.
+WARNING:  For instance uut_alu/add_mod/, width 1 of formal port ci is not equal to width 32 of actual constant.
+WARNING:  For instance uut_alu/inc_mod/, width 16 of formal port b is not equal to width 32 of actual constant.
+WARNING:  For instance uut_alu/inc_mod/, width 1 of formal port ci is not equal to width 32 of actual constant.
+WARNING: File "/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/twos_comp.v" Line 8.  For instance flip_b/first_bit/, width 1 of formal port a is not equal to width 16 of actual signal flipped.
+WARNING:  For instance flip_b/first_bit/, width 1 of formal port b is not equal to width 32 of actual constant.
+WARNING:  For instance flip_b/first_bit/, width 1 of formal port ci is not equal to width 32 of actual constant.
+WARNING: File "/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/twos_comp.v" Line 5.  For instance flip_b/first_bit/, width 1 of formal port sum is not equal to width 16 of actual signal out_a.
+WARNING:  For instance uut_alu/dec_mod/, width 16 of formal port b is not equal to width 32 of actual constant.
+WARNING:  For instance uut_alu/dec_mod/, width 1 of formal port ci is not equal to width 32 of actual constant.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Test cases for the register file:
+Finished circuit initialization process.
+Reading register  0...Success
+Reading register  1...Success
+Reading register  2...Success
+Reading register  3...Success
+Reading register  4...Success
+Reading register  5...Success
+Reading register  6...Success
+Reading register  7...Success
+Reading register  8...Success
+Reading register  9...Success
+Reading register 10...Success
+Reading register 11...Success
+Reading register 12...Success
+Reading register 13...Success
+Reading register 14...Success
+Reading register 15...Success
+Reading register 16...Success
+Reading register 17...Success
+Reading register 18...Success
+Reading register 19...Success
+Reading register 20...Success
+Reading register 21...Success
+Reading register 22...Success
+Reading register 23...Success
+Reading register 24...Success
+Reading register 25...Success
+Reading register 26...Success
+Reading register 27...Success
+Reading register 28...Success
+Reading register 29...Success
+Reading register 30...Success
+Reading register 31...Success
+# exit 0

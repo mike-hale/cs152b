@@ -26,32 +26,52 @@ module sixteen_bit_alu(
 );
 
 wire [15:0] inv_val, and_val, or_val, add_val, sub_val, dec_val, inc_val, asl_val, asr_val, lsl_val, lsr_val, slt_val;
+wire sub_ovf, add_ovf, inc_ovf, dec_ovf;
 
-arithmetic_shift_left asl_mod(a, b, asl_val);
+//OP 0000
+sixteen_bit_subtract sub_mod(a, b, 0, sub_val, sub_ovf);
 
-arithmetic_shift_right asr_mod(a, b, asr_val);
+//OP 0001
+sixteen_bit_adder_signed add_mod(a, b, 0, add_val, add_ovf);
 
-logical_shift_left lsl_mod(a, b, lsl_val);
-
-logical_shift_right lsr_mod(a, b, lsr_val);
-
+//OP 0010
 bitwise_or bwo_mod(a, b, or_val);
 
+//OP 0011
 bitwise_and bwa_mod(a, b, and_val);
 
+//OP 0100
+sixteen_bit_adder_signed inc_mod(a, 1, 0, inc_val, inc_ovf);
+
+//OP 0101
+sixteen_bit_subtract dec_mod(a, 1, 0, dec_val, dec_ovf);
+
+//OP 0110
 bitwise_inv bwi_mod(a, inv_val);
+
+//OP 1000
+logical_shift_left lsl_mod(a, b, lsl_val);
+
+//OP 1010
+logical_shift_right lsr_mod(a, b, lsr_val);
+
+//OP 1100
+arithmetic_shift_left asl_mod(a, b, asl_val);
+
+//OP 1110
+arithmetic_shift_right asr_mod(a, b, asr_val);
 
 //First layer:
 wire [15:0] inter1[7:0];
 
 _2to1_mux mux1a[15:0](add_val, sub_val, op[0], inter1[0]);
 _2to1_mux mux1b[15:0](or_val , and_val, op[0], inter1[1]);
-_2to1_mux mux1c[15:0](dec_val, inc_val, op[0], inter[2]);
-_2to1_mux mux1d[15:0](lsl_val, slt_val, op[0], inter[4]);
-assign inter[3] = inv_val;
-assign inter[5] = lsr_val;
-assign inter[6] = asl_val;
-assign inter[7] = asr_val;
+_2to1_mux mux1c[15:0](dec_val, inc_val, op[0], inter1[2]);
+_2to1_mux mux1d[15:0](lsl_val, slt_val, op[0], inter1[4]);
+assign inter1[3] = inv_val;
+assign inter1[5] = lsr_val;
+assign inter1[6] = asl_val;
+assign inter1[7] = asr_val;
 
 // Second layer:
 wire [15:0] inter2[3:0];
