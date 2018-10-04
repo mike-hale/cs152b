@@ -15,7 +15,7 @@ module sixteen_bit_subtract(
     .overflow(overflow_twoscomp)
   );
   wire overflow_add;
-  sixteen_bit_adder_signed(
+  sixteen_bit_adder_signed adder_signed(
     .a(a),
     .b(flipped_b),
     .ci(ci),

@@ -11,15 +11,12 @@ WARNING: File "/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/tw
 WARNING:  For instance flip_b/first_bit/, width 1 of formal port b is not equal to width 32 of actual constant.
 WARNING:  For instance flip_b/first_bit/, width 1 of formal port ci is not equal to width 32 of actual constant.
 WARNING: File "/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/twos_comp.v" Line 5.  For instance flip_b/first_bit/, width 1 of formal port sum is not equal to width 16 of actual signal out_a.
-WARNING:  For instance uut_alu/sub_mod/, width 1 of formal port ci is not equal to width 32 of actual constant.
-WARNING:  For instance uut_alu/add_mod/, width 1 of formal port ci is not equal to width 32 of actual constant.
 WARNING:  For instance uut_alu/inc_mod/, width 16 of formal port b is not equal to width 32 of actual constant.
 WARNING:  For instance uut_alu/inc_mod/, width 1 of formal port ci is not equal to width 32 of actual constant.
 WARNING: File "/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/twos_comp.v" Line 8.  For instance flip_b/first_bit/, width 1 of formal port a is not equal to width 16 of actual signal flipped.
 WARNING:  For instance flip_b/first_bit/, width 1 of formal port b is not equal to width 32 of actual constant.
 WARNING:  For instance flip_b/first_bit/, width 1 of formal port ci is not equal to width 32 of actual constant.
 WARNING: File "/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/twos_comp.v" Line 5.  For instance flip_b/first_bit/, width 1 of formal port sum is not equal to width 16 of actual signal out_a.
-WARNING:  For instance uut_alu/dec_mod/, width 16 of formal port b is not equal to width 32 of actual constant.
 WARNING:  For instance uut_alu/dec_mod/, width 1 of formal port ci is not equal to width 32 of actual constant.
 Time resolution is 1 ps
 # onerror resume
@@ -60,4 +57,13 @@ Reading register 28...Success
 Reading register 29...Success
 Reading register 30...Success
 Reading register 31...Success
-# exit 0
+Adder Fail 1 (15 + 19 =     X)
+# run all
+OR Pass 1
+AND Pass 1
+AND Pass 2
+Stopped at time : 1050 ns : File "/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/tb.v" Line 109
+# run all
+INC Fail 1 (0x55AA++ = 0xxxxX)
+INC Fail 2 (0xFFFF++ = 0xxxxX)
+Stopped at time : 47921680 ns : File "/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/register_file.v" Line 25

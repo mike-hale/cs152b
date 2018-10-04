@@ -23,6 +23,7 @@
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
     <file xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="_2to1_mux_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="addbit.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="addbit.stx"/>
@@ -46,9 +47,11 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="logical_shift_right.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="logical_shift_right.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="logical_shift_right.xst"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="sixteen_bit_adder_signed_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="sixteen_bit_alu.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="sixteen_bit_alu.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="sixteen_bit_alu.xst"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="sixteen_bit_alu_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="tb_isim_beh.wdb"/>
@@ -58,42 +61,11 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1538612145" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1538612145">
+    <transform xil_pn:end_ts="1538617417" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1538617417">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1538612692" xil_pn:in_ck="2100500449758319264" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1538612691">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="addbit.v"/>
-      <outfile xil_pn:name="arithmetic_shift_left.v"/>
-      <outfile xil_pn:name="arithmetic_shift_right.v"/>
-      <outfile xil_pn:name="async_mux.v"/>
-      <outfile xil_pn:name="bitwise_and.v"/>
-      <outfile xil_pn:name="bitwise_inv.v"/>
-      <outfile xil_pn:name="bitwise_or.v"/>
-      <outfile xil_pn:name="logical_shift_left.v"/>
-      <outfile xil_pn:name="logical_shift_right.v"/>
-      <outfile xil_pn:name="register_file.v"/>
-      <outfile xil_pn:name="sixteen_bit_adder.v"/>
-      <outfile xil_pn:name="sixteen_bit_alu.v"/>
-      <outfile xil_pn:name="sixteen_bit_subtract.v"/>
-      <outfile xil_pn:name="tb.v"/>
-      <outfile xil_pn:name="twos_comp.v"/>
-    </transform>
-    <transform xil_pn:end_ts="1538612327" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-7128511773193751507" xil_pn:start_ts="1538612327">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1538612327" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-6545400597629602119" xil_pn:start_ts="1538612327">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1538612327" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-5826473383862346098" xil_pn:start_ts="1538612327">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1538612692" xil_pn:in_ck="2100500449758319264" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1538612692">
+    <transform xil_pn:end_ts="1538618428" xil_pn:in_ck="2100500449758319264" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1538618428">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="addbit.v"/>
@@ -112,7 +84,38 @@
       <outfile xil_pn:name="tb.v"/>
       <outfile xil_pn:name="twos_comp.v"/>
     </transform>
-    <transform xil_pn:end_ts="1538612697" xil_pn:in_ck="2100500449758319264" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="3154150483583015834" xil_pn:start_ts="1538612692">
+    <transform xil_pn:end_ts="1538617417" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-7128511773193751507" xil_pn:start_ts="1538617417">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1538617417" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-6545400597629602119" xil_pn:start_ts="1538617417">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1538617417" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-5826473383862346098" xil_pn:start_ts="1538617417">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1538618428" xil_pn:in_ck="2100500449758319264" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1538618428">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="addbit.v"/>
+      <outfile xil_pn:name="arithmetic_shift_left.v"/>
+      <outfile xil_pn:name="arithmetic_shift_right.v"/>
+      <outfile xil_pn:name="async_mux.v"/>
+      <outfile xil_pn:name="bitwise_and.v"/>
+      <outfile xil_pn:name="bitwise_inv.v"/>
+      <outfile xil_pn:name="bitwise_or.v"/>
+      <outfile xil_pn:name="logical_shift_left.v"/>
+      <outfile xil_pn:name="logical_shift_right.v"/>
+      <outfile xil_pn:name="register_file.v"/>
+      <outfile xil_pn:name="sixteen_bit_adder.v"/>
+      <outfile xil_pn:name="sixteen_bit_alu.v"/>
+      <outfile xil_pn:name="sixteen_bit_subtract.v"/>
+      <outfile xil_pn:name="tb.v"/>
+      <outfile xil_pn:name="twos_comp.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1538618433" xil_pn:in_ck="2100500449758319264" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="3154150483583015834" xil_pn:start_ts="1538618428">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -124,7 +127,7 @@
       <outfile xil_pn:name="tb_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1538612697" xil_pn:in_ck="1186589553327596325" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-7279468980045707235" xil_pn:start_ts="1538612697">
+    <transform xil_pn:end_ts="1538618434" xil_pn:in_ck="-7107803426003057531" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-7279468980045707235" xil_pn:start_ts="1538618433">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="isim.cmd"/>

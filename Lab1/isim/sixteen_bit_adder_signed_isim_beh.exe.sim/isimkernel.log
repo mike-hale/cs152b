@@ -1,0 +1,28 @@
+Command line:
+   sixteen_bit_adder_signed_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50758
+
+Thu Oct  4 01:27:13 2018
+
+
+ Elaboration Time: 0.04 sec
+
+ Current Memory Usage: 198.713 Meg
+
+ Total Signals          : 131
+ Total Nets             : 111
+ Total Signal Drivers   : 70
+ Total Blocks           : 18
+ Total Primitive Blocks : 17
+ Total Processes        : 71
+ Total Traceable Variables  : 18
+ Total Scalar Nets and Variables : 191
+
+ Total Simulation Time: 0.04 sec
+
+ Current Memory Usage: 276.312 Meg
+
+Thu Oct  4 01:27:30 2018
+

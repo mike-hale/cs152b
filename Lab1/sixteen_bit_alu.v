@@ -22,17 +22,18 @@ module sixteen_bit_alu(
 	input [15:0] a,
 	input [15:0] b,
 	input [3:0] op,
-	output [15:0] out
+	output [15:0] out,
+	output [15:0] debug
 );
 
 wire [15:0] inv_val, and_val, or_val, add_val, sub_val, dec_val, inc_val, asl_val, asr_val, lsl_val, lsr_val, slt_val;
 wire sub_ovf, add_ovf, inc_ovf, dec_ovf;
 
 //OP 0000
-sixteen_bit_subtract sub_mod(a, b, 0, sub_val, sub_ovf);
+sixteen_bit_subtract sub_mod(a, b, 1'b0, sub_val, sub_ovf);
 
 //OP 0001
-sixteen_bit_adder_signed add_mod(a, b, 0, add_val, add_ovf);
+sixteen_bit_adder_signed add_mod(a, b, 1'b0, add_val, add_ovf);
 
 //OP 0010
 bitwise_or bwo_mod(a, b, or_val);
@@ -44,7 +45,7 @@ bitwise_and bwa_mod(a, b, and_val);
 sixteen_bit_adder_signed inc_mod(a, 1, 0, inc_val, inc_ovf);
 
 //OP 0101
-sixteen_bit_subtract dec_mod(a, 1, 0, dec_val, dec_ovf);
+sixteen_bit_subtract dec_mod(a, 16'b01, 0, dec_val, dec_ovf);
 
 //OP 0110
 bitwise_inv bwi_mod(a, inv_val);
@@ -76,14 +77,15 @@ assign inter1[7] = asr_val;
 // Second layer:
 wire [15:0] inter2[3:0];
 _2to1_mux mux2a[15:0](inter1[0], inter1[1], op[1], inter2[0]);
-_2to1_mux mux2b[15:0](inter1[2], inter1[3], op[1], inter2[0]);
-_2to1_mux mux2c[15:0](inter1[4], inter1[5], op[1], inter2[0]);
-_2to1_mux mux2d[15:0](inter1[6], inter1[7], op[1], inter2[0]);
+_2to1_mux mux2b[15:0](inter1[2], inter1[3], op[1], inter2[1]);
+_2to1_mux mux2c[15:0](inter1[4], inter1[5], op[1], inter2[2]);
+_2to1_mux mux2d[15:0](inter1[6], inter1[7], op[1], inter2[3]);
 
 // Third layer:
 wire [15:0] inter3[1:0];
 _2to1_mux mux3a[15:0](inter2[0], inter2[1], op[2], inter3[0]);
 _2to1_mux mux3b[15:0](inter2[2], inter2[3], op[2], inter3[1]);
+assign debug = inter3[0];
 
 // Fourth layer:
 _2to1_mux mux4[15:0](inter3[0], inter3[1], op[3], out);

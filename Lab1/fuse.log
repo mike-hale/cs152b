@@ -19,20 +19,18 @@ Analyzing Verilog file "/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152
 Analyzing Verilog file "/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/sixteen_bit_alu.v" into library work
 Analyzing Verilog file "/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/register_file.v" into library work
 Analyzing Verilog file "/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/tb.v" into library work
+WARNING:HDLCompiler:568 - "/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/tb.v" Line 119: Constant value is truncated to fit in <4> bits.
 Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:604 - "/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/sixteen_bit_subtract.v" Line 18: Module instantiation should have an instance name
-WARNING:HDLCompiler:189 - "/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/sixteen_bit_alu.v" Line 32: Size mismatch in connection of port <ci>. Formal port size is 1-bit while actual signal size is 32-bit.
 WARNING:HDLCompiler:189 - "/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/twos_comp.v" Line 11: Size mismatch in connection of port <a>. Formal port size is 1-bit while actual signal size is 16-bit.
 WARNING:HDLCompiler:189 - "/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/twos_comp.v" Line 12: Size mismatch in connection of port <b>. Formal port size is 1-bit while actual signal size is 32-bit.
 WARNING:HDLCompiler:189 - "/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/twos_comp.v" Line 13: Size mismatch in connection of port <ci>. Formal port size is 1-bit while actual signal size is 32-bit.
 WARNING:HDLCompiler:189 - "/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/twos_comp.v" Line 14: Size mismatch in connection of port <sum>. Formal port size is 1-bit while actual signal size is 16-bit.
-WARNING:HDLCompiler:189 - "/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/sixteen_bit_alu.v" Line 35: Size mismatch in connection of port <ci>. Formal port size is 1-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/sixteen_bit_alu.v" Line 44: Size mismatch in connection of port <b>. Formal port size is 16-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/sixteen_bit_alu.v" Line 47: Size mismatch in connection of port <b>. Formal port size is 16-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/sixteen_bit_alu.v" Line 45: Size mismatch in connection of port <b>. Formal port size is 16-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/sixteen_bit_alu.v" Line 48: Size mismatch in connection of port <ci>. Formal port size is 1-bit while actual signal size is 32-bit.
 Completed static elaboration
-Fuse Memory Usage: 95344 KB
-Fuse CPU Usage: 1200 ms
+Fuse Memory Usage: 95340 KB
+Fuse CPU Usage: 1190 ms
 Compiling module addbit
 Compiling module twos_comp
 Compiling module sixteen_bit_adder_signed
@@ -52,6 +50,6 @@ Compiling module glbl
 Time Resolution for simulation is 1ps.
 Compiled 16 Verilog Units
 Built simulation executable /home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Lab1/tb_isim_beh.exe
-Fuse Memory Usage: 98648 KB
+Fuse Memory Usage: 98620 KB
 Fuse CPU Usage: 1320 ms
-GCC CPU Usage: 750 ms
+GCC CPU Usage: 790 ms
