@@ -7,6 +7,7 @@ reg [4:0] ra, rb, rw; // Select register
 reg [3:0] op;
 wire [15:0] rf_a_out, rf_b_out, alu_out, debug;
 reg [15:0] rf_w_in, alu_a_in, alu_b_in;
+wire ovf;
 
 integer idx;
 
@@ -15,6 +16,7 @@ sixteen_bit_alu uut_alu(
 	alu_b_in, 
 	op, 
 	alu_out,
+	ovf,
 	debug
 );
 

@@ -2,9 +2,9 @@
 
 module bitwise_inv(
 	input [15:0] a,
-	output wire [15:0] out
+	output wire [16:0] out
 );
 
-assign out = ~a;
+assign out = {1'b0,~a};
 
 endmodule
