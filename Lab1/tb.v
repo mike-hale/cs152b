@@ -102,8 +102,26 @@ initial begin
 	end else begin
 		$display("OR Fail 1 (0x55AA | 0xAA55 = 0x%x)", alu_out);
 	end
+	
+	alu_a_in = 'h00FF;
+	#10
+	if (alu_out == 'hAAFF) begin
+		$display("OR Pass 2");
+	end else begin
+		$display("OR Fail 2 (0x00FF | 0xAA55 = 0x%x)", alu_out);
+	end
+	
+	alu_b_in = 'h0FF0;
+	#10
+	if (alu_out == 'h0FFF) begin
+		$display("OR Pass 3");
+	end else begin
+		$display("OR Fail 3 (0x00FF | 0x0FF0 = 0x%x)", alu_out);
+	end
 
 	// Bitwise AND tests
+	alu_a_in = 'h55AA;
+	alu_b_in = 'hAA55;
 	op = 4'b0011;
 	#10
 	if (alu_out == 'h0000) begin
@@ -118,6 +136,13 @@ initial begin
 	end else begin
 		$display("AND Fail 2 (0x55AA & 0x00FF = 0x%x)", alu_out);
 	end	
+	alu_b_in = 'h55AA;
+	#10
+	if (alu_out == 'h55AA) begin
+		$display("AND Pass 3");
+	end else begin
+		$display("AND Fail 3 (0x55AA & 0x55AA = 0x%x)", alu_out);
+	end
 	
 	// DEC tests
 	op = 4'b0100;
@@ -168,6 +193,13 @@ initial begin
 		$display("INV Pass 2");
 	end else begin
 		$display("INV Fail 2 (~0x55AA = 0x%x)", alu_out);
+	end
+	alu_a_in = 'hFFFF;
+	#10
+	if (alu_out == 'h0000) begin
+		$display("INV Pass 3");
+	end else begin
+		$display("INV Fail 3 (~0xFFFF = 0x%x)", alu_out);
 	end
 	
 	// Logical shift left tests
