@@ -5,8 +5,9 @@ module tb();
 reg clock, rst, wren;
 reg [4:0] ra, rb, rw; // Select register
 reg [3:0] op;
-wire [15:0] rf_a_out, rf_b_out, alu_out, debug;
+wire signed [15:0] rf_a_out, rf_b_out, alu_out, debug;
 reg [15:0] rf_w_in, alu_a_in, alu_b_in;
+wire ovf;
 
 integer idx;
 
@@ -15,6 +16,7 @@ sixteen_bit_alu uut_alu(
 	alu_b_in,
 	op,
 	alu_out,
+	ovf,
 	debug
 );
 
@@ -68,9 +70,8 @@ initial begin
 	#10 rst = 1;
 	#10 rst = 0;
 
-	// Subtract1 poss & poss
-	alu_a_in = 16'd91;
-	alu_b_in = 16'd47;
+	alu_a_in = 16'd91; //poss
+	alu_b_in = 16'd47; // poss
 	op = 4'b0000;
 	#10
 	if (alu_out == 16'd44) begin
@@ -78,55 +79,51 @@ initial begin
 	end else begin
 		$display("SUB Fail 1 (91 - 47 = %d)", alu_out);
 	end
-
-	//Subtract2  pos and neg
-	alu_a_in = -16'd91;
-	alu_b_in = 16'd47;
+	
+	alu_a_in = -16'd91; //neg
+	alu_b_in = 16'd47; //poss
 	op = 4'b0000;
 
 	#10
 	if (alu_out == -16'd44) begin
-		$display("SUB Pass 1");
+		$display("SUB Pass 2");
 	end else begin
-		$display("SUB Fail 1 (91 - 47 = %d)", alu_out);
+		$display("SUB Fail 2 (-91 - 47 = %d)", alu_out);
 	end
 
-	//Subtract3  neg and neg
-	alu_a_in = -16'd91;
-	alu_b_in = -16'd47;
+	alu_a_in = -16'd91; //neg
+	alu_b_in = -16'd47; //neg
 	op = 4'b0000;
 	#10
 	if (alu_out == -16'd138) begin
-		$display("SUB Pass 1");
+		$display("SUB Pass 3");
 	end else begin
-		$display("SUB Fail 1 (91 - 47 = %d)", alu_out);
+		$display("SUB Fail 3 (-91 - -47 = %d)", alu_out);
 	end
 
-	//Subtract4 Positive overflow
 	alu_a_in = 16'd32677; //32,677
 	alu_b_in = -16'd1;
 	op = 4'b0000;
 	#10
 	if ( ovf == 1 ) begin
-		$display("SUB Pass 1");
+		$display("SUB Pass 4");
 	end else begin
-		$display("SUB Fail 1 (Poss. ovf failed. ovf = %d)", ovf);
+		$display("SUB Fail 4 (Poss. ovf failed. ovf = %d)", ovf);
 	end
 
-	//Subtract5 Negative overflow
 	alu_a_in = -16'd32678; //32,677
 	alu_b_in = 16'd1;
 	op = 4'b0000;
 	#10
 	if ( ovf == 1 ) begin
-		$display("SUB Pass 1");
+		$display("SUB Pass 5");
 	end else begin
-		$display("SUB Fail 1 (Poss. ovf failed. ovf = %d)", ovf);
+		$display("SUB Fail 5 (Poss. ovf failed. ovf = %d)", ovf);
 	end
 
-	// Adder1 tests  poss + poss
-	alu_a_in = 16'd15;
-	alu_b_in = 16'd19;
+	// Adder tests
+	alu_a_in = 16'd15; //pos
+	alu_b_in = 16'd19; //pos
 	op = 4'b0001;
 	#10
 	if (alu_out == 16'd34) begin
@@ -135,49 +132,44 @@ initial begin
 		$display("ADD Fail 1 (15 + 19 = %d)", alu_out);
 	end
 
-	// Adder2 tests  poss + neg
-	alu_a_in = 16'd15;
-	alu_b_in = -16'd19;
+	alu_a_in = 16'd15; //pos
+	alu_b_in = -16'd19; //neg
 	op = 4'b0001;
 	#10
 	if (alu_out == -16'd4) begin
-		$display("ADD Pass 1");
+		$display("ADD Pass 2");
 	end else begin
-		$display("ADD Fail 1 (15 + 19 = %d)", alu_out);
+		$display("ADD Fail 2 (15 + -19 = %d)", alu_out);
 	end
 
-	//Adder3 tests neg + neg
-	alu_a_in = -16'd15;
-	alu_b_in = -16'd19;
+	alu_a_in = -16'd15; //neg
+	alu_b_in = -16'd19; //neg
 	op = 4'b0001;
 	#10
 	if (alu_out == -16'd34) begin
-		$display("ADD Pass 1");
+		$display("ADD Pass 3");
 	end else begin
-		$display("ADD Fail 1 (15 + 19 = %d)", alu_out);
+		$display("ADD Fail 3 (-15 + -19 = %d)", alu_out);
 	end
 
-	//Adder4 pos overflow
 	alu_a_in = 16'd32677; // 32,677
 	alu_b_in = 16'd1;
 	op = 4'b0001;
 	#10
 	if (ovf == -16'd4) begin
-		$display("ADD Pass 1");
+		$display("ADD Pass 4");
 	end else begin
-		$display("ADD Fail 1 (Poss overflow failed. ovf = %d)", ovf);
+		$display("ADD Fail 4 (Poss overflow failed. ovf = %d)", ovf);
 	end
 
-
-	//Adder5 neg overflow
 	alu_a_in = -16'd32678;
 	alu_b_in = -16'd1;
 	op = 4'b0001;
 	#10
 	if (alu_out == -16'd4) begin
-		$display("ADD Pass 1");
+		$display("ADD Pass 5");
 	end else begin
-		$display("ADD Fail 1 (Negative overflow, ovf)", ovf);
+		$display("ADD Fail 5 (Negative overflow failed. ovf = %d)", ovf);
 	end
 
 	// Bitwise OR tests
@@ -248,6 +240,14 @@ initial begin
 	end else begin
 		$display("DEC Fail 2 (0xFFFF-- = 0x%x)", alu_out);
 	end
+	
+	alu_a_in = -'d32678; //min 16-bit int
+	#10
+	if (ovf == 'd1) begin
+		$display("DEC Pass 3");
+	end else begin
+		#display("DEC Fail 3 (ovf = %d)", ovf);
+	end
 
 	// INC tests
 	op = 4'b0101;
@@ -264,6 +264,14 @@ initial begin
 		$display("INC Pass 2");
 	end else begin
 		$display("INC Fail 2 (0xFFFF++ = 0x%x)", alu_out);
+	end
+	
+	alu_a_in='hEFFF;
+	#10
+	if (ovf == 1) begin
+		$display("INC Pass 3");
+	end else begin
+		$display("INC Fail 3 (ovf = %d)", ovf);
 	end
 
 	// Bitwise inverse tests
