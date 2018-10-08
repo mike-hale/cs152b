@@ -177,6 +177,22 @@ initial begin
 	end else begin
 		$display("LSL Fail 1 (0x55AA << 1 = 0x%x)", alu_out);
 	end	
+
+	alu_b_in = 'h0010;
+	#10
+	if (alu_out == 'h0000) begin
+		$display("LSL Pass 2");
+	end else begin
+		$display("LSL Fail 2 (0x55AA << 16 = 0x%x", alu_out);
+	end
+
+	alu_b_in = 'h0000;
+	#10
+	if (alu_out == 'h55AA) begin
+		$display("LSL Pass 3");
+	end else begin
+		$display("LSL Fail 3 (0x55AA << 0 = 0x%x", alu_out);
+	end
 	
 	// Set on less than tests
 	op = 4'b1001;
@@ -206,24 +222,74 @@ initial begin
 	end else begin
 		$display("LSR Fail 1 (0x55AA >> 1 = 0x%x)", alu_out);
 	end	
+
+	alu_b_in = 'h0010;
+	#10
+	if (alu_out == 'h0000) begin
+		$display("LSR Pass 2");
+	end else begin
+		$display("LSR Fail 2 (0x55AA >> 16 = 0x%x", alu_out);
+	end
+
+	alu_b_in = 'h0000;
+	#10
+	if (alu_out == 'h55AA) begin
+		$display("LSL Pass 3");
+	end else begin
+		$display("LSL Fail 3 (0x55AA >> 0 = 0x%x", alu_out);
+	end
 	
 	// Arithmetic shift left tests
 	op = 4'b1100;
+	alu_b_in = 'h0001;
 	#10
-	if (alu_out == 'hAB54) begin
+	if (alu_out == 'hAB54 && overflow == 1) begin
 		$display("ASL Pass 1");
 	end else begin
 		$display("ASL Fail 1 (0x55AA <<< 1 = 0x%x)", alu_out);
 	end	
-	
+
+	alu_b_in = 'h0010;
+	#10
+	if (alu_out == 'h0000 && overflow == 1) begin
+		$display("ASL Pass 2");
+	end else begin
+		$display("ASL Fail 2 (0x55AA <<< 16 = 0x%x", alu_out);
+	end
+
+	alu_b_in = 'h0000;
+	#10
+	if (alu_out == 'h55AA && overflow == 0) begin
+		$display("ASL Pass 3");
+	end else begin
+		$display("ASL Fail 3 (0x55AA <<< 0 = 0x%x", alu_out);
+	end
+
 	// Arithmetic shift right tests
 	op = 4'b1110;
 	alu_a_in = 'hAA55;
+	alu_b_in = 'h0001;
 	#10
-	if (alu_out == 'hD52A) begin
+	if (alu_out == 'hD52A && overflow == 0) begin
 		$display("ASR Pass 1");
 	end else begin
 		$display("ASR Fail 1 (0xAA55 >>> 1 = 0x%x)", alu_out);
+	end
+
+	alu_b_in = 'h0010;
+	#10
+	if (alu_out == 'h0000 && overflow == 0) begin
+		$display("ASR Pass 2");
+	end else begin
+		$display("ASR Fail 2 (0xAA55 >>> 16 = 0x%x", alu_out);
+	end
+
+	alu_b_in = 'h0000;
+	#10
+	if (alu_out == 'h55AA && overflow == 0) begin
+		$display("ASR Pass 3");
+	end else begin
+		$display("ASR Fail 3 (0xAA55 >>> 0 = 0x%x", alu_out);
 	end
 	$finish;
 end
