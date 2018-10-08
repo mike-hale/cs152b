@@ -46,9 +46,10 @@ Reading register 28...Success
 Reading register 29...Success
 Reading register 30...Success
 Reading register 31...Success
+RF Pass simultaneous read/write
 SUB Pass 1
-SUB Pass 2
 # run all
+SUB Pass 2
 SUB Pass 3
 SUB Pass 4
 SUB Pass 5
@@ -86,4 +87,4 @@ ASL Pass 3
 ASR Pass 1
 ASR Pass 2
 ASR Pass 3
-Stopped at time : 1370 ns : File "C:/Users/CS152B/Desktop/cs152b/Lab1/tb.v" Line 428
+Stopped at time : 1380 ns : File "C:/Users/CS152B/Desktop/cs152b/Lab1/tb.v" Line 441

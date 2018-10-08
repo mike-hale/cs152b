@@ -65,6 +65,19 @@ initial begin
 			$display("Fail (0x%x)", rf_b_out);
 		end
 	end
+  
+  // Test reading and writing at the same time:
+  rw = 5'h0;
+  ra = 5'h0;
+  rb = 5'h1;
+  rf_w_in = 'hAA55;
+  wren = 1;
+  #10
+  if (rf_a_out == 'hAA55 && rf_b_out == 'h55AA) begin
+    $display("RF Pass simultaneous read/write");
+  end else begin
+    $display("RF Fail simultaneous read/write");
+  end
 
 	// Reset the contents of the register file
 	#10 rst = 1;
