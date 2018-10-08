@@ -367,7 +367,7 @@ initial begin
 	if (alu_out == 'h55AA) begin
 		$display("LSL Pass 3");
 	end else begin
-		$display("LSL Fail 3 (0x55AA >> 0 = 0x%x", alu_out);
+		$display("LSL Fail 3 (0x55AA >> 0 = 0x%x)", alu_out);
 	end
 	
 	// Arithmetic shift left tests
@@ -380,17 +380,19 @@ initial begin
 		$display("ASL Fail 1 (0x55AA <<< 1 = 0x%x)", alu_out);
 	end	
 
+  alu_a_in = 'hF000;
 	alu_b_in = 'h0010;
 	#10
 	if (alu_out == 'h0000 && ovf == 1) begin
 		$display("ASL Pass 2");
 	end else begin
-		$display("ASL Fail 2 (0x55AA <<< 16 = 0x%x", alu_out);
+		$display("ASL Fail 2 (0xF000 <<< 16 = 0x%x, ovf = %x)", alu_out, ovf);
 	end
 
+  alu_a_in = 'hAA55;
 	alu_b_in = 'h0000;
 	#10
-	if (alu_out == 'h55AA && ovf == 0) begin
+	if (alu_out == 'hAA55 && ovf == 0) begin
 		$display("ASL Pass 3");
 	end else begin
 		$display("ASL Fail 3 (0x55AA <<< 0 = 0x%x", alu_out);
@@ -409,15 +411,16 @@ initial begin
 
 	alu_b_in = 'h0010;
 	#10
-	if (alu_out == 'h0000 && ovf == 0) begin
+	if (alu_out == 'hFFFF && ovf == 0) begin
 		$display("ASR Pass 2");
 	end else begin
 		$display("ASR Fail 2 (0xAA55 >>> 16 = 0x%x", alu_out);
 	end
 
+  alu_a_in = 'hAA55;
 	alu_b_in = 'h0000;
 	#10
-	if (alu_out == 'h55AA && ovf == 0) begin
+	if (alu_out == 'hAA55 && ovf == 0) begin
 		$display("ASR Pass 3");
 	end else begin
 		$display("ASR Fail 3 (0xAA55 >>> 0 = 0x%x", alu_out);

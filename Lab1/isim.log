@@ -73,9 +73,17 @@ INV Pass 1
 INV Pass 2
 INV Pass 3
 LSL Pass 1
+LSL Pass 2
+LSL Pass 3
 SLT Pass 1
 SLT Pass 1
 LSR Pass 1
+LSR Pass 2
+LSL Pass 3
 ASL Pass 1
+ASL Pass 2
+ASL Pass 3
 ASR Pass 1
-Stopped at time : 1290 ns : File "C:/Users/CS152B/Desktop/cs152b/Lab1/tb.v" Line 359
+ASR Pass 2
+ASR Pass 3
+Stopped at time : 1370 ns : File "C:/Users/CS152B/Desktop/cs152b/Lab1/tb.v" Line 428
