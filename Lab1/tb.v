@@ -78,6 +78,7 @@ initial begin
   end else begin
     $display("RF Fail simultaneous read/write");
   end
+  wren = 0;
 
 	// Reset the contents of the register file
 	#10 rst = 1;
@@ -279,7 +280,7 @@ initial begin
 		$display("INC Fail 2 (0xFFFF++ = 0x%x)", alu_out);
 	end
 	
-	alu_a_in='hEFFF;
+	alu_a_in='h7FFF;
 	#10
 	if (ovf == 1) begin
 		$display("INC Pass 3");
@@ -346,14 +347,54 @@ initial begin
 	if (alu_out == 'h0001) begin
 		$display("SLT Pass 1");
 	end else begin
-		$display("SLT Fail 1 (36 < 45 = %b)", alu_out);
+		$display("SLT Fail 1 (36 <= 45 = %b)", alu_out);
 	end
 	alu_b_in = 16'd15;
 	#10
 	if (alu_out == 'h0000) begin
-		$display("SLT Pass 1");
+		$display("SLT Pass 2");
 	end else begin
-		$display("SLT Fail 1 (36 < 15 = %b)", alu_out);
+		$display("SLT Fail 2 (36 <= 15 = %b)", alu_out);
+	end
+	alu_a_in = 16'd32767;
+	alu_b_in = -16'd2;
+	#10
+	if (alu_out == 'h0000) begin
+		$display("SLT Pass 3");
+	end else begin
+		$display("SLT Fail 3 (32767 <= -2 = %b)", alu_out);
+	end
+	alu_a_in = -16'd10;
+	alu_b_in = 16'd10;
+	#10
+	if (alu_out == 'h0001) begin
+		$display("SLT Pass 4");
+	end else begin
+		$display("SLT Fail 4 (-10 <= 10 = %b)", alu_out);
+	end
+	alu_a_in = 16'd10;
+	alu_b_in = -16'd10;
+	#10
+	if (alu_out == 'h0000) begin
+		$display("SLT Pass 5");
+	end else begin
+		$display("SLT Fail 5 (10 <= -10 = %b)", alu_out);
+	end
+	alu_a_in = -16'd32768;
+	alu_b_in = 16'd1;
+	#10
+	if (alu_out == 'h0001) begin
+		$display("SLT Pass 6");
+	end else begin
+		$display("SLT Fail 6 (-32768 <= 1 = %b)", alu_out);
+	end
+	alu_a_in = 16'd10;
+	alu_b_in = 16'd10;
+	#10
+	if (alu_out == 'h0001) begin
+		$display("SLT Pass 7");
+	end else begin
+		$display("SLT Fail 7 (10 <= 10 = %b)", alu_out);
 	end
 
 	// Logical shift right tests

@@ -1,6 +1,11 @@
 `timescale 1ns / 1ps
 
-module _2to1_mux(in0, in1, sel, out);
+module mux(
+  in0, 
+  in1, 
+  sel, 
+  out
+);
 
 input sel;
 
