@@ -5,5 +5,8 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="error" file="Simulator" num="799" delta="unknown" >Unsupported net type
+</msg>
+
 </messages>
 
