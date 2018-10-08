@@ -23,19 +23,20 @@ module sixteen_bit_alu(
 	input [15:0] b,
 	input [3:0] op,
 	output [15:0] out,
+	output ovf,
 	output [15:0] debug
 );
 
-wire [15:0] inv_val, and_val, or_val, add_val, sub_val, dec_val, inc_val, asl_val, asr_val, lsl_val, lsr_val, slt_out, slt_val;
-wire sub_ovf, add_ovf, inc_ovf, dec_ovf, slt_ovf;
+wire [16:0] inv_val, and_val, or_val, add_val, sub_val, dec_val, inc_val, asl_val, asr_val, lsl_val, lsr_val, slt_out, slt_val;
+wire sub_ovf, add_ovf, inc_ovf, dec_ovf, slt_ovf, asl_ovf, asr_ovf;
 
 // Condense ADD, SUB, INC, DEC into a single adder
 wire [15:0] b_adder_inter, b_adder_input;
 
 _2to1_mux adder_inter_mux[15:0](b, 16'b1, op[2], b_adder_inter);
-_2to1_mux adder_input_mux[15:0](b_adder_inter, ~b_adder_inter, ~op[0], b_adder_input);
+_2to1_mux adder_input_mux[15:0](b_adder_inter, ~b_adder_inter, ~op[0], b_adder_input); //??: is this supposed to determine between an add and subtract?
 
-sixteen_bit_adder_signed add_mod(a, b_adder_input, ~op[0], add_val, add_ovf);
+sixteen_bit_adder_signed add_mod(a, b_adder_input, ~op[0], add_val);
 
 //OP 0000
 //sixteen_bit_subtract sub_mod(a, b, sub_val, sub_ovf);
@@ -62,7 +63,7 @@ bitwise_inv bwi_mod(a, inv_val);
 logical_shift_left lsl_mod(a, b, lsl_val);
 
 //OP 1001
-sixteen_bit_adder_signed slt_mod(a, ~b, 1'b0, slt_out, slt_ovf);
+sixteen_bit_adder_signed slt_mod(a, ~b, 1'b0, slt_out);
 assign slt_val = {15'b0, slt_out[15]};
 
 //OP 1010
@@ -75,31 +76,30 @@ arithmetic_shift_left asl_mod(a, b, asl_val);
 arithmetic_shift_right asr_mod(a, b, asr_val);
 
 //First layer:
-wire [15:0] inter1[7:0];
+wire [16:0] inter1[7:0];
 
 assign inter1[0] = add_val;
-_2to1_mux mux1b[15:0](or_val , and_val, op[0], inter1[1]);
+_2to1_mux mux1b[16:0](or_val , and_val, op[0], inter1[1]);
 assign inter1[2] = add_val;
-_2to1_mux mux1d[15:0](lsl_val, slt_val, op[0], inter1[4]);
+_2to1_mux mux1d[16:0](lsl_val, slt_val, op[0], inter1[4]);
 assign inter1[3] = inv_val;
 assign inter1[5] = lsr_val;
 assign inter1[6] = asl_val;
 assign inter1[7] = asr_val;
 
 // Second layer:
-wire [15:0] inter2[3:0];
-_2to1_mux mux2a[15:0](inter1[0], inter1[1], op[1], inter2[0]);
-_2to1_mux mux2b[15:0](inter1[2], inter1[3], op[1], inter2[1]);
-_2to1_mux mux2c[15:0](inter1[4], inter1[5], op[1], inter2[2]);
-_2to1_mux mux2d[15:0](inter1[6], inter1[7], op[1], inter2[3]);
+wire [16:0] inter2[3:0];
+_2to1_mux mux2a[16:0](inter1[0], inter1[1], op[1], inter2[0]);
+_2to1_mux mux2b[16:0](inter1[2], inter1[3], op[1], inter2[1]);
+_2to1_mux mux2c[16:0](inter1[4], inter1[5], op[1], inter2[2]);
+_2to1_mux mux2d[16:0](inter1[6], inter1[7], op[1], inter2[3]);
 
 // Third layer:
-wire [15:0] inter3[1:0];
-_2to1_mux mux3a[15:0](inter2[0], inter2[1], op[2], inter3[0]);
-_2to1_mux mux3b[15:0](inter2[2], inter2[3], op[2], inter3[1]);
-assign debug = inter3[0];
+wire [16:0] inter3[1:0];
+_2to1_mux mux3a[16:0](inter2[0], inter2[1], op[2], inter3[0]);
+_2to1_mux mux3b[16:0](inter2[2], inter2[3], op[2], inter3[1]);
 
 // Fourth layer:
-_2to1_mux mux4[15:0](inter3[0], inter3[1], op[3], out);
+_2to1_mux mux4[16:0](inter3[0], inter3[1], op[3], {ovf,out});
 
 endmodule

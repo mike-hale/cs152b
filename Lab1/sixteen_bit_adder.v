@@ -3,9 +3,10 @@ module sixteen_bit_adder_signed(
   input wire [15:0] a,
   input wire [15:0] b,
   input wire ci,
-  output wire[15:0] sum,
-  output wire overflow);
+  output wire[16:0] out
+);
 
+  wire[15:0] sum;
   wire[16:0] carry;
   assign carry[0] = ci;
     //repetitive code
@@ -23,5 +24,6 @@ module sixteen_bit_adder_signed(
   endgenerate
 
   assign overflow = carry[16] ^ sum[15];
+  assign out = {overflow,sum};
 
 endmodule
