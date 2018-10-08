@@ -5,7 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="248" delta="unknown" >"C:/Users/TA/Documents/CS152B Team 3/Lab1/sixteen_bit_adder.v" Line 15: Block identifier is required on this block
+<msg type="warning" file="HDLCompiler" num="248" delta="unknown" >"C:/Users/CS152B/Desktop/cs152b/Lab1/sixteen_bit_adder.v" Line 15: Block identifier is required on this block
 </msg>
 
 <msg type="error" file="Simulator" num="799" delta="unknown" >Unsupported net type

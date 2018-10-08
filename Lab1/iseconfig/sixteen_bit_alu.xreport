@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-10-05T12:54:18</DateModified>
+  <DateModified>2018-10-08T10:43:20</DateModified>
   <ModuleName>sixteen_bit_alu</ModuleName>
   <SummaryTimeStamp>2018-10-05T12:54:17</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/TA/Documents/CS152B Team 3/Lab1/iseconfig/sixteen_bit_alu.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/TA/Documents/CS152B Team 3/Lab1\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/CS152B/Desktop/cs152b/Lab1/iseconfig/sixteen_bit_alu.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/CS152B/Desktop/cs152b/Lab1\</ImplementationReportsDirectory>
   <DateInitialized>2018-10-04T00:00:30</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

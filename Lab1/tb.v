@@ -85,7 +85,7 @@ initial begin
 	op = 4'b0000;
 
 	#10
-	if (alu_out == -16'd44) begin
+	if (alu_out == -16'd138) begin
 		$display("SUB Pass 2");
 	end else begin
 		$display("SUB Fail 2 (-91 - 47 = %d)", alu_out);
@@ -95,13 +95,13 @@ initial begin
 	alu_b_in = -16'd47; //neg
 	op = 4'b0000;
 	#10
-	if (alu_out == -16'd138) begin
+	if (alu_out == -16'd44) begin
 		$display("SUB Pass 3");
 	end else begin
 		$display("SUB Fail 3 (-91 - -47 = %d)", alu_out);
 	end
 
-	alu_a_in = 16'd32677; //32,677
+	alu_a_in = 16'd32767; //32,677
 	alu_b_in = -16'd1;
 	op = 4'b0000;
 	#10
@@ -111,7 +111,7 @@ initial begin
 		$display("SUB Fail 4 (Poss. ovf failed. ovf = %d)", ovf);
 	end
 
-	alu_a_in = -16'd32678; //32,677
+	alu_a_in = -16'd32768; //32,677
 	alu_b_in = 16'd1;
 	op = 4'b0000;
 	#10
@@ -152,21 +152,21 @@ initial begin
 		$display("ADD Fail 3 (-15 + -19 = %d)", alu_out);
 	end
 
-	alu_a_in = 16'd32677; // 32,677
+	alu_a_in = 16'd32767; // 32,677
 	alu_b_in = 16'd1;
 	op = 4'b0001;
 	#10
-	if (ovf == -16'd4) begin
+	if (ovf == 1) begin
 		$display("ADD Pass 4");
 	end else begin
 		$display("ADD Fail 4 (Poss overflow failed. ovf = %d)", ovf);
 	end
 
-	alu_a_in = -16'd32678;
+	alu_a_in = -16'd32768;
 	alu_b_in = -16'd1;
 	op = 4'b0001;
 	#10
-	if (alu_out == -16'd4) begin
+	if (ovf == 1) begin
 		$display("ADD Pass 5");
 	end else begin
 		$display("ADD Fail 5 (Negative overflow failed. ovf = %d)", ovf);
@@ -241,12 +241,12 @@ initial begin
 		$display("DEC Fail 2 (0xFFFF-- = 0x%x)", alu_out);
 	end
 	
-	alu_a_in = -'d32678; //min 16-bit int
+	alu_a_in = -'d32768; //min 16-bit int
 	#10
 	if (ovf == 'd1) begin
 		$display("DEC Pass 3");
 	end else begin
-		#display("DEC Fail 3 (ovf = %d)", ovf);
+		$display("DEC Fail 3 (ovf = %d)", ovf);
 	end
 
 	// INC tests
@@ -300,6 +300,7 @@ initial begin
 
 	// Logical shift left tests
 	op = 4'b1000;
+  alu_a_in = 'h55AA;
 	alu_b_in = 'h0001;
 	#10
 	if (alu_out == 'hAB54) begin
