@@ -97,7 +97,6 @@ initial begin
 	alu_a_in = -16'd91; //Negative subtraction
 	alu_b_in = -16'd47;
 	op = 4'b0000;
-
 	#10
 	if (alu_out == -16'd44) begin
 		$display("SUB Pass 2");
@@ -258,7 +257,7 @@ initial begin
 
 	// DEC tests
 	op = 4'b0100;
-	alu_a_in = 'h55AA;
+	alu_a_in = 'h55AA; // normal dec
 	#10
 	if (alu_out == 'h55A9) begin
 		$display("DEC Pass 1");
@@ -267,7 +266,7 @@ initial begin
 	end
 	alu_a_in = 'h0000;
 	#10
-	if (alu_out == 'hFFFF) begin
+	if (alu_out == 'hFFFF) begin  //zero -> neg out
 		$display("DEC Pass 2");
 	end else begin
 		$display("DEC Fail 2 (0xFFFF-- = 0x%x)", alu_out);
@@ -275,14 +274,14 @@ initial begin
 
 	alu_a_in = -'d32768; //min 16-bit int
 	#10
-	if (ovf == 'd1) begin
+	if (ovf == 'd1) begin //negative overflow
 		$display("DEC Pass 3");
 	end else begin
 		$display("DEC Fail 3 (ovf = %d)", ovf);
 	end
 
 	// INC tests
-	op = 4'b0101;
+	op = 4'b0101; //basic inc
 	alu_a_in = 'h55AA;
 	#10
 	if (alu_out == 'h55AB) begin
@@ -290,7 +289,7 @@ initial begin
 	end else begin
 		$display("INC Fail 1 (0x55AA++ = 0x%x)", alu_out);
 	end
-	alu_a_in = 'hFFFF;
+	alu_a_in = 'hFFFF; //negative -> 0
 	#10
 	if (alu_out == 'h0000) begin
 		$display("INC Pass 2");
@@ -300,7 +299,7 @@ initial begin
 
 	alu_a_in='h7FFF;
 	#10
-	if (ovf == 1) begin
+	if (ovf == 1) begin //Positive overflow
 		$display("INC Pass 3");
 	end else begin
 		$display("INC Fail 3 (ovf = %d)", ovf);
