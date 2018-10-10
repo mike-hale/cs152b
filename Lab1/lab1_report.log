@@ -1,7 +1,7 @@
-This is LuaTeX, Version 1.07.0 (MiKTeX 2.9.6630 64-bit)  (format=lualatex 2018.9.25)  8 OCT 2018 18:19
+This is LuaTeX, Version 1.07.0 (MiKTeX 2.9.6630 64-bit)  (format=lualatex 2018.9.25)  9 OCT 2018 12:40
  restricted system commands enabled.
-**lab0.tex
-(./lab0.tex
+**lab1_report.tex
+(./lab1_report.tex
 LaTeX2e <2017-04-15>
 Lua module: luaotfload-main 2017/01/29 2.80001 OpenType layout system.
 Lua module: lualibs 2017-02-01 2.5 ConTeXt Lua standard libraries.
@@ -33,7 +33,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.792 seconds
+luaotfload | main : initialization completed in 0.842 seconds
 Babel <3.18> and hyphenation patterns for 1 language(s) loaded.
 ("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/article.cls
 "
@@ -540,36 +540,85 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/psnfss/courier.s
 ty"
 Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
-) (./lab0.aux)
-\openout1 = lab0.aux
+)
+("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/circuitikz/circu
+itikz.sty"
+Package: circuitikz 2017/05/28{} The CircuiTikz circuit drawing package version 
+0.8.3
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
+("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/frontendla
+yer/tikz/libraries/tikzlibrarycalc.code.tex"
+File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.1a (rcs-revision 1.9)
+)
+("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/libraries/
+pgflibraryarrows.code.tex"
+File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
+\arrowsize=\dimen165
+)
+("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/generic/circuitikz/pgf
+circ.defines.tex"
+\pgf@circ@res@up=\dimen166
+\pgf@circ@res@down=\dimen167
+\pgf@circ@res@zero=\dimen168
+\pgf@circ@res@left=\dimen169
+\pgf@circ@res@right=\dimen170
+\pgf@circ@res@other=\dimen171
+\pgf@circ@res@step=\dimen172
+\pgf@circ@res@temp=\dimen173
+\pgfstartlinewidth=\dimen174
+\pgf@circ@Rlen=\dimen175
+)
+("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/generic/circuitikz/pgf
+circutils.tex")
+("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/generic/circuitikz/pgf
+circshapes.tex")
+("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/generic/circuitikz/pgf
+circmonopoles.tex")
+("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/generic/circuitikz/pgf
+circbipoles.tex")
+("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/generic/circuitikz/pgf
+circtripoles.tex")
+("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/generic/circuitikz/pgf
+circquadpoles.tex")
+("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/generic/circuitikz/pgf
+circlabel.tex")
+("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/generic/circuitikz/pgf
+circvoltage.tex")
+("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/generic/circuitikz/pgf
+circcurrent.tex")
+("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/generic/circuitikz/pgf
+circflow.tex")
+("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/generic/circuitikz/pgf
+circpath.tex")) (./lab1_report.aux)
+\openout1 = lab1_report.aux
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
 \c@lstlisting=\count127
  ABD: EveryShipout initializing macros
 ("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/context/base/supp-pdf.
 mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count128
-\scratchdimen=\dimen165
+\scratchdimen=\dimen176
 \scratchbox=\box42
 \nofMPsegments=\count129
 \nofMParguments=\count130
 \everyMPshowfont=\toks35
 \MPscratchCnt=\count131
-\MPscratchDim=\dimen166
+\MPscratchDim=\dimen177
 \MPnumerator=\count132
 \makeMPintoPDFobject=\count133
 \everyMPtoPDFconversion=\toks36
@@ -632,13 +681,13 @@ Package grfext Info: Graphics extension search list:
 ,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 23.
+LaTeX Font Info:    Try loading font information for U+msa on input line 25.
 
 ("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/amsfonts/umsa.fd
 "
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 23.
+LaTeX Font Info:    Try loading font information for U+msb on input line 25.
 
 ("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/amsfonts/umsb.fd
 "
@@ -647,52 +696,76 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 LaTeX Warning: No \author given.
 
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 40.
-("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/lm/omslmr.fd"
-File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 40.
 
-("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/lm/omslmsy.fd"
-File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 40.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 40.
+Overfull \hbox (7.18782pt too wide) in paragraph at lines 125--126
+[] 
+ []
 
-("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/psnfss/t1pcr.fd"
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) [1
 
-{C:/Users/Michael/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Overfull \hbox (7.18782pt too wide) in paragraph at lines 181--182
+[] 
+ []
+
+[1
+
+{C:/Users/Michael/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+]
 [2
-Missing character: There is no ’ (U+2019) in font ec-lmr10!
-Missing character: There is no ’ (U+2019) in font ec-lmr10!
-Missing character: There is no ’ (U+2019) in font ec-lmr10!
-] (./lab0.aux))
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+] (./lab1_report.aux))
 
 Here is how much of LuaTeX's memory you used:
- 14515 strings out of 494447
- 100000,319454 words of node,token memory allocated
+ 21909 strings out of 494447
+ 100000,662416 words of node,token memory allocated
  432 words of node memory still in use:
    5 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 5 attribute, 49 glue_spec, 5 attrib
 ute_list, 1 write nodes
-   avail lists: 1:1,2:275,3:65,4:44,5:144,6:18,7:2376,8:6,9:93,10:14,11:139
- 18032 multiletter control sequences out of 65536+200000
- 59 fonts using 3594127 bytes
- 55i,6n,54p,1151b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}
-{C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy
-.enc}{C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-e
-c.enc}<C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/
-lmbx12.pfb><C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
-c/lm/lmr10.pfb><C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
-ublic/lm/lmr17.pfb><C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
-e1/public/lm/lmsy10.pfb><C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/font
-s/type1/urw/courier/ucrr8a.pfb>
-Output written on lab0.pdf (2 pages, 102824 bytes).
+   avail lists: 1:1,2:4713,3:1189,4:10,5:46,6:10,7:2089,8:7,9:692,10:6,11:56
+ 25370 multiletter control sequences out of 65536+200000
+ 56 fonts using 3370447 bytes
+ 55i,8n,54p,415b,832s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc
+}<C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmmi10.pfb><C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb><C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Michael/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Michael/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Users/Michael/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb>
+Output written on lab1_report.pdf (2 pages, 111323 bytes).
 
-PDF statistics: 35 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 37 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

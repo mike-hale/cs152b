@@ -1,0 +1,183 @@
+\documentclass[11pt]{article}
+
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage[T1]{fontenc}
+\usepackage{courier}
+\usepackage{circuitikz}
+\usetikzlibrary{calc}
+
+\lstset{xleftmargin=-1cm,
+	xrightmargin=\parindent,
+	numbersep=5pt} 
+
+\title{CS152B Lab 1}
+
+\begin{document}
+	
+\title{\vspace{-0.5in} Com Sci 152B Digital Design \\
+	Lab 1: ALU \& Register File Implementation }
+\date{}
+\maketitle
+\vspace{-0.75in}
+\begin{center}
+\begin{tabular}{cc}
+	Michael Hale & 004-620-459 \\ 
+	Matthew Nuesca & 904-440-067 \\ 
+	Shilin Patel & 904-569-866 \\ 
+	Bingxin Zhu & 704-845-969
+\end{tabular}
+\end{center}
+
+\section*{Overview}
+
+In this lab we implemented two key components found in modern processors: the arithmetic logic unit (ALU) and the register file. The purpose of the ALU is to perform a variety of operations on arbitrary 16-bit integers and write the result to an output port. On the other hand, the register file performs no computation and simply reads and writes to a series of internal 16-bit registers. 
+
+\tikzset{
+	multiplexer/.pic = {
+		
+		% frame
+		\draw[pic actions] (0, 0) coordinate (-NW) -- ++(300 : 1.5)
+		coordinate (-SW) -- ++(0 : 1.5) coordinate (-SE) -- ++(60 : 1.5)
+		coordinate (-NE) -- cycle;
+		
+		% output
+		\coordinate (-output) at ($(-SW)!0.5!(-SE)$);
+		
+		% select
+		\foreach \x/\lbl in {0.33/A,0.66/B} {
+			\coordinate (-\lbl) at ($(-SE)!\x!(-NE)$);
+			
+		}
+		
+		% input
+		\pgfmathsetmacro{\ymin}{0.75}
+		\pgfmathsetmacro{\ymax}{2.25}
+		\foreach \i in {0,1} {
+			\foreach \j in {0,1} {
+				\pgfmathsetmacro{\y}{\ymax - (\ymax - \ymin)*(2*\i + \j) / 3.};
+				\coordinate (-\i\j) at (\y,0);
+				\node[yshift = -8pt] at (-\i\j) {$\i\j$};
+			}
+		}
+	}
+}
+
+
+\section*{Shifter}
+\begin{tikzpicture}
+
+\draw (0,0) pic(multi3) [draw, fill = white] {multiplexer};
+\draw (3,0) pic(multi2) [draw, fill = white] {multiplexer};
+\draw (6,0) pic(multi1) [draw, fill = white] {multiplexer};
+\draw (9,0) pic(multi0) [draw, fill = white] {multiplexer};
+
+% select
+\coordinate (T) at ([xshift = 5pt]multi0-NE);
+\draw (multi0-A) -- (multi0-A -| T) node[right]{$B_0$};
+\draw (multi0-B) -- (multi0-B -| T) node[right]{$B_1$};
+%\foreach \s in {A,B} 
+%\draw (multi1-\s) -- (multi1-\s -|  T) node[right]{$\s$};
+\coordinate (A0) at (10.5,5);
+\coordinate (A1) at (7.5,5);
+\coordinate (A2) at (4.5,5);
+\coordinate (A3) at (1.5,5);
+
+\coordinate (N0) at (10.5,4);
+\coordinate (N1) at (7.5,4);
+\coordinate (N2) at (4.5,4);
+\coordinate (N3) at (1.5,4);
+\foreach \a in {0,1,2,3}
+	\draw (N\a) -- (A\a) node[above]{$A_\a$};
+\foreach \m in {0,1,2,3} {
+	\foreach \i in {00,01,10,11} {
+		\draw (multi\m-\i) -- ++(90:0.5) coordinate (multi\m-\i-raised);
+	}	
+}
+\draw (multi0-00-raised) -- (N0);
+\draw (multi1-00-raised) -- (N1);
+\draw (multi0-01-raised) -- (N1);
+\draw (multi2-00-raised) -- (N2);
+\draw (multi1-01-raised) -- (N2);
+\draw (multi0-10-raised) -- (N2);
+\draw (multi3-00-raised) -- (N3);
+\draw (multi2-01-raised) -- (N3);
+\draw (multi1-10-raised) -- (N3);
+\draw (multi0-11-raised) -- (N3);
+
+\draw (multi3-11-raised) node[above]{$0$};
+\draw (multi3-10-raised) node[above]{$0$};
+\draw (multi3-01-raised) node[above]{$0$};
+\draw (multi2-11-raised) node[above]{$0$};
+\draw (multi2-10-raised) node[above]{$0$};
+\draw (multi1-11-raised) node[above]{$0$};
+
+% output
+\draw (multi3-output) -- ++(270:0.5) node[below]{$S_3$};
+\draw (multi2-output) -- ++(270:0.5) node[below]{$S_2$};
+\draw (multi1-output) -- ++(270:0.5) node[below]{$S_1$};
+\draw (multi0-output) -- ++(270:0.5) node[below]{$S_0$};
+
+\end{tikzpicture}
+
+\section*{Arithmetic Right Shifter}
+\begin{tikzpicture}
+
+\draw (0,0) pic(multi3) [draw, fill = white] {multiplexer};
+\draw (3,0) pic(multi2) [draw, fill = white] {multiplexer};
+\draw (6,0) pic(multi1) [draw, fill = white] {multiplexer};
+\draw (9,0) pic(multi0) [draw, fill = white] {multiplexer};
+
+% select
+\coordinate (T) at ([xshift = 5pt]multi0-NE);
+\draw (multi0-A) -- (multi0-A -| T) node[right]{$B_0$};
+\draw (multi0-B) -- (multi0-B -| T) node[right]{$B_1$};
+%\foreach \s in {A,B} 
+%\draw (multi1-\s) -- (multi1-\s -|  T) node[right]{$\s$};
+\coordinate (A0) at (10.5,5);
+\coordinate (A1) at (7.5,5);
+\coordinate (A2) at (4.5,5);
+\coordinate (A3) at (1.5,5);
+
+\coordinate (N0) at (10.5,4);
+\coordinate (N1) at (7.5,4);
+\coordinate (N2) at (4.5,4);
+\coordinate (N3) at (1.5,4);
+\foreach \a in {0,1,2,3}
+\draw (N\a) -- (A\a) node[above]{$A_\a$};
+\foreach \m in {0,1,2,3} {
+	\foreach \i in {00,01,10,11} {
+		\draw (multi\m-\i) -- ++(90:0.5) coordinate (multi\m-\i-raised);
+	}	
+}
+\draw (multi0-00-raised) -- (N0);
+\draw (multi1-00-raised) -- (N1);
+\draw (multi0-01-raised) -- (N1);
+\draw (multi2-00-raised) -- (N2);
+\draw (multi1-01-raised) -- (N2);
+\draw (multi0-10-raised) -- (N2);
+\draw (multi3-00-raised) -- (N3);
+\draw (multi2-01-raised) -- (N3);
+\draw (multi1-10-raised) -- (N3);
+\draw (multi0-11-raised) -- (N3);
+
+\draw (multi3-11-raised) -- (N3);
+\draw (multi3-10-raised) -- (N3);
+\draw (multi3-01-raised) -- (N3);
+\draw (multi2-11-raised) -- (N3);
+\draw (multi2-10-raised) -- (N3);
+\draw (multi1-11-raised) -- (N3);
+
+% output
+\draw (multi3-output) -- ++(270:0.5) node[below]{$S_3$};
+\draw (multi2-output) -- ++(270:0.5) node[below]{$S_2$};
+\draw (multi1-output) -- ++(270:0.5) node[below]{$S_1$};
+\draw (multi0-output) -- ++(270:0.5) node[below]{$S_0$};
+
+\end{tikzpicture}
+
+\end{document}
