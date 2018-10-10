@@ -7,7 +7,7 @@ reg [4:0] ra, rb, rw; // Select register
 reg [3:0] op;
 wire signed [15:0] rf_a_out, rf_b_out, alu_out, debug;
 reg [15:0] rf_w_in, alu_a_in, alu_b_in;
-wire ovf;
+wire ovf, zero;
 
 integer idx;
 
@@ -17,6 +17,7 @@ sixteen_bit_alu uut_alu(
 	op,
 	alu_out,
 	ovf,
+  zero,
 	debug
 );
 
@@ -141,6 +142,16 @@ initial begin
 		$display("SUB Pass 6");
 	end else begin
 		$display("SUB Fail 6 (Neg. ovf failed. ovf = %d)", ovf);
+	end
+  
+  alu_a_in = -16'd15;
+	alu_b_in = -16'd15;
+	op = 4'b0000;
+	#10
+	if ( alu_out == 0 && zero == 1 ) begin
+		$display("SUB Pass 7");
+	end else begin
+		$display("SUB Fail 7 (-15 - (-15) = %d)", alu_out);
 	end
 
 	// Adder tests

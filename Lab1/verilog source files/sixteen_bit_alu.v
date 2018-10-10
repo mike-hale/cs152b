@@ -24,6 +24,7 @@ module sixteen_bit_alu(
 	input [3:0] op,
 	output [15:0] out,
 	output ovf,
+  output zero,
 	output [15:0] debug
 );
 
@@ -93,5 +94,7 @@ mux mux3b[16:0](second_to_third[2], second_to_third[3], op[2], third_to_last[1])
 
 // Fourth layer:
 mux mux4[16:0](third_to_last[0], third_to_last[1], op[3], {ovf,out});
+
+assign zero = ~(out[0] | out[1] | out[2] | out[3] | out[4] | out[5] | out[6] | out[7] | out[8] | out[9] | out[10] | out[11] | out[12] | out[13] | out[14] | out[15]);
 
 endmodule
