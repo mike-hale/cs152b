@@ -15,6 +15,31 @@
 	xrightmargin=\parindent,
 	numbersep=5pt} 
 
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+	language=Verilog,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3,
+	xleftmargin=0pt,
+}
+
 \title{CS152B Lab 1}
 
 \begin{document}
@@ -67,62 +92,44 @@ In this lab we implemented two key components found in modern processors: the ar
 	}
 }
 
+\section*{Questions}
+1) Structural Verilog is an implementation of a system using only basic module building blocks, such as logic gates. No logic abstracted further than wires and gates is allowed. Behavioral Verilog can implement abstractions on top of logic gates such as conditionals and looping. Behavioral Verilog also may rely on always blocks to abstract clock edge based operations that in structural Verilog would require far more effort to manipulate. Using this type of syntax may limit knowledge of what is actually occurring on the hardware (as is natural with every abstraction).
 
-\section*{Shifter}
-\begin{tikzpicture}
+To implement a multiplexer in both a structural and behavioral method requires:
+\begin{lstlisting}
+input select_bit;
+input input_a;
+input input_b;
 
-\draw (0,0) pic(multi3) [draw, fill = white] {multiplexer};
-\draw (3,0) pic(multi2) [draw, fill = white] {multiplexer};
-\draw (6,0) pic(multi1) [draw, fill = white] {multiplexer};
-\draw (9,0) pic(multi0) [draw, fill = white] {multiplexer};
+output output;
 
-% select
-\coordinate (T) at ([xshift = 5pt]multi0-NE);
-\draw (multi0-A) -- (multi0-A -| T) node[right]{$B_0$};
-\draw (multi0-B) -- (multi0-B -| T) node[right]{$B_1$};
-%\foreach \s in {A,B} 
-%\draw (multi1-\s) -- (multi1-\s -|  T) node[right]{$\s$};
-\coordinate (A0) at (10.5,5);
-\coordinate (A1) at (7.5,5);
-\coordinate (A2) at (4.5,5);
-\coordinate (A3) at (1.5,5);
+Structural multiplexer (only uses logic gates):
 
-\coordinate (N0) at (10.5,4);
-\coordinate (N1) at (7.5,4);
-\coordinate (N2) at (4.5,4);
-\coordinate (N3) at (1.5,4);
-\foreach \a in {0,1,2,3}
-	\draw (N\a) -- (A\a) node[above]{$A_\a$};
-\foreach \m in {0,1,2,3} {
-	\foreach \i in {00,01,10,11} {
-		\draw (multi\m-\i) -- ++(90:0.5) coordinate (multi\m-\i-raised);
-	}	
-}
-\draw (multi0-00-raised) -- (N0);
-\draw (multi1-00-raised) -- (N1);
-\draw (multi0-01-raised) -- (N1);
-\draw (multi2-00-raised) -- (N2);
-\draw (multi1-01-raised) -- (N2);
-\draw (multi0-10-raised) -- (N2);
-\draw (multi3-00-raised) -- (N3);
-\draw (multi2-01-raised) -- (N3);
-\draw (multi1-10-raised) -- (N3);
-\draw (multi0-11-raised) -- (N3);
+assign output = (input_a & !select_bit) | (input_b & select_bit);
 
-\draw (multi3-11-raised) node[above]{$0$};
-\draw (multi3-10-raised) node[above]{$0$};
-\draw (multi3-01-raised) node[above]{$0$};
-\draw (multi2-11-raised) node[above]{$0$};
-\draw (multi2-10-raised) node[above]{$0$};
-\draw (multi1-11-raised) node[above]{$0$};
+Behavioral multiplexer (uses abstracted logic):
 
-% output
-\draw (multi3-output) -- ++(270:0.5) node[below]{$S_3$};
-\draw (multi2-output) -- ++(270:0.5) node[below]{$S_2$};
-\draw (multi1-output) -- ++(270:0.5) node[below]{$S_1$};
-\draw (multi0-output) -- ++(270:0.5) node[below]{$S_0$};
+always @ (select_bit or input_a or input_b)
+begin
+if (select_bit == 1'b0) begin
+output <= input_a;
+end else begin
+output <= input_b;
+end
+end
+\end{lstlisting}
+\leavevmode \\
+2) An asynchronous multiplexer is the one implemented in the previous question. This approach is always checking for either input or select bits to determine which option to choose. The actual assignment of one of the inputs to the output is non blocking, meaning it will happen independent of the order of other operations occurring in the system. A synchronous mux implements the same logic but uses blocking assignments and doesn't necessitate an always block. It will run in a specific order with other modules and will complete at a known time. 
 
-\end{tikzpicture}
+Behavioral synchronous multiplexer:
+\begin{lstlisting}
+assign output = select_bit : input_a ? input_b;
+\end{lstlisting}
+\leavevmode \\
+
+\noindent3) The difference between the implementations of the shifters are determined by the characteristics of each shift. Arithmetic and logical left shifts are almost identical. When the bits are shifted left (towards the MSB), the now open position is filled with a 0. The difference is that the logical shift can not overflow, while the arithmetic shift will overflow if the new MSB is different from the previous MSB. Arithmetic right shifts shift towards the LSB, with the open position becoming a copy of the sign bit (if two's complement representation), or the MSB (in a general case). Logical right shift will be similar to the arithmetic right shift, except that the open bit will always be replaced by a zero, not the previous MSB. Shifts, arithmetic (<<<, >>>) and logical (<<, >>), are implemented using behavioral logic for this project, however the arithmetic overflow is determined by using an XOR on the MSB of the input and the MSB of the output. 
+\\ \\
+4) Using only structural components, let's implement an arithmetic right shifter. This is achievable using only multiplexers. Below is a diagram for a four bit shifter. The 2 to 1 multiplexer logic is abstracted to a black box using the implementation described above. There is no overflow for the right shift as the sign bit will never change.
 
 \section*{Arithmetic Right Shifter}
 \begin{tikzpicture}
@@ -179,5 +186,9 @@ In this lab we implemented two key components found in modern processors: the ar
 \draw (multi0-output) -- ++(270:0.5) node[below]{$S_0$};
 
 \end{tikzpicture}
+
+\section*{Obstacles and Solutions}
+There were 2 main issues that we encountered. Our first issue was determining how to implement overflow. We first assumed that we can check for overflow just by XOR'ing the most significant bit in our output (16th bit) compared to the carry out bit  in out output (17th bit). This insured that positive overflow would be caught when 2 positive numbers were added and negative overflow would be caught when 2 negative numbers were added. What we didn't realize was that the overflow bit would be set when we added a small positive number to a big negative number  to result in a negative output. After looking through waveforms to figure out what was happening we found that to really track overflow, we had to check when our 2 inputs were positive numbers and our output was negative or when our 2 inputs were negative numbers and our output resulted in being positive. \\
+The second issue we ran into was figuring out the logic for our SLT. Our SLT uses subtraction to check SLT and so subtracting a negative number from a really big positive number can result in overflow. After thinking about it for a while, we realized that the SLT logic for this case is to check for a sign difference on the two inputs. 
 
 \end{document}
