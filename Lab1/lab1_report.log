@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.07.0 (MiKTeX 2.9.6630 64-bit)  (format=lualatex 2018.9.25)  12 OCT 2018 11:14
+This is LuaTeX, Version 1.07.0 (MiKTeX 2.9.6630 64-bit)  (format=lualatex 2018.9.25)  12 OCT 2018 13:51
  restricted system commands enabled.
 **lab1_report.tex
 (./lab1_report.tex
@@ -33,7 +33,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.781 seconds
+luaotfload | main : initialization completed in 0.810 seconds
 Babel <3.18> and hyphenation patterns for 1 language(s) loaded.
 ("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/article.cls
 "
@@ -183,6 +183,20 @@ File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
+("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics/color.s
+ty"
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics-cfg/col
+or.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: luatex.def on input line 147.
+
+("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics-def/lua
+tex.def"
+File: luatex.def 2018/01/08 v1.0l Graphics/color driver for luatex
+))
 ("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pgf/frontendlaye
 r/tikz.sty"
 ("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pgf/basiclayer/p
@@ -229,11 +243,7 @@ phics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: luatex.def on input line 99.
-
-("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/graphics-def/lua
-tex.def"
-File: luatex.def 2018/01/08 v1.0l Graphics/color driver for luatex
-))
+)
 \Gin@req@height=\dimen119
 \Gin@req@width=\dimen120
 )
@@ -303,6 +313,7 @@ or.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: luatex.def on input line 225.
+LaTeX Info: Redefining \color on input line 709.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
@@ -589,38 +600,56 @@ circcurrent.tex")
 ("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/generic/circuitikz/pgf
 circflow.tex")
 ("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/generic/circuitikz/pgf
-circpath.tex")) (./lab1_report.aux)
+circpath.tex"))
+("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/changepage/chang
+epage.sty"
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count127
+\cp@tempcnt=\count128
+)
+("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/listings/lstlang
+1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/listings/lstlang
+2.sty"
+File: lstlang2.sty 2015/06/04 1.6 listings language file
+)
+("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/listings/lstlang
+3.sty"
+File: lstlang3.sty 2015/06/04 1.6 listings language file
+) (./lab1_report.aux)
 \openout1 = lab1_report.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-\c@lstlisting=\count127
- ABD: EveryShipout initializing macros
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 153.
+LaTeX Font Info:    ... okay on input line 153.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 153.
+LaTeX Font Info:    ... okay on input line 153.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 153.
+LaTeX Font Info:    ... okay on input line 153.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 153.
+LaTeX Font Info:    ... okay on input line 153.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 153.
+LaTeX Font Info:    ... okay on input line 153.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 153.
+LaTeX Font Info:    ... okay on input line 153.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 153.
+LaTeX Font Info:    ... okay on input line 153.
+\c@lstlisting=\count129
+
 ("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/context/base/supp-pdf.
 mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count128
+\scratchcounter=\count130
 \scratchdimen=\dimen176
 \scratchbox=\box42
-\nofMPsegments=\count129
-\nofMParguments=\count130
+\nofMPsegments=\count131
+\nofMParguments=\count132
 \everyMPshowfont=\toks35
-\MPscratchCnt=\count131
+\MPscratchCnt=\count133
 \MPscratchDim=\dimen177
-\MPnumerator=\count132
-\makeMPintoPDFobject=\count133
+\MPnumerator=\count134
+\makeMPintoPDFobject=\count135
 \everyMPtoPDFconversion=\toks36
 )
 ("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/oberdiek/epstopd
@@ -680,14 +709,14 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG
 ,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
-)
-LaTeX Font Info:    Try loading font information for U+msa on input line 25.
+) ABD: EveryShipout initializing macros
+LaTeX Font Info:    Try loading font information for U+msa on input line 158.
 
 ("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/amsfonts/umsa.fd
 "
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 25.
+LaTeX Font Info:    Try loading font information for U+msb on input line 158.
 
 ("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/amsfonts/umsb.fd
 "
@@ -696,32 +725,33 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 LaTeX Warning: No \author given.
 
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 42.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 175.
 ("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/psnfss/t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 44--45
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
 
  []
 
 [1
 
 {C:/Users/Michael/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Overfull \hbox (47.5175pt too wide) in paragraph at lines 186--187
-[][] 
- []
-
 [2]
-Overfull \hbox (7.18782pt too wide) in paragraph at lines 243--244
+Underfull \hbox (badness 10000) in paragraph at lines 217--219
+
+ []
+
+[3] [4]
+Overfull \hbox (7.18782pt too wide) in paragraph at lines 325--326
 [] 
  []
 
-[3]
-Overfull \hbox (7.18782pt too wide) in paragraph at lines 299--300
+
+Overfull \hbox (7.18782pt too wide) in paragraph at lines 381--382
 [] 
  []
 
-[4
+[5
 Missing character: There is no ; (U+003B) in font nullfont!
 Missing character: There is no ; (U+003B) in font nullfont!
 Missing character: There is no ; (U+003B) in font nullfont!
@@ -738,6 +768,7 @@ Missing character: There is no ; (U+003B) in font nullfont!
 Missing character: There is no ; (U+003B) in font nullfont!
 Missing character: There is no ; (U+003B) in font nullfont!
 Missing character: There is no ; (U+003B) in font nullfont!
+] [6
 Missing character: There is no ; (U+003B) in font nullfont!
 Missing character: There is no ; (U+003B) in font nullfont!
 Missing character: There is no ; (U+003B) in font nullfont!
@@ -757,16 +788,16 @@ Missing character: There is no ; (U+003B) in font nullfont!
 ] (./lab1_report.aux))
 
 Here is how much of LuaTeX's memory you used:
- 22573 strings out of 494447
+ 23119 strings out of 494447
  100000,662416 words of node,token memory allocated
  432 words of node memory still in use:
    5 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 5 attribute, 49 glue_spec, 5 attrib
 ute_list, 1 write nodes
-   avail lists: 1:1,2:5570,3:1457,4:14,5:122,6:13,7:2514,8:77,9:811,10:11,11:149
-
- 26017 multiletter control sequences out of 65536+200000
- 66 fonts using 4183735 bytes
- 55i,10n,54p,552b,993s stack positions out of 5000i,500n,10000p,200000b,50000s
+   avail lists: 1:1,2:4617,3:1182,4:133,5:839,6:32,7:3087,8:406,9:1330,10:13,11:
+210
+ 26516 multiletter control sequences out of 65536+200000
+ 69 fonts using 4427255 bytes
+ 55i,10n,54p,979b,1060s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc
 }{C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc
 }<C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
@@ -779,9 +810,9 @@ Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Michae
 l/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Users/Mi
 chael/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/User
 s/Michael/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on lab1_report.pdf (4 pages, 165604 bytes).
+Output written on lab1_report.pdf (6 pages, 179441 bytes).
 
-PDF statistics: 56 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 62 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

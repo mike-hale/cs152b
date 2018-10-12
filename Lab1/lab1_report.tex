@@ -5,15 +5,148 @@
 \usepackage{amssymb}
 \usepackage{bm}
 \usepackage{listings}
+\usepackage{color}
 \usepackage{tikz}
 \usepackage[T1]{fontenc}
 \usepackage{courier}
 \usepackage{circuitikz}
 \usetikzlibrary{calc}
+\usepackage{changepage}
 
 \lstset{xleftmargin=-1cm,
 	xrightmargin=\parindent,
 	numbersep=5pt} 
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{
+	frame=tb,
+	language=Verilog,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3,
+	xleftmargin=0pt,
+}
+
+\tikzset{
+	multiplexer4/.pic = {
+		
+		% frame
+		\draw[pic actions] (0, 0) coordinate (-NW) -- ++(300 : 1.5)
+		coordinate (-SW) -- ++(0 : 1.5) coordinate (-SE) -- ++(60 : 1.5)
+		coordinate (-NE) -- cycle;
+		
+		% output
+		\coordinate (-output) at ($(-SW)!0.5!(-SE)$);
+		
+		% select
+		\foreach \x/\lbl in {0.33/A,0.66/B} {
+			\coordinate (-\lbl) at ($(-SE)!\x!(-NE)$);
+			
+		}
+		
+		% input
+		\pgfmathsetmacro{\ymin}{0.75}
+		\pgfmathsetmacro{\ymax}{2.25}
+		\foreach \i in {0,1} {
+			\foreach \j in {0,1} {
+				\pgfmathsetmacro{\y}{\ymax - (\ymax - \ymin)*(2*\i + \j) / 3.};
+				\coordinate (-\i\j) at (\y,0);
+				\node[yshift = -8pt] at (-\i\j) {$\i\j$};
+			}
+		}
+	}
+}
+\tikzset{
+	multiplexer2/.pic = {
+		\draw[pic actions] (0,0) coordinate (-NW) -- ++(300 : 0.8)
+		coordinate (-SW) -- ++(0 : 0.8) coordinate (-SE) -- ++(60 : 0.8)
+		coordinate (-NE) -- cycle;
+		
+		\coordinate (-output) at ($(-SW)!0.5!(-SE)$);
+		
+		\coordinate (-sel) at ($(-SE)!0.5!(-NE)$);
+		
+		\draw ($(-NW)!0.33!(-NE)$) -- ++(90 : 0.3) coordinate(-in0);
+		\draw ($(-NW)!0.67!(-NE)$) -- ++(90 : 0.3) coordinate(-in1);
+		\draw ($(-SW)!0.5!(-SE)$) -- ++(270 : 0.3) coordinate(-out);
+		
+		\node[yshift = -8pt] at ($(-NW)!0.33!(-NE)$) {$0$};
+		\node[yshift = -8pt] at ($(-NW)!0.67!(-NE)$) {$1$};
+	}	
+}
+
+\tikzset{
+	alumux/.pic = {
+		\draw (0,0) pic(-mpx1) [draw, fill=white] {multiplexer2};
+		\draw (1.6,0) pic(-mpx2) [draw, fill=white] {multiplexer2};
+		\draw (3.2,0) pic(-mpx3) [draw, fill=white] {multiplexer2};
+		%\draw (4.8,0) pic(mpx4) [draw, fill=white] {multiplexer2};
+		\draw (6.4,0) pic(-mpx5) [draw, fill=white] {multiplexer2};
+		%\draw (8.0,0) pic(mpx6) [draw, fill=white] {multiplexer2};
+		%\draw (9.6,0) pic(mpx7) [draw, fill=white] {multiplexer2};
+		%\draw (11.2,0) pic(mpx8) [draw, fill=white] {multiplexer2};
+		
+		\draw (0.8,-2) pic(-mpx9) [draw, fill=white] {multiplexer2};
+		\draw (4.0,-2) pic(-mpx10) [draw, fill=white] {multiplexer2};
+		\draw (7.2,-2) pic(-mpx11) [draw, fill=white] {multiplexer2};
+		\draw (10.4,-2) pic(-mpx12) [draw, fill=white] {multiplexer2};
+		
+		\draw (2.4,-4) pic(-mpx13) [draw, fill=white] {multiplexer2};
+		\draw (8.8,-4) pic(-mpx14) [draw, fill=white] {multiplexer2};
+		
+		\draw (5.6,-6) pic(-mpx15) [draw, fill=white] {multiplexer2};
+		
+		\draw (-mpx1-out) -- (-mpx9-in0);
+		\draw (-mpx2-out) -- (-mpx9-in1);
+		\draw (-mpx3-out) -- (-mpx10-in0);
+		%\draw (mpx4-out) -- (mpx10-in1);
+		\draw (-mpx5-out) -- (-mpx11-in0);
+		%\draw (mpx6-out) -- (mpx11-in1);
+		%\draw (mpx7-out) -- (mpx12-in0);
+		%\draw (mpx8-out) -- (mpx12-in1);
+		
+		\draw (-mpx9-out) -- (-mpx13-in0);
+		\draw (-mpx10-out) -- (-mpx13-in1);
+		\draw (-mpx11-out) -- (-mpx14-in0);
+		\draw (-mpx12-out) -- (-mpx14-in1);
+		
+		\draw (-mpx13-out) -- (-mpx15-in0);
+		\draw (-mpx14-out) -- (-mpx15-in1);
+		
+		\draw ($(-mpx1-SW)!0.5!(-mpx1-NW)$) -- ++(180 : 0.5) node[left]{$\texttt{op[0]}$};
+		\draw ($(-mpx9-SW)!0.5!(-mpx9-NW)$) -- ++(180 : 0.5) node[left]{$\texttt{op[1]}$};
+		\draw ($(-mpx13-SW)!0.5!(-mpx13-NW)$) -- ++(180 : 0.5) node[left]{$\texttt{op[2]}$};
+		\draw ($(-mpx15-SW)!0.5!(-mpx15-NW)$) -- ++(180 : 0.5) node[left]{$\texttt{op[3]}$};
+		
+		\node[above, right, rotate=90] at (-mpx1-in0) {$\texttt{sub\_val}$};
+		\node[above, right, rotate=90] at (-mpx1-in1) {$\texttt{add\_val}$};
+		\node[above, right, rotate=90] at (-mpx2-in0) {$\texttt{or\_val}$};
+		\node[above, right, rotate=90] at (-mpx2-in1) {$\texttt{and\_val}$};
+		\node[above, right, rotate=90] at (-mpx3-in0) {$\texttt{dec\_val}$};
+		\node[above, right, rotate=90] at (-mpx3-in1) {$\texttt{inc\_val}$};
+		\node[above, right, rotate=90] at (-mpx10-in1) {$\texttt{inv\_val}$};
+		\node[above, right, rotate=90] at (-mpx5-in0) {$\texttt{lsl\_val}$};
+		\node[above, right, rotate=90] at (-mpx5-in1) {$\texttt{slt\_val}$};
+		\node[above, right, rotate=90] at (-mpx11-in1) {$\texttt{lsr\_val}$};
+		\node[above, right, rotate=90] at (-mpx12-in0) {$\texttt{asl\_val}$};
+		\node[above, right, rotate=90] at (-mpx12-in1) {$\texttt{asr\_val}$};
+		
+		\node[below] at (-mpx15-out) {$\texttt{ovf,out}$};
+	}
+}
 
 \title{CS152B Lab 1}
 
@@ -71,119 +204,68 @@ The register file shall contain 32 sixteen bit registers and must include two si
 \subsection{ALU Implementation}
 Our ALU implementation essentially partitions each instruction into a single Verilog module. In the top level ALU module, the inputs \texttt{a} and \texttt{b} fan out into each of these instruction modules which each independently generate an \texttt{ovf} and \texttt{result} signal concatenated into a single \texttt{out} signal. These signals are then fed into a multiplexer which uses the op-code \texttt{op} to determine the ALU output. The \texttt{zero} flag is generated by OR-ing each bit of the output and inverting the result.
 
-Rather than designing a single multiplexer that would take 12 seventeen bit inputs and generate one seventeen bit output, we instead created a simple two-input multiplexer module. In our top level ALU module, we then instantiated arrays of these muxes of length 17 to handle the wide instruction outputs. To generalize the multiplexer to 12 inputs, we created a cascade of 2-input muxes where each stage was determined by a different bit of the op-code \texttt{op}.
+\subsubsection{Output Multiplexer}
+Rather than designing a single multiplexer that would take 12 seventeen bit inputs and generate one seventeen bit output, we instead created a simple two-input multiplexer module. In our top level ALU module, we then instantiated arrays of these muxes of length 17 to handle the wide instruction outputs. To generalize the multiplexer to 12 inputs, we created a cascade of 2-input muxes where each stage was determined by a different bit of the op-code \texttt{op}. Figure 1 shows how each bit of the op-code selects a level of the hierarchy of muxes.
 
-\tikzset{
-	multiplexer4/.pic = {
-		
-		% frame
-		\draw[pic actions] (0, 0) coordinate (-NW) -- ++(300 : 1.5)
-		coordinate (-SW) -- ++(0 : 1.5) coordinate (-SE) -- ++(60 : 1.5)
-		coordinate (-NE) -- cycle;
-		
-		% output
-		\coordinate (-output) at ($(-SW)!0.5!(-SE)$);
-		
-		% select
-		\foreach \x/\lbl in {0.33/A,0.66/B} {
-			\coordinate (-\lbl) at ($(-SE)!\x!(-NE)$);
-			
-		}
-		
-		% input
-		\pgfmathsetmacro{\ymin}{0.75}
-		\pgfmathsetmacro{\ymax}{2.25}
-		\foreach \i in {0,1} {
-			\foreach \j in {0,1} {
-				\pgfmathsetmacro{\y}{\ymax - (\ymax - \ymin)*(2*\i + \j) / 3.};
-				\coordinate (-\i\j) at (\y,0);
-				\node[yshift = -8pt] at (-\i\j) {$\i\j$};
-			}
-		}
-	}
-}
-\tikzset{
-	multiplexer2/.pic = {
-		\draw[pic actions] (0,0) coordinate (-NW) -- ++(300 : 0.8)
-		coordinate (-SW) -- ++(0 : 0.8) coordinate (-SE) -- ++(60 : 0.8)
-		coordinate (-NE) -- cycle;
-		
-		\coordinate (-output) at ($(-SW)!0.5!(-SE)$);
-		
-		\coordinate (-sel) at ($(-SE)!0.5!(-NE)$);
-		
-		\draw ($(-NW)!0.33!(-NE)$) -- ++(90 : 0.3) coordinate(-in0);
-		\draw ($(-NW)!0.67!(-NE)$) -- ++(90 : 0.3) coordinate(-in1);
-		\draw ($(-SW)!0.5!(-SE)$) -- ++(270 : 0.3) coordinate(-out);
 
-		\node[yshift = -8pt] at ($(-NW)!0.33!(-NE)$) {$0$};
-		\node[yshift = -8pt] at ($(-NW)!0.67!(-NE)$) {$1$};
-	}	
-}
-
-\tikzset{
-	alumux/.pic = {
-	\draw (0,0) pic(-mpx1) [draw, fill=white] {multiplexer2};
-	\draw (1.6,0) pic(-mpx2) [draw, fill=white] {multiplexer2};
-	\draw (3.2,0) pic(-mpx3) [draw, fill=white] {multiplexer2};
-	%\draw (4.8,0) pic(mpx4) [draw, fill=white] {multiplexer2};
-	\draw (6.4,0) pic(-mpx5) [draw, fill=white] {multiplexer2};
-	%\draw (8.0,0) pic(mpx6) [draw, fill=white] {multiplexer2};
-	%\draw (9.6,0) pic(mpx7) [draw, fill=white] {multiplexer2};
-	%\draw (11.2,0) pic(mpx8) [draw, fill=white] {multiplexer2};
-	
-	\draw (0.8,-2) pic(-mpx9) [draw, fill=white] {multiplexer2};
-	\draw (4.0,-2) pic(-mpx10) [draw, fill=white] {multiplexer2};
-	\draw (7.2,-2) pic(-mpx11) [draw, fill=white] {multiplexer2};
-	\draw (10.4,-2) pic(-mpx12) [draw, fill=white] {multiplexer2};
-	
-	\draw (2.4,-4) pic(-mpx13) [draw, fill=white] {multiplexer2};
-	\draw (8.8,-4) pic(-mpx14) [draw, fill=white] {multiplexer2};
-	
-	\draw (5.6,-6) pic(-mpx15) [draw, fill=white] {multiplexer2};
-	
-	\draw (-mpx1-out) -- (-mpx9-in0);
-	\draw (-mpx2-out) -- (-mpx9-in1);
-	\draw (-mpx3-out) -- (-mpx10-in0);
-	%\draw (mpx4-out) -- (mpx10-in1);
-	\draw (-mpx5-out) -- (-mpx11-in0);
-	%\draw (mpx6-out) -- (mpx11-in1);
-	%\draw (mpx7-out) -- (mpx12-in0);
-	%\draw (mpx8-out) -- (mpx12-in1);
-	
-	\draw (-mpx9-out) -- (-mpx13-in0);
-	\draw (-mpx10-out) -- (-mpx13-in1);
-	\draw (-mpx11-out) -- (-mpx14-in0);
-	\draw (-mpx12-out) -- (-mpx14-in1);
-	
-	\draw (-mpx13-out) -- (-mpx15-in0);
-	\draw (-mpx14-out) -- (-mpx15-in1);
-	
-	\draw ($(-mpx1-SW)!0.5!(-mpx1-NW)$) -- ++(180 : 0.5) node[left]{$\texttt{op[0]}$};
-	\draw ($(-mpx9-SW)!0.5!(-mpx9-NW)$) -- ++(180 : 0.5) node[left]{$\texttt{op[1]}$};
-	\draw ($(-mpx13-SW)!0.5!(-mpx13-NW)$) -- ++(180 : 0.5) node[left]{$\texttt{op[2]}$};
-	\draw ($(-mpx15-SW)!0.5!(-mpx15-NW)$) -- ++(180 : 0.5) node[left]{$\texttt{op[3]}$};
-	
-	\node[above, right, rotate=90] at (-mpx1-in0) {$\texttt{sub\_val}$};
-	\node[above, right, rotate=90] at (-mpx1-in1) {$\texttt{add\_val}$};
-	\node[above, right, rotate=90] at (-mpx2-in0) {$\texttt{or\_val}$};
-	\node[above, right, rotate=90] at (-mpx2-in1) {$\texttt{and\_val}$};
-	\node[above, right, rotate=90] at (-mpx3-in0) {$\texttt{dec\_val}$};
-	\node[above, right, rotate=90] at (-mpx3-in1) {$\texttt{inc\_val}$};
-	\node[above, right, rotate=90] at (-mpx10-in1) {$\texttt{inv\_val}$};
-	\node[above, right, rotate=90] at (-mpx5-in0) {$\texttt{lsl\_val}$};
-	\node[above, right, rotate=90] at (-mpx5-in1) {$\texttt{slt\_val}$};
-	\node[above, right, rotate=90] at (-mpx11-in1) {$\texttt{lsr\_val}$};
-	\node[above, right, rotate=90] at (-mpx12-in0) {$\texttt{asl\_val}$};
-	\node[above, right, rotate=90] at (-mpx12-in1) {$\texttt{asr\_val}$};
-	
-	\node[below] at (-mpx15-out) {$\texttt{ovf,out}$};
-	}
-}
-
-\begin{tikzpicture}
+\begin{adjustwidth}{-4em}{}
+	\begin{tikzpicture}
 	\draw pic() [draw, scale=1.0] {alumux};
-\end{tikzpicture}
+	\end{tikzpicture}
+\end{adjustwidth}
+
+Figure 1: Tree of 2-input muxes to mimic the operation of a 16-input mux.
+\\
+
+The implementation of the bitwise and the shift instructions was relatively straightforward, since we were permitted to use the Verilog built-in operations (\texttt{\&,|,~,<<,>>,<<<,>>>}). The ADD, SUB, INC, DEC, and SLT instructions are implemented using the adder module. The adder performs 16-bit two's-complement and concatenates the \texttt{ovf} bit to the front of the \texttt{sum}. 
+
+\section{Questions}
+\begin{enumerate}
+	\item Structural Verilog is an implementation of a system using only basic module building blocks, such as logic gates. No logic abstracted further than wires and gates is allowed. Behavioral Verilog can implement abstractions on top of logic gates such as conditionals and looping. Behavioral Verilog also may rely on always blocks to abstract clock edge based operations that in structural Verilog would require far more effort to manipulate. Using this type of syntax may limit knowledge of what is actually occurring on the hardware (as is natural with every abstraction).
+	
+	Implementation of a multiplexer using structural Verilog:
+	
+	\begin{lstlisting}
+	input select_bit, input_a, input_b;
+	output out;
+	
+	//Structural multiplexer (only uses logic gates):
+	assign out = (input_a & !select_bit) | 
+	                  (input_b & select_bit);
+	\end{lstlisting}
+	
+	Implementation of a multiplexer using behavioral Verilog:
+	
+	\begin{lstlisting}
+	input select_bit, input_a, input_b;
+	output reg out;
+	
+	//Behavioral multiplexer (uses abstracted logic):	
+	always @ (select_bit or input_a or input_b)	begin
+		if (select_bit == 1'b0) begin
+			out <= input_a;
+		end else begin
+			out <= input_b;
+		end
+	end
+	\end{lstlisting}
+	
+	\item An asynchronous multiplexer is the one implemented in the previous question. This approach is always checking for either input or select bits to determine which option to choose. The actual assignment of one of the inputs to the output is non blocking, meaning it will happen independent of the order of other operations occurring in the system. A synchronous mux implements the same logic but uses blocking assignments and doesn't necessitate an always block. It will run in a specific order with other modules and will complete at a known time. 
+	
+	Behavioral synchronous multiplexer:
+	
+	\begin{lstlisting}
+	input select_bit, input_a, input_b;
+	output out;
+	
+	assign out = select_bit ? input_a : input_b;
+	\end{lstlisting}
+	
+	\item The difference between the implementations of the shifters are determined by the characteristics of each shift. Arithmetic and logical left shifts are almost identical. When the bits are shifted left (towards the MSB), the now open position is filled with a 0. The difference is that the logical shift can not overflow, while the arithmetic shift will overflow if the new MSB is different from the previous MSB. Arithmetic right shifts shift towards the LSB, with the open position becoming a copy of the sign bit (if two's complement representation), or the MSB (in a general case). Logical right shift will be similar to the arithmetic right shift, except that the open bit will always be replaced by a zero, not the previous MSB. Shifts, arithmetic (<<<, >>>) and logical (<<, >>), are implemented using behavioral logic for this project, however the arithmetic overflow is determined by using an XOR on the MSB of the input and the MSB of the output. 
+	
+	\item Using only structural components, let's implement an arithmetic right shifter. This is achievable using only multiplexers. Below is a diagram for a four bit shifter. The 2 to 1 multiplexer logic is abstracted to a black box using the implementation described above. There is no overflow for the right shift as the sign bit will never change.
+	
+\end{enumerate}
 
 
 \section*{Shifter}
