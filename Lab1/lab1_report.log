@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.07.0 (MiKTeX 2.9.6630 64-bit)  (format=lualatex 2018.9.25)  9 OCT 2018 12:40
+This is LuaTeX, Version 1.07.0 (MiKTeX 2.9.6630 64-bit)  (format=lualatex 2018.9.25)  12 OCT 2018 11:14
  restricted system commands enabled.
 **lab1_report.tex
 (./lab1_report.tex
@@ -33,7 +33,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.842 seconds
+luaotfload | main : initialization completed in 0.781 seconds
 Babel <3.18> and hyphenation patterns for 1 language(s) loaded.
 ("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/article.cls
 "
@@ -696,19 +696,32 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 LaTeX Warning: No \author given.
 
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 42.
+("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/psnfss/t1pcr.fd"
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
-Overfull \hbox (7.18782pt too wide) in paragraph at lines 125--126
-[] 
- []
-
-
-Overfull \hbox (7.18782pt too wide) in paragraph at lines 181--182
-[] 
  []
 
 [1
 
-{C:/Users/Michael/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+{C:/Users/Michael/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Overfull \hbox (47.5175pt too wide) in paragraph at lines 186--187
+[][] 
+ []
+
+[2]
+Overfull \hbox (7.18782pt too wide) in paragraph at lines 243--244
+[] 
+ []
+
+[3]
+Overfull \hbox (7.18782pt too wide) in paragraph at lines 299--300
+[] 
+ []
+
+[4
 Missing character: There is no ; (U+003B) in font nullfont!
 Missing character: There is no ; (U+003B) in font nullfont!
 Missing character: There is no ; (U+003B) in font nullfont!
@@ -725,8 +738,6 @@ Missing character: There is no ; (U+003B) in font nullfont!
 Missing character: There is no ; (U+003B) in font nullfont!
 Missing character: There is no ; (U+003B) in font nullfont!
 Missing character: There is no ; (U+003B) in font nullfont!
-]
-[2
 Missing character: There is no ; (U+003B) in font nullfont!
 Missing character: There is no ; (U+003B) in font nullfont!
 Missing character: There is no ; (U+003B) in font nullfont!
@@ -746,26 +757,31 @@ Missing character: There is no ; (U+003B) in font nullfont!
 ] (./lab1_report.aux))
 
 Here is how much of LuaTeX's memory you used:
- 21909 strings out of 494447
+ 22573 strings out of 494447
  100000,662416 words of node,token memory allocated
  432 words of node memory still in use:
    5 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 5 attribute, 49 glue_spec, 5 attrib
 ute_list, 1 write nodes
-   avail lists: 1:1,2:4713,3:1189,4:10,5:46,6:10,7:2089,8:7,9:692,10:6,11:56
- 25370 multiletter control sequences out of 65536+200000
- 56 fonts using 3370447 bytes
- 55i,8n,54p,415b,832s stack positions out of 5000i,500n,10000p,200000b,50000s
+   avail lists: 1:1,2:5570,3:1457,4:14,5:122,6:13,7:2514,8:77,9:811,10:11,11:149
+
+ 26017 multiletter control sequences out of 65536+200000
+ 66 fonts using 4183735 bytes
+ 55i,10n,54p,552b,993s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc
+}{C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc
 }<C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmmi10.pfb><C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
 ublic/amsfonts/cm/cmr10.pfb><C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/
 fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Michael/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Michael/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Users/Michael/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb>
-Output written on lab1_report.pdf (2 pages, 111323 bytes).
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Michael/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Michael/App
+Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Michae
+l/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Users/Mi
+chael/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/User
+s/Michael/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb>
+Output written on lab1_report.pdf (4 pages, 165604 bytes).
 
-PDF statistics: 37 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 56 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 
