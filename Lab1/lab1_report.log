@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.07.0 (MiKTeX 2.9.6630 64-bit)  (format=lualatex 2018.9.25)  12 OCT 2018 13:51
+This is LuaTeX, Version 1.07.0 (MiKTeX 2.9.6630 64-bit)  (format=lualatex 2018.9.25)  12 OCT 2018 17:08
  restricted system commands enabled.
 **lab1_report.tex
 (./lab1_report.tex
@@ -33,7 +33,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.810 seconds
+luaotfload | main : initialization completed in 0.813 seconds
 Babel <3.18> and hyphenation patterns for 1 language(s) loaded.
 ("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/article.cls
 "
@@ -607,6 +607,46 @@ Package: changepage 2009/10/20 v1.0c check page and change page layout
 \c@cp@cntr=\count127
 \cp@tempcnt=\count128
 )
+("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/multirow/multiro
+w.sty"
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
+\multirow@colwidth=\skip47
+\multirow@cntb=\count129
+\multirow@dima=\skip48
+\bigstrutjot=\dimen176
+)
+("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/geometry/geometr
+y.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/ifpdf
+.sty"
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/ifvte
+x.sty"
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/generic/ifxetex/ifxete
+x.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count130
+\Gm@cntv=\count131
+\c@Gm@tempcnt=\count132
+\Gm@bindingoffset=\dimen177
+\Gm@wd@mp=\dimen178
+\Gm@odd@mp=\dimen179
+\Gm@even@mp=\dimen180
+\Gm@layoutwidth=\dimen181
+\Gm@layoutheight=\dimen182
+\Gm@layouthoffset=\dimen183
+\Gm@layoutvoffset=\dimen184
+\Gm@dimlist=\toks35
+
+("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/geometry/geometr
+y.cfg"))
 ("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/listings/lstlang
 1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
@@ -621,36 +661,36 @@ File: lstlang3.sty 2015/06/04 1.6 listings language file
 ) (./lab1_report.aux)
 \openout1 = lab1_report.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-\c@lstlisting=\count129
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 155.
+LaTeX Font Info:    ... okay on input line 155.
+\c@lstlisting=\count133
 
 ("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/context/base/supp-pdf.
 mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count130
-\scratchdimen=\dimen176
+\scratchcounter=\count134
+\scratchdimen=\dimen185
 \scratchbox=\box42
-\nofMPsegments=\count131
-\nofMParguments=\count132
-\everyMPshowfont=\toks35
-\MPscratchCnt=\count133
-\MPscratchDim=\dimen177
-\MPnumerator=\count134
-\makeMPintoPDFobject=\count135
-\everyMPtoPDFconversion=\toks36
+\nofMPsegments=\count135
+\nofMParguments=\count136
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count137
+\MPscratchDim=\dimen186
+\MPnumerator=\count138
+\makeMPintoPDFobject=\count139
+\everyMPtoPDFconversion=\toks37
 )
 ("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/oberdiek/epstopd
 f-base.sty"
@@ -693,15 +733,10 @@ Package ifluatex Info: LuaTeX detected.
 xcmds.sty"
 Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO)
 
-
-("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/generic/oberdiek/ifpdf
-.sty"
-Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
-)
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-\pdftexcmds@toks=\toks37
+\pdftexcmds@toks=\toks38
 )
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 43
 8.
@@ -710,13 +745,46 @@ Package grfext Info: Graphics extension search list:
 ,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 ) ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+msa on input line 158.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=59.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+LaTeX Font Info:    Try loading font information for U+msa on input line 160.
 ("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/amsfonts/umsa.fd
 "
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 158.
+LaTeX Font Info:    Try loading font information for U+msb on input line 160.
 
 ("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/amsfonts/umsb.fd
 "
@@ -725,50 +793,27 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 LaTeX Warning: No \author given.
 
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 175.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 177.
 ("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/psnfss/t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 177--178
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
 
  []
 
 [1
 
 {C:/Users/Michael/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 217--219
+Underfull \hbox (badness 10000) in paragraph at lines 213--214
 
  []
 
-[3] [4]
-Overfull \hbox (7.18782pt too wide) in paragraph at lines 325--326
-[] 
+[2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 298--299
+
  []
 
-
-Overfull \hbox (7.18782pt too wide) in paragraph at lines 381--382
-[] 
- []
-
-[5
-Missing character: There is no ; (U+003B) in font nullfont!
-Missing character: There is no ; (U+003B) in font nullfont!
-Missing character: There is no ; (U+003B) in font nullfont!
-Missing character: There is no ; (U+003B) in font nullfont!
-Missing character: There is no ; (U+003B) in font nullfont!
-Missing character: There is no ; (U+003B) in font nullfont!
-Missing character: There is no ; (U+003B) in font nullfont!
-Missing character: There is no ; (U+003B) in font nullfont!
-Missing character: There is no ; (U+003B) in font nullfont!
-Missing character: There is no ; (U+003B) in font nullfont!
-Missing character: There is no ; (U+003B) in font nullfont!
-Missing character: There is no ; (U+003B) in font nullfont!
-Missing character: There is no ; (U+003B) in font nullfont!
-Missing character: There is no ; (U+003B) in font nullfont!
-Missing character: There is no ; (U+003B) in font nullfont!
-Missing character: There is no ; (U+003B) in font nullfont!
-] [6
+[4] [5] [6] [7
 Missing character: There is no ; (U+003B) in font nullfont!
 Missing character: There is no ; (U+003B) in font nullfont!
 Missing character: There is no ; (U+003B) in font nullfont!
@@ -788,16 +833,16 @@ Missing character: There is no ; (U+003B) in font nullfont!
 ] (./lab1_report.aux))
 
 Here is how much of LuaTeX's memory you used:
- 23119 strings out of 494447
+ 23690 strings out of 494447
  100000,662416 words of node,token memory allocated
  432 words of node memory still in use:
    5 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 5 attribute, 49 glue_spec, 5 attrib
 ute_list, 1 write nodes
-   avail lists: 1:1,2:4617,3:1182,4:133,5:839,6:32,7:3087,8:406,9:1330,10:13,11:
-210
- 26516 multiletter control sequences out of 65536+200000
+   avail lists: 1:1,2:3317,3:876,4:141,5:1053,6:44,7:4022,8:710,9:1811,10:19,11:
+260
+ 27052 multiletter control sequences out of 65536+200000
  69 fonts using 4427255 bytes
- 55i,10n,54p,979b,1060s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,10n,54p,973b,993s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc
 }{C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc
 }<C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
@@ -810,9 +855,9 @@ Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Michae
 l/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Users/Mi
 chael/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/User
 s/Michael/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on lab1_report.pdf (6 pages, 179441 bytes).
+Output written on lab1_report.pdf (7 pages, 191751 bytes).
 
-PDF statistics: 62 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 65 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 
