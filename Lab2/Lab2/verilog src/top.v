@@ -21,9 +21,11 @@ parameter SIDE_YELLOW = 5;
 parameter WALK = 6;
 
 reg [2:0] state;
-reg [2:0] next_state;
+
 reg [3:0] second_cnt;
-reg walk_btn;
+reg walk_request;
+reg sensor_check;
+reg [2:0] prev_state;
 wire side_sensor; 
 assign side_sensor = sw[0];
 
@@ -38,11 +40,21 @@ assign led[7] = clk_1Hz;
 initial begin
   state <= MAIN_GREEN;
   second_cnt <= 12;
-  walk_btn <= 0;
+  walk_request <= 0;
+  sensor_check = 0;
+end
+
+// Asynchronous walk request register
+always @(btn_deb, state) begin
+  prev_state <= state;
+  if (btn_deb == 1) begin
+    walk_request <= 1;
+  end else if (prev_state == WALK && state == SIDE_GREEN) begin
+    walk_request <= 0;
+  end
 end
 
 always @(posedge clk_1Hz) begin
-  /*
 
   /* Update state */
   if (second_cnt == 0) begin
@@ -54,54 +66,61 @@ always @(posedge clk_1Hz) begin
   case(state)
     MAIN_GREEN: begin
       if(second_cnt == 0) begin
-        second_cnt <= 12;
+		if (sensor_check == 1) begin
+		    state <= MAIN_YELLOW;
+			second_cnt <= 2;
+		end else begin
+			state <= MAIN_GREEN_EXTRA;
+			second_cnt <= 3;
+		end
       end else if (second_cnt == 6 && side_sensor == 1) begin
-        next_state <= MAIN_GREEN_EXTRA;
-        second_cnt <= 0;
-      end else begin
-        next_state <= MAIN_YELLOW;
-      end
+        sensor_check <= 1;
+      end 
     end
     MAIN_GREEN_EXTRA: begin
-      if(second_cnt <= 0) begin
-        second_cnt <= 3;
-        next_state <= MAIN_YELLOW;
+      if(second_cnt == 0) begin
+		state <= MAIN_YELLOW;
+        second_cnt <= 2;
       end
     end
     MAIN_YELLOW: begin
-      if(second_cnt <= 0) begin
-        second_cnt <= 2;
-      end else if(walk_btn == 1) begin 
-        next_state <= WALK;
-      end else begin
-        next_state <= SIDE_GREEN;
+      if(second_cnt == 0) begin
+		if (walk_request == 1) begin
+          second_cnt <= 3;
+		  state <= WALK;
+		end else begin
+		  second_cnt <= 6;
+		  state <= SIDE_GREEN;
+		end
       end
     end
     SIDE_GREEN: begin
       if(second_cnt <= 0) begin 
-        second_cnt <= 6;
-      end else if(side_sensor) begin
-        next_state <= SIDE_GREEN_EXTRA;
-      end else begin
-        next_state <= SIDE_YELLOW;
+        if (side_sensor == 1) begin
+          second_cnt <= 3;
+          state <= SIDE_GREEN_EXTRA;
+        end else begin
+          second_cnt <= 2;
+          state <= SIDE_YELLOW;
+        end
       end
     end
     SIDE_GREEN_EXTRA: begin
       if(second_cnt <= 0) begin
-        second_cnt <= 3;
+        second_cnt <= 2;
+		state <= SIDE_YELLOW;
       end
     end
     SIDE_YELLOW: begin 
       if(second_cnt <= 0) begin
-        second_cnt <= 2;
-        next_state <= MAIN_GREEN;
+        second_cnt <= 9;
+        state <= MAIN_GREEN;
       end
     end
     WALK: begin
       if(second_cnt == 0) begin 
-        second_cnt <= 3;
-        next_state <= SIDE_GREEN;
-        walk_btn <= 0;
+        second_cnt <= 6;
+        state <= SIDE_GREEN;
       end
     end
     endcase
