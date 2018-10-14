@@ -1,10 +1,9 @@
-`timescale 1ns / 1ps
-
 module top(
   input clk,
   input btn,
   input [7:0] sw,
-  output [7:0] led
+  output [7:0] led,
+  output reg [2:0] state
 );
 
 wire clk_1Hz, clk_32Hz;
@@ -20,14 +19,13 @@ parameter SIDE_GREEN_EXTRA = 4;
 parameter SIDE_YELLOW = 5;
 parameter WALK = 6;
 
-reg [2:0] state;
+//reg [2:0] state;
 
 reg [3:0] second_cnt;
 reg walk_request;
 reg sensor_check;
 reg [2:0] prev_state;
-wire side_sensor; 
-assign side_sensor = sw[0];
+wire side_sensor = sw[0];
 
 assign led[0] = (state == MAIN_GREEN) || (state == MAIN_GREEN_EXTRA);
 assign led[1] = (state == MAIN_YELLOW);
@@ -37,15 +35,18 @@ assign led[4] = (state == SIDE_YELLOW);
 assign led[5] = (state == MAIN_GREEN || state == MAIN_GREEN_EXTRA || state == MAIN_YELLOW || state == WALK);
 assign led[6] = (state == WALK);
 assign led[7] = clk_1Hz;
+
+// Start in the MAIN_GREEN state
 initial begin
   state <= MAIN_GREEN;
-  second_cnt <= 12;
+  second_cnt <= 8;
   walk_request <= 0;
-  sensor_check = 0;
+  sensor_check <= 0;
 end
 
 // Asynchronous walk request register
 always @(btn_deb, state) begin
+  // Want to detect the change from WALK to SIDE_GREEN
   prev_state <= state;
   if (btn_deb == 1) begin
     walk_request <= 1;
@@ -57,9 +58,7 @@ end
 always @(posedge clk_1Hz) begin
 
   /* Update state */
-  if (second_cnt == 0) begin
-    state <= next_state;
-  end else begin
+  if (second_cnt != 0) begin
     second_cnt <= second_cnt - 1;
   end
   
@@ -68,28 +67,28 @@ always @(posedge clk_1Hz) begin
       if(second_cnt == 0) begin
 		if (sensor_check == 1) begin
 		    state <= MAIN_YELLOW;
-			second_cnt <= 2;
+			second_cnt <= 1;
 		end else begin
 			state <= MAIN_GREEN_EXTRA;
-			second_cnt <= 3;
+			second_cnt <= 2;
 		end
-      end else if (second_cnt == 6 && side_sensor == 1) begin
+      end else if (second_cnt == 2 && side_sensor == 1) begin
         sensor_check <= 1;
       end 
     end
     MAIN_GREEN_EXTRA: begin
       if(second_cnt == 0) begin
 		state <= MAIN_YELLOW;
-        second_cnt <= 2;
+        second_cnt <= 1;
       end
     end
     MAIN_YELLOW: begin
       if(second_cnt == 0) begin
 		if (walk_request == 1) begin
-          second_cnt <= 3;
+          second_cnt <= 2;
 		  state <= WALK;
 		end else begin
-		  second_cnt <= 6;
+		  second_cnt <= 5;
 		  state <= SIDE_GREEN;
 		end
       end
@@ -97,29 +96,29 @@ always @(posedge clk_1Hz) begin
     SIDE_GREEN: begin
       if(second_cnt <= 0) begin 
         if (side_sensor == 1) begin
-          second_cnt <= 3;
+          second_cnt <= 2;
           state <= SIDE_GREEN_EXTRA;
         end else begin
-          second_cnt <= 2;
+          second_cnt <= 1;
           state <= SIDE_YELLOW;
         end
       end
     end
     SIDE_GREEN_EXTRA: begin
       if(second_cnt <= 0) begin
-        second_cnt <= 2;
+        second_cnt <= 1;
 		state <= SIDE_YELLOW;
       end
     end
     SIDE_YELLOW: begin 
       if(second_cnt <= 0) begin
-        second_cnt <= 9;
+        second_cnt <= 8;
         state <= MAIN_GREEN;
       end
     end
     WALK: begin
       if(second_cnt == 0) begin 
-        second_cnt <= 6;
+        second_cnt <= 5;
         state <= SIDE_GREEN;
       end
     end

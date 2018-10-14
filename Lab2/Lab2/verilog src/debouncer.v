@@ -1,5 +1,3 @@
-`timescale 1ns / 1ps
-
 module debouncer(
 input button,
 input clk,
