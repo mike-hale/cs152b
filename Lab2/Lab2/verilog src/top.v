@@ -27,13 +27,13 @@ reg sensor_check;
 reg [2:0] prev_state;
 wire side_sensor = sw[0];
 
-assign led[0] = (state == MAIN_GREEN) || (state == MAIN_GREEN_EXTRA);
-assign led[1] = (state == MAIN_YELLOW);
-assign led[2] = (state == SIDE_GREEN || state == SIDE_GREEN_EXTRA || state == SIDE_YELLOW || state == WALK);
-assign led[3] = (state == SIDE_GREEN || state == SIDE_GREEN_EXTRA);
-assign led[4] = (state == SIDE_YELLOW);
-assign led[5] = (state == MAIN_GREEN || state == MAIN_GREEN_EXTRA || state == MAIN_YELLOW || state == WALK);
-assign led[6] = (state == WALK);
+assign led[0] = state == MAIN_GREEN || state == MAIN_GREEN_EXTRA;
+assign led[1] = state == MAIN_YELLOW;
+assign led[2] = state != MAIN_GREEN && state != MAIN_GREEN_EXTRA && state != MAIN_YELLOW;
+assign led[3] = state == SIDE_GREEN || state == SIDE_GREEN_EXTRA;
+assign led[4] = state == SIDE_YELLOW;
+assign led[5] = state != SIDE_GREEN && state != SIDE_GREEN_EXTRA && state != SIDE_YELLOW;
+assign led[6] = state == WALK;
 assign led[7] = clk_1Hz;
 
 // Start in the MAIN_GREEN state
@@ -72,8 +72,8 @@ always @(posedge clk_1Hz) begin
 			state <= MAIN_GREEN_EXTRA;
 			second_cnt <= 2;
 		end
-      end else if (second_cnt == 2 && side_sensor == 1) begin
-        sensor_check <= 1;
+      end else if (second_cnt == 2) begin
+        sensor_check <= side_sensor;
       end 
     end
     MAIN_GREEN_EXTRA: begin
