@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.07.0 (MiKTeX 2.9.6630 64-bit)  (format=lualatex 2018.9.25)  14 OCT 2018 18:14
+This is LuaTeX, Version 1.07.0 (MiKTeX 2.9.6630 64-bit)  (format=lualatex 2018.9.25)  14 OCT 2018 18:25
  restricted system commands enabled.
 **lab1_report.tex
 (./lab1_report.tex
@@ -33,7 +33,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.847 seconds
+luaotfload | main : initialization completed in 0.811 seconds
 Babel <3.18> and hyphenation patterns for 1 language(s) loaded.
 ("C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/tex/latex/base/article.cls
 "
@@ -991,7 +991,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 422--425
 
  []
 
-[6<./fig3.jpg><./fig4.jpg><./fig5.jpg>] [7] [8
+
+Underfull \hbox (badness 10000) in paragraph at lines 427--428
+
+ []
+
+<fig6.jpg, id=100, 662.475pt x 86.724pt>
+File: fig6.jpg Graphic file (type jpg)
+<use fig6.jpg>
+Package luatex.def Info: fig6.jpg  used on input line 430.
+(luatex.def)             Requested size: 463.72934pt x 60.70636pt.
+[6<./fig3.jpg><./fig4.jpg><./fig5.jpg><./fig6.jpg>] [7] [8
 Missing character: There is no ; (U+003B) in font nullfont!
 Missing character: There is no ; (U+003B) in font nullfont!
 Missing character: There is no ; (U+003B) in font nullfont!
@@ -1009,22 +1019,22 @@ Missing character: There is no ; (U+003B) in font nullfont!
 Missing character: There is no ; (U+003B) in font nullfont!
 Missing character: There is no ; (U+003B) in font nullfont!
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 547.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 547.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 553.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 553.
  (./lab1_report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 547.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 547.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 547.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 553.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 553.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 553.
 )
 
 Here is how much of LuaTeX's memory you used:
- 27607 strings out of 494447
+ 27615 strings out of 494447
  100000,794899 words of node,token memory allocated
  437 words of node memory still in use:
    5 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 5 attribute, 50 glue_spec, 5 attrib
 ute_list, 1 write nodes
-   avail lists: 2:3342,3:881,4:118,5:1052,6:44,7:4031,8:729,9:1868,10:19,11:218
- 30767 multiletter control sequences out of 65536+200000
+   avail lists: 2:3342,3:881,4:108,5:1052,6:44,7:4031,8:729,9:1868,10:19,11:257
+ 30771 multiletter control sequences out of 65536+200000
  69 fonts using 4427255 bytes
  55i,10n,54p,1497b,995s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Michael/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc
@@ -1039,9 +1049,9 @@ Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Michae
 l/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Users/Mi
 chael/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/User
 s/Michael/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on lab1_report.pdf (8 pages, 499087 bytes).
+Output written on lab1_report.pdf (8 pages, 584973 bytes).
 
-PDF statistics: 229 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 230 PDF objects out of 1000 (max. 8388607)
  101 named destinations out of 1000 (max. 131072)
  144 words of extra memory for PDF output out of 10000 (max. 100000000)
 
