@@ -1,0 +1,6 @@
+13:27:07.660 INFO  - Processing command line option -hwspec C:\Genesys_bsb_design\SDK\SDK_Export\hw\system.xml. 
+13:28:19.458 INFO  - Processing command line option -hwspec C:\Genesys_bsb_design\SDK\SDK_Export\hw\system.xml. 
+13:31:54.609 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Desktop/cs152b/Lab3/SDK/Genesys_bsb_design_hw_platform/download.bit" 
+13:33:04.375 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Desktop/cs152b/Lab3/SDK/Genesys_bsb_design_hw_platform/download.bit" 
+14:04:49.588 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:07:13.717 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
