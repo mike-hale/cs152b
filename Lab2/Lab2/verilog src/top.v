@@ -2,8 +2,7 @@ module top(
   input clk,
   input btn,
   input [7:0] sw,
-  output [7:0] led,
-  output reg [2:0] state
+  output [7:0] led
 );
 
 wire clk_1Hz, clk_32Hz;
@@ -19,7 +18,7 @@ parameter SIDE_GREEN_EXTRA = 4;
 parameter SIDE_YELLOW = 5;
 parameter WALK = 6;
 
-//reg [2:0] state;
+reg [2:0] state;
 
 reg [3:0] second_cnt;
 reg walk_request;

@@ -4,3 +4,46 @@
 13:33:04.375 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Desktop/cs152b/Lab3/SDK/Genesys_bsb_design_hw_platform/download.bit" 
 14:04:49.588 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
 14:07:13.717 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+11:04:02.111 ERROR - Unexpected error while launching program. com.xilinx.sdk.targetmanager.TMException: Could not detect MDM peripheral on hardware. Please check:
+    1. If FPGA is configured correctly
+    2. MDM Core is instantiated in the design
+    3. If the correct FPGA is referred, in case of multiple FPGAs
+    4. If the correct MDM is referred, in case of a multiple MDM system
+    
+
+	at com.xilinx.sdk.targetmanager.internal.TM.connectToProcessor(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+11:04:51.666 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+11:06:41.249 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Desktop/cs152b/Lab3/Lab3/SDK/Genesys_bsb_design_hw_platform/system.bit" 
+11:10:16.493 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:45:54.441 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:51:33.314 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:54:46.138 INFO  - System reset is completed. 
+11:56:21.549 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:56:23.143 INFO  - System reset is completed. 
+11:58:19.055 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:58:21.150 INFO  - System reset is completed. 
+11:59:15.158 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:59:16.653 INFO  - System reset is completed. 
+12:00:12.468 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:00:14.661 INFO  - System reset is completed. 
+12:00:54.170 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:00:55.582 INFO  - System reset is completed. 
+12:02:10.392 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:02:12.691 INFO  - System reset is completed. 
+12:02:54.499 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:02:56.697 INFO  - System reset is completed. 
+12:06:05.014 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:06:07.308 INFO  - System reset is completed. 
+12:06:56.816 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:06:57.911 INFO  - System reset is completed. 
+12:08:29.421 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:08:30.616 INFO  - System reset is completed. 
+12:09:57.427 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:09:59.621 INFO  - System reset is completed. 
+12:14:16.740 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+12:14:16.740 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+`timescale 1s / 1s
 
 module tb();
 
@@ -8,7 +8,7 @@ wire one_hz_clk, walk_light;
 wire [2:0] state;
 
 
-top UUT(clk, walk_btn, {7'b0,side_sensor}, {one_hz_clk,walk_light,side_st_light,main_st_light}, state);
+top UUT(clk, walk_btn, {7'b0,side_sensor}, {one_hz_clk,walk_light,side_st_light,main_st_light});
 
 initial begin
   $display("Initializing Simulation");

@@ -1,4 +1,4 @@
-14:05:46 **** Build of project hello_world_bsp ****
+12:13:40 **** Build of project hello_world_bsp ****
 make -k all 
 libgen -hw ../Genesys_bsb_design_hw_platform/system.xml\
 	       \
@@ -6,7 +6,7 @@ libgen -hw ../Genesys_bsb_design_hw_platform/system.xml\
 	       -log libgen.log \
 	       system.mss
 libgen
-Xilinx EDK 14.6 Build EDK_P.68d
+Xilinx EDK 2013.2 Build EDK_P.68d
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 Command Line: libgen -hw ../Genesys_bsb_design_hw_platform/system.xml -pe
@@ -38,5 +38,5 @@ Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
 Running execs_generate.
 'Finished building libraries'
 
-14:05:56 Build Finished (took 9s.938ms)
+12:13:58 Build Finished (took 17s.757ms)
 

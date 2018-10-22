@@ -33,19 +33,27 @@
 
 #include <stdio.h>
 #include "platform.h"
+#include "xparameters.h"
+#include "xgpio.h"
 
 void print(char *str);
 
 int main()
 {
-	int a;
-    init_platform();
-    print("Please enter a number.\n\r");
-    scanf("%d", &a);
-    //getchar()
-    if(a==1)
+	XGpio led;
+	XGpio_Initialize(&led, XPAR_LEDS_8BIT_DEVICE_ID);
+	XGpio_SetDataDirection(&led, 1, ~0x01);
+	XGpio_DiscreteWrite(&led, 1, 0x00);
+	char str[256] = "";
+	init_platform();
+    print("Enter two numbers: \r\n");
+    scanf("%s", str);
+    print(str);
+    int product = 10;
+    if(product > 100)
     {
-    	print("Hello World!\n");
+  	  XGpio_DiscreteWrite(&led, 1, 0x01);
     }
+    print(product);
     return 0;
 }
