@@ -47,9 +47,30 @@ int main()
 	char str[256] = "";
 	init_platform();
     print("Enter two numbers: \r\n");
-    scanf("%s", str);
-    print(str);
-    int product = 10;
+    
+    char past_delim = 0;
+    int a = 0;
+    int b = 0;
+    while (1) {
+        int c = getchar();
+        if (c >= '0' && c <= '9') {
+            if (past_delim == 0) {
+                a *= 10;
+                a += c - '0';
+            }
+            else {
+                b *= 10;
+                b += c - '0';
+            }
+        }
+        else if (c == ' ') {
+            past_delim = 1;
+        }
+        else if (c == '\n' || c == '\r') {
+            break;
+        }
+    }
+    int product = a*b;
     if(product > 100)
     {
   	  XGpio_DiscreteWrite(&led, 1, 0x01);
