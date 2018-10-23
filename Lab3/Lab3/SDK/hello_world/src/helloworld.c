@@ -46,7 +46,7 @@ int main()
 	XGpio_DiscreteWrite(&led, 1, 0x00);
 	char str[256] = "";
 	init_platform();
-    print("Enter two numbers: \r\n");
+    print("Enter two numbers: ");
     
     char past_delim = 0;
     int a = 0;
@@ -68,6 +68,8 @@ int main()
         }
         else if (c == '\n' || c == '\r') {
             break;
+        } else {
+            print("\r\nEnter two numbers: ");
         }
     }
     int product = a*b;
