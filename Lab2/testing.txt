@@ -1,0 +1,9 @@
+We tested this traffic light finite state machine by creating a series of test cases that simulates each of the states and transitions to other states. State transitions as a result of the side sensor or walk button are also tested for accuracy. Each of the states is displayed in the waveform below, along with a counter for helpful timing testing. 001 is a green light, 010 is a yellow light, and 100 is a red light. The walk button and side sensor go high and their state is recorded to affect the light transitions. 
+
+The state machine follows a looping pattern (described in fsm diagram above) only altered by the walk button or side sensor. This can be seen in how both side and main street lights are red when the walk light is triggered after the walk button. The side sensor also results in a shorter (-3 sec) green for the main street and a longer (+3 sec) green for the side street light.
+
+Testing was mostly done through implementation on the fpga. 7 LED were used to display 2 sets of three lights and the walk light. We also set the remaining LED to blink every second (using a clock divider) in order to count out each state properly and ensure transitions were occurring as expected.
+
+For both simulation and implementation testing we essentially traced through the FSM diagram and checked every transition for accuracy.
+
+
