@@ -41,19 +41,27 @@ void print(char *str);
 int main()
 {
 	XGpio led;
+	XGpio numpad;
 	XGpio_Initialize(&led, XPAR_LEDS_8BIT_DEVICE_ID);
+	XGpio_Initialize(&led, )
 	XGpio_SetDataDirection(&led, 1, ~0x01);
 	XGpio_DiscreteWrite(&led, 1, 0x00);
-	char str[256] = "";
 	init_platform();
     print("Enter two numbers: ");
     
     char past_delim = 0;
     int a = 0;
     int b = 0;
-    while (1) {
-        int c = getchar();
-        if (c >= '0' && c <= '9') {
+    char str[256];
+    gets(str);
+    
+    int i;
+    for (i = 0; ; i++) {
+        char c = str[i];
+        if (c == 0) {
+        	continue;
+        }
+        else if (c >= '0' && c <= '9') {
             if (past_delim == 0) {
                 a *= 10;
                 a += c - '0';
@@ -77,6 +85,6 @@ int main()
     {
   	  XGpio_DiscreteWrite(&led, 1, 0x01);
     }
-    print(product);
+    xil_printf("%d", product);
     return 0;
 }

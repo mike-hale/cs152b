@@ -1779,3 +1779,1245 @@ ELF file	: hello_world.elf
 elfcheck passed.
 'Finished building: hello_world.elf.elfcheck'
 ' '
+10:21:25 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:80:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+../src/helloworld.c:47:7: warning: unused variable 'str' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  14084	   1360	   2156	  17600	   44c0	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck hello_world.elf -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+'Finished building: hello_world.elf.elfcheck'
+' '
+10:22:07 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+10:22:28 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+10:23:46 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+10:26:24 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+10:30:47 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:83:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+../src/helloworld.c:47:7: warning: unused variable 'str' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  14096	   1360	   2152	  17608	   44c8	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck hello_world.elf -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+'Finished building: hello_world.elf.elfcheck'
+' '
+10:32:24 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+10:33:03 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+10:35:30 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+10:43:41 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:55:9: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+../src/helloworld.c:83:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  14080	   1360	   2152	  17592	   44b8	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck hello_world.elf -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+'Finished building: hello_world.elf.elfcheck'
+' '
+10:43:44 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+10:44:14 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:55:9: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'char'
+../src/helloworld.c:83:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  14084	   1360	   2156	  17600	   44c0	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck hello_world.elf -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+'Finished building: hello_world.elf.elfcheck'
+' '
+10:44:17 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+10:46:04 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:55:9: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'char'
+../src/helloworld.c:83:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  14084	   1360	   2156	  17600	   44c0	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck hello_world.elf -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+'Finished building: hello_world.elf.elfcheck'
+' '
+10:46:07 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+10:47:48 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:9: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'char'
+../src/helloworld.c:60:9: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'char'
+../src/helloworld.c:61:9: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'char'
+../src/helloworld.c:89:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  14584	   1360	   2152	  18096	   46b0	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck hello_world.elf -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+'Finished building: hello_world.elf.elfcheck'
+' '
+10:47:51 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+10:48:06 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+10:48:49 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:9: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'char'
+../src/helloworld.c:60:9: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'char'
+../src/helloworld.c:61:9: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'char'
+../src/helloworld.c:89:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  14584	   1360	   2152	  18096	   46b0	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck hello_world.elf -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+'Finished building: hello_world.elf.elfcheck'
+' '
+10:49:08 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:9: error: too many arguments to function 'print'
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: declared here
+../src/helloworld.c:60:9: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'char'
+../src/helloworld.c:61:9: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'char'
+../src/helloworld.c:89:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+make: *** [src/helloworld.o] Error 1
+10:49:15 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:9: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'char'
+../src/helloworld.c:60:9: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'char'
+../src/helloworld.c:61:9: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'char'
+../src/helloworld.c:89:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  14584	   1360	   2152	  18096	   46b0	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck hello_world.elf -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+'Finished building: hello_world.elf.elfcheck'
+' '
+10:49:58 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:88:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  14560	   1360	   2152	  18072	   4698	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck hello_world.elf -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+'Finished building: hello_world.elf.elfcheck'
+' '
+10:50:06 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+10:50:43 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:54:9: warning: implicit declaration of function 'inbyte' [-Wimplicit-function-declaration]
+../src/helloworld.c:88:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4314	    320	   2094	   6728	   1a48	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck hello_world.elf -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+'Finished building: hello_world.elf.elfcheck'
+' '
+10:50:47 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+10:51:49 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:54:9: warning: implicit declaration of function 'inbyte' [-Wimplicit-function-declaration]
+../src/helloworld.c:88:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4322	    320	   2094	   6736	   1a50	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck hello_world.elf -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+'Finished building: hello_world.elf.elfcheck'
+' '
+10:51:54 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+10:53:00 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:54:9: warning: implicit declaration of function 'inbyte' [-Wimplicit-function-declaration]
+../src/helloworld.c:88:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4322	    320	   2094	   6736	   1a50	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck hello_world.elf -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+'Finished building: hello_world.elf.elfcheck'
+' '
+10:53:04 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+10:53:37 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+10:55:11 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:54:9: warning: implicit declaration of function 'inbyte' [-Wimplicit-function-declaration]
+../src/helloworld.c:59:14: warning: unused variable 'd' [-Wunused-variable]
+../src/helloworld.c:88:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4446	    320	   2088	   6854	   1ac6	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck hello_world.elf -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+'Finished building: hello_world.elf.elfcheck'
+' '
+10:55:15 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+10:57:40 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:54:6: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+../src/helloworld.c:54:43: error: 'XPAR_UARTLITE_1_BASEADDR' undeclared (first use in this function)
+../src/helloworld.c:54:43: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:56:15: error: 'c' undeclared (first use in this function)
+../src/helloworld.c:59:14: warning: unused variable 'd' [-Wunused-variable]
+../src/helloworld.c:54:20: warning: unused variable 'inp' [-Wunused-variable]
+../src/helloworld.c:88:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+make: *** [src/helloworld.o] Error 1
+10:58:27 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:54:6: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+../src/helloworld.c:54:50: error: 'XPAR_UARTLITE_1_BASEADDR' undeclared (first use in this function)
+../src/helloworld.c:54:50: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:56:15: error: 'c' undeclared (first use in this function)
+../src/helloworld.c:59:14: warning: unused variable 'd' [-Wunused-variable]
+../src/helloworld.c:54:20: warning: unused variable 'inp' [-Wunused-variable]
+../src/helloworld.c:88:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+make: *** [src/helloworld.o] Error 1
+10:58:49 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:54:6: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+../src/helloworld.c:54:43: error: 'XPAR_UARTLITE_1_BASEADDR' undeclared (first use in this function)
+../src/helloworld.c:54:43: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:56:15: error: 'c' undeclared (first use in this function)
+../src/helloworld.c:59:14: warning: unused variable 'd' [-Wunused-variable]
+../src/helloworld.c:54:20: warning: unused variable 'inp' [-Wunused-variable]
+../src/helloworld.c:88:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+make: *** [src/helloworld.o] Error 1
+11:00:00 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:54:6: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+../src/helloworld.c:56:15: error: 'c' undeclared (first use in this function)
+../src/helloworld.c:56:15: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:59:14: warning: unused variable 'd' [-Wunused-variable]
+../src/helloworld.c:54:20: warning: unused variable 'inp' [-Wunused-variable]
+../src/helloworld.c:88:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+make: *** [src/helloworld.o] Error 1
+11:00:20 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:54:6: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+../src/helloworld.c:83:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3922	    320	   2094	   6336	   18c0	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck hello_world.elf -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+'Finished building: hello_world.elf.elfcheck'
+' '
+11:00:25 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:01:12 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:54:6: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+../src/helloworld.c:83:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3922	    320	   2094	   6336	   18c0	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck hello_world.elf -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+'Finished building: hello_world.elf.elfcheck'
+' '
+11:01:15 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:01:32 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:54:6: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+../src/helloworld.c:83:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3922	    320	   2094	   6336	   18c0	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck hello_world.elf -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+'Finished building: hello_world.elf.elfcheck'
+' '
+11:01:37 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:01:50 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:04:47 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:55:6: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+../src/helloworld.c:84:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13020	   1360	   2156	  16536	   4098	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck hello_world.elf -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+'Finished building: hello_world.elf.elfcheck'
+' '
+11:04:57 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:84:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  14944	   1360	   2152	  18456	   4818	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck hello_world.elf -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+'Finished building: hello_world.elf.elfcheck'
+' '
+11:05:02 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:05:32 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:55:6: warning: implicit declaration of function 'inbyte' [-Wimplicit-function-declaration]
+../src/helloworld.c:84:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12984	   1360	   2152	  16496	   4070	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck hello_world.elf -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+'Finished building: hello_world.elf.elfcheck'
+' '
+11:05:35 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:06:24 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:06:38 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:14:19 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:55:6: warning: implicit declaration of function 'inbyte' [-Wimplicit-function-declaration]
+../src/helloworld.c:84:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3958	    320	   2088	   6366	   18de	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck hello_world.elf -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+'Finished building: hello_world.elf.elfcheck'
+' '
+11:14:22 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:19:30 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:57:6: warning: implicit declaration of function 'inbyte' [-Wimplicit-function-declaration]
+../src/helloworld.c:86:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  14492	   1360	   2156	  18008	   4658	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck hello_world.elf -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+'Finished building: hello_world.elf.elfcheck'
+' '
+11:20:32 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:56:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/helloworld.c:56:5: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/helloworld.c:56:5: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/helloworld.c:56:24: warning: incompatible implicit declaration of built-in function 'strlen' [enabled by default]
+../src/helloworld.c:59:6: warning: implicit declaration of function 'inbyte' [-Wimplicit-function-declaration]
+../src/helloworld.c:88:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+make: *** [src/helloworld.o] Error 1
+11:20:52 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:56:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/helloworld.c:56:5: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/helloworld.c:56:5: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/helloworld.c:56:25: warning: incompatible implicit declaration of built-in function 'strlen' [enabled by default]
+../src/helloworld.c:59:6: warning: implicit declaration of function 'inbyte' [-Wimplicit-function-declaration]
+../src/helloworld.c:88:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+make: *** [src/helloworld.o] Error 1
+11:20:59 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:56:5: error: unknown type name 'inr'
+../src/helloworld.c:57:5: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/helloworld.c:57:21: warning: incompatible implicit declaration of built-in function 'strlen' [enabled by default]
+../src/helloworld.c:60:6: warning: implicit declaration of function 'inbyte' [-Wimplicit-function-declaration]
+../src/helloworld.c:89:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+make: *** [src/helloworld.o] Error 1
+11:21:02 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:57:5: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/helloworld.c:57:21: warning: incompatible implicit declaration of built-in function 'strlen' [enabled by default]
+../src/helloworld.c:60:6: warning: implicit declaration of function 'inbyte' [-Wimplicit-function-declaration]
+../src/helloworld.c:89:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  14680	   1360	   2152	  18192	   4710	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck hello_world.elf -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+'Finished building: hello_world.elf.elfcheck'
+' '
+11:21:18 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:22:10 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:57:5: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/helloworld.c:57:21: warning: incompatible implicit declaration of built-in function 'strlen' [enabled by default]
+../src/helloworld.c:89:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+../src/helloworld.c:51:10: warning: unused variable 'past_delim' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  14416	   1360	   2152	  17928	   4608	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck hello_world.elf -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+'Finished building: hello_world.elf.elfcheck'
+' '
+11:22:13 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:22:35 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:57:5: warning: implicit declaration of function 'stren' [-Wimplicit-function-declaration]
+../src/helloworld.c:58:5: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/helloworld.c:58:21: warning: incompatible implicit declaration of built-in function 'strlen' [enabled by default]
+../src/helloworld.c:90:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+../src/helloworld.c:51:10: warning: unused variable 'past_delim' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+C:\Users\CS152B\Desktop\cs152b\Lab3\Lab3\SDK\hello_world\Debug/../src/helloworld.c:57: undefined reference to `stren'
+collect2: ld returned 1 exit status
+make: *** [hello_world.elf] Error 1
+11:22:39 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:57:5: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/helloworld.c:57:12: warning: incompatible implicit declaration of built-in function 'strlen' [enabled by default]
+../src/helloworld.c:90:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+../src/helloworld.c:51:10: warning: unused variable 'past_delim' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  14452	   1360	   2156	  17968	   4630	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck hello_world.elf -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+'Finished building: hello_world.elf.elfcheck'
+' '
+11:22:43 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:23:28 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:5: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/helloworld.c:58:12: warning: incompatible implicit declaration of built-in function 'strlen' [enabled by default]
+../src/helloworld.c:92:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+../src/helloworld.c:51:10: warning: unused variable 'past_delim' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  14344	   1360	   2152	  17856	   45c0	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck hello_world.elf -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+'Finished building: hello_world.elf.elfcheck'
+' '
+11:23:36 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:32:10 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:57:5: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/helloworld.c:57:12: warning: incompatible implicit declaration of built-in function 'strlen' [enabled by default]
+../src/helloworld.c:59:6: warning: implicit declaration of function 'inbyte' [-Wimplicit-function-declaration]
+../src/helloworld.c:88:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+../src/helloworld.c:56:9: warning: unused variable 'i' [-Wunused-variable]
+../src/helloworld.c:90:1: error: expected declaration or statement at end of input
+make: *** [src/helloworld.o] Error 1
+11:36:25 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:9: error: 'c' undeclared (first use in this function)
+../src/helloworld.c:58:9: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:86:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+make: *** [src/helloworld.o] Error 1
+11:36:33 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:86:5: warning: passing argument 1 of 'print' makes pointer from integer without a cast [enabled by default]
+c:\xilinx\sdk\2013.2\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/include/stdio.h:233:9: note: expected 'char *' but argument is of type 'int'
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  14400	   1360	   2152	  17912	   45f8	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck hello_world.elf -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+'Finished building: hello_world.elf.elfcheck'
+' '
+11:36:38 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:37:10 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hello_world.elf  |tee "hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17228	   1364	   2160	  20752	   5110	hello_world.elf
+'Finished building: hello_world.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck hello_world.elf -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe microblaze_0  |tee "hello_world.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Genesys_bsb_design_hw_platform/system.xml -pe
+microblaze_0 hello_world.elf 
+
+ELF file	: hello_world.elf
+elfcheck passed.
+'Finished building: hello_world.elf.elfcheck'
+' '
+11:37:15 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:37:41 **** Incremental Build of configuration Debug for project hello_world ****
+make all 
+make: Nothing to be done for `all'.
+11:40:05 **** Auto Build of configuration Debug for project hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:46:25: error: expected expression before ')' token
+../src/helloworld.c:44:8: warning: unused variable 'numpad' [-Wunused-variable]
+make: *** [src/helloworld.o] Error 1

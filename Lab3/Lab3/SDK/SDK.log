@@ -47,3 +47,26 @@
 	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
 
 12:14:16.740 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+10:21:34.872 ERROR - Checking FPGA configuration failed..Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+10:22:21.504 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Desktop/cs152b/Lab3/Lab3/SDK/Genesys_bsb_design_hw_platform/system.bit" 
+10:23:47.214 INFO  - System reset is completed. 
+10:26:25.230 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:26:31.892 INFO  - System reset is completed. 
+10:32:25.428 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:33:03.683 INFO  - System reset is completed. 
+10:35:31.397 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:35:32.892 INFO  - System reset is completed. 
+10:43:45.122 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:48:07.230 INFO  - System reset is completed. 
+10:50:06.837 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:01:15.822 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:01:38.371 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:01:50.982 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:01:52.949 INFO  - System reset is completed. 
+11:05:03.007 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:22:14.116 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 

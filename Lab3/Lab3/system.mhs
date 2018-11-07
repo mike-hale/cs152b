@@ -300,3 +300,12 @@ BEGIN proc_sys_reset
  PORT Peripheral_Reset = sys_periph_reset
 END
 
+BEGIN xps_gpio
+ PARAMETER INSTANCE = xps_gpio_0
+ PARAMETER HW_VER = 2.00.a
+ PARAMETER C_BASEADDR = 0xffffffff
+ PARAMETER C_HIGHADDR = 0x00000000
+ PARAMETER C_GPIO_WIDTH = 8
+ PARAMETER C_ALL_INPUTS = 1
+END
+
