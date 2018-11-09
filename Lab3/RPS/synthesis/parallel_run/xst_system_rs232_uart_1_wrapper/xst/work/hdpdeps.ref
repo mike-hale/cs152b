@@ -1,0 +1,9 @@
+V3 6
+FL C:/Users/CS152B/Desktop/cs152b/Lab3/RPS/synthesis/parallel_run/hdl/system_rs232_uart_1_wrapper.vhd 2018/10/29.10:45:36 P.68d
+EN work/system_rs232_uart_1_wrapper 1540835552 \
+      FL C:/Users/CS152B/Desktop/cs152b/Lab3/RPS/synthesis/parallel_run/hdl/system_rs232_uart_1_wrapper.vhd \
+      PB ieee/std_logic_1164 1370735607 LB UNISIM PH unisim/VCOMPONENTS 1370735613 \
+      LB xps_uart16550_v3_00_a
+AR work/system_rs232_uart_1_wrapper/STRUCTURE 1540835553 \
+      FL C:/Users/CS152B/Desktop/cs152b/Lab3/RPS/synthesis/parallel_run/hdl/system_rs232_uart_1_wrapper.vhd \
+      EN work/system_rs232_uart_1_wrapper 1540835552 CP xps_uart16550

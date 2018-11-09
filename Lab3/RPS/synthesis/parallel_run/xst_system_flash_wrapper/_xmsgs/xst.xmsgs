@@ -1,0 +1,1042 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="2096" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd</arg>&quot; line <arg fmt="%d" index="2">912</arg>: Use of null array slice on signal &lt;<arg fmt="%s" index="3">mch_access_control</arg>&gt; is not supported.
+</msg>
+
+<msg type="warning" file="Xst" num="2096" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd</arg>&quot; line <arg fmt="%d" index="2">912</arg>: Use of null array slice on signal &lt;<arg fmt="%s" index="3">mch_access_data</arg>&gt; is not supported.
+</msg>
+
+<msg type="warning" file="Xst" num="2096" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd</arg>&quot; line <arg fmt="%d" index="2">912</arg>: Use of null array slice on signal &lt;<arg fmt="%s" index="3">mch_access_write</arg>&gt; is not supported.
+</msg>
+
+<msg type="warning" file="Xst" num="2096" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd</arg>&quot; line <arg fmt="%d" index="2">912</arg>: Use of null array slice on signal &lt;<arg fmt="%s" index="3">mch_access_full</arg>&gt; is not supported.
+</msg>
+
+<msg type="warning" file="Xst" num="2096" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd</arg>&quot; line <arg fmt="%d" index="2">912</arg>: Use of null array slice on signal &lt;<arg fmt="%s" index="3">mch_readdata_control</arg>&gt; is not supported.
+</msg>
+
+<msg type="warning" file="Xst" num="2096" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd</arg>&quot; line <arg fmt="%d" index="2">912</arg>: Use of null array slice on signal &lt;<arg fmt="%s" index="3">mch_readdata_data</arg>&gt; is not supported.
+</msg>
+
+<msg type="warning" file="Xst" num="2096" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd</arg>&quot; line <arg fmt="%d" index="2">912</arg>: Use of null array slice on signal &lt;<arg fmt="%s" index="3">mch_readdata_read</arg>&gt; is not supported.
+</msg>
+
+<msg type="warning" file="Xst" num="2096" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd</arg>&quot; line <arg fmt="%d" index="2">912</arg>: Use of null array slice on signal &lt;<arg fmt="%s" index="3">mch_readdata_exists</arg>&gt; is not supported.
+</msg>
+
+<msg type="warning" file="Xst" num="37" delta="new" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">SIGIS</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
+</msg>
+
+<msg type="warning" file="Xst" num="37" delta="new" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">SIGIS</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
+</msg>
+
+<msg type="warning" file="Xst" num="37" delta="new" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">SIGIS</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
+</msg>
+
+<msg type="warning" file="Xst" num="37" delta="new" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">SIGIS</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
+</msg>
+
+<msg type="warning" file="Xst" num="37" delta="new" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">SIGIS</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
+</msg>
+
+<msg type="warning" file="Xst" num="37" delta="new" >Detected unknown constraint/property &quot;<arg fmt="%s" index="1">SIGIS</arg>&quot;. This constraint/property is not supported by the current software release and will be ignored.
+</msg>
+
+<msg type="warning" file="Xst" num="2096" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd</arg>&quot; line <arg fmt="%d" index="2">912</arg>: Use of null array slice on signal &lt;<arg fmt="%s" index="3">mch_access_control</arg>&gt; is not supported.
+</msg>
+
+<msg type="warning" file="Xst" num="2096" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd</arg>&quot; line <arg fmt="%d" index="2">912</arg>: Use of null array slice on signal &lt;<arg fmt="%s" index="3">mch_access_data</arg>&gt; is not supported.
+</msg>
+
+<msg type="warning" file="Xst" num="2096" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd</arg>&quot; line <arg fmt="%d" index="2">912</arg>: Use of null array slice on signal &lt;<arg fmt="%s" index="3">mch_access_write</arg>&gt; is not supported.
+</msg>
+
+<msg type="warning" file="Xst" num="2096" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd</arg>&quot; line <arg fmt="%d" index="2">912</arg>: Use of null array slice on signal &lt;<arg fmt="%s" index="3">mch_access_full</arg>&gt; is not supported.
+</msg>
+
+<msg type="warning" file="Xst" num="2096" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd</arg>&quot; line <arg fmt="%d" index="2">912</arg>: Use of null array slice on signal &lt;<arg fmt="%s" index="3">mch_readdata_control</arg>&gt; is not supported.
+</msg>
+
+<msg type="warning" file="Xst" num="2096" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd</arg>&quot; line <arg fmt="%d" index="2">912</arg>: Use of null array slice on signal &lt;<arg fmt="%s" index="3">mch_readdata_data</arg>&gt; is not supported.
+</msg>
+
+<msg type="warning" file="Xst" num="2096" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd</arg>&quot; line <arg fmt="%d" index="2">912</arg>: Use of null array slice on signal &lt;<arg fmt="%s" index="3">mch_readdata_read</arg>&gt; is not supported.
+</msg>
+
+<msg type="warning" file="Xst" num="2096" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd</arg>&quot; line <arg fmt="%d" index="2">912</arg>: Use of null array slice on signal &lt;<arg fmt="%s" index="3">mch_readdata_exists</arg>&gt; is not supported.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd</arg>&quot; line <arg fmt="%d" index="2">912</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">Bus2IP_Clk</arg>&apos; of component &apos;<arg fmt="%s" index="4">mch_plbv46_slave_burst</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd</arg>&quot; line <arg fmt="%d" index="2">912</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">Bus2IP_Reset</arg>&apos; of component &apos;<arg fmt="%s" index="4">mch_plbv46_slave_burst</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd</arg>&quot; line <arg fmt="%d" index="2">912</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">Bus2IP_BurstLength</arg>&apos; of component &apos;<arg fmt="%s" index="4">mch_plbv46_slave_burst</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd</arg>&quot; line <arg fmt="%d" index="2">912</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">Bus2IP_AddrBurstCntLoad</arg>&apos; of component &apos;<arg fmt="%s" index="4">mch_plbv46_slave_burst</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd</arg>&quot; line <arg fmt="%d" index="2">912</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">Bus2IP_WrReq</arg>&apos; of component &apos;<arg fmt="%s" index="4">mch_plbv46_slave_burst</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd</arg>&quot; line <arg fmt="%d" index="2">912</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">Bus2IP_RdReq</arg>&apos; of component &apos;<arg fmt="%s" index="4">mch_plbv46_slave_burst</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="1994" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd</arg>&quot; line <arg fmt="%d" index="2">402</arg>: Null range in type of signal &lt;<arg fmt="%s" index="3">MCH_Access_Control</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1994" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd</arg>&quot; line <arg fmt="%d" index="2">403</arg>: Null range in type of signal &lt;<arg fmt="%s" index="3">MCH_Access_Data</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1994" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd</arg>&quot; line <arg fmt="%d" index="2">405</arg>: Null range in type of signal &lt;<arg fmt="%s" index="3">MCH_Access_Write</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1994" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd</arg>&quot; line <arg fmt="%d" index="2">406</arg>: Null range in type of signal &lt;<arg fmt="%s" index="3">MCH_Access_Full</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1994" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd</arg>&quot; line <arg fmt="%d" index="2">408</arg>: Null range in type of signal &lt;<arg fmt="%s" index="3">MCH_ReadData_Control</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1994" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd</arg>&quot; line <arg fmt="%d" index="2">409</arg>: Null range in type of signal &lt;<arg fmt="%s" index="3">MCH_ReadData_Data</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1994" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd</arg>&quot; line <arg fmt="%d" index="2">411</arg>: Null range in type of signal &lt;<arg fmt="%s" index="3">MCH_ReadData_Read</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1994" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd</arg>&quot; line <arg fmt="%d" index="2">412</arg>: Null range in type of signal &lt;<arg fmt="%s" index="3">MCH_ReadData_Exists</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd</arg>&quot; line <arg fmt="%d" index="2">1039</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">IP2Bus_retry</arg>&apos; of component &apos;<arg fmt="%s" index="4">EMC</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd</arg>&quot; line <arg fmt="%d" index="2">1039</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">IP2Bus_toutSup</arg>&apos; of component &apos;<arg fmt="%s" index="4">EMC</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="1994" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mch_plbv46_slave_burst_v2_01_a/hdl/vhdl/mch_plbv46_slave_burst.vhd</arg>&quot; line <arg fmt="%d" index="2">402</arg>: Null range in type of signal &lt;<arg fmt="%s" index="3">MCH_Access_Control</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1994" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mch_plbv46_slave_burst_v2_01_a/hdl/vhdl/mch_plbv46_slave_burst.vhd</arg>&quot; line <arg fmt="%d" index="2">403</arg>: Null range in type of signal &lt;<arg fmt="%s" index="3">MCH_Access_Data</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1994" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mch_plbv46_slave_burst_v2_01_a/hdl/vhdl/mch_plbv46_slave_burst.vhd</arg>&quot; line <arg fmt="%d" index="2">405</arg>: Null range in type of signal &lt;<arg fmt="%s" index="3">MCH_Access_Write</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1994" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mch_plbv46_slave_burst_v2_01_a/hdl/vhdl/mch_plbv46_slave_burst.vhd</arg>&quot; line <arg fmt="%d" index="2">406</arg>: Null range in type of signal &lt;<arg fmt="%s" index="3">MCH_Access_Full</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1994" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mch_plbv46_slave_burst_v2_01_a/hdl/vhdl/mch_plbv46_slave_burst.vhd</arg>&quot; line <arg fmt="%d" index="2">408</arg>: Null range in type of signal &lt;<arg fmt="%s" index="3">MCH_ReadData_Control</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1994" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mch_plbv46_slave_burst_v2_01_a/hdl/vhdl/mch_plbv46_slave_burst.vhd</arg>&quot; line <arg fmt="%d" index="2">409</arg>: Null range in type of signal &lt;<arg fmt="%s" index="3">MCH_ReadData_Data</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1994" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mch_plbv46_slave_burst_v2_01_a/hdl/vhdl/mch_plbv46_slave_burst.vhd</arg>&quot; line <arg fmt="%d" index="2">411</arg>: Null range in type of signal &lt;<arg fmt="%s" index="3">MCH_ReadData_Read</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1994" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mch_plbv46_slave_burst_v2_01_a/hdl/vhdl/mch_plbv46_slave_burst.vhd</arg>&quot; line <arg fmt="%d" index="2">412</arg>: Null range in type of signal &lt;<arg fmt="%s" index="3">MCH_ReadData_Exists</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1995" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mch_plbv46_slave_burst_v2_01_a/hdl/vhdl/mch_plbv46_slave_burst.vhd</arg>&quot; line <arg fmt="%d" index="2">702</arg>: Use of null array on signal &lt;<arg fmt="%s" index="3">MCH_Access_Full</arg>&gt; is not supported.
+</msg>
+
+<msg type="warning" file="Xst" num="1995" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mch_plbv46_slave_burst_v2_01_a/hdl/vhdl/mch_plbv46_slave_burst.vhd</arg>&quot; line <arg fmt="%d" index="2">703</arg>: Use of null array on signal &lt;<arg fmt="%s" index="3">MCH_ReadData_Control</arg>&gt; is not supported.
+</msg>
+
+<msg type="warning" file="Xst" num="1995" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mch_plbv46_slave_burst_v2_01_a/hdl/vhdl/mch_plbv46_slave_burst.vhd</arg>&quot; line <arg fmt="%d" index="2">704</arg>: Use of null array on signal &lt;<arg fmt="%s" index="3">MCH_ReadData_Data</arg>&gt; is not supported.
+</msg>
+
+<msg type="warning" file="Xst" num="1995" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/mch_plbv46_slave_burst_v2_01_a/hdl/vhdl/mch_plbv46_slave_burst.vhd</arg>&quot; line <arg fmt="%d" index="2">705</arg>: Use of null array on signal &lt;<arg fmt="%s" index="3">MCH_ReadData_Exists</arg>&gt; is not supported.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_burst_v1_01_a/hdl/vhdl/plb_slave_attachment.vhd</arg>&quot; line <arg fmt="%d" index="2">2040</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">Data_Exists</arg>&apos; of component &apos;<arg fmt="%s" index="4">wr_buffer</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_burst_v1_01_a/hdl/vhdl/plb_slave_attachment.vhd</arg>&quot; line <arg fmt="%d" index="2">3380</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">BE_out</arg>&apos; of component &apos;<arg fmt="%s" index="4">addr_reg_cntr_brst_flex</arg>&apos;.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">Sl_SSize</arg>&gt; in unit &lt;<arg fmt="%s" index="2">plb_slave_attachment</arg>&gt; has a constant value of <arg fmt="%s" index="3">00</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_burst_v1_01_a/hdl/vhdl/burst_support.vhd</arg>&quot; line <arg fmt="%d" index="2">260</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">Carry_Out</arg>&apos; of component &apos;<arg fmt="%s" index="4">counter_f</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_burst_v1_01_a/hdl/vhdl/burst_support.vhd</arg>&quot; line <arg fmt="%d" index="2">323</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">Carry_Out</arg>&apos; of component &apos;<arg fmt="%s" index="4">counter_f</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd</arg>&quot; line <arg fmt="%d" index="2">214</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MUXCY_L</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd</arg>&quot; line <arg fmt="%d" index="2">237</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MUXCY_L</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd</arg>&quot; line <arg fmt="%d" index="2">244</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">XORCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd</arg>&quot; line <arg fmt="%d" index="2">250</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">FDRE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd</arg>&quot; line <arg fmt="%d" index="2">237</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MUXCY_L</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd</arg>&quot; line <arg fmt="%d" index="2">244</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">XORCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd</arg>&quot; line <arg fmt="%d" index="2">250</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">FDRE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd</arg>&quot; line <arg fmt="%d" index="2">237</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MUXCY_L</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd</arg>&quot; line <arg fmt="%d" index="2">244</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">XORCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd</arg>&quot; line <arg fmt="%d" index="2">250</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">FDRE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd</arg>&quot; line <arg fmt="%d" index="2">237</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MUXCY_L</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd</arg>&quot; line <arg fmt="%d" index="2">244</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">XORCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd</arg>&quot; line <arg fmt="%d" index="2">250</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">FDRE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd</arg>&quot; line <arg fmt="%d" index="2">237</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MUXCY_L</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd</arg>&quot; line <arg fmt="%d" index="2">244</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">XORCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd</arg>&quot; line <arg fmt="%d" index="2">250</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">FDRE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd</arg>&quot; line <arg fmt="%d" index="2">237</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MUXCY_L</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd</arg>&quot; line <arg fmt="%d" index="2">244</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">XORCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd</arg>&quot; line <arg fmt="%d" index="2">250</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">FDRE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_burst_v1_01_a/hdl/vhdl/addr_reg_cntr_brst_flex.vhd</arg>&quot; line <arg fmt="%d" index="2">628</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">Carry_Out</arg>&apos; of component &apos;<arg fmt="%s" index="4">flex_addr_cntr</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_burst_v1_01_a/hdl/vhdl/addr_reg_cntr_brst_flex.vhd</arg>&quot; line <arg fmt="%d" index="2">628</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">Carry_Out</arg>&apos; of component &apos;<arg fmt="%s" index="4">flex_addr_cntr</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">284</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MULT_AND</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">294</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MUXCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">305</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">XORCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">321</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">FDRE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">284</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MULT_AND</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">294</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MUXCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">305</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">XORCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">321</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">FDRE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">284</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MULT_AND</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">294</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MUXCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">305</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">XORCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">321</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">FDRE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">284</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MULT_AND</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">294</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MUXCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">305</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">XORCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">321</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">FDRE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">284</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MULT_AND</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">294</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MUXCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">305</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">XORCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">321</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">FDRE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">284</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MULT_AND</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">294</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MUXCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">305</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">XORCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">321</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">FDRE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">284</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MULT_AND</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">294</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MUXCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">305</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">XORCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">321</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">FDRE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/emc_common_v4_01_a/hdl/vhdl/mem_state_machine.vhd</arg>&quot; line <arg fmt="%d" index="2">342</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<arg fmt="%s" index="3">&lt;addr_align_rd_d1&gt;, &lt;new_page_d1&gt;</arg>
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">284</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MULT_AND</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">294</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MUXCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">305</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">XORCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">321</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">FDRE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">284</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MULT_AND</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">294</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MUXCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">305</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">XORCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">321</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">FDRE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">284</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MULT_AND</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">294</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MUXCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">305</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">XORCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">331</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">FDSE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">284</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MULT_AND</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">294</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MUXCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">305</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">XORCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">331</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">FDSE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">284</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MULT_AND</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">294</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MUXCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">305</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">XORCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">331</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">FDSE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">284</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MULT_AND</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">294</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MUXCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">305</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">XORCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">331</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">FDSE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">284</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MULT_AND</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">294</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MUXCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">305</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">XORCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">331</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">FDSE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">284</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MULT_AND</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">294</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MUXCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">305</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">XORCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">321</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">FDRE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">284</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MULT_AND</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">294</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MUXCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">305</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">XORCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">321</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">FDRE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">284</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MULT_AND</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">294</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MUXCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">305</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">XORCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">321</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">FDRE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">284</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MULT_AND</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">294</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MUXCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">305</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">XORCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">321</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">FDRE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">284</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MULT_AND</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">294</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">MUXCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">305</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">XORCY</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd</arg>&quot; line <arg fmt="%d" index="2">321</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">FDRE</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/emc_common_v4_01_a/hdl/vhdl/mem_steer.vhd</arg>&quot; line <arg fmt="%d" index="2">1419</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Addr_In</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">sig_addr_bits_A28_A29</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">sig_addr_bit_A29</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">sig_addr_bit_A28</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Addr</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">MSize</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">A&lt;7:31&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">test</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Bus2IP_Clk</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Bus2IP_Mem_CS&lt;0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Bus2IP_RNW</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Bus2IP_Addr</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Bus2IP_Reset</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">page_mode_enable</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">mem_width</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">ADDR_REG_0</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Address_In_Erly</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Address_Valid_Erly</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">addr_out_s_h</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">addr_cy&lt;4&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">alu_cy&lt;6&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">burst_bytes</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">xfer_64</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">be_extended</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">burst_bytes</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">xfer_64</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">be_extended</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Bus2IP_RNW</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Synch_mem</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Two_pipe_delay</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Bus2IP_Mem_CS&lt;0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Addr_align</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">write_data_d2</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">write_data_d1</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">read_data_en_d&lt;4&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">read_data_ce&lt;4:7&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">read_ack_d&lt;3:5&gt;</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">mem_dq_t_cmb&lt;0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">mem_dq_t_cmb&lt;1:3&gt;</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">addr_cnt_d4</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">addr_cnt_d3</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">addr_align_read</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">addr_align_d&lt;2&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">addr_align_d&lt;3:5&gt;</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">cry&lt;0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">cry&lt;0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">cry&lt;0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">cry&lt;0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">WrBuf_wen</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">RNW</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Addr_Cnt_Size_Erly</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">s_h_size&lt;0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">master_64</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">master_32</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">master_128</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">cacheln_4</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Addr_Cnt_Size_Erly</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">s_h_size&lt;0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">master_64</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">master_32</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">master_128</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">cacheln_4</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Burst_length&lt;0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Address_strobe</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Bus2IP_RdReq</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Bus2IP_WrReq</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">Bus2IP_Burst</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">mem_be_int</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">cs_Strobe</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">bus2Mem_CS</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">addr_align</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">Tlz_cnt_en</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">Thz_cnt_en</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PLB_UABus</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">wrreq_out</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">write_cntrl_burst</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">wrbuf_full</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">wr_dphase_active_ns</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">wr_buffer_rst</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">wr_buf_rden_ns</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">wr_buf_rden</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">wr_buf_done_in</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">sl_wrdack_i_dly1</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">sl_wait_ns</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">sl_rddack_ns</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">sl_addrack_ns</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">set_sl_busy_ns</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">rnw_s_h</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">response_ack_dly1</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">plb_wrprim_reg</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">plb_wrdbus_reg</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">plb_wrburst_reg</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">plb_size_sh_reg</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">plb_savalid_reg</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">plb_rdprim_reg</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">plb_buslock_reg</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">msize_i</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">fixed_dbeat_cnt</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">dbeat_cnt</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">control_done_strb</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">control_done_d1</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">bus2ip_wrreq_ns</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">bus2ip_wrburst_ns</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">bus2ip_rdreq_ns</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">brstlength_i</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">addr_cntr_load_d1</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">CS_Early_i</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PLB_wrPrim</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PLB_SAValid</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PLB_wrPendReq</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PLB_wrPendPri</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PLB_rdPendReq</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PLB_rdPendPri</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PLB_busLock</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PLB_reqPri</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PLB_lockErr</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PLB_TAttribute</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PLB_rdPrim</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">PLB_abort</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="1305" delta="new" >Output &lt;<arg fmt="%s" index="1">Bus2IP_RdCE</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1305" delta="new" >Output &lt;<arg fmt="%s" index="1">Bus2IP_WrCE</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">plb2ip_wrreq</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">plb2ip_wrce</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">plb2ip_rnw</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">plb2ip_rdreq</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">plb2ip_rdce</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">plb2ip_data</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">plb2ip_cs</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">plb2ip_ce</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">plb2ip_burstlength</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">plb2ip_burst</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">plb2ip_be</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">plb2ip_addrvalid</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">plb2ip_addr</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">ip2plb_wrack</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">ip2plb_rdack</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">ip2plb_error</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">ip2plb_data</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">ip2plb_addrack</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">ip2plb_ack</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">bus2ip_wrreq_i</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">bus2ip_rdreq_i</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">mch_readdata_read</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">mch_readdata_exists</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">mch_readdata_data</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">mch_readdata_control</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">mch_access_write</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">mch_access_full</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">mch_access_data</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">mch_access_control</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2404" delta="new" > FFs/Latches &lt;<arg fmt="%s" index="1">burstlength_i</arg>&lt;<arg fmt="%d" index="2">0</arg>:<arg fmt="%d" index="3">3</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">plb_slave_attachment</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">mem_adv_ldn_reg</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">io_registers</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">clear_sl_rd_busy</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">plb_slave_attachment</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;sl_rdcomp_i&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">set_sl_busy</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">plb_slave_attachment</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;sl_addrack_i&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">crnt_state_5</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">mem_state_machine</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">new_page_d1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">mem_state_machine</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">addr_cntl_cs_FSM_FFd2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">plb_slave_attachment</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;addr_cycle_flush&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">FLASH/MCH_PLB_IPIF_I/bus2ip_cs_d1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">system_flash_wrapper</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">addr_cnt_rst_reg</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">mem_state_machine</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Data_strobe&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">plb_write_cntl_state_FSM_FFd1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">plb_slave_attachment</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;sl_wrcomp_i&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">plb_write_cntl_state_FSM_FFd1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">plb_slave_attachment</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;sl_wrcomp_i&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">FLASH/EMC_CTRL_I/IO_REGISTERS_I/mem_a_reg_31</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">system_flash_wrapper</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">FLASH/EMC_CTRL_I/MEM_STATE_MACHINE_I/addr_align_rd_d1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">system_flash_wrapper</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">system_flash_wrapper</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">system_flash_wrapper</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="new" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">FLASH/EMC_CTRL_I/MEM_STATE_MACHINE_I/Addr_align_rd</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">system_flash_wrapper</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">FLASH/EMC_CTRL_I/MEM_STATE_MACHINE_I/cs_strobe_reg</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">system_flash_wrapper</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/sa2mirror_rdaddr_i_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">system_flash_wrapper</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/sa2mirror_rdaddr_i_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">system_flash_wrapper</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/sa2mirror_rdaddr_i_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">system_flash_wrapper</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/sa2mirror_rdaddr_i_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">system_flash_wrapper</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/sa2mirror_rdaddr_i_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">system_flash_wrapper</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/sa2mirror_rdaddr_i_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">system_flash_wrapper</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/sa2mirror_rdaddr_i_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">system_flash_wrapper</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/sa2mirror_rdaddr_i_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">system_flash_wrapper</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/sa2mirror_rdaddr_i_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">system_flash_wrapper</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/sa2mirror_rdaddr_i_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">system_flash_wrapper</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/sa2mirror_sh_size_i_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">system_flash_wrapper</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/sa2mirror_sh_size_i_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">system_flash_wrapper</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/bus2ip_rdburst_i</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">system_flash_wrapper</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/bus2ip_wrburst_i</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">system_flash_wrapper</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">FLASH/EMC_CTRL_I/IO_REGISTERS_I/mem_wen_reg</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">system_flash_wrapper</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;FLASH/EMC_CTRL_I/MEM_STEER_I/mem_dqt_t_d&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/GEN_WRITE_BUFFER.GEN_WRBUF_WREN2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">system_flash_wrapper</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/GEN_WRITE_BUFFER.GEN_WRBUF_WREN1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[1].I_SIZE_S_H_REG</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">system_flash_wrapper</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[1].I_SIZE_S_H_REG&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[2].I_SIZE_S_H_REG</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">system_flash_wrapper</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[2].I_SIZE_S_H_REG&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[3].I_SIZE_S_H_REG</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">system_flash_wrapper</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[3].I_SIZE_S_H_REG&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.I_BURST_S_H_REG</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">system_flash_wrapper</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.I_BURST_S_H_REG&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.I_SNGL_S_H_REG</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">system_flash_wrapper</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.I_SNGL_S_H_REG&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.I_CACHLN_S_H_REG</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">system_flash_wrapper</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;FLASH/MCH_PLB_IPIF_I/NO_CHNL_IF_GEN.PLBV46_SLAVE_BURST_I/I_SLAVE_ATTACHMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.I_CACHLN_S_H_REG&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="new" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+</messages>
+

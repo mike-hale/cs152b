@@ -1,0 +1,4 @@
+AR gpio_core imp C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_gpio_v2_00_a/hdl/vhdl/gpio_core.vhd sub00/vhpl01 1540408743
+EN gpio_core NULL C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_gpio_v2_00_a/hdl/vhdl/gpio_core.vhd sub00/vhpl00 1540408742
+EN xps_gpio NULL C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_gpio_v2_00_a/hdl/vhdl/xps_gpio.vhd sub00/vhpl02 1540408744
+AR xps_gpio imp C:/Xilinx/14.6/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/xps_gpio_v2_00_a/hdl/vhdl/xps_gpio.vhd sub00/vhpl03 1540408745

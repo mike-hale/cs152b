@@ -1,4 +1,4 @@
-12:13:40 **** Build of project hello_world_bsp ****
+14:09:19 **** Build of project hello_world_bsp ****
 make -k all 
 libgen -hw ../Genesys_bsb_design_hw_platform/system.xml\
 	       \
@@ -38,5 +38,5 @@ Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
 Running execs_generate.
 'Finished building libraries'
 
-12:13:58 Build Finished (took 17s.757ms)
+14:09:29 Build Finished (took 9s.978ms)
 

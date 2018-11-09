@@ -1,0 +1,77 @@
+13:15:25.453 INFO  - Processing command line option -hwspec C:\Users\CS152B\Desktop\cs152b\Lab3\RPS\SDK\SDK_Export\hw\system.xml. 
+13:20:50.607 INFO  - Processing command line option -hwspec C:\Users\CS152B\Desktop\cs152b\Lab3\RPS\SDK\SDK_Export\hw\system.xml. 
+13:37:48.448 INFO  - Processing command line option -hwspec C:\Users\CS152B\Desktop\cs152b\Lab3\RPS\SDK\SDK_Export\hw\system.xml. 
+13:37:48.635 INFO  - The hardware specification for project 'RPS_hw_platform' is different from C:\Users\CS152B\Desktop\cs152b\Lab3\RPS\SDK\SDK_Export\hw\system.xml. 
+13:37:48.848 INFO  - Copied contents of C:\Users\CS152B\Desktop\cs152b\Lab3\RPS\SDK\SDK_Export\hw\system.xml into \RPS_hw_platform\system.xml. 
+13:37:48.864 INFO  - Copied contents of C:\Users\CS152B\Desktop\cs152b\Lab3\RPS\SDK\SDK_Export\hw\system.bit into \RPS_hw_platform\system.bit. 
+13:37:48.875 INFO  - Copied contents of C:\Users\CS152B\Desktop\cs152b\Lab3\RPS\SDK\SDK_Export\hw\system_bd.bmm into \RPS_hw_platform\system_bd.bmm. 
+13:37:49.965 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+13:37:50.075 INFO  - Clearing existing target manager status. 
+13:37:53.980 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+13:40:55.157 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Desktop/cs152b/Lab3/SDK/RPS_hw_platform/download.bit" 
+13:50:28.629 INFO  - System reset is completed. 
+13:51:24.943 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:52:56.591 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:52:58.758 INFO  - System reset is completed. 
+10:40:13.572 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+10:42:04.489 INFO  - Processing command line option -hwspec C:\Users\CS152B\Desktop\cs152b\Lab3\RPS\SDK\SDK_Export\hw\system.xml. 
+11:10:24.314 INFO  - Processing command line option -hwspec C:\Users\CS152B\Desktop\cs152b\Lab3\RPS\SDK\SDK_Export\hw\system.xml. 
+11:10:29.447 INFO  - Updating .bit and .bmm files from XPS's export folder. 
+11:10:37.399 INFO  - Copied contents of C:\Users\CS152B\Desktop\cs152b\Lab3\RPS\SDK\SDK_Export\hw\system.bit into \RPS_hw_platform\system.bit. 
+11:10:37.399 INFO  - Copied contents of C:\Users\CS152B\Desktop\cs152b\Lab3\RPS\SDK\SDK_Export\hw\system_bd.bmm into \RPS_hw_platform\system_bd.bmm. 
+11:26:31.060 INFO  - Processing command line option -hwspec C:\Users\CS152B\Desktop\cs152b\Lab3\RPS\SDK\SDK_Export\hw\system.xml. 
+11:26:36.134 INFO  - Updating .bit and .bmm files from XPS's export folder. 
+11:37:00.443 INFO  - Processing command line option -hwspec C:\Users\CS152B\Desktop\cs152b\Lab3\RPS\SDK\SDK_Export\hw\system.xml. 
+11:37:01.803 INFO  - The hardware specification for project 'RPS_hw_platform' is different from C:\Users\CS152B\Desktop\cs152b\Lab3\RPS\SDK\SDK_Export\hw\system.xml. 
+11:37:01.834 INFO  - Copied contents of C:\Users\CS152B\Desktop\cs152b\Lab3\RPS\SDK\SDK_Export\hw\system.xml into \RPS_hw_platform\system.xml. 
+11:37:01.850 INFO  - Copied contents of C:\Users\CS152B\Desktop\cs152b\Lab3\RPS\SDK\SDK_Export\hw\system.bit into \RPS_hw_platform\system.bit. 
+11:37:01.881 INFO  - Copied contents of C:\Users\CS152B\Desktop\cs152b\Lab3\RPS\SDK\SDK_Export\hw\system_bd.bmm into \RPS_hw_platform\system_bd.bmm. 
+11:37:03.763 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+11:37:05.825 INFO  - Updating hardware inferred compiler options for rps. 
+11:37:05.840 INFO  - Clearing existing target manager status. 
+11:42:56.914 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Desktop/cs152b/Lab3/SDK/RPS_hw_platform/download.bit" 
+11:43:26.696 INFO  - System reset is completed. 
+12:00:01.445 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:00:26.986 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:01:09.031 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:02:02.376 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:02:22.840 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:02:36.381 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:09:01.082 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:09:38.029 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:10:11.105 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:34:28.052 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Desktop/cs152b/Lab3/SDK/RPS_hw_platform/download.bit" 
+11:01:14.026 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:13:26.769 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:14:07.378 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:15:00.053 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:15:56.104 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:16:53.962 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:17:53.823 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:18:50.669 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:28:00.126 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+11:28:00.126 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+11:48:40.952 INFO  - Processing command line option -hwspec C:\Users\CS152B\Desktop\cs152b\Lab3\RPS\SDK\SDK_Export\hw\system.xml. 
+11:48:59.975 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Desktop/cs152b/Lab3/SDK/RPS_hw_platform/download.bit" 
+11:50:14.227 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:50:46.212 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:51:08.987 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:51:25.463 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:52:08.793 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+11:52:08.809 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+13:12:05.178 INFO  - Processing command line option -hwspec C:\Users\CS152B\Desktop\cs152b\Lab3\RPS\SDK\SDK_Export\hw\system.xml. 
+13:12:25.923 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Desktop/cs152b/Lab3/SDK/RPS_hw_platform/download.bit" 
+13:31:05.490 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+13:31:42.266 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Desktop/cs152b/Lab3/SDK/RPS_hw_platform/download.bit" 
+13:48:55.404 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

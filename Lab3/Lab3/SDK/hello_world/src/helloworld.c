@@ -41,12 +41,11 @@ void print(char *str);
 int main()
 {
 	XGpio led;
-	XGpio numpad;
 	XGpio_Initialize(&led, XPAR_LEDS_8BIT_DEVICE_ID);
-	XGpio_Initialize(&led, )
 	XGpio_SetDataDirection(&led, 1, ~0x01);
 	XGpio_DiscreteWrite(&led, 1, 0x00);
 	init_platform();
+	GOTO:
     print("Enter two numbers: ");
     
     char past_delim = 0;
@@ -84,7 +83,10 @@ int main()
     if(product > 100)
     {
   	  XGpio_DiscreteWrite(&led, 1, 0x01);
+    } else {
+    	XGpio_DiscreteWrite(&led, 1, 0x00);
     }
-    xil_printf("%d", product);
+    xil_printf("%d\n", product);
+    goto GOTO;
     return 0;
 }

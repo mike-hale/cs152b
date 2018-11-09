@@ -1,0 +1,76 @@
+#-----------------------------------------------------------
+# PlanAhead v14.6 (64-bit)
+# Build 269223 by xbuild on Wed Jun  5 11:14:03 MDT 2013
+# Start of session at: Fri Nov 09 12:45:02 2018
+# Process ID: 1624
+# Log file: C:/Users/CS152B/Desktop/cs152b/seven_seg_test/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/CS152B/Desktop/cs152b/seven_seg_test/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/CS152B/Desktop/cs152b/seven_seg_test/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+set_property iostandard LVCMOS25 [get_ports [list {led[7]}]]
+undo
+set_property iostandard LVCMOS25 [get_ports [list {led[6]}]]
+undo
+startgroup
+set_property package_pin AD11 [get_ports {led[7]}]
+endgroup
+startgroup
+set_property package_pin AD9 [get_ports {led[6]}]
+endgroup
+startgroup
+set_property package_pin AM13 [get_ports {led[5]}]
+endgroup
+startgroup
+set_property package_pin AM12 [get_ports {led[4]}]
+endgroup
+startgroup
+set_property package_pin AD10 [get_ports {led[3]}]
+endgroup
+set_property package_pin "" [get_ports [list  {led[2]}]]
+startgroup
+set_property package_pin AD10 [get_ports {led[3]}]
+endgroup
+set_property package_pin "" [get_ports [list  {led[1]}]]
+startgroup
+set_property package_pin AD10 [get_ports {led[3]}]
+endgroup
+set_property package_pin "" [get_ports [list  {led[7]}]]
+set_property package_pin "" [get_ports [list  {led[6]}]]
+set_property package_pin "" [get_ports [list  {led[5]}]]
+startgroup
+set_property package_pin AM1 [get_ports {led[4]}]
+endgroup
+set_property package_pin "" [get_ports [list  {led[5]}]]
+set_property package_pin "" [get_ports [list  {led[4]}]]
+set_property package_pin "" [get_ports [list  {led[3]}]]
+startgroup
+set_property package_pin AD11 [get_ports {led[0]}]
+endgroup
+startgroup
+set_property package_pin AD9 [get_ports {led[1]}]
+endgroup
+startgroup
+set_property package_pin AM13 [get_ports {led[2]}]
+endgroup
+startgroup
+set_property package_pin AM12 [get_ports {led[3]}]
+endgroup
+startgroup
+set_property package_pin AE9 [get_ports {led[4]}]
+endgroup
+startgroup
+set_property package_pin AC8 [get_ports {led[5]}]
+endgroup
+startgroup
+set_property package_pin AB10 [get_ports {led[6]}]
+endgroup
+startgroup
+set_property package_pin AC9 [get_ports {led[7]}]
+endgroup
+set_property package_pin "" [get_ports [list  clk]]
+startgroup
+set_property package_pin AG18 [get_ports clk]
+endgroup
+save_constraints

@@ -1,5 +1,0 @@
-verilog work "Lab2/verilog src/master_clk.v"
-verilog work "Lab2/verilog src/debouncer.v"
-verilog work "Lab2/verilog src/top.v"
-verilog work "Lab2/verilog src/tb.v"
-verilog work "C:/Xilinx/14.6/ISE_DS/ISE//verilog/src/glbl.v"

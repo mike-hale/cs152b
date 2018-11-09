@@ -1,0 +1,2595 @@
+13:39:57 **** Build of project rps_bsp ****
+make -k all 
+libgen -hw ../RPS_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../RPS_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.b  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.b  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+"Compiling common"
+"Compiling lldma"
+"Compiling standalone";
+"Compiling mpmc"
+"Compiling gpio"
+"Compiling bram"
+"Compiling uartlite"
+"Compiling uartns550"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+13:40:16 **** Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2490	    268	   2090	   4848	   12f0	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+13:40:56 **** Auto Build of project rps_bsp ****
+make -k all 
+'Finished building libraries'
+13:44:20 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:41:1: error: unknown type name 'XGpio'
+../src/helloworld.c:42:1: warning: implicit declaration of function 'XGpio_Initialize' [-Wimplicit-function-declaration]
+../src/helloworld.c:42:27: error: 'XPAR_XPS_GPIO_0_DEVICE_ID' undeclared (first use in this function)
+../src/helloworld.c:42:27: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:43:1: warning: implicit declaration of function 'XGpio_SetDataDirection' [-Wimplicit-function-declaration]
+../src/helloworld.c:43:41: error: expected ')' before ';' token
+../src/helloworld.c:86:1: error: expected ';' before '}' token
+../src/helloworld.c:86:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+13:44:53 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:46:22: error: 'led' undeclared (first use in this function)
+../src/helloworld.c:46:22: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] Error 1
+13:46:04 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:46:22: error: 'led' undeclared (first use in this function)
+../src/helloworld.c:46:22: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:53:3: error: 'c' undeclared (first use in this function)
+../src/helloworld.c:55:1: error: expected ';' before 'int'
+../src/helloworld.c:56:4: error: 'product' undeclared (first use in this function)
+../src/helloworld.c:62:1: error: expected declaration or statement at end of input
+../src/helloworld.c:50:6: warning: unused variable 'str' [-Wunused-variable]
+../src/helloworld.c:49:16: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:49:6: warning: unused variable 'player_1' [-Wunused-variable]
+make: *** [src/helloworld.o] Error 1
+13:50:18 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:50:9: warning: variable 'input_num' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:49:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:48:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3202	    336	   2094	   5632	   1600	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+13:50:24 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+13:51:13 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+13:51:21 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:49:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:48:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6122	    340	   2098	   8560	   2170	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+13:51:24 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+13:52:55 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+13:54:40 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:49:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:48:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6122	    340	   2098	   8560	   2170	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+13:55:49 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:49:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:48:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6122	    340	   2098	   8560	   2170	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+13:56:30 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+13:58:38 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:49:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:48:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6282	    340	   2098	   8720	   2210	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+13:58:46 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:49:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:48:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6282	    340	   2098	   8720	   2210	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+13:58:50 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:49:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:48:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6286	    340	   2088	   8714	   220a	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+13:58:53 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+13:59:02 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:49:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:48:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6286	    340	   2088	   8714	   220a	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+13:59:05 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+14:01:06 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:51:8: warning: unused variable 'swit' [-Wunused-variable]
+../src/helloworld.c:49:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:48:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6290	    340	   2098	   8728	   2218	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+14:02:05 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:46:19: error: 'swit' undeclared (first use in this function)
+../src/helloworld.c:46:19: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:53:8: warning: unused variable 'swit' [-Wunused-variable]
+../src/helloworld.c:51:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:50:6: warning: unused variable 'player_1' [-Wunused-variable]
+make: *** [src/helloworld.o] Error 1
+14:02:35 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:48:25: error: 'swit' undeclared (first use in this function)
+../src/helloworld.c:48:25: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:54:8: warning: variable 'swit' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:52:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:51:6: warning: unused variable 'player_1' [-Wunused-variable]
+make: *** [src/helloworld.o] Error 1
+14:03:07 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:48:25: error: 'swit' undeclared (first use in this function)
+../src/helloworld.c:48:25: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:52:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:51:6: warning: unused variable 'player_1' [-Wunused-variable]
+make: *** [src/helloworld.o] Error 1
+14:03:29 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:52:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:51:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6370	    340	   2098	   8808	   2268	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+14:03:41 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+14:05:09 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+14:05:21 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:54:8: warning: variable 'swit' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:52:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:51:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6370	    340	   2098	   8808	   2268	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+14:05:31 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+11:10:37 **** Build of project rps_bsp ****
+make -k all 
+'Finished building libraries'
+11:10:38 **** Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+11:37:02 **** Build of project rps_bsp ****
+make -k all 
+'Finished building libraries'
+11:37:02 **** Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+11:42:15 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:50:1: error: expected ';' before 'init_platform'
+../src/helloworld.c:55:8: warning: variable 'swit' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:53:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:52:6: warning: unused variable 'player_1' [-Wunused-variable]
+make: *** [src/helloworld.o] Error 1
+11:42:32 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:55:8: warning: variable 'swit' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:53:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:52:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6618	    340	   2098	   9056	   2360	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+11:42:39 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+11:42:57 **** Auto Build of project rps_bsp ****
+make -k all 
+libgen -hw ../RPS_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../RPS_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.b  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.b  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+"Compiling common"
+"Compiling lldma"
+"Compiling standalone";
+"Compiling mpmc"
+"Compiling gpio"
+"Compiling bram"
+"Compiling uartlite"
+"Compiling uartns550"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+11:43:14 **** Auto Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+11:43:22 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+11:45:18 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+11:45:33 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:56:8: warning: variable 'swit' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:54:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:53:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6430	    340	   2088	   8858	   229a	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+11:45:38 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+11:45:58 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:56:8: warning: variable 'swit' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:54:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:53:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6430	    340	   2088	   8858	   229a	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+11:46:04 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+11:49:16 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:56:8: warning: variable 'swit' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:54:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:53:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6430	    340	   2088	   8858	   229a	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+11:49:19 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+11:52:51 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:56:8: warning: variable 'swit' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:54:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:53:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6430	    340	   2088	   8858	   229a	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+11:52:57 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+11:54:03 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:56:8: warning: variable 'swit' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:54:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:53:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6430	    340	   2088	   8858	   229a	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+11:54:10 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+11:57:25 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:56:8: warning: variable 'swit' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:54:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:53:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6430	    340	   2088	   8858	   229a	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+11:58:28 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+11:59:40 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+11:59:57 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:56:8: warning: variable 'swit' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:54:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:53:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6430	    340	   2088	   8858	   229a	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+12:00:00 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+12:00:21 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:56:8: warning: variable 'swit' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:54:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:53:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6430	    340	   2088	   8858	   229a	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+12:00:26 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+12:00:41 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:56:8: warning: variable 'swit' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:54:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:53:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6430	    340	   2088	   8858	   229a	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+12:00:52 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:56:8: warning: variable 'swit' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:54:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:53:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6430	    340	   2088	   8858	   229a	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+12:01:08 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+12:01:50 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:56:8: warning: variable 'swit' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:54:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:53:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6430	    340	   2088	   8858	   229a	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+12:01:58 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:56:8: warning: variable 'swit' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:54:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:53:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6430	    340	   2088	   8858	   229a	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+12:02:01 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+12:02:15 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:56:8: warning: variable 'swit' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:54:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:53:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6430	    340	   2088	   8858	   229a	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+12:02:22 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+12:02:32 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:56:8: warning: variable 'swit' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:54:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:53:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6430	    340	   2088	   8858	   229a	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+12:02:35 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+12:06:26 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:3: warning: implicit declaration of function 'check_numpad' [-Wimplicit-function-declaration]
+../src/helloworld.c:56:8: warning: variable 'swit' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:54:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:53:6: warning: unused variable 'player_1' [-Wunused-variable]
+../src/helloworld.c: At top level:
+../src/helloworld.c:67:23: error: expected ';', ',' or ')' before '&' token
+make: *** [src/helloworld.o] Error 1
+12:06:41 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:23: error: expected ';', ',' or ')' before '&' token
+../src/helloworld.c:61:3: warning: implicit declaration of function 'check_numpad' [-Wimplicit-function-declaration]
+../src/helloworld.c:56:8: warning: variable 'swit' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:54:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:53:6: warning: unused variable 'player_1' [-Wunused-variable]
+../src/helloworld.c: At top level:
+../src/helloworld.c:69:23: error: expected ';', ',' or ')' before '&' token
+make: *** [src/helloworld.o] Error 1
+12:07:27 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:56:8: warning: variable 'swit' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:54:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:53:6: warning: unused variable 'player_1' [-Wunused-variable]
+../src/helloworld.c: In function 'check_numpad':
+../src/helloworld.c:74:3: warning: passing argument 1 of 'XGpio_DiscreteWrite' from incompatible pointer type [enabled by default]
+../../rps_bsp/microblaze_0/include/xgpio.h:174:6: note: expected 'struct XGpio *' but argument is of type 'struct XGpio **'
+../src/helloworld.c:74:13: error: void value not ignored as it ought to be
+make: *** [src/helloworld.o] Error 1
+12:08:17 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:56:8: warning: variable 'swit' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:54:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:53:6: warning: unused variable 'player_1' [-Wunused-variable]
+../src/helloworld.c: In function 'check_numpad':
+../src/helloworld.c:74:3: warning: passing argument 1 of 'XGpio_DiscreteWrite' from incompatible pointer type [enabled by default]
+../../rps_bsp/microblaze_0/include/xgpio.h:174:6: note: expected 'struct XGpio *' but argument is of type 'struct XGpio **'
+../src/helloworld.c:75:3: warning: passing argument 1 of 'XGpio_DiscreteRead' from incompatible pointer type [enabled by default]
+../../rps_bsp/microblaze_0/include/xgpio.h:173:5: note: expected 'struct XGpio *' but argument is of type 'struct XGpio **'
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6614	    340	   2088	   9042	   2352	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+12:08:25 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+12:08:49 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:57:8: warning: variable 'swit' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:55:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:54:6: warning: unused variable 'player_1' [-Wunused-variable]
+../src/helloworld.c: In function 'check_numpad':
+../src/helloworld.c:73:3: warning: passing argument 1 of 'XGpio_DiscreteWrite' from incompatible pointer type [enabled by default]
+../../rps_bsp/microblaze_0/include/xgpio.h:174:6: note: expected 'struct XGpio *' but argument is of type 'struct XGpio **'
+../src/helloworld.c:74:3: warning: passing argument 1 of 'XGpio_DiscreteRead' from incompatible pointer type [enabled by default]
+../../rps_bsp/microblaze_0/include/xgpio.h:173:5: note: expected 'struct XGpio *' but argument is of type 'struct XGpio **'
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6614	    340	   2088	   9042	   2352	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+12:09:00 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+12:09:33 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:56:8: warning: variable 'swit' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:54:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:53:6: warning: unused variable 'player_1' [-Wunused-variable]
+../src/helloworld.c: In function 'check_numpad':
+../src/helloworld.c:72:3: warning: passing argument 1 of 'XGpio_DiscreteWrite' from incompatible pointer type [enabled by default]
+../../rps_bsp/microblaze_0/include/xgpio.h:174:6: note: expected 'struct XGpio *' but argument is of type 'struct XGpio **'
+../src/helloworld.c:73:3: warning: passing argument 1 of 'XGpio_DiscreteRead' from incompatible pointer type [enabled by default]
+../../rps_bsp/microblaze_0/include/xgpio.h:173:5: note: expected 'struct XGpio *' but argument is of type 'struct XGpio **'
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6586	    340	   2098	   9024	   2340	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+12:09:37 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+12:10:06 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:56:8: warning: variable 'swit' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:54:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:53:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6578	    340	   2098	   9016	   2338	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+12:10:10 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+12:11:16 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:56:8: warning: variable 'swit' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:54:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:53:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6586	    340	   2098	   9024	   2340	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+12:11:32 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+10:29:42 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:61:8: error: 'input_num' undeclared (first use in this function)
+../src/helloworld.c:61:8: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:55:5: warning: variable 'keypad' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:54:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:53:6: warning: unused variable 'player_1' [-Wunused-variable]
+make: *** [src/helloworld.o] Error 1
+10:33:17 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:62:8: error: 'input_num' undeclared (first use in this function)
+../src/helloworld.c:62:8: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:55:5: warning: variable 'keypad' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:54:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:53:6: warning: unused variable 'player_1' [-Wunused-variable]
+make: *** [src/helloworld.o] Error 1
+10:33:27 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:67:22: error: 'input_num' undeclared (first use in this function)
+../src/helloworld.c:67:22: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:54:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:53:6: warning: unused variable 'player_1' [-Wunused-variable]
+make: *** [src/helloworld.o] Error 1
+10:33:38 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:54:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:53:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17208	   1380	   2156	  20744	   5108	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+10:33:47 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+10:34:09 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:67:2: error: expected ';' before '}' token
+../src/helloworld.c:54:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:53:6: warning: unused variable 'player_1' [-Wunused-variable]
+make: *** [src/helloworld.o] Error 1
+10:34:12 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:54:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:53:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17336	   1380	   2156	  20872	   5188	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+10:34:29 **** Auto Build of project rps_bsp ****
+make -k all 
+'Finished building libraries'
+10:34:57 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+10:56:36 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:68:3: warning: statement with no effect [-Wunused-value]
+../src/helloworld.c:69:2: error: expected ';' before '}' token
+../src/helloworld.c:71:8: warning: unused variable 'keypad_selection' [-Wunused-variable]
+../src/helloworld.c:70:8: warning: unused variable 'serial_selection' [-Wunused-variable]
+../src/helloworld.c:54:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:53:6: warning: unused variable 'player_1' [-Wunused-variable]
+make: *** [src/helloworld.o] Error 1
+11:01:03 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:76:14: error: expected expression before ')' token
+../src/helloworld.c:80:3: error: 'winner' undeclared (first use in this function)
+../src/helloworld.c:80:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:88:8: warning: unused variable 'keypad_selection' [-Wunused-variable]
+../src/helloworld.c:87:8: warning: unused variable 'serial_selection' [-Wunused-variable]
+../src/helloworld.c:63:6: warning: unused variable 'serial_string' [-Wunused-variable]
+../src/helloworld.c:60:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:59:6: warning: unused variable 'player_1' [-Wunused-variable]
+make: *** [src/helloworld.o] Error 1
+11:01:08 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:88:8: warning: unused variable 'keypad_selection' [-Wunused-variable]
+../src/helloworld.c:87:8: warning: unused variable 'serial_selection' [-Wunused-variable]
+../src/helloworld.c:78:6: warning: variable 'winner' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:63:6: warning: unused variable 'serial_string' [-Wunused-variable]
+../src/helloworld.c:60:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:59:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6858	    340	   2098	   9296	   2450	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+11:01:13 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+11:02:11 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:89:8: warning: unused variable 'keypad_selection' [-Wunused-variable]
+../src/helloworld.c:88:8: warning: unused variable 'serial_selection' [-Wunused-variable]
+../src/helloworld.c:79:6: warning: variable 'winner' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:63:6: warning: unused variable 'serial_string' [-Wunused-variable]
+../src/helloworld.c:60:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:59:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6846	    340	   2088	   9274	   243a	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+11:02:14 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+11:03:25 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:91:8: warning: unused variable 'keypad_selection' [-Wunused-variable]
+../src/helloworld.c:90:8: warning: unused variable 'serial_selection' [-Wunused-variable]
+../src/helloworld.c:81:6: warning: variable 'winner' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:65:6: warning: unused variable 'serial_string' [-Wunused-variable]
+../src/helloworld.c:62:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:61:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6846	    340	   2088	   9274	   243a	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+11:04:24 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:98:8: warning: unused variable 'keypad_selection' [-Wunused-variable]
+../src/helloworld.c:97:8: warning: unused variable 'serial_selection' [-Wunused-variable]
+../src/helloworld.c:88:6: warning: variable 'winner' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:65:6: warning: unused variable 'serial_string' [-Wunused-variable]
+../src/helloworld.c:62:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:61:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6906	    340	   2098	   9344	   2480	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+11:09:37 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:86:6: error: 'seral' undeclared (first use in this function)
+../src/helloworld.c:86:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:99:3: error: 'winner' undeclared (first use in this function)
+../src/helloworld.c:62:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:61:6: warning: unused variable 'player_1' [-Wunused-variable]
+make: *** [src/helloworld.o] Error 1
+11:09:48 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:86:6: error: 'seral' undeclared (first use in this function)
+../src/helloworld.c:86:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:62:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:61:6: warning: unused variable 'player_1' [-Wunused-variable]
+make: *** [src/helloworld.o] Error 1
+11:09:59 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:57:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17700	   1380	   2160	  21240	   52f8	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+11:10:09 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+11:13:19 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:57:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17748	   1380	   2160	  21288	   5328	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+11:13:26 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+11:14:03 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:57:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17804	   1380	   2160	  21344	   5360	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+11:14:06 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+11:14:52 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:57:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17800	   1380	   2156	  21336	   5358	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+11:14:59 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+11:15:44 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:57:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17828	   1380	   2160	  21368	   5378	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+11:15:55 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+11:16:25 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:57:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17832	   1380	   2156	  21368	   5378	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+11:16:47 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:57:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17832	   1380	   2156	  21368	   5378	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+11:16:53 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+11:17:42 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:57:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17836	   1380	   2160	  21376	   5380	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+11:17:51 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:57:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17808	   1380	   2156	  21344	   5360	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+11:17:53 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+11:18:47 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:57:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17812	   1380	   2160	  21352	   5368	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+11:18:50 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+11:23:19 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/calculator.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/calculator.d" -MT"src/calculator.d" -o "src/calculator.o" "../src/calculator.c"
+'Finished building: ../src/calculator.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/calculator.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17812	   1380	   2160	  21352	   5368	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+11:23:28 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/calculator.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/calculator.d" -MT"src/calculator.d" -o "src/calculator.o" "../src/calculator.c"
+../src/calculator.c: In function 'main':
+../src/calculator.c:46:25: error: expected expression before ')' token
+../src/calculator.c:44:8: warning: unused variable 'numpad' [-Wunused-variable]
+make: *** [src/calculator.o] Error 1
+11:23:40 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/calculator.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/calculator.d" -MT"src/calculator.d" -o "src/calculator.o" "../src/calculator.c"
+../src/calculator.c: In function 'main':
+../src/calculator.c:44:8: warning: unused variable 'numpad' [-Wunused-variable]
+'Finished building: ../src/calculator.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/calculator.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+C:\Users\CS152B\Desktop\cs152b\Lab3\SDK\rps\Debug/../src/helloworld.c:47: multiple definition of `main'
+./src/calculator.o:C:\Users\CS152B\Desktop\cs152b\Lab3\SDK\rps\Debug/../src/calculator.c:42: first defined here
+collect2: ld returned 1 exit status
+make: *** [rps.elf] Error 1
+11:23:58 **** Clean-only build of configuration Debug for project rps ****
+make clean 
+rm -rf  ./src/calculator.o ./src/helloworld.o ./src/platform.o  ./src/calculator.d ./src/helloworld.d ./src/platform.d  rps.elf.size  rps.elf.elfcheck  rps.elf
+' '
+11:23:58 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:57:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17812	   1380	   2160	  21352	   5368	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+11:49:00 **** Auto Build of project rps_bsp ****
+make -k all 
+'Finished building libraries'
+11:49:05 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+11:50:10 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:57:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17828	   1380	   2160	  21368	   5378	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+11:50:13 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+11:50:42 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:57:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17828	   1380	   2160	  21368	   5378	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+11:50:45 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+11:51:00 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:57:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17828	   1380	   2160	  21368	   5378	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+11:51:03 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:57:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17828	   1380	   2160	  21368	   5378	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+11:51:08 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+11:51:21 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:57:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17828	   1380	   2160	  21368	   5378	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+11:51:24 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+11:51:40 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:57:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17828	   1380	   2160	  21368	   5378	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+11:52:03 **** Auto Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:57:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17828	   1380	   2160	  21368	   5378	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.6 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '
+13:12:26 **** Auto Build of project rps_bsp ****
+make -k all 
+'Finished building libraries'
+13:12:28 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+13:30:42 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+13:31:43 **** Auto Build of project rps_bsp ****
+make -k all 
+'Finished building libraries'
+13:31:46 **** Incremental Build of configuration Debug for project rps ****
+make all 
+make: Nothing to be done for `all'.
+14:08:09 **** Clean-only build of configuration Debug for project rps ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  rps.elf.size  rps.elf.elfcheck  rps.elf
+' '
+14:08:09 **** Clean-only build of project rps_bsp ****
+make -k clean 
+rm -rf microblaze_0
+14:08:12 **** Build of project rps_bsp ****
+make -k all 
+libgen -hw ../RPS_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../RPS_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.b  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.b  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+"Compiling common"
+"Compiling lldma"
+"Compiling standalone";
+"Compiling mpmc"
+"Compiling gpio"
+"Compiling bram"
+"Compiling uartlite"
+"Compiling uartns550"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+14:08:23 **** Build of configuration Debug for project rps ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:6: warning: unused variable 'player_2' [-Wunused-variable]
+../src/helloworld.c:57:6: warning: unused variable 'player_1' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../rps_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: rps.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../rps_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "rps.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: rps.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size rps.elf  |tee "rps.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17828	   1380	   2160	  21368	   5378	rps.elf
+'Finished building: rps.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck rps.elf -hw ../../RPS_hw_platform/system.xml -pe microblaze_0  |tee "rps.elf.elfcheck"
+elfcheck
+Xilinx EDK 2013.2 Build EDK_P.68d
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../RPS_hw_platform/system.xml -pe microblaze_0
+rps.elf 
+
+ELF file	: rps.elf
+elfcheck passed.
+'Finished building: rps.elf.elfcheck'
+' '

@@ -13,16 +13,16 @@
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="LED" key="selection"/>
+		<item value="XPAR_GPIO" key="selection"/>
 		<list key="findhistory">
+			<item value="switch"/>
+			<item value="XPAR"/>
+			<item value="XPAR_GPIO"/>
+			<item value="pmod"/>
+			<item value="J1"/>
+			<item value="JA"/>
+			<item value="J"/>
 			<item value="led"/>
-			<item value="add"/>
-			<item value="leds"/>
-			<item value="gpio"/>
-			<item value="tri"/>
-			<item value="xgpio"/>
-			<item value="xgio"/>
-			<item value="xpio"/>
 		</list>
 		<list key="replacehistory">
 		</list>

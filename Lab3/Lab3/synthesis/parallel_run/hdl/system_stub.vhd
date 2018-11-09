@@ -37,7 +37,8 @@ entity system_stub is
     fpga_0_RS232_Uart_1_sin_pin : in std_logic;
     fpga_0_RS232_Uart_1_sout_pin : out std_logic;
     fpga_0_clk_1_sys_clk_pin : in std_logic;
-    fpga_0_rst_1_sys_rst_pin : in std_logic
+    fpga_0_rst_1_sys_rst_pin : in std_logic;
+    xps_gpio_0_GPIO_IO_pin : inout std_logic_vector(0 to 7)
   );
 end system_stub;
 
@@ -73,7 +74,8 @@ architecture STRUCTURE of system_stub is
       fpga_0_RS232_Uart_1_sin_pin : in std_logic;
       fpga_0_RS232_Uart_1_sout_pin : out std_logic;
       fpga_0_clk_1_sys_clk_pin : in std_logic;
-      fpga_0_rst_1_sys_rst_pin : in std_logic
+      fpga_0_rst_1_sys_rst_pin : in std_logic;
+      xps_gpio_0_GPIO_IO_pin : inout std_logic_vector(0 to 7)
     );
   end component;
 
@@ -112,7 +114,8 @@ begin
       fpga_0_RS232_Uart_1_sin_pin => fpga_0_RS232_Uart_1_sin_pin,
       fpga_0_RS232_Uart_1_sout_pin => fpga_0_RS232_Uart_1_sout_pin,
       fpga_0_clk_1_sys_clk_pin => fpga_0_clk_1_sys_clk_pin,
-      fpga_0_rst_1_sys_rst_pin => fpga_0_rst_1_sys_rst_pin
+      fpga_0_rst_1_sys_rst_pin => fpga_0_rst_1_sys_rst_pin,
+      xps_gpio_0_GPIO_IO_pin => xps_gpio_0_GPIO_IO_pin
     );
 
 end architecture STRUCTURE;

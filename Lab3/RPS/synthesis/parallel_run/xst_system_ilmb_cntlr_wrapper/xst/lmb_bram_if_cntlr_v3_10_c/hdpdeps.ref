@@ -1,0 +1,106 @@
+V3 65
+FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/axi_interface.vhd 2013/06/03.20:49:35 P.68d
+EN lmb_bram_if_cntlr_v3_10_c/axi_interface 1540835204 \
+      FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/axi_interface.vhd \
+      PB ieee/std_logic_1164 1370735607
+AR lmb_bram_if_cntlr_v3_10_c/axi_interface/IMP 1540835205 \
+      FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/axi_interface.vhd \
+      EN lmb_bram_if_cntlr_v3_10_c/axi_interface 1540835204 LB unisim \
+      PH unisim/VCOMPONENTS 1370735613 CP FDRE
+FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/checkbit_handler.vhd 2013/06/03.20:49:35 P.68d
+EN lmb_bram_if_cntlr_v3_10_c/checkbit_handler 1540835198 \
+      FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/checkbit_handler.vhd \
+      PB ieee/std_logic_1164 1370735607
+AR lmb_bram_if_cntlr_v3_10_c/checkbit_handler/IMP 1540835199 \
+      FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/checkbit_handler.vhd \
+      EN lmb_bram_if_cntlr_v3_10_c/checkbit_handler 1540835198 LB unisim \
+      PH unisim/VCOMPONENTS 1370735613 LB lmb_bram_if_cntlr_v3_10_c \
+      CP std_logic_vector CP XOR18 CP Parity CP std_logic CP ParityEnable CP MUXF7
+FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/correct_one_bit.vhd 2013/06/03.20:49:35 P.68d
+EN lmb_bram_if_cntlr_v3_10_c/Correct_One_Bit 1540835200 \
+      FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/correct_one_bit.vhd \
+      PB ieee/std_logic_1164 1370735607 LB unisim PH unisim/VCOMPONENTS 1370735613
+AR lmb_bram_if_cntlr_v3_10_c/Correct_One_Bit/IMP 1540835201 \
+      FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/correct_one_bit.vhd \
+      EN lmb_bram_if_cntlr_v3_10_c/Correct_One_Bit 1540835200 CP MUXCY_L CP XORCY
+FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/lmb_bram_if_cntlr.vhd 2013/06/03.20:49:35 P.68d
+EN lmb_bram_if_cntlr_v3_10_c/lmb_bram_if_cntlr 1540835208 \
+      FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/lmb_bram_if_cntlr.vhd \
+      PB ieee/std_logic_1164 1370735607 PB ieee/NUMERIC_STD 1370735611 \
+      LB lmb_bram_if_cntlr_v3_10_c
+AR lmb_bram_if_cntlr_v3_10_c/lmb_bram_if_cntlr/imp 1540835209 \
+      FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/lmb_bram_if_cntlr.vhd \
+      EN lmb_bram_if_cntlr_v3_10_c/lmb_bram_if_cntlr 1540835208 LB unisim \
+      PH unisim/VCOMPONENTS 1370735613 LB lmb_bram_if_cntlr_v3_10_c CP lmb_mux \
+      CP integer CP std_logic CP natural CP std_logic_vector \
+      CP correct_data_table_type CP bool_array CP checkbit_handler \
+      CP Correct_One_Bit CP plb_interface CP axi_interface \
+      PB lmb_bram_if_cntlr_v3_10_c/lmb_bram_if_funcs 1540835207
+FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/lmb_bram_if_funcs.vhd 2013/06/03.20:49:35 P.68d
+PH lmb_bram_if_cntlr_v3_10_c/lmb_bram_if_funcs 1540835206 \
+      FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/lmb_bram_if_funcs.vhd \
+      PB ieee/std_logic_1164 1370735607
+PB lmb_bram_if_cntlr_v3_10_c/lmb_bram_if_funcs 1540835207 \
+      FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/lmb_bram_if_funcs.vhd \
+      PH lmb_bram_if_cntlr_v3_10_c/lmb_bram_if_funcs 1540835206 \
+      PB ieee/std_logic_1164 1370735607 PB ieee/NUMERIC_STD 1370735611
+FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/lmb_mux.vhd 2013/06/03.20:49:35 P.68d
+EN lmb_bram_if_cntlr_v3_10_c/lmb_mux 1540835196 \
+      FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/lmb_mux.vhd \
+      PB ieee/std_logic_1164 1370735607 PB ieee/std_logic_arith 1370735608 \
+      PB ieee/STD_LOGIC_UNSIGNED 1370735609
+AR lmb_bram_if_cntlr_v3_10_c/lmb_mux/imp 1540835197 \
+      FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/lmb_mux.vhd \
+      EN lmb_bram_if_cntlr_v3_10_c/lmb_mux 1540835196 CP pselect_mask \
+      CP C_MASK_Vec_T CP ABus_vec_T CP DBus_vec_T CP std_logic_vector CP BE_vec_T \
+      CP natural
+FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/parity.vhd 2013/06/03.20:49:35 P.68d
+EN lmb_bram_if_cntlr_v3_10_c/Parity 1540835190 \
+      FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/parity.vhd \
+      PB ieee/std_logic_1164 1370735607
+AR lmb_bram_if_cntlr_v3_10_c/Parity/IMP 1540835191 \
+      FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/parity.vhd \
+      EN lmb_bram_if_cntlr_v3_10_c/Parity 1540835190 LB unisim \
+      PH unisim/VCOMPONENTS 1370735613 CP std_logic_vector CP LUT6 CP std_logic \
+      CP MUXF7 CP MUXF8
+FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/parityenable.vhd 2013/06/03.20:49:35 P.68d
+EN lmb_bram_if_cntlr_v3_10_c/ParityEnable 1540835192 \
+      FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/parityenable.vhd \
+      PB ieee/std_logic_1164 1370735607
+AR lmb_bram_if_cntlr_v3_10_c/ParityEnable/IMP 1540835193 \
+      FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/parityenable.vhd \
+      EN lmb_bram_if_cntlr_v3_10_c/ParityEnable 1540835192 LB unisim \
+      PH unisim/VCOMPONENTS 1370735613 CP std_logic_vector CP LUT6
+FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/plb_interface.vhd 2013/06/03.20:49:35 P.68d
+EN lmb_bram_if_cntlr_v3_10_c/plb_interface 1540835202 \
+      FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/plb_interface.vhd \
+      PB ieee/std_logic_1164 1370735607 PB ieee/NUMERIC_STD 1370735611 \
+      LB lmb_bram_if_cntlr_v3_10_c
+AR lmb_bram_if_cntlr_v3_10_c/plb_interface/IMP 1540835203 \
+      FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/plb_interface.vhd \
+      EN lmb_bram_if_cntlr_v3_10_c/plb_interface 1540835202 LB unisim \
+      PH unisim/VCOMPONENTS 1370735613 CP pselect CP FDRE
+FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/pselect.vhd 2013/06/03.20:49:35 P.68d
+EN lmb_bram_if_cntlr_v3_10_c/pselect 1540835186 \
+      FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/pselect.vhd \
+      PB ieee/std_logic_1164 1370735607 PB ieee/std_logic_arith 1370735608 \
+      PB ieee/STD_LOGIC_UNSIGNED 1370735609 LB unisim
+AR lmb_bram_if_cntlr_v3_10_c/pselect/imp 1540835187 \
+      FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/pselect.vhd \
+      EN lmb_bram_if_cntlr_v3_10_c/pselect 1540835186 CP std_logic_vector CP MUXCY
+FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/pselect_mask.vhd 2013/06/03.20:49:35 P.68d
+EN lmb_bram_if_cntlr_v3_10_c/pselect_mask 1540835194 \
+      FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/pselect_mask.vhd \
+      PB ieee/std_logic_1164 1370735607 PB ieee/std_logic_arith 1370735608 \
+      PB ieee/STD_LOGIC_UNSIGNED 1370735609 LB unisim
+AR lmb_bram_if_cntlr_v3_10_c/pselect_mask/imp 1540835195 \
+      FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/pselect_mask.vhd \
+      EN lmb_bram_if_cntlr_v3_10_c/pselect_mask 1540835194 LB unisim
+FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/xor18.vhd 2013/06/03.20:49:35 P.68d
+EN lmb_bram_if_cntlr_v3_10_c/XOR18 1540835188 \
+      FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/xor18.vhd \
+      PB ieee/std_logic_1164 1370735607 LB unisim PH unisim/VCOMPONENTS 1370735613
+AR lmb_bram_if_cntlr_v3_10_c/XOR18/IMP 1540835189 \
+      FL $XILINX/hw/XilinxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/hdl/vhdl/xor18.vhd \
+      EN lmb_bram_if_cntlr_v3_10_c/XOR18 1540835188 CP std_logic CP LUT6 CP MUXCY_L \
+      CP XORCY

@@ -1,0 +1,81 @@
+Release 14.6 Map P.68d (nt64)
+Xilinx Map Application Log File for Design 'system'
+
+Design Information
+------------------
+Command Line   : map -o system_map.ncd -w -pr b -ol high -timing -detail
+system.ngd system.pcf 
+Target Device  : xc5vlx50t
+Target Package : ff1136
+Target Speed   : -1
+Mapper Version : virtex5 -- $Revision: 1.55 $
+Mapped Date    : Fri Oct 26 12:47:41 2018
+
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+INFO:Security:54 - 'xc5vlx50t' is a WebPack part.
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
+----------------------------------------------------------------------
+ERROR:LIT:600 - IOBUFDS symbol
+   "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/g
+   en_dqs[0].u_iob_dqs/gen_dqs_iob_ddr2.u_iobuf_dqs" (output
+   signal=DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_
+   io_0/gen_dqs[0].u_iob_dqs/dqs_ibuf) does not have IOSTANDARD specified. Map
+   is unable to generate a default IOSTANDARD for IOBUFDS, one has to be
+   explicitly provided.
+ERROR:LIT:600 - IOBUFDS symbol
+   "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/g
+   en_dqs[1].u_iob_dqs/gen_dqs_iob_ddr2.u_iobuf_dqs" (output
+   signal=DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_
+   io_0/gen_dqs[1].u_iob_dqs/dqs_ibuf) does not have IOSTANDARD specified. Map
+   is unable to generate a default IOSTANDARD for IOBUFDS, one has to be
+   explicitly provided.
+ERROR:LIT:600 - IOBUFDS symbol
+   "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/g
+   en_dqs[2].u_iob_dqs/gen_dqs_iob_ddr2.u_iobuf_dqs" (output
+   signal=DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_
+   io_0/gen_dqs[2].u_iob_dqs/dqs_ibuf) does not have IOSTANDARD specified. Map
+   is unable to generate a default IOSTANDARD for IOBUFDS, one has to be
+   explicitly provided.
+ERROR:LIT:600 - IOBUFDS symbol
+   "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/g
+   en_dqs[3].u_iob_dqs/gen_dqs_iob_ddr2.u_iobuf_dqs" (output
+   signal=DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_
+   io_0/gen_dqs[3].u_iob_dqs/dqs_ibuf) does not have IOSTANDARD specified. Map
+   is unable to generate a default IOSTANDARD for IOBUFDS, one has to be
+   explicitly provided.
+ERROR:LIT:600 - IOBUFDS symbol
+   "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/g
+   en_dqs[4].u_iob_dqs/gen_dqs_iob_ddr2.u_iobuf_dqs" (output
+   signal=DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_
+   io_0/gen_dqs[4].u_iob_dqs/dqs_ibuf) does not have IOSTANDARD specified. Map
+   is unable to generate a default IOSTANDARD for IOBUFDS, one has to be
+   explicitly provided.
+ERROR:LIT:600 - IOBUFDS symbol
+   "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/g
+   en_dqs[5].u_iob_dqs/gen_dqs_iob_ddr2.u_iobuf_dqs" (output
+   signal=DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_
+   io_0/gen_dqs[5].u_iob_dqs/dqs_ibuf) does not have IOSTANDARD specified. Map
+   is unable to generate a default IOSTANDARD for IOBUFDS, one has to be
+   explicitly provided.
+ERROR:LIT:600 - IOBUFDS symbol
+   "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/g
+   en_dqs[6].u_iob_dqs/gen_dqs_iob_ddr2.u_iobuf_dqs" (output
+   signal=DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_
+   io_0/gen_dqs[6].u_iob_dqs/dqs_ibuf) does not have IOSTANDARD specified. Map
+   is unable to generate a default IOSTANDARD for IOBUFDS, one has to be
+   explicitly provided.
+ERROR:LIT:600 - IOBUFDS symbol
+   "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/g
+   en_dqs[7].u_iob_dqs/gen_dqs_iob_ddr2.u_iobuf_dqs" (output
+   signal=DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_
+   io_0/gen_dqs[7].u_iob_dqs/dqs_ibuf) does not have IOSTANDARD specified. Map
+   is unable to generate a default IOSTANDARD for IOBUFDS, one has to be
+   explicitly provided.
+Errors found during logical drc. 
+
+Design Summary
+--------------
+Number of errors   :   8
+Number of warnings :   0

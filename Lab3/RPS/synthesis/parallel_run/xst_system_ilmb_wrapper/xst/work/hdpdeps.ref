@@ -1,0 +1,9 @@
+V3 6
+FL C:/Users/CS152B/Desktop/cs152b/Lab3/RPS/synthesis/parallel_run/hdl/system_ilmb_wrapper.vhd 2018/10/29.10:45:36 P.68d
+EN work/system_ilmb_wrapper 1540835166 \
+      FL C:/Users/CS152B/Desktop/cs152b/Lab3/RPS/synthesis/parallel_run/hdl/system_ilmb_wrapper.vhd \
+      PB ieee/std_logic_1164 1370735607 LB UNISIM PH unisim/VCOMPONENTS 1370735613 \
+      LB lmb_v10_v2_00_b
+AR work/system_ilmb_wrapper/STRUCTURE 1540835167 \
+      FL C:/Users/CS152B/Desktop/cs152b/Lab3/RPS/synthesis/parallel_run/hdl/system_ilmb_wrapper.vhd \
+      EN work/system_ilmb_wrapper 1540835166 CP lmb_v10

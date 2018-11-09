@@ -1,0 +1,16 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "led[0]" LOC = AL11;
+NET "led[1]" LOC = AJ10;
+NET "led[2]" LOC = AK9;
+NET "led[3]" LOC = AF9;
+NET "led[4]" LOC = AN14;
+NET "led[5]" LOC = AN13;
+NET "led[6]" LOC = AP12;
+NET "digit[0]" LOC = J19;
+NET "digit[1]" LOC = L18;
+NET "digit[2]" LOC = K18;
+NET "digit[3]" LOC = H18;
+NET "cat" LOC = AL10;
+NET "clk" LOC = AG18;

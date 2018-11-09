@@ -1,0 +1,9 @@
+V3 6
+FL C:/Users/CS152B/Desktop/cs152b/Lab3/Lab3/synthesis/parallel_run/hdl/system_dip_switches_8bit_wrapper.vhd 2018/10/24.12:15:31 P.68d
+EN work/system_dip_switches_8bit_wrapper 1540408762 \
+      FL C:/Users/CS152B/Desktop/cs152b/Lab3/Lab3/synthesis/parallel_run/hdl/system_dip_switches_8bit_wrapper.vhd \
+      PB ieee/std_logic_1164 1370735607 LB UNISIM PH unisim/VCOMPONENTS 1370735613 \
+      LB xps_gpio_v2_00_a
+AR work/system_dip_switches_8bit_wrapper/STRUCTURE 1540408763 \
+      FL C:/Users/CS152B/Desktop/cs152b/Lab3/Lab3/synthesis/parallel_run/hdl/system_dip_switches_8bit_wrapper.vhd \
+      EN work/system_dip_switches_8bit_wrapper 1540408762 CP xps_gpio

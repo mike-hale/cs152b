@@ -1,0 +1,9 @@
+V3 6
+FL C:/Users/CS152B/Desktop/cs152b/Lab3/Lab3/synthesis/parallel_run/hdl/system_dlmb_cntlr_wrapper.vhd 2018/10/24.12:15:31 P.68d
+EN work/system_dlmb_cntlr_wrapper 1540408595 \
+      FL C:/Users/CS152B/Desktop/cs152b/Lab3/Lab3/synthesis/parallel_run/hdl/system_dlmb_cntlr_wrapper.vhd \
+      PB ieee/std_logic_1164 1370735607 LB UNISIM PH unisim/VCOMPONENTS 1370735613 \
+      LB lmb_bram_if_cntlr_v3_10_c
+AR work/system_dlmb_cntlr_wrapper/STRUCTURE 1540408596 \
+      FL C:/Users/CS152B/Desktop/cs152b/Lab3/Lab3/synthesis/parallel_run/hdl/system_dlmb_cntlr_wrapper.vhd \
+      EN work/system_dlmb_cntlr_wrapper 1540408595 CP lmb_bram_if_cntlr

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<item value="C:\Users\CS152B\Desktop\cs152b\Lab3\Lab3\SDK\Genesys_bsb_design_hw_platform\system.bit" key="Genesys_bsb_design_hw_platform-bitFile"/>
-	<item value="" key="Genesys_bsb_design_hw_platform-bmmFile"/>
+	<item value="C:\Users\CS152B\Desktop\cs152b\Lab3\Lab3\SDK\Genesys_bsb_design_hw_platform\system_bd.bmm" key="Genesys_bsb_design_hw_platform-bmmFile"/>
 	<item value="bootloop" key="Genesys_bsb_design_hw_platform-microblaze_0-initElf"/>
 </section>

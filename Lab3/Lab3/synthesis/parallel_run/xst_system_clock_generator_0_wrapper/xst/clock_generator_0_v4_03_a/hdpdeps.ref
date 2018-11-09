@@ -1,0 +1,10 @@
+V3 7
+FL C:/Users/CS152B/Desktop/cs152b/Lab3/Lab3/hdl/elaborate/clock_generator_0_v4_03_a/hdl/vhdl/clock_generator.vhd 2018/10/26.12:43:07 P.68d
+EN clock_generator_0_v4_03_a/clock_generator 1540583003 \
+      FL C:/Users/CS152B/Desktop/cs152b/Lab3/Lab3/hdl/elaborate/clock_generator_0_v4_03_a/hdl/vhdl/clock_generator.vhd \
+      PB ieee/std_logic_1164 1370735607 PB ieee/NUMERIC_STD 1370735611 LB Unisim \
+      PH unisim/VCOMPONENTS 1370735613 LB clock_generator_v4_03_a
+AR clock_generator_0_v4_03_a/clock_generator/STRUCTURE 1540583004 \
+      FL C:/Users/CS152B/Desktop/cs152b/Lab3/Lab3/hdl/elaborate/clock_generator_0_v4_03_a/hdl/vhdl/clock_generator.vhd \
+      EN clock_generator_0_v4_03_a/clock_generator 1540583003 CP pll_module \
+      CP BUFG

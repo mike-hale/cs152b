@@ -50,10 +50,10 @@ entity system_xps_gpio_0_wrapper is
     Sl_rdDAck : out std_logic;
     Sl_rdComp : out std_logic;
     Sl_rdBTerm : out std_logic;
-    Sl_MBusy : out std_logic_vector(0 to 0);
-    Sl_MWrErr : out std_logic_vector(0 to 0);
-    Sl_MRdErr : out std_logic_vector(0 to 0);
-    Sl_MIRQ : out std_logic_vector(0 to 0);
+    Sl_MBusy : out std_logic_vector(0 to 1);
+    Sl_MWrErr : out std_logic_vector(0 to 1);
+    Sl_MRdErr : out std_logic_vector(0 to 1);
+    Sl_MIRQ : out std_logic_vector(0 to 1);
     IP2INTC_Irpt : out std_logic;
     GPIO_IO_I : in std_logic_vector(0 to 7);
     GPIO_IO_O : out std_logic_vector(0 to 7);
@@ -156,7 +156,7 @@ begin
       C_SPLB_DWIDTH => 32,
       C_SPLB_P2P => 0,
       C_SPLB_MID_WIDTH => 1,
-      C_SPLB_NUM_MASTERS => 1,
+      C_SPLB_NUM_MASTERS => 2,
       C_SPLB_NATIVE_DWIDTH => 32,
       C_SPLB_SUPPORT_BURSTS => 0,
       C_FAMILY => "virtex5",

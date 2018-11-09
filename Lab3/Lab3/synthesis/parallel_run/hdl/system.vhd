@@ -37,7 +37,8 @@ entity system is
     fpga_0_RS232_Uart_1_sin_pin : in std_logic;
     fpga_0_RS232_Uart_1_sout_pin : out std_logic;
     fpga_0_clk_1_sys_clk_pin : in std_logic;
-    fpga_0_rst_1_sys_rst_pin : in std_logic
+    fpga_0_rst_1_sys_rst_pin : in std_logic;
+    xps_gpio_0_GPIO_IO_pin : inout std_logic_vector(0 to 7)
   );
 end system;
 
@@ -693,7 +694,7 @@ architecture STRUCTURE of system is
       PLB_Clk : in std_logic;
       SYS_Rst : in std_logic;
       PLB_Rst : out std_logic;
-      SPLB_Rst : out std_logic_vector(0 to 6);
+      SPLB_Rst : out std_logic_vector(0 to 7);
       MPLB_Rst : out std_logic_vector(0 to 1);
       PLB_dcrAck : out std_logic;
       PLB_dcrDBus : out std_logic_vector(0 to 31);
@@ -717,22 +718,22 @@ architecture STRUCTURE of system is
       M_type : in std_logic_vector(0 to 5);
       M_wrBurst : in std_logic_vector(0 to 1);
       M_wrDBus : in std_logic_vector(0 to 63);
-      Sl_addrAck : in std_logic_vector(0 to 6);
-      Sl_MRdErr : in std_logic_vector(0 to 13);
-      Sl_MWrErr : in std_logic_vector(0 to 13);
-      Sl_MBusy : in std_logic_vector(0 to 13);
-      Sl_rdBTerm : in std_logic_vector(0 to 6);
-      Sl_rdComp : in std_logic_vector(0 to 6);
-      Sl_rdDAck : in std_logic_vector(0 to 6);
-      Sl_rdDBus : in std_logic_vector(0 to 223);
-      Sl_rdWdAddr : in std_logic_vector(0 to 27);
-      Sl_rearbitrate : in std_logic_vector(0 to 6);
-      Sl_SSize : in std_logic_vector(0 to 13);
-      Sl_wait : in std_logic_vector(0 to 6);
-      Sl_wrBTerm : in std_logic_vector(0 to 6);
-      Sl_wrComp : in std_logic_vector(0 to 6);
-      Sl_wrDAck : in std_logic_vector(0 to 6);
-      Sl_MIRQ : in std_logic_vector(0 to 13);
+      Sl_addrAck : in std_logic_vector(0 to 7);
+      Sl_MRdErr : in std_logic_vector(0 to 15);
+      Sl_MWrErr : in std_logic_vector(0 to 15);
+      Sl_MBusy : in std_logic_vector(0 to 15);
+      Sl_rdBTerm : in std_logic_vector(0 to 7);
+      Sl_rdComp : in std_logic_vector(0 to 7);
+      Sl_rdDAck : in std_logic_vector(0 to 7);
+      Sl_rdDBus : in std_logic_vector(0 to 255);
+      Sl_rdWdAddr : in std_logic_vector(0 to 31);
+      Sl_rearbitrate : in std_logic_vector(0 to 7);
+      Sl_SSize : in std_logic_vector(0 to 15);
+      Sl_wait : in std_logic_vector(0 to 7);
+      Sl_wrBTerm : in std_logic_vector(0 to 7);
+      Sl_wrComp : in std_logic_vector(0 to 7);
+      Sl_wrDAck : in std_logic_vector(0 to 7);
+      Sl_MIRQ : in std_logic_vector(0 to 15);
       PLB_MIRQ : out std_logic_vector(0 to 1);
       PLB_ABus : out std_logic_vector(0 to 31);
       PLB_UABus : out std_logic_vector(0 to 31);
@@ -764,13 +765,13 @@ architecture STRUCTURE of system is
       PLB_rdPendReq : out std_logic;
       PLB_wrPendReq : out std_logic;
       PLB_rdBurst : out std_logic;
-      PLB_rdPrim : out std_logic_vector(0 to 6);
+      PLB_rdPrim : out std_logic_vector(0 to 7);
       PLB_reqPri : out std_logic_vector(0 to 1);
       PLB_size : out std_logic_vector(0 to 3);
       PLB_type : out std_logic_vector(0 to 2);
       PLB_wrBurst : out std_logic;
       PLB_wrDBus : out std_logic_vector(0 to 31);
-      PLB_wrPrim : out std_logic_vector(0 to 6);
+      PLB_wrPrim : out std_logic_vector(0 to 7);
       PLB_SaddrAck : out std_logic;
       PLB_SMRdErr : out std_logic_vector(0 to 1);
       PLB_SMWrErr : out std_logic_vector(0 to 1);
@@ -3726,10 +3727,10 @@ architecture STRUCTURE of system is
       Sl_rdDAck : out std_logic;
       Sl_rdComp : out std_logic;
       Sl_rdBTerm : out std_logic;
-      Sl_MBusy : out std_logic_vector(0 to 0);
-      Sl_MWrErr : out std_logic_vector(0 to 0);
-      Sl_MRdErr : out std_logic_vector(0 to 0);
-      Sl_MIRQ : out std_logic_vector(0 to 0);
+      Sl_MBusy : out std_logic_vector(0 to 1);
+      Sl_MWrErr : out std_logic_vector(0 to 1);
+      Sl_MRdErr : out std_logic_vector(0 to 1);
+      Sl_MIRQ : out std_logic_vector(0 to 1);
       IP2INTC_Irpt : out std_logic;
       GPIO_IO_I : in std_logic_vector(0 to 7);
       GPIO_IO_O : out std_logic_vector(0 to 7);
@@ -3875,7 +3876,7 @@ architecture STRUCTURE of system is
   signal mb_plb_PLB_rdBurst : std_logic;
   signal mb_plb_PLB_rdPendPri : std_logic_vector(0 to 1);
   signal mb_plb_PLB_rdPendReq : std_logic;
-  signal mb_plb_PLB_rdPrim : std_logic_vector(0 to 6);
+  signal mb_plb_PLB_rdPrim : std_logic_vector(0 to 7);
   signal mb_plb_PLB_reqPri : std_logic_vector(0 to 1);
   signal mb_plb_PLB_size : std_logic_vector(0 to 3);
   signal mb_plb_PLB_type : std_logic_vector(0 to 2);
@@ -3883,24 +3884,24 @@ architecture STRUCTURE of system is
   signal mb_plb_PLB_wrDBus : std_logic_vector(0 to 31);
   signal mb_plb_PLB_wrPendPri : std_logic_vector(0 to 1);
   signal mb_plb_PLB_wrPendReq : std_logic;
-  signal mb_plb_PLB_wrPrim : std_logic_vector(0 to 6);
-  signal mb_plb_SPLB_Rst : std_logic_vector(0 to 6);
-  signal mb_plb_Sl_MBusy : std_logic_vector(0 to 13);
-  signal mb_plb_Sl_MIRQ : std_logic_vector(0 to 13);
-  signal mb_plb_Sl_MRdErr : std_logic_vector(0 to 13);
-  signal mb_plb_Sl_MWrErr : std_logic_vector(0 to 13);
-  signal mb_plb_Sl_SSize : std_logic_vector(0 to 13);
-  signal mb_plb_Sl_addrAck : std_logic_vector(0 to 6);
-  signal mb_plb_Sl_rdBTerm : std_logic_vector(0 to 6);
-  signal mb_plb_Sl_rdComp : std_logic_vector(0 to 6);
-  signal mb_plb_Sl_rdDAck : std_logic_vector(0 to 6);
-  signal mb_plb_Sl_rdDBus : std_logic_vector(0 to 223);
-  signal mb_plb_Sl_rdWdAddr : std_logic_vector(0 to 27);
-  signal mb_plb_Sl_rearbitrate : std_logic_vector(0 to 6);
-  signal mb_plb_Sl_wait : std_logic_vector(0 to 6);
-  signal mb_plb_Sl_wrBTerm : std_logic_vector(0 to 6);
-  signal mb_plb_Sl_wrComp : std_logic_vector(0 to 6);
-  signal mb_plb_Sl_wrDAck : std_logic_vector(0 to 6);
+  signal mb_plb_PLB_wrPrim : std_logic_vector(0 to 7);
+  signal mb_plb_SPLB_Rst : std_logic_vector(0 to 7);
+  signal mb_plb_Sl_MBusy : std_logic_vector(0 to 15);
+  signal mb_plb_Sl_MIRQ : std_logic_vector(0 to 15);
+  signal mb_plb_Sl_MRdErr : std_logic_vector(0 to 15);
+  signal mb_plb_Sl_MWrErr : std_logic_vector(0 to 15);
+  signal mb_plb_Sl_SSize : std_logic_vector(0 to 15);
+  signal mb_plb_Sl_addrAck : std_logic_vector(0 to 7);
+  signal mb_plb_Sl_rdBTerm : std_logic_vector(0 to 7);
+  signal mb_plb_Sl_rdComp : std_logic_vector(0 to 7);
+  signal mb_plb_Sl_rdDAck : std_logic_vector(0 to 7);
+  signal mb_plb_Sl_rdDBus : std_logic_vector(0 to 255);
+  signal mb_plb_Sl_rdWdAddr : std_logic_vector(0 to 31);
+  signal mb_plb_Sl_rearbitrate : std_logic_vector(0 to 7);
+  signal mb_plb_Sl_wait : std_logic_vector(0 to 7);
+  signal mb_plb_Sl_wrBTerm : std_logic_vector(0 to 7);
+  signal mb_plb_Sl_wrComp : std_logic_vector(0 to 7);
+  signal mb_plb_Sl_wrDAck : std_logic_vector(0 to 7);
   signal mb_reset : std_logic;
   signal microblaze_0_DXCL_FSL_M_Clk : std_logic;
   signal microblaze_0_DXCL_FSL_M_Control : std_logic;
@@ -3955,6 +3956,9 @@ architecture STRUCTURE of system is
   signal sys_bus_reset : std_logic_vector(0 to 0);
   signal sys_periph_reset : std_logic_vector(0 to 0);
   signal sys_rst_s : std_logic;
+  signal xps_gpio_0_GPIO_IO_I : std_logic_vector(0 to 7);
+  signal xps_gpio_0_GPIO_IO_O : std_logic_vector(0 to 7);
+  signal xps_gpio_0_GPIO_IO_T : std_logic_vector(0 to 7);
 
   attribute BOX_TYPE : STRING;
   attribute BOX_TYPE of system_microblaze_0_wrapper : component is "user_black_box";
@@ -7634,52 +7638,52 @@ begin
 
   xps_gpio_0 : system_xps_gpio_0_wrapper
     port map (
-      SPLB_Clk => net_gnd0,
-      SPLB_Rst => net_gnd0,
-      PLB_ABus => net_gnd32,
-      PLB_UABus => net_gnd32,
-      PLB_PAValid => net_gnd0,
-      PLB_SAValid => net_gnd0,
-      PLB_rdPrim => net_gnd0,
-      PLB_wrPrim => net_gnd0,
-      PLB_masterID => net_gnd1(0 downto 0),
-      PLB_abort => net_gnd0,
-      PLB_busLock => net_gnd0,
-      PLB_RNW => net_gnd0,
-      PLB_BE => net_gnd4,
-      PLB_MSize => net_gnd2,
-      PLB_size => net_gnd4,
-      PLB_type => net_gnd3(2 downto 0),
-      PLB_lockErr => net_gnd0,
-      PLB_wrDBus => net_gnd32,
-      PLB_wrBurst => net_gnd0,
-      PLB_rdBurst => net_gnd0,
-      PLB_wrPendReq => net_gnd0,
-      PLB_rdPendReq => net_gnd0,
-      PLB_wrPendPri => net_gnd2,
-      PLB_rdPendPri => net_gnd2,
-      PLB_reqPri => net_gnd2,
-      PLB_TAttribute => net_gnd16,
-      Sl_addrAck => open,
-      Sl_SSize => open,
-      Sl_wait => open,
-      Sl_rearbitrate => open,
-      Sl_wrDAck => open,
-      Sl_wrComp => open,
-      Sl_wrBTerm => open,
-      Sl_rdDBus => open,
-      Sl_rdWdAddr => open,
-      Sl_rdDAck => open,
-      Sl_rdComp => open,
-      Sl_rdBTerm => open,
-      Sl_MBusy => open,
-      Sl_MWrErr => open,
-      Sl_MRdErr => open,
-      Sl_MIRQ => open,
+      SPLB_Clk => clk_125_0000MHzPLL0,
+      SPLB_Rst => mb_plb_SPLB_Rst(7),
+      PLB_ABus => mb_plb_PLB_ABus,
+      PLB_UABus => mb_plb_PLB_UABus,
+      PLB_PAValid => mb_plb_PLB_PAValid,
+      PLB_SAValid => mb_plb_PLB_SAValid,
+      PLB_rdPrim => mb_plb_PLB_rdPrim(7),
+      PLB_wrPrim => mb_plb_PLB_wrPrim(7),
+      PLB_masterID => mb_plb_PLB_masterID(0 to 0),
+      PLB_abort => mb_plb_PLB_abort,
+      PLB_busLock => mb_plb_PLB_busLock,
+      PLB_RNW => mb_plb_PLB_RNW,
+      PLB_BE => mb_plb_PLB_BE,
+      PLB_MSize => mb_plb_PLB_MSize,
+      PLB_size => mb_plb_PLB_size,
+      PLB_type => mb_plb_PLB_type,
+      PLB_lockErr => mb_plb_PLB_lockErr,
+      PLB_wrDBus => mb_plb_PLB_wrDBus,
+      PLB_wrBurst => mb_plb_PLB_wrBurst,
+      PLB_rdBurst => mb_plb_PLB_rdBurst,
+      PLB_wrPendReq => mb_plb_PLB_wrPendReq,
+      PLB_rdPendReq => mb_plb_PLB_rdPendReq,
+      PLB_wrPendPri => mb_plb_PLB_wrPendPri,
+      PLB_rdPendPri => mb_plb_PLB_rdPendPri,
+      PLB_reqPri => mb_plb_PLB_reqPri,
+      PLB_TAttribute => mb_plb_PLB_TAttribute,
+      Sl_addrAck => mb_plb_Sl_addrAck(7),
+      Sl_SSize => mb_plb_Sl_SSize(14 to 15),
+      Sl_wait => mb_plb_Sl_wait(7),
+      Sl_rearbitrate => mb_plb_Sl_rearbitrate(7),
+      Sl_wrDAck => mb_plb_Sl_wrDAck(7),
+      Sl_wrComp => mb_plb_Sl_wrComp(7),
+      Sl_wrBTerm => mb_plb_Sl_wrBTerm(7),
+      Sl_rdDBus => mb_plb_Sl_rdDBus(224 to 255),
+      Sl_rdWdAddr => mb_plb_Sl_rdWdAddr(28 to 31),
+      Sl_rdDAck => mb_plb_Sl_rdDAck(7),
+      Sl_rdComp => mb_plb_Sl_rdComp(7),
+      Sl_rdBTerm => mb_plb_Sl_rdBTerm(7),
+      Sl_MBusy => mb_plb_Sl_MBusy(14 to 15),
+      Sl_MWrErr => mb_plb_Sl_MWrErr(14 to 15),
+      Sl_MRdErr => mb_plb_Sl_MRdErr(14 to 15),
+      Sl_MIRQ => mb_plb_Sl_MIRQ(14 to 15),
       IP2INTC_Irpt => open,
-      GPIO_IO_I => net_gnd8,
-      GPIO_IO_O => open,
-      GPIO_IO_T => open,
+      GPIO_IO_I => xps_gpio_0_GPIO_IO_I,
+      GPIO_IO_O => xps_gpio_0_GPIO_IO_O,
+      GPIO_IO_T => xps_gpio_0_GPIO_IO_T,
       GPIO2_IO_I => net_gnd32,
       GPIO2_IO_O => open,
       GPIO2_IO_T => open
@@ -7995,6 +7999,70 @@ begin
       IO => fpga_0_FLASH_Mem_DQ_pin(15),
       O => fpga_0_FLASH_Mem_DQ_pin_I(15),
       T => fpga_0_FLASH_Mem_DQ_pin_T(15)
+    );
+
+  iobuf_39 : IOBUF
+    port map (
+      I => xps_gpio_0_GPIO_IO_O(0),
+      IO => xps_gpio_0_GPIO_IO_pin(0),
+      O => xps_gpio_0_GPIO_IO_I(0),
+      T => xps_gpio_0_GPIO_IO_T(0)
+    );
+
+  iobuf_40 : IOBUF
+    port map (
+      I => xps_gpio_0_GPIO_IO_O(1),
+      IO => xps_gpio_0_GPIO_IO_pin(1),
+      O => xps_gpio_0_GPIO_IO_I(1),
+      T => xps_gpio_0_GPIO_IO_T(1)
+    );
+
+  iobuf_41 : IOBUF
+    port map (
+      I => xps_gpio_0_GPIO_IO_O(2),
+      IO => xps_gpio_0_GPIO_IO_pin(2),
+      O => xps_gpio_0_GPIO_IO_I(2),
+      T => xps_gpio_0_GPIO_IO_T(2)
+    );
+
+  iobuf_42 : IOBUF
+    port map (
+      I => xps_gpio_0_GPIO_IO_O(3),
+      IO => xps_gpio_0_GPIO_IO_pin(3),
+      O => xps_gpio_0_GPIO_IO_I(3),
+      T => xps_gpio_0_GPIO_IO_T(3)
+    );
+
+  iobuf_43 : IOBUF
+    port map (
+      I => xps_gpio_0_GPIO_IO_O(4),
+      IO => xps_gpio_0_GPIO_IO_pin(4),
+      O => xps_gpio_0_GPIO_IO_I(4),
+      T => xps_gpio_0_GPIO_IO_T(4)
+    );
+
+  iobuf_44 : IOBUF
+    port map (
+      I => xps_gpio_0_GPIO_IO_O(5),
+      IO => xps_gpio_0_GPIO_IO_pin(5),
+      O => xps_gpio_0_GPIO_IO_I(5),
+      T => xps_gpio_0_GPIO_IO_T(5)
+    );
+
+  iobuf_45 : IOBUF
+    port map (
+      I => xps_gpio_0_GPIO_IO_O(6),
+      IO => xps_gpio_0_GPIO_IO_pin(6),
+      O => xps_gpio_0_GPIO_IO_I(6),
+      T => xps_gpio_0_GPIO_IO_T(6)
+    );
+
+  iobuf_46 : IOBUF
+    port map (
+      I => xps_gpio_0_GPIO_IO_O(7),
+      IO => xps_gpio_0_GPIO_IO_pin(7),
+      O => xps_gpio_0_GPIO_IO_I(7),
+      T => xps_gpio_0_GPIO_IO_T(7)
     );
 
 end architecture STRUCTURE;

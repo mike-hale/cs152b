@@ -1,0 +1,17 @@
+V3 9
+FL $XILINX/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd 2013/06/03.20:49:56 P.68d
+EN xps_mch_emc_v3_01_a/xps_mch_emc 1540835429 \
+      FL $XILINX/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd \
+      PB ieee/std_logic_1164 1370735607 PB ieee/std_logic_arith 1370735608 \
+      PB ieee/STD_LOGIC_SIGNED 1370735609 PB ieee/std_logic_misc 1370735608 \
+      PB ieee/STD_LOGIC_UNSIGNED 1370735609 LB unisim LB proc_common_v3_00_a \
+      LB mch_plbv46_slave_burst_v2_01_a LB emc_common_v4_01_a \
+      PB proc_common_v3_00_a/proc_common_pkg 1540835259 \
+      PB proc_common_v3_00_a/family 1540835285 PB proc_common_v3_00_a/ipif_pkg 1540835302 \
+      EN mch_plbv46_slave_burst_v2_01_a/mch_plbv46_slave_burst 1540835425 \
+      EN emc_common_v4_01_a/EMC 1540835427
+AR xps_mch_emc_v3_01_a/xps_mch_emc/implementation 1540835430 \
+      FL $XILINX/hw/XilinxProcessorIPLib/pcores/xps_mch_emc_v3_01_a/hdl/vhdl/xps_mch_emc.vhd \
+      EN xps_mch_emc_v3_01_a/xps_mch_emc 1540835429 \
+      CP mch_plbv46_slave_burst_v2_01_a/mch_plbv46_slave_burst \
+      CP emc_common_v4_01_a/emc

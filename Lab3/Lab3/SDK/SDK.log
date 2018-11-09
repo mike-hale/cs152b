@@ -70,3 +70,52 @@
 11:01:52.949 INFO  - System reset is completed. 
 11:05:03.007 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
 11:22:14.116 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:36:38.684 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:41:41.421 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+11:28:13.430 INFO  - Processing command line option -hwspec C:\Users\CS152B\Desktop\cs152b\Lab3\RPS\SDK\SDK_Export\hw\system.xml. 
+11:28:15.104 INFO  - The hardware specification for project 'Genesys_bsb_design_hw_platform' is different from C:\Users\CS152B\Desktop\cs152b\Lab3\RPS\SDK\SDK_Export\hw\system.xml. 
+11:28:15.135 INFO  - Copied contents of C:\Users\CS152B\Desktop\cs152b\Lab3\RPS\SDK\SDK_Export\hw\system.xml into \Genesys_bsb_design_hw_platform\system.xml. 
+11:28:15.415 INFO  - Copied contents of C:\Users\CS152B\Desktop\cs152b\Lab3\RPS\SDK\SDK_Export\hw\system.bit into \Genesys_bsb_design_hw_platform\system.bit. 
+11:28:16.108 INFO  - Copied contents of C:\Users\CS152B\Desktop\cs152b\Lab3\RPS\SDK\SDK_Export\hw\system_bd.bmm into \Genesys_bsb_design_hw_platform\system_bd.bmm. 
+11:28:17.411 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+11:28:18.501 INFO  - Updating MSS for Board Support Package Project: hello_world_bsp.
+		 The following new driver assignments were made:
+			Peripheral Instance: xps_gpio_0, driver: gpio_v3_01_a.
+ 
+11:28:19.357 INFO  - Updating hardware inferred compiler options for hello_world. 
+11:28:19.388 INFO  - Clearing existing target manager status. 
+11:29:16.080 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Desktop/cs152b/Lab3/Lab3/SDK/Genesys_bsb_design_hw_platform/system.bit" 
+11:31:59.756 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:33:07.625 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:33:22.182 WARN  - Terminating existing sessions on processor microblaze_0 
+11:33:26.883 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Desktop/cs152b/Lab3/Lab3/SDK/Genesys_bsb_design_hw_platform/system.bit" 
+11:37:38.250 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:39:04.660 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:39:06.394 INFO  - System reset is completed. 
+11:40:38.153 INFO  - FPGA Cable Disconnected. All active launches will be terminated. 
+11:40:38.163 WARN  - Terminating existing sessions on processor microblaze_0 
+11:41:07.835 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Desktop/cs152b/Lab3/Lab3/SDK/Genesys_bsb_design_hw_platform/system.bit" 
+11:41:46.915 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:42:05.665 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:42:20.230 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:42:37.856 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:43:01.778 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:43:25.074 INFO  - System reset is completed. 
+11:44:45.617 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:48:04.711 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:48:35.319 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+11:48:35.319 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+11:52:14.462 INFO  - Processing command line option -hwspec C:\Users\CS152B\Desktop\cs152b\Lab3\RPS\SDK\SDK_Export\hw\system.xml. 
+11:52:34.670 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Desktop/cs152b/Lab3/Lab3/SDK/Genesys_bsb_design_hw_platform/download.bit" 
+11:53:37.405 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:54:22.017 INFO  - microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+12:13:53.866 INFO  - FPGA Cable Disconnected. All active launches will be terminated. 
+12:35:19.616 INFO  - FPGA configured successfully with bitstream "C:/Users/CS152B/Desktop/cs152b/Lab3/Lab3/SDK/Genesys_bsb_design_hw_platform/download.bit" 
+13:10:31.899 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+13:10:31.899 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

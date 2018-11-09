@@ -5,10 +5,13 @@ WARNING:EDK:3605 - Use of the repository located at
    paths that apply to all the projects.
 WARNING:EDK:4107 - IPNAME: xps_gpio, INSTANCE: xps_gpio_0 - base address
    C_BASEADDR (0xffffffff) is greater than high address C_HIGHADDR (0x00000000)
-   - C:\Users\CS152B\Desktop\cs152b\Lab3\Lab3\system.mhs line 306 
+   - C:\Users\CS152B\Desktop\cs152b\Lab3\Lab3\system.mhs line 307 
 WARNING:EDK:4107 - IPNAME: xps_gpio, INSTANCE: xps_gpio_0 - base address
    C_BASEADDR (0xffffffff) is greater than high address C_HIGHADDR (0x00000000)
-   - C:\Users\CS152B\Desktop\cs152b\Lab3\Lab3\system.mhs line 306 
+   - C:\Users\CS152B\Desktop\cs152b\Lab3\Lab3\system.mhs line 307 
+WARNING:EDK:3967 - xps_gpio (xps_gpio_0) - ADDRESS specified by PARAMETER
+   C_BASEADDR is ignored - C:\Users\CS152B\Desktop\cs152b\Lab3\Lab3\system.mhs
+   line 304 
 WARNING:EDK -  ****************************************************************
 WARNING:EDK -  **             MicroBlaze - microblaze_0
 WARNING:EDK -  ****************************************************************
@@ -21,11 +24,9 @@ WARNING:EDK -  ****************************************************************
 WARNING:EDK -  ** Suboptimal use of D-cache Block RAM. Please increase the 
 WARNING:EDK -  ** cache size to 4096 bytes to fully utilize Block RAM.
 WARNING:EDK -  ****************************************************************
-WARNING:EDK:2137 - Peripheral xps_gpio_0 is not accessible from any processor in
-   the system. Check Bus Interface connections and address parameters. 
 
 Checking platform configuration ...
-IPNAME: plb_v46, INSTANCE: mb_plb - 2 master(s) : 7 slave(s) 
+IPNAME: plb_v46, INSTANCE: mb_plb - 2 master(s) : 8 slave(s) 
 IPNAME: lmb_v10, INSTANCE: ilmb - 1 master(s) : 1 slave(s) 
 IPNAME: lmb_v10, INSTANCE: dlmb - 1 master(s) : 1 slave(s) 
 

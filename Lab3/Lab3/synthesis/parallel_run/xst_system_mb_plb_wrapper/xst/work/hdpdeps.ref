@@ -1,8 +1,9 @@
 V3 6
-FL C:/Users/CS152B/Desktop/cs152b/Lab3/Lab3/synthesis/parallel_run/hdl/system_mb_plb_wrapper.vhd 2018/10/24.12:15:31 P.68d
-EN work/system_mb_plb_wrapper 1540408691 \
+FL C:/Users/CS152B/Desktop/cs152b/Lab3/Lab3/synthesis/parallel_run/hdl/system_mb_plb_wrapper.vhd 2018/10/26.12:43:11 P.68d
+EN work/system_mb_plb_wrapper 1540583150 \
       FL C:/Users/CS152B/Desktop/cs152b/Lab3/Lab3/synthesis/parallel_run/hdl/system_mb_plb_wrapper.vhd \
       PB ieee/std_logic_1164 1370735607 LB UNISIM PH unisim/VCOMPONENTS 1370735613 \
       LB plb_v46_v1_05_a
-AR work/system_mb_plb_wrapper/STRUCTURE 1540408692 \
-      FL C:/Us
+AR work/system_mb_plb_wrapper/STRUCTURE 1540583151 \
+      FL C:/Users/CS152B/Desktop/cs152b/Lab3/Lab3/synthesis/parallel_run/hdl/system_mb_plb_wrapper.vhd \
+      EN work/system_mb_plb_wrapper 1540583150 CP plb_v46
