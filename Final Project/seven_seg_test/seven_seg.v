@@ -43,22 +43,22 @@ end
 
 always @(thirty_two_hz) begin
   case (digit [3:0])
-      0: led <= 7'b1111110;
-      1: led <= 7'b0110000;
-      2: led <= 7'b1101101;
-      3: led <= 7'b1111001;
-      4: led <= 7'b0110011;
-      5: led <= 7'b1011011;
-      6: led <= 7'b1011111;
-      7: led <= 7'b1110000;
+      0: led <= 7'b0111111;
+      1: led <= 7'b0000110;
+      2: led <= 7'b1011011;
+      3: led <= 7'b1001111;
+      4: led <= 7'b1100110;
+      5: led <= 7'b1101101;
+      6: led <= 7'b1111101;
+      7: led <= 7'b0000111;
       8: led <= 7'b1111111;
-      9: led <= 7'b1110011;
-      default: led <= 7'b0000000;
+      9: led <= 7'b1100111;
+      default: led <= 7'b0111111;
   endcase
 end
 
 always @(thirty_two_hz) begin
-  cat <= 0;
+  cat <= 1;
 end
 
 endmodule

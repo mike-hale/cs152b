@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-11-09T12:35:15</DateModified>
+  <DateModified>2018-11-09T14:11:12</DateModified>
   <ModuleName>seven_seg</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/CS152B/Desktop/cs152b/seven_seg_test/iseconfig/seven_seg.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/CS152B/Desktop/cs152b/seven_seg_test</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/CS152B/Desktop/cs152b/Final Project/seven_seg_test/iseconfig/seven_seg.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/CS152B/Desktop/cs152b/Final Project/seven_seg_test\</ImplementationReportsDirectory>
   <DateInitialized>2018-11-09T12:35:15</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
