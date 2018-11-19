@@ -1,0 +1,93 @@
+\documentclass[11pt]{article}
+
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage[T1]{fontenc}
+\usepackage{courier}
+\usepackage{circuitikz}
+\usetikzlibrary{calc}
+\usepackage{changepage}
+\usepackage{multirow}
+\usepackage[margin=1.0in]{geometry}
+\usepackage[open]{bookmark}
+
+\lstset{xleftmargin=-1cm,
+	xrightmargin=\parindent,
+	numbersep=5pt} 
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{
+	frame=tb,
+	language=Verilog,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3,
+	xleftmargin=0pt,
+}
+
+\title{CS152B Lab 1}
+
+\begin{document}
+	
+\title{\vspace{-0.5in} Com Sci 152B Digital Design \\
+	Lab 3: Microblaze System Setup + Serial Communication }
+\date{}
+\maketitle
+\vspace{-0.75in}
+\begin{center}
+	\begin{tabular}{cc}
+		Michael Hale & 004-620-459 \\ 
+		Matthew Nuesca & 904-440-067 \\ 
+		Shilin Patel & 904-569-866 \\ 
+	\end{tabular}
+\end{center}
+
+\section{Overview}
+In this lab we developed a multiplier application and a rock paper scissor game using a soft processor. 2 additional peripherals were used along with the soft processor to fulfill design requirements and learn more about serial communication
+
+\section{Design Requirements}
+As stated in the Overview, there are 2 small projects that were implemented for this lab. These to projects required the use of the Microblaze platform, a soft microprocessor core developed by Xilinx. The design requirements are shown in more detail below.
+
+\subsection{Multiplier Application}
+We were required to use the Microblaze platform to develop an application to return the product of two numbers. Two numbers delimitted by whatever character we chose were to be received from the console of the workstation and the product was to be sent back to the workstation via serial. Additionally, if the product was greater than 100, the FPGA should light up an LED.
+
+\subsection{Rock Paper Scissor Application}
+Another system was built to develop a simple rock paper scissors game using the Microblaze platform. 2 players provided an number input between 1-3 to represent rock, papers, and scissors, and the FPGA would have to decide the winner. The 1st player's input came from the PC terminal through a serial connection while the 2nd player's input came from Digilent's P-mod Keypad and the output of the winner would be outputted to the PC terminal. 
+
+
+\section{Implementation Details}
+Before proceeding with the application code, multiple drivers had to be developed in the FPGA. This includes, the Microblaze platform along with the RS-232 interfacing core and the GPIO interfacing core which mapped to the P-mod pins on the FPGA. After this was done, most of the development could be done in C using the Xilinx SDK. 
+
+\subsection{Microblaze and Peripheral Core Setup}
+The Microblaze platform was set up using Xilinx's Platform Studio, an EDK that contains a wizard called the Base System Builder.  The wizard and a tutorial that allowed us to build A single-processor Microblaze system into the FPGA. In addition to the Microblaze platform, the Base System Builder allowed us to configure a RS232 peripheral driver. After configuration, libraries were provided to make printing and receiving input a C function. By default, LED's were implemented using a GPIO driver as well.  \\
+The Digilent Keypad was implemented using a more manual method. The Digilent Keypad interfaced through the P-mod ports and required a GPIO pin. The EDK was used to add another GPIO driver core, but modifications to the User Constraints file and the Master Hardware Specification file were required to map the pins to a port and for the EDK to recognize those pins as a port that could be used by the GPIO driver that was made. 
+
+\subsection{C Code Implementation}
+\includegraphics[scale=0.2]{procrastination}
+
+
+\section{Testbench}
+
+
+\section{Challenges \& Solutions}
+
+
+\end{document}
