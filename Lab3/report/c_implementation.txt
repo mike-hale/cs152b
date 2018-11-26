@@ -2,26 +2,112 @@ Multiplication Application:
 
 MicroBlaze allows for implementation in C, therefore all implementation is in C, except for mapping to port numbers. For the multiplication application, first it was necessary set up XGpio to turn on an LED in the event of a product > 100. We used default channel 1, and wanted only to have one LED illuminate. 
 
-{screenshot 1}
+XGpio led;
+XGpio_Initialize(&led, XPAR_LEDS_8BIT_DEVICE_ID);
+XGpio_SetDataDirection(&led, 1, ~0x01);
+XGpio_DiscreteWrite(&led, 1, 0x00);
+init_platform();
 
 Once the setup is done for I/O, it is now down to implement the logic. We use gets() to read in our two inputs and check for our delimiter of a space. Once an enter is inputted and received, we stop processing the line. This implementation also accounts for the problem of receiving a null byte.
 
-{screenshot 2}
+int i;
+for (i = 0; ; i++) {
+    char c = str[i];
+    if (c == 0) {
+    	continue;
+    }
+    else if (c >= '0' && c <= '9') {
+        if (past_delim == 0) {
+            a *= 10;
+            a += c - '0';
+        }
+        else {
+            b *= 10;
+            b += c - '0';
+        }
+    }
+    else if (c == ' ') {
+        past_delim = 1;
+    }
+    else if (c == '\n' || c == '\r') {
+        break;
+    } else {
+        print("\r\nEnter two numbers: ");
+    }
+}
 
 Lastly, we check the value of our product to see if we should write to the XGpio LED.
 
-{screenshot 3}
+int product = a*b;
+if(product > 100)
+{
+	  XGpio_DiscreteWrite(&led, 1, 0x01);
+} else {
+	XGpio_DiscreteWrite(&led, 1, 0x00);
+}
+xil_printf("%d\n", product);
+
 
 Rock Paper Scissors Application:
 
 For the rock paper scissors application we first need to set up the pmodKYPD as an XGpio read and write connection. 
 
-{screenshot 4}
+XGpio numpad;
+
+XGpio_Initialize(&numpad, XPAR_XPS_GPIO_0_DEVICE_ID);
+XGpio_SetDataDirection(&numpad, 1, 0xF0);
+init_platform();
 
 For the main implementation we get the entry the user typed and then value of the keypad using a helper function. These two values are compared and then the result of the game is printed using xil_printf(), a light weight version of printf(). We also check for valid input for the keypad.
 
-{screenshot 5}
+while (1) {
+	xil_printf("Would you like to play a game? ;)\r\n");
+	keypad = -1;
+	serial = -1;
+
+	while(keypad == -1) {
+		keypad = check_numpad(&numpad);
+		if (keypad & ONE_BIT) {
+			keypad = 1;
+		} else if (keypad & TWO_BIT) {
+			keypad = 2;
+		} else if (keypad & THREE_BIT) {
+			keypad = 3;
+		} else {
+			keypad = -1;
+		}
+	}
+	xil_printf("Registered keypad input\r\n");
+	BACK_TO_SERIAL:
+	gets(serial_string);
+	serial = serial_string[0] - '0';
+	if (serial > 3 || serial < 1) {
+		xil_printf("Invalid serial input, re-enter choice\r\n");
+		goto BACK_TO_SERIAL;
+	}
+
+	char* serial_selection = serial == 1 ? "rock" : serial == 2 ? "paper" : "scissors";
+	char* keypad_selection = keypad == 1 ? "rock" : keypad == 2 ? "paper" : "scissors";
+
+	if (serial - keypad == 1 || serial - keypad == -2) {
+		xil_printf("Console won! %s > %s\r\n", serial_selection, keypad_selection);
+	} else if (serial - keypad == 0) {
+		xil_printf("Its a Tie! %s = %s\r\n", serial_selection, keypad_selection);
+	} else {
+		xil_printf("Keypad won! %s < %s\r\n", serial_selection, keypad_selection);
+	}
+}
 
 The helper function to check for the numpad input, sets each of the column 4 bits to high sequentially (with a XGpio write), and then reads from each row. The row is high if the column that is high matches the row being checked. This allows us to detect the button clicked.
 
-{screenshot 6}
+int check_numpad(XGpio* numpad) {
+	int ret = 0;
+	int i;
+	for (i = 0; i < 4; i++) {
+		int mask = 1 << i;
+		XGpio_DiscreteWrite(numpad, 1, mask);
+		int row = (0xF0 & XGpio_DiscreteRead(numpad, 1)) >> 4;
+		ret |= (row << (i*4));
+	}
+	return ret;
+}
