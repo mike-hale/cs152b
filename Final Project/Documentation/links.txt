@@ -1,0 +1,4 @@
+https://www.jefkine.com/general/2016/09/05/backpropagation-in-convolutional-neural-networks/
+http://cs231n.github.io/
+https://cs.stanford.edu/people/karpathy/convnetjs/demo/mnist.html
+https://datascience.stackexchange.com/questions/27506/back-propagation-in-cnn/27751#27751
