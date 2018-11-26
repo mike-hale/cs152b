@@ -1,0 +1,27 @@
+Multiplication Application:
+
+MicroBlaze allows for implementation in C, therefore all implementation is in C, except for mapping to port numbers. For the multiplication application, first it was necessary set up XGpio to turn on an LED in the event of a product > 100. We used default channel 1, and wanted only to have one LED illuminate. 
+
+{screenshot 1}
+
+Once the setup is done for I/O, it is now down to implement the logic. We use gets() to read in our two inputs and check for our delimiter of a space. Once an enter is inputted and received, we stop processing the line. This implementation also accounts for the problem of receiving a null byte.
+
+{screenshot 2}
+
+Lastly, we check the value of our product to see if we should write to the XGpio LED.
+
+{screenshot 3}
+
+Rock Paper Scissors Application:
+
+For the rock paper scissors application we first need to set up the pmodKYPD as an XGpio read and write connection. 
+
+{screenshot 4}
+
+For the main implementation we get the entry the user typed and then value of the keypad using a helper function. These two values are compared and then the result of the game is printed using xil_printf(), a light weight version of printf(). We also check for valid input for the keypad.
+
+{screenshot 5}
+
+The helper function to check for the numpad input, sets each of the column 4 bits to high sequentially (with a XGpio write), and then reads from each row. The row is high if the column that is high matches the row being checked. This allows us to detect the button clicked.
+
+{screenshot 6}
