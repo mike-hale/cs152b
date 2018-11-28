@@ -13,14 +13,14 @@
 //-- https://github.com/jamesbowman/swapforth
 //--
 //----------------------------------------------------------------------------
-`default_nettype none
+//`default_nettype none
 
-`include "baudgen.vh"
+//`include "baudgen.vh"
 
 //--- Serial transmitter unit module
 //--- TX output is not registered
 module uart_tx #(
-         parameter BAUDRATE = `B9600  //-- Default baudrate
+         parameter BAUDRATE = 10417  //-- Default baudrate
 )(
          input wire clk,        //-- System clcok (12MHz in the ICEstick)
          input wire rstn,       //-- Reset  (Active low)
@@ -33,6 +33,10 @@ module uart_tx #(
 //-- Registers for storing the states
 reg [1:0] state;
 reg [1:0] next_state;
+
+initial begin
+	state = IDLE;
+end
 
 //-- fsm states
 localparam IDLE  = 0;  //-- Idle state

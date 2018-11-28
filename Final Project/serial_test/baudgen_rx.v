@@ -10,7 +10,7 @@
 //-----------------------------------------------------------------------------
 //-- GPL license
 //-----------------------------------------------------------------------------
-`include "baudgen.vh"
+//`include "baudgen.vh"
 
 //----------------------------------------------------------------------------------------
 //-- baudgen module
@@ -30,7 +30,7 @@
 //--
 //---------------------------------------------------------------------------------------
 module baudgen_rx #(
-         parameter BAUDRATE = `B115200  //-- Default baudrate
+         parameter BAUDRATE = 10417  //-- Default baudrate
 )(
          input wire rstn,         //-- Reset (active low)
          input wire clk,          //-- System clock

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Final Project/fc_test/fc.ncd
+OUTFILE=/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Final Project/fc_test/fc.bit
+FAMILY=Spartan6
+PART=xc6slx100t-2csg484
+WORKINGDIR=/home/ise/Michael/Documents/Senior Year 18/CS 152B/cs152b/Final Project/fc_test
+LICENSE=ISE
+USER_INFO=8416_11442_1478797146_620

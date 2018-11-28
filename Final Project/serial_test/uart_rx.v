@@ -13,13 +13,13 @@
 //-- https://github.com/jamesbowman/swapforth
 //--
 //----------------------------------------------------------------------------
-`default_nettype none
+//`default_nettype none
 
 `include "baudgen.vh"
 
 //-- Serial receiver unit module
 module uart_rx #(
-         parameter BAUDRATE = `B9600   //-- Default baudrate
+         parameter BAUDRATE = 10417   //-- Default baudrate
 )(
          input wire clk,         //-- System clock (12MHz in the ICEstick)
          input wire rstn,        //-- Reset (Active low)
