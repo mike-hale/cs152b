@@ -34,14 +34,14 @@ module uart_tx #(
 reg [1:0] state;
 reg [1:0] next_state;
 
-initial begin
-	state = IDLE;
-end
-
 //-- fsm states
 localparam IDLE  = 0;  //-- Idle state
 localparam START = 1;  //-- Start transmission
 localparam TRANS = 2;  //-- Transmitting data
+
+initial begin
+	state = IDLE;
+end
 
 //-- Transmission clock
 wire clk_baud;

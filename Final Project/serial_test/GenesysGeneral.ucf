@@ -89,12 +89,12 @@ NET "sys_clk"   LOC = "AG18"; # Bank = 4, Pin name = IO_L6P_GC_4, Type = GCLK, S
 ## onBoard Leds
  NET "Led<0>"  LOC = "AG8";  # Bank = 22, Pin name = IO_L18P_22,     Sch name = LD0
  NET "Led<1>"  LOC = "AH8";  # Bank = 22, Pin name = IO_L18N_22,     Sch name = LD1
-# NET "Led<2>"  LOC = "AH9";  # Bank = 22, Pin name = IO_L17P_22,     Sch name = LD2
-# NET "Led<3>"  LOC = "AG10"; # Bank = 22, Pin name = IO_L19P_22,     Sch name = LD3
-# NET "Led<4>"  LOC = "AH10"; # Bank = 22, Pin name = IO_L17N_22,     Sch name = LD4
-# NET "Led<5>"  LOC = "AG11"; # Bank = 22, Pin name = IO_L19N_22,     Sch name = LD5
-# NET "Led<6>"  LOC = "AF11"; # Bank = 22, Pin name = IO_L16P_22,     Sch name = LD6
-# NET "Led<7>"  LOC = "AE11"; # Bank = 22, Pin name = IO_L16N_22,     Sch name = LD7
+ NET "Led<2>"  LOC = "AH9";  # Bank = 22, Pin name = IO_L17P_22,     Sch name = LD2
+ NET "Led<3>"  LOC = "AG10"; # Bank = 22, Pin name = IO_L19P_22,     Sch name = LD3
+ NET "Led<4>"  LOC = "AH10"; # Bank = 22, Pin name = IO_L17N_22,     Sch name = LD4
+ NET "Led<5>"  LOC = "AG11"; # Bank = 22, Pin name = IO_L19N_22,     Sch name = LD5
+ NET "Led<6>"  LOC = "AF11"; # Bank = 22, Pin name = IO_L16P_22,     Sch name = LD6
+ NET "Led<7>"  LOC = "AE11"; # Bank = 22, Pin name = IO_L16N_22,     Sch name = LD7
 # 
 ## onBoard PUSH BUTTONS 
 # NET "btn<0>" LOC = "G6";  # Bank = 12, Pin name = IO_L17P_12,        Sch name = BTN0
@@ -470,12 +470,12 @@ NET "sys_clk"   LOC = "AG18"; # Bank = 4, Pin name = IO_L6P_GC_4, Type = GCLK, S
 # NET "VHDCI2IO2<19>" LOC = "AP32";  # BANK = 13, Pin name = IO_L19N_13,        Sch name = EXP-IO40_N
 # 
 ## RS232 connector1
-# NET "Rs1Rx" LOC = "AG15"; # Bank = 4, Pin name = IO_L5N_GC_4,   Sch name = RS1-RX
-# NET "Rs1Tx" LOC = "AF19"; # Bank = 4, Pin name = IO_L6N_GC_4,   Sch name = RS1-TX
+ NET "rx" LOC = "AG15"; # Bank = 4, Pin name = IO_L5N_GC_4,   Sch name = RS1-RX
+ NET "tx" LOC = "AF19"; # Bank = 4, Pin name = IO_L6N_GC_4,   Sch name = RS1-TX
 # 
 ## RS232 connector2
- NET "rx" LOC = "AF18"; # Bank = 4, Pin name = IO_L8P_CC_GC_4,    Sch name = RS2-RX
- NET "tx" LOC = "AG16"; # Bank = 4, Pin name = IO_L7N_GC_VRP_4,   Sch name = RS2-TX
+# NET "rx" LOC = "AF18"; # Bank = 4, Pin name = IO_L8P_CC_GC_4,    Sch name = RS2-RX
+# NET "tx" LOC = "AG16"; # Bank = 4, Pin name = IO_L7N_GC_VRP_4,   Sch name = RS2-TX
 #
 #
 #
