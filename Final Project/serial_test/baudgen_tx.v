@@ -8,8 +8,8 @@
 //-----------------------------------------------------------------------------
 //-- GPL license
 //-----------------------------------------------------------------------------
-`default_nettype none
-`include "baudgen.vh"
+//`default_nettype none
+//`include "baudgen.vh"
 
 //----------------------------------------------------------------------------------------
 //-- baudgen module
@@ -28,7 +28,7 @@
 //--
 //---------------------------------------------------------------------------------------
 module baudgen_tx #(
-          parameter BAUDRATE = `B115200  //-- Default baudrate
+          parameter BAUDRATE = 10417  //-- Default baudrate
 )(
           input wire rstn,              //-- Reset (active low)
           input wire clk,               //-- System clock

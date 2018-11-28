@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -18,10 +18,12 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
+`include "baudgen.vh"
+
 module top(
-  input sys_clk,
-  input rx,
-  output tx,
+  input wire sys_clk,
+  input wire rx,
+  output wire tx,
   output [7:0] Led
 );
 
@@ -32,7 +34,6 @@ reg [7:0] out_data;
 
 wire in_ready;
 wire [7:0] in_data;
-reg [7:0] cnt;
 
 uart_rx rx_inst(sys_clk, rst, rx, in_ready, in_data);
 uart_tx tx_inst(sys_clk, rst, start, out_data, tx, out_ready);
@@ -40,15 +41,7 @@ uart_tx tx_inst(sys_clk, rst, start, out_data, tx, out_ready);
 initial begin
   rst = 1;
   start = 1;
-  out_data = "0";
-  cnt = 0;
+  out_data = 'h33;
 end
-
-always @(*) begin
-  if (in_ready == 1)
-    cnt <= cnt + 1;
-end
-
-assign Led = cnt;
 
 endmodule
