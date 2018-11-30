@@ -38,6 +38,8 @@ reg [1:0] byte_idx;
 reg [3:0] label;
 
 reg [31:0] img [27:0][27:0];
+reg [31:0] val;
+reg [29:0] cnt;
 
 wire in_ready;
 wire [7:0] in_data;
@@ -47,21 +49,28 @@ uart_tx tx_inst(sys_clk, rst, start, out_data, tx, out_ready);
 
 initial begin
   label = 'hF;
-  has_sent = 0;
-  byte_idx = 0;
   img_x = 0;
   img_y = 0;
   rst = 1;
   start = 0;
   out_data = "7";
+  has_sent = 0;
+  cnt = 0;
 end
 
-always @(out_ready) begin
-  if (out_ready == 1 && has_sent == 0) begin
-    has_sent = 1;
+always @(posedge sys_clk) begin
+  if (cnt < 100000000)
+    cnt <= cnt + 1;
+  else if (start == 1)
+    cnt <= 0;
+end
+
+always @(out_ready, cnt) begin
+  if (out_ready == 1 && cnt == 100000000) begin 
     start = 1;
-  end else if (out_ready == 1 && has_sent == 1)
-    start = 0;
+  end else if (out_ready == 1) begin
+    0 = 0;
+  end
 end
     
 always @(in_ready) begin
@@ -69,24 +78,26 @@ always @(in_ready) begin
     if (label == 'hF)
       label = in_data;
     else begin
-      img[img_x][img_y] = (in_data << (8*byte_idx)) | img[img_x][img_y];
-      if (byte_idx == 3) begin
-        if (img_x == 27) begin
-          img_y = img_y + 1;
-          img_x = 0;
-          byte_idx = 0;
-        end else begin
-          img_x = img_x + 1;
-          byte_idx = 0;
-        end
-      end else
-        byte_idx = byte_idx + 1;
+      val[31] = ~in_data[7];
+      val[30:15] = 16'b0;
+      val[14:8] = (in_data[7] == 1) ? in_data[6:0] : ~in_data[6:0];
+      val[7:0] = 8'b0;
+      img[img_x][img_y] <= val; 
+      if (img_y == 27) begin
+        img_x = img_x + 1;
+        img_y = 0;
+      end else begin
+        img_y = img_y + 1;
+      end
     end
   end
 end
 
-assign Led[7:1] = in_data[7:1];
+assign Led[7:4] = in_data[7:4];
 
-assign Led[0] = byte_idx == 3 && img_x == 27 && img_y == 27;
+assign Led[3] = (cnt < 50000000);
+assign Led[2] = out_ready;
+assign Led[1] = in_ready;
+assign Led[0] = img_x == 27 && img_y == 27;
 
 endmodule

@@ -14,4 +14,6 @@ Time resolution is 1 ps
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 # run all
-Stopped at time : 59984505 ns : File "C:/Users/CS152B/Desktop/cs152b/Final Project/serial_test/tb.v" Line 17
+Stopped at time : 7863755 ns : File "C:/Users/CS152B/Desktop/cs152b/Final Project/serial_test/tb.v" Line 16
+# run all
+Stopped at time : 89162755 ns : File "C:/Users/CS152B/Desktop/cs152b/Final Project/serial_test/uart_tx.v" Line 124
