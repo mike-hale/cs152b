@@ -12,6 +12,7 @@ module conv #(
 (
     input clk,
     input out_rdy,
+    input in_valid,
     input forward,
     input load_weights,
     input [31:0] conv_input,
@@ -73,11 +74,11 @@ end
 
 //Update the temporary computed value upon each input
 always @(posedge clk) begin
-if (load_weights == 1)
+if (in_valid == 1 && load_weights == 1)
     // We store the input in the weights if this pin is high and we are not sendig 
     weights[conv_input_x][conv_input_y][conv_input_idx][conv_input_idx2] <= conv_input;
 if (forward == 1) begin
-    if (in_rdy == 1 && (conv_input_idx != last_input_idx || conv_input_x != last_input_x || conv_input_y != last_input_y)) begin
+    if (in_valid == 1 && in_rdy == 1 && (conv_input_idx != last_input_idx || conv_input_x != last_input_x || conv_input_y != last_input_y)) begin
         // Update last input indices so we dont overcount inputs
         last_input_idx <= conv_input_idx;
         last_input_x <= conv_input_x;
@@ -152,7 +153,7 @@ if (forward == 1) begin
         end
     end
 end else begin // Backprop stage
-    if (in_rdy == 1 && conv_input_idx != last_input_idx || conv_input_x != last_input_x || conv_input_y != last_input_y) begin
+    if (in_valid == 1 && in_rdy == 1 && conv_input_idx != last_input_idx || conv_input_x != last_input_x || conv_input_y != last_input_y) begin
         // Update last input indices so we dont overcount inputs
         last_input_idx <= conv_input_idx;
         last_input_x <= conv_input_x;

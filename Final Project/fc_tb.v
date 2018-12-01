@@ -9,7 +9,7 @@ wire [31:0] fc_output;
 wire [9:0] fc_out_idx;
 integer bound;
 
-fc #(1024,10,10) fc_layer(clk, out_rdy, forward, load_weights, fc_input, fc_in_idx,, in_rdy, fc_output, fc_out_idx);
+fc #(1024,10,10) fc_layer(clk, out_rdy,1, forward, load_weights, fc_input, fc_in_idx,, in_rdy, fc_output, fc_out_idx);
 
 initial begin
   clk = 0;

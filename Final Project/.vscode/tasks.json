@@ -22,6 +22,16 @@
                 "panel": "new"
             },
             "problemMatcher": []
+        },
+        {
+            "label": "TRAIN Testbench",
+            "type": "shell",
+            "command": "iverilog -o train.out train.v conv.v fc.v & vvp train.out",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": []
         }
     ]
 }

@@ -6,6 +6,7 @@ module fc #(
 (
     input clk,
     input out_rdy,
+    input in_valid,
     input forward,
     input load_weights,
     input [31:0] fc_input,
@@ -42,11 +43,11 @@ end
 
 // Updates output_val based on incoming inputs.
 always @(posedge clk) begin
-    if (load_weights == 1)
+    if (in_valid == 1 && load_weights == 1)
         weights[fc_input_idx][fc_input_idx2] = fc_input;
     
     if (forward == 1) begin
-        if (in_rdy == 1 && fc_input_idx != last_input_idx) begin
+        if (in_valid == 1 && in_rdy == 1 && fc_input_idx != last_input_idx) begin
             last_input_idx <= fc_input_idx;
             last_input[fc_input_idx] <= fc_input;
             for (i=0; i<OUTPUT_WIDTH; i=i+1) begin
@@ -75,7 +76,7 @@ always @(posedge clk) begin
             end
         end
     end else begin // Backprop stage
-        if (in_rdy == 1 && fc_input_idx != last_input_idx) begin
+        if (in_valid == 1 && in_rdy == 1 && fc_input_idx != last_input_idx) begin
             last_input_idx <= fc_input_idx;
             // Again we must only update if the output was positive
             if (output_val[fc_input_idx][31] == 0) // Positive value

@@ -11,7 +11,7 @@ wire [3:0] conv_output_x, conv_output_y;
 wire in_rdy;
 integer x_bound, y_bound, idx_bound;
 
-conv #(8,12,4,4,5,1,2,16) conv_inst(clk,out_rdy,forward,load_weights,conv_input,conv_input_idx,,conv_input_x,conv_input_y,
+conv #(8,12,4,4,5,1,2,16) conv_inst(clk,out_rdy,1,forward,load_weights,conv_input,conv_input_idx,,conv_input_x,conv_input_y,
                                         in_rdy,conv_output,conv_output_idx,conv_output_x,conv_output_y);
 
 initial begin
