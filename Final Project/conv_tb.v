@@ -1,6 +1,6 @@
 module conv_tb();
 
-reg clk, out_rdy, forward;
+reg clk, out_rdy, forward, load_weights;
 reg [31:0] conv_input;
 reg [3:0] conv_input_idx;
 reg [3:0] conv_input_x, conv_input_y;
@@ -11,7 +11,7 @@ wire [3:0] conv_output_x, conv_output_y;
 wire in_rdy;
 integer x_bound, y_bound, idx_bound;
 
-conv #(8,12,4,4,5,1,16,8) conv_inst(clk,out_rdy,forward,conv_input,conv_input_idx,conv_input_x,conv_input_y,
+conv #(8,12,4,4,5,1,2,16) conv_inst(clk,out_rdy,forward,load_weights,conv_input,conv_input_idx,,conv_input_x,conv_input_y,
                                         in_rdy,conv_output,conv_output_idx,conv_output_x,conv_output_y);
 
 initial begin
@@ -21,6 +21,7 @@ initial begin
   clk = 0;
   out_rdy = 1;
   forward = 1;
+  load_weights = 0;
   conv_input = {16'b01,16'b0};
   conv_input_idx = 0;
   conv_input_x = 0;
@@ -52,10 +53,10 @@ always @(posedge clk) begin
         conv_input_x <= conv_input_x + 1;
     end 
     end
-    if (forward == 1 && conv_output_idx == 15 && conv_output_x == 7 && conv_output_y == 7) begin
+    if (forward == 1 && conv_output_idx == 15 && conv_output_x == 3 && conv_output_y == 3) begin
         forward <= 0;
-        x_bound = 7;
-        y_bound = 7;
+        x_bound = 3;
+        y_bound = 3;
         idx_bound = 15;
     end 
     if (forward == 0 && conv_output_idx == 7 && conv_output_x == 11 && conv_output_y == 11) begin
