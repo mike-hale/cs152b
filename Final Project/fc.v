@@ -43,10 +43,13 @@ end
 
 // Updates output_val based on incoming inputs.
 always @(posedge clk) begin
-    if (in_valid == 1 && load_weights == 1)
-        weights[fc_input_idx][fc_input_idx2] = fc_input;
+    if (load_weights == 1) begin
+        if (in_valid == 1)
+            weights[fc_input_idx][fc_input_idx2] <= fc_input;
+    end
+
     
-    if (forward == 1) begin
+    else if (forward == 1) begin
         if (in_valid == 1 && in_rdy == 1 && fc_input_idx != last_input_idx) begin
             last_input_idx <= fc_input_idx;
             last_input[fc_input_idx] <= fc_input;

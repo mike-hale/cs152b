@@ -26,7 +26,17 @@
         {
             "label": "TRAIN Testbench",
             "type": "shell",
-            "command": "iverilog -o train.out train.v conv.v fc.v & vvp train.out",
+            "command": "iverilog -o train.out lfsr_rng.v train_tb.v conv.v fc.v & vvp train.out",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "LFSR Testbench",
+            "type": "shell",
+            "command": "iverilog -o lfsr.out lfsr_rng.v lfsr_rng_tb.v & vvp lfsr.out",
             "presentation": {
                 "reveal": "always",
                 "panel": "new"
