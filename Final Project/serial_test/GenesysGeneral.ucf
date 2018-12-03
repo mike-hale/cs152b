@@ -5,7 +5,8 @@
 
 
 # clock pin for Genesys rev C board
-NET "sys_clk"   LOC = "AG18"; # Bank = 4, Pin name = IO_L6P_GC_4, Type = GCLK, Sch name = GCLK0
+NET "clk"   LOC = "AG18"; # Bank = 4, Pin name = IO_L6P_GC_4, Type = GCLK, Sch name = GCLK0
+TIMESPEC TS_clk = PERIOD "clk" 10 INPUT_JITTER 50;
  
 #NET "200mHz_P"   LOC = "J14"; # Bank = 3, Pin name = IO_L8P_GC_3, Type = GCLK, Sch name = GCLK4_P
 #NET "200mHz_N"   LOC = "H13"; # Bank = 4, Pin name = IO_L8N_GC_3, Type = GCLK, Sch name = GCLK4_N

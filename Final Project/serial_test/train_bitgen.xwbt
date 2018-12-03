@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\CS152B\Desktop\cs152b\Final Project\serial_test\train.ncd
+OUTFILE=C:\Users\CS152B\Desktop\cs152b\Final Project\serial_test\train.bit
+FAMILY=Virtex5
+PART=xc5vlx50t-2ff1136
+WORKINGDIR=C:\Users\CS152B\Desktop\cs152b\Final Project\serial_test
+LICENSE=ISE
+USER_INFO=203015155_203016297_210565169_664

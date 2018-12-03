@@ -1,4 +1,5 @@
 module train(
+    input clk,
     input rx,
     output tx,
     output [7:0] led
@@ -53,16 +54,16 @@ reg [31:0] temp;
 reg start;
 reg [7:0] out_data;
 wire in_ready, out_ready;
-wire [7:0] in_data
+wire [7:0] in_data;
 
 uart_rx rx_inst(clk, 1, rx, in_ready, in_data);
 uart_tx tx_inst(clk, 1, start, out_data, tx, out_ready);
 
-conv #(1,28,3,5,5,1,2,8) conv1(clk,1'b1,conv1_valid,fw,load_weights,conv1_in,conv1_i_in,conv1_i2_in,conv1_x_in,conv1_y_in,
-                               conv1_rdy,conv1_out,conv1_i_out,conv1_x_out,conv1_y_out);
+//conv #(1,28,3,5,5,1,2,8) conv1(clk,1'b1,conv1_valid,fw,load_weights,conv1_in,conv1_i_in,conv1_i2_in,conv1_x_in,conv1_y_in,
+//                               conv1_rdy,conv1_out,conv1_i_out,conv1_x_out,conv1_y_out);
 
-conv #(8,12,4,4,5,1,1,16) conv2(clk,1'b1,conv2_valid,fw,load_weights,conv2_in,conv2_i_in,conv2_i2_in,conv2_x_in,conv2_y_in,
-                                conv2_rdy,conv2_out,conv2_i_out,conv2_x_out,conv2_y_out);
+//conv #(8,12,4,4,5,1,1,16) conv2(clk,1'b1,conv2_valid,fw,load_weights,conv2_in,conv2_i_in,conv2_i2_in,conv2_x_in,conv2_y_in,
+//                                conv2_rdy,conv2_out,conv2_i_out,conv2_x_out,conv2_y_out);
 
 fc #(1024,10,10) fc_inst(clk,1'b1,fc_valid,fw,load_weights,fc_in,fc_i_in,fc_i2_in,fc_rdy,fc_out,fc_i_out);
 
@@ -204,13 +205,13 @@ always @(posedge clk) begin
                     img_y <= img_y + 1;
             end
         end else if (out_ready == 1) begin
-            out_data <= output_value[output_v_idx][8*output_b_idx + 7:0];
+            out_data <= output_value[output_v_idx] >> (8*output_b_idx);
             start <= 1;
             output_b_idx <= 0;
             output_v_idx <= output_v_idx + 1;
         end 
     end else if (out_ready == 1) begin
-        out_data <= output_value[output_v_idx][8*output_b_idx + 7:0];
+        out_data <= output_value[output_v_idx] >> (8*output_b_idx);
         start <= 1;
         output_b_idx <= output_b_idx + 1;
     end
