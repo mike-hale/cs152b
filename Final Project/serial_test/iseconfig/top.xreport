@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-12-02T11:49:33</DateModified>
+  <DateModified>2018-12-03T11:09:34</DateModified>
   <ModuleName>train</ModuleName>
-  <SummaryTimeStamp>2018-11-30T14:07:11</SummaryTimeStamp>
+  <SummaryTimeStamp>2018-12-02T16:33:56</SummaryTimeStamp>
   <SavedFilePath>C:/Users/CS152B/Desktop/cs152b/Final Project/serial_test/iseconfig/top.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/CS152B/Desktop/cs152b/Final Project/serial_test\</ImplementationReportsDirectory>
   <DateInitialized>2018-12-02T11:49:33</DateInitialized>

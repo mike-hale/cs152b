@@ -1,8 +1,0 @@
-MO fc NULL ../fc.v vlg61/fc.bin 1543797244
-MO baudgen_rx NULL baudgen_rx.v vlg17/baudgen__rx.bin 1543797244
-MO lfsr_rng NULL ../lfsr_rng.v vlg45/lfsr__rng.bin 1543797244
-MO baudgen_tx NULL baudgen_tx.v vlg21/baudgen__tx.bin 1543797244
-MO train NULL ../train.v vlg52/train.bin 1543797244
-MO uart_rx NULL uart_rx.v vlg21/uart__rx.bin 1543797244
-MO conv NULL ../conv.v vlg4A/conv.bin 1543781718
-MO uart_tx NULL uart_tx.v vlg2B/uart__tx.bin 1543797244

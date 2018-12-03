@@ -1,7 +1,0 @@
-verilog work "baudgen_tx.v"
-verilog work "baudgen_rx.v"
-verilog work "uart_tx.v"
-verilog work "uart_rx.v"
-verilog work "../lfsr_rng.v"
-verilog work "../fc.v"
-verilog work "../train.v"
