@@ -30,7 +30,7 @@ copy ..\example_design\fc_weights_exdes.ucf results\
 cd results
 
 echo 'Running ngdbuild'
-ngdbuild -p xc6slx100t-fgg484-2 fc_weights_exdes
+ngdbuild -p xc5vlx50t-ff1136-2 fc_weights_exdes
 
 echo 'Running map'
 map fc_weights_exdes -o mapped.ncd  -pr i

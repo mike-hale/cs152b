@@ -93,9 +93,9 @@ ENTITY fc_o_val_exdes IS
     WEA            : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     ADDRA          : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
   
-    DINA           : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    DINA           : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
   
-    DOUTA          : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+    DOUTA          : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     CLKA       : IN STD_LOGIC
 
 
@@ -121,9 +121,9 @@ ARCHITECTURE xilinx OF fc_o_val_exdes IS
     WEA        : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     ADDRA      : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
   
-    DINA       : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    DINA       : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
   
-    DOUTA      : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+    DOUTA      : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 
     CLKA       : IN STD_LOGIC
 

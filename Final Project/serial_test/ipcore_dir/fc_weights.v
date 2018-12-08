@@ -47,8 +47,8 @@ module fc_weights(
 input clka;
 input [0 : 0] wea;
 input [13 : 0] addra;
-input [15 : 0] dina;
-output [15 : 0] douta;
+input [31 : 0] dina;
+output [31 : 0] douta;
 
 // synthesis translate_off
 
@@ -65,7 +65,7 @@ output [15 : 0] douta;
     .C_DISABLE_WARN_BHV_COLL(0),
     .C_DISABLE_WARN_BHV_RANGE(0),
     .C_ENABLE_32BIT_ADDRESS(0),
-    .C_FAMILY("spartan6"),
+    .C_FAMILY("virtex5"),
     .C_HAS_AXI_ID(0),
     .C_HAS_ENA(0),
     .C_HAS_ENB(0),
@@ -91,8 +91,8 @@ output [15 : 0] douta;
     .C_PRIM_TYPE(1),
     .C_READ_DEPTH_A(16384),
     .C_READ_DEPTH_B(16384),
-    .C_READ_WIDTH_A(16),
-    .C_READ_WIDTH_B(16),
+    .C_READ_WIDTH_A(32),
+    .C_READ_WIDTH_B(32),
     .C_RST_PRIORITY_A("CE"),
     .C_RST_PRIORITY_B("CE"),
     .C_RST_TYPE("SYNC"),
@@ -111,9 +111,9 @@ output [15 : 0] douta;
     .C_WRITE_DEPTH_B(16384),
     .C_WRITE_MODE_A("WRITE_FIRST"),
     .C_WRITE_MODE_B("WRITE_FIRST"),
-    .C_WRITE_WIDTH_A(16),
-    .C_WRITE_WIDTH_B(16),
-    .C_XDEVICEFAMILY("spartan6")
+    .C_WRITE_WIDTH_A(32),
+    .C_WRITE_WIDTH_B(32),
+    .C_XDEVICEFAMILY("virtex5")
   )
   inst (
     .CLKA(clka),
