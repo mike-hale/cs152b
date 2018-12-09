@@ -1,17 +1,33 @@
 from tkinter import *
 from PIL import Image, ImageDraw
 import io
+import serial
 
 width = 400
 height = 400
 black = (0, 0, 0)
 size = 28, 28
 
+port = 'COM4'
+baud = 9600
+
+def send():
+	global image1
+	ser = serial.Serial(port, baud)
+	if ser.isOpen():
+		print(ser.name + " is open")
+
+	while 1:
+	    serial_line = ser.read(1)
+	    print(serial_line)
+	    if serial_line == b'7':
+	    	ser.write(image1)
+
 def save():
 	global image1
 	image1.thumbnail(size, Image.ANTIALIAS)
 	image1 = image1.tobytes()
-	print(image1)
+	send()
 	exit()
 
 def paint(event):
