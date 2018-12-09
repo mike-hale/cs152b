@@ -1,0 +1,8 @@
+V3 3
+FL "C:/Users/CS152B/Desktop/cs152b/Final Project/block_mem_Size_analysis/ipcore_dir/blk_mem_gen_v7_3.vhd" 2018/12/05.12:00:55 P.68d
+EN work/blk_mem_gen_v7_3 1544040152 \
+      FL "C:/Users/CS152B/Desktop/cs152b/Final Project/block_mem_Size_analysis/ipcore_dir/blk_mem_gen_v7_3.vhd" \
+      PB ieee/std_logic_1164 1370735607
+AR work/blk_mem_gen_v7_3/blk_mem_gen_v7_3_a 1544040153 \
+      FL "C:/Users/CS152B/Desktop/cs152b/Final Project/block_mem_Size_analysis/ipcore_dir/blk_mem_gen_v7_3.vhd" \
+      EN work/blk_mem_gen_v7_3 1544040152

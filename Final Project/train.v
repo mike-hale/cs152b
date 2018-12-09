@@ -65,7 +65,6 @@ uart_tx tx_inst(clk, 1, start, out_data, tx, out_ready);
 //conv #(8,12,4,4,5,1,1,16) conv2(clk,1'b1,conv2_valid,fw,load_weights,conv2_in,conv2_i_in,conv2_i2_in,conv2_x_in,conv2_y_in,
 //                                conv2_rdy,conv2_out,conv2_i_out,conv2_x_out,conv2_y_out);
 
-fc #(1024,10,10) fc_inst(clk,1'b1,fc_valid,fw,load_weights,fc_in,fc_i_in,fc_i2_in,fc_rdy,fc_out,fc_i_out);
 
 lfsr_rng lsfr(clk, rand);
 
@@ -77,6 +76,61 @@ assign led[4] = (state == ERROR);
 assign led[5] = (state == FC_BP);
 assign led[6] = (state == CONV2_BP);
 assign led[7] = (state == CONV1_BP);
+
+wire wt_we;
+wire [13:0] wt_addr;
+wire [15:0] wt_idata;
+wire [15:0] wt_odata;
+fc_weights weights (
+  .clka(clk), // input clka
+  .wea(wt_we), // input [0 : 0] wea
+  .addra(wt_addr), // input [13 : 0] addra
+  .dina(wt_idata), // input [15 : 0] dina
+  .douta(wt_odata) // output [15 : 0] douta
+);
+
+wire o_val_rst, o_val_we;
+wire [3:0] o_val_addr;
+wire [15:0] o_val_idata;
+wire [15:0] o_val_odata;
+fc_o_val output_val (
+  .clka(clk), // input clka
+  .rsta(o_val_rst), // input rsta
+  .wea(o_val_we), // input [0 : 0] wea
+  .addra(o_val_addr), // input [3 : 0] addra
+  .dina(o_val_idata), // input [15 : 0] dina
+  .douta(o_val_odata) // output [15 : 0] douta
+);
+
+wire lastin_rst, lastin_we;
+wire [9:0] lastin_addr;
+wire [15:0] lastin_idata;
+wire [15:0] lastin_odata;
+fc_lastin last_input (
+  .clka(clk), // input clka
+  .rsta(lastin_rst), // input rsta
+  .wea(lastin_we), // input [0 : 0] wea
+  .addra(lastin_addr), // input [9 : 0] addra
+  .dina(lastin_idata), // input [15 : 0] dina
+  .douta(lastin_odata) // output [15 : 0] douta
+);
+
+wire error_rst, error_we;
+wire [9:0] error_addr;
+wire [15:0] error_idata;
+wire [15:0] error_odata;
+fc_error error_val (
+  .clka(clk), // input clka
+  .rsta(error_rst), // input rsta
+  .wea(error_we), // input [0 : 0] wea
+  .addra(error_addr), // input [9 : 0] addra
+  .dina(error_idata), // input [15 : 0] dina
+  .douta(error_odata) // output [15 : 0] douta
+);
+
+fc #(1024,10,10) fc_inst(clk,1'b1,fc_valid,fw,load_weights,fc_in,fc_i_in,fc_i2_in,fc_rdy,fc_out,fc_i_out,
+wt_we, wt_addr, wt_idata, wt_odata, o_val_rst, o_val_we, o_val_addr, o_val_idata, o_val_odata,
+lastin_rst, lastin_we, lastin_addr, lastin_idata, lastin_odata, error_rst, error_we, error_addr, error_idata, error_odata);
 
 initial begin
     for (i=0;i<28;i=i+1)

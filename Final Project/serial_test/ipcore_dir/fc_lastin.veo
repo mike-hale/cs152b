@@ -52,8 +52,8 @@ fc_lastin your_instance_name (
   .rsta(rsta), // input rsta
   .wea(wea), // input [0 : 0] wea
   .addra(addra), // input [9 : 0] addra
-  .dina(dina), // input [15 : 0] dina
-  .douta(douta) // output [15 : 0] douta
+  .dina(dina), // input [31 : 0] dina
+  .douta(douta) // output [31 : 0] douta
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 
