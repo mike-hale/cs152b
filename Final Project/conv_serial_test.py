@@ -29,3 +29,11 @@ def save_image(image):
             else:
                 val = 0
             f.write('%08x,\n' % val)
+
+def save_weights():
+    f = open('weights.coe', 'w')
+    for i in range(16):
+        for j in range(8):
+            for k in range(8):
+                val = int(0.5*i + j + k) << 15
+                f.write('%08x,\n' % val)
