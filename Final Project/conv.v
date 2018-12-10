@@ -99,13 +99,58 @@ assign last_w_x = wt_addr[5:3] == KERNEL_SIZE - 1;
 assign last_w_y = wt_addr[2:0] == KERNEL_SIZE - 1;
 
 // Multiplier and adder module
-reg [31:0] add_i_a, add_i_b;
-wire [31:0] add_o;
-qadd #(15,32) adder (add_i_a, add_i_b, add_o);
+parameter Q = 15;
+parameter N = 32;
 
-reg [31:0] mult_i_a, mult_i_b;
-wire [31:0] mult_o;
-qmult #(15,32) mult (mult_i_a, mult_i_b, mult_o);
+function [N-1:0] qmult;
+	 input			[N-1:0]	i_multiplicand;
+	 input			[N-1:0]	i_multiplier;
+   reg [2*N-1:0]	r_result;
+begin
+  r_result = i_multiplicand[N-2:0] * i_multiplier[N-2:0];
+	qmult[N-1] = (i_multiplier[N-1] ^ i_multiplicand[N-1]);
+  qmult[N-2:0] = r_result[N-2+Q:Q];
+end
+endfunction
+
+function [N-1:0] qadd;
+    input [N-1:0] a;
+    input [N-1:0] b;
+begin
+  // both negative or both positive
+	if(a[N-1] == b[N-1]) begin						//	Since they have the same sign, absolute magnitude increases
+		qadd[N-2:0] = a[N-2:0] + b[N-2:0];		//		So we just add the two numbers
+		qadd[N-1] = a[N-1];							//		and set the sign appropriately...  Doesn't matter which one we use,  
+  end												//		Not doing any error checking on this...
+	//	one of them is negative...
+	else if(a[N-1] == 0 && b[N-1] == 1) begin		//	subtract a-b
+		if( a[N-2:0] > b[N-2:0] ) begin					//	if a is greater than b,
+			qadd[N-2:0] = a[N-2:0] - b[N-2:0];			//		then just subtract b from a
+			qadd[N-1] = 0;										//		and manually set the sign to positive
+			end
+		else begin												//	if a is less than b,
+			qadd[N-2:0] = b[N-2:0] - a[N-2:0];			//		we'll actually subtract a from b to avoid a 2's complement answer
+			if (qadd[N-2:0] == 0)
+				qadd[N-1] = 0;										//		I don't like negative zero....
+			else
+				qadd[N-1] = 1;										//		and manually set the sign to negative
+			end
+		end
+	else begin												//	subtract b-a (a negative, b positive)
+		if( a[N-2:0] > b[N-2:0] ) begin					//	if a is greater than b,
+			qadd[N-2:0] = a[N-2:0] - b[N-2:0];			//		we'll actually subtract b from a to avoid a 2's complement answer
+			if (qadd[N-2:0] == 0)
+				qadd[N-1] = 0;										//		I don't like negative zero....
+			else
+				qadd[N-1] = 1;										//		and manually set the sign to negative
+			end
+		else begin												//	if a is less than b,
+			qadd[N-2:0] = b[N-2:0] - a[N-2:0];			//		then just subtract a from b
+			qadd[N-1] = 0;										//		and manually set the sign to positive
+			end
+  end
+end
+endfunction
 
 initial begin
     out_valid = 0;
@@ -158,6 +203,7 @@ always @(posedge clk) begin
                 last_input_idx <= conv_input_idx;
                 last_input_x <= conv_input_x;
                 last_input_y <= conv_input_y;
+                conv_in_val <= conv_input;
                 // Get ready for computation stage
                 wt_addr <= {conv_input_idx[IN_ADDR_WIDTH - 1:0],3'b0,3'b0};
                 o_val_addr <= {conv_input_x[COORD_WIDTH - 1:0],conv_input_y[COORD_WIDTH - 1:0]};
@@ -175,14 +221,10 @@ always @(posedge clk) begin
                 if (last_input_x >= wt_addr[5:3] && last_input_x - wt_addr[5:3] < OUTPUT_SIZE &&
                     last_input_y >= wt_addr[2:0] && last_input_y - wt_addr[2:0] < OUTPUT_SIZE) begin
                     // If input coordinates and weight coordinates yield a valid output value
-                    mult_i_a = wt_odata;
-                    mult_i_b = lastin_idata;
-                    temp = mult_o;
+                    temp = qmult(wt_odata, conv_in_val);
                 end else
-                    temp = 0;
-                add_i_a = temp;
-                add_i_b = o_val_odata;
-                o_val_idata <= add_o;
+                    temp = 0;               
+                o_val_idata <= qadd(temp,o_val_odata);
                 o_val_we <= 1; // Next cycle we write
             end else begin // Otherwise we simply read the next output or change states
                 o_val_we <= 0;
@@ -226,8 +268,9 @@ always @(posedge clk) begin
         FW_SEND: begin  
             // If we are done performing previous computation, start sending
             // Must scan inputs over the pooling region before sending
-            if (o_val_odata[31] == 0 && o_val_odata > max_val)
+            if (o_val_odata[31] == 0 && o_val_odata > max_val) begin
                 max_val = o_val_odata;
+            end
             if (last_o_idx == 1 && last_o_x == 1 && last_o_y == 1) begin
                 state <= BP_REC;
                 out_valid <= 0;
@@ -312,17 +355,11 @@ always @(posedge clk) begin
                     wt_we <= 1;
                     if (max_val != 0) begin
                         // Update error data
-                        mult_i_a = wt_odata;
-                        mult_i_b = conv_in_val;
-                        add_i_a = mult_o;
-                        add_i_b = error_odata;
-                        error_idata <= add_o;
+                        temp = qmult(wt_odata, conv_in_val);
+                        error_idata <= qadd(temp,error_odata);
                         // Update weights
-                        mult_i_a = lastin_odata;
-                        mult_i_b = conv_in_val;
-                        add_i_a = {~mult_o[31], 4'b0, mult_o[30:4]};
-                        add_i_b = wt_odata;
-                        wt_idata <= add_o;
+                        temp = qmult(lastin_odata, conv_in_val);
+                        wt_idata <= qadd(temp,wt_odata);
                     end else begin
                         error_idata <= error_odata;
                         wt_idata <= wt_odata;

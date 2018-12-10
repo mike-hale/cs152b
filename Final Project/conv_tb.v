@@ -1,3 +1,4 @@
+`timescale 1ns/1ps
 module conv_tb(
   input clk,
   output [7:0] Led,
@@ -5,7 +6,6 @@ module conv_tb(
   input rx,
   output tx
 );
-
 
 // Weights
 wire wt_we;
@@ -108,17 +108,17 @@ parameter UART_FW = 3;
 parameter BP_SEND = 4;
 parameter BP_REC = 5;
 
-parameter IDLE = 6;
+parameter IDLE = 4;
 
 reg out_rdy, forward, load_weights, in_valid;
 reg [2:0] state;
 reg [31:0] conv_input;
-reg [0:0] conv_input_idx;
+reg [2:0] conv_input_idx;
 reg [4:0] conv_input_x, conv_input_y;
 reg [1:0] byte_idx;
 
 wire [31:0] conv_output;
-wire [3:0] conv_output_idx;
+wire [2:0] conv_output_idx;
 wire [3:0] conv_output_x, conv_output_y;
 wire in_rdy,out_valid;
 
@@ -139,10 +139,11 @@ conv #(1,28,3,5,5,1,2,8,1,3) conv_inst(clk,out_rdy,in_valid,load_weights,conv_in
     error_rst,error_we,error_addr,error_idata,error_odata);
 
 
+
 initial begin
-  led7 = 0;
   byte_idx = 0;
   start = 1;
+  led7 = 0;
   state = LOAD_IMAGE;
   image_idata = 0;
   image_addr = 0;
@@ -177,8 +178,7 @@ always @(posedge clk) begin
             state <= FW_SEND;
         end
         if (rx_irdy == 1) begin
-            led7 <= ~led7;
-            image_idata[31] <= ~in_data[7];
+            image_idata[31] <= in_data[7];
             image_idata[30:15] <= 16'b0;
             image_idata[14:8] <= (in_data[7] == 1) ? in_data[6:0] : ~in_data[6:0];
             image_idata[7:0] <= 8'b0;
@@ -228,8 +228,8 @@ always @(posedge clk) begin
     end
     
     UART_FW: begin
-        if (tx_ordy == 1) begin
-            out_data <= output_odata << (8*byte_idx);
+        if (tx_ordy == 1 && start != 1) begin
+            out_data <= output_odata >> (8*byte_idx);
             start <= 1;
             if (byte_idx == 3) begin
                 if (output_addr[3:0] == 11) begin
