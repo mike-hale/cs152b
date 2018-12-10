@@ -45,7 +45,7 @@
 # PART OF THIS FILE AT ALL TIMES.
 
 
-set device xa6slx4csg225-2
+set device xc5vlx50tff1136-2
 set projName input_image
 set design input_image
 set projDir [file dirname [info script]]

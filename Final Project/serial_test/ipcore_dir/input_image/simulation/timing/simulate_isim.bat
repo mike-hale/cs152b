@@ -45,6 +45,7 @@
 :: PART OF THIS FILE AT ALL TIMES.
 ::--------------------------------------------------------------------------------
 
+cp ..\..\..\input_image.mif .
 
 
 vlogcomp -work work ..\..\implement\results\routed.v

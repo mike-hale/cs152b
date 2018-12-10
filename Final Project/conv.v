@@ -240,6 +240,9 @@ always @(posedge clk) begin
                         state <= FW_SEND;
                         max_val = 0;
                         o_val_addr <= 'b0;
+                        conv_output_idx <= 'hFFFF;
+                        conv_output_x <= (OUTPUT_SIZE - 1) / MAXPOOL;
+                        conv_output_y <= (OUTPUT_SIZE - 1) / MAXPOOL;
                     end else begin
                         // Go back and wait for another input
                         state <= FW_REC;
@@ -272,14 +275,31 @@ always @(posedge clk) begin
 
         /********** FORWARD STAGE SENDING **********/
         FW_SEND: begin  
-            // If we are done performing previous computation, start sending
             // Must scan inputs over the pooling region before sending
             if (o_val_odata[31] == 0 && o_val_odata > max_val) begin
                 max_val = o_val_odata;
             end
-            if (last_o_idx == 1 && last_o_x == 1 && last_o_y == 1) begin
+            // If we are done scanning, start sending
+            if (mem_valid == 1) begin
+                conv_output <= max_val;
+                max_val = 0;
+                out_valid <= 1;
+                if (conv_output_y == (OUTPUT_SIZE - 1) / MAXPOOL) begin
+                    if (conv_output_x == (OUTPUT_SIZE - 1) / MAXPOOL) begin
+                        conv_output_idx <= conv_output_idx + 1;
+                        conv_output_x <= 0;
+                        conv_output_y <= 0;
+                    end else begin
+                        conv_output_x <= conv_output_x + 1;
+                        conv_output_y <= 0;
+                    end
+                 end else
+                     conv_output_y <= conv_output_y + 1; 
+            end else
+              out_valid <= 0;            
+
+            if (out_valid == 1 && last_o_idx == 1 && last_o_x == 1 && last_o_y == 1) begin
                 state <= BP_REC;
-                out_valid <= 0;
                 o_val_addr <= 0;
             end
             // Incrementing address is complex since we must sweep the maxpool region
@@ -300,19 +320,14 @@ always @(posedge clk) begin
                         o_val_addr[COORD_WIDTH - 1:0] <= o_val_addr[COORD_WIDTH - 1:0] + 1;
                         o_val_addr[2*COORD_WIDTH - 1:COORD_WIDTH] <= o_val_addr[2*COORD_WIDTH - 1:COORD_WIDTH] - MAXPOOL + 1;
                     end                          
-                    conv_output <= max_val;
-                    out_valid <= 1;
-                    max_val = 0; // Reset max val (ReLu is implicit)
-                    conv_output_idx <= o_val_addr[O_ADDR_WIDTH + 2*COORD_WIDTH - 1:2*COORD_WIDTH];
-                    conv_output_x <= o_val_addr[2*COORD_WIDTH - 1:COORD_WIDTH] / MAXPOOL;
-                    conv_output_y <= o_val_addr[COORD_WIDTH - 1:0] / MAXPOOL;
+                    mem_valid <= 1; // next cycle we must 
                 end else begin
                     // Reached edge of maxpool region (increment x but subtract (MAXPOOL - 1) from y)
                     o_val_addr[COORD_WIDTH - 1:0] <= o_val_addr[COORD_WIDTH - 1:0] - MAXPOOL + 1;
                     o_val_addr[2*COORD_WIDTH - 1:COORD_WIDTH] <= o_val_addr[2*COORD_WIDTH - 1:COORD_WIDTH] + 1;
                 end
             end else begin
-                out_valid <= 0;
+                mem_valid <= 0;
                 // Default case, just increment y
                 o_val_addr[COORD_WIDTH - 1:0] <= o_val_addr[COORD_WIDTH - 1:0] + 1;
             end

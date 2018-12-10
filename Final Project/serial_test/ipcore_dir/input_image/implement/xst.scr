@@ -1,7 +1,7 @@
 run
 -ifmt VHDL
 -ent input_image_exdes
--p xa6slx4-csg225-2
+-p xc5vlx50t-ff1136-2
 -ifn xst.prj
 -write_timing_constraints No
 -iobuf YES

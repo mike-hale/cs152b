@@ -115,7 +115,7 @@ parameter BP_REC = 5;
 
 parameter IDLE = 4;
 
-reg out_rdy, forward, load_weights, in_valid;
+reg out_rdy, forward, load_weights, in_valid, mem_valid;
 reg [2:0] state;
 reg [31:0] conv_input;
 reg [2:0] conv_input_idx;
@@ -146,6 +146,7 @@ conv #(1,28,3,5,5,1,2,8,1,3) conv_inst(clk,out_rdy,in_valid,load_weights,conv_in
 
 
 initial begin
+  mem_valid = 0;
   byte_idx = 0;
   start = 1;
   led7 = 0;
@@ -196,11 +197,15 @@ always @(posedge clk) begin
          end
     end
     FW_SEND: begin
-	     if (in_valid == 0) begin
-		      in_valid <= 1;
-		      conv_input <= image_odata;
+        if (mem_valid == 1 && in_valid == 0) begin
+            in_valid <= 1;
+            conv_input <= image_odata;
+	      end else if (in_valid == 0) begin
+		        mem_valid <= 1;
         end else if (in_rdy == 1) begin
             conv_input <= image_odata;
+            mem_valid <= 0;
+            in_valid <= 0;
             if (image_addr[4:0] == 27) begin
                 image_addr[9:5] <= image_addr[9:5] + 1;
                 image_addr[4:0] <= 0;
