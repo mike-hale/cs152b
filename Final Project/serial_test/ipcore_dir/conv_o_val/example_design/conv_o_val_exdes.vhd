@@ -91,7 +91,7 @@ ENTITY conv_o_val_exdes IS
     RSTA           : IN STD_LOGIC;  --opt port
   
     WEA            : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    ADDRA          : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
+    ADDRA          : IN STD_LOGIC_VECTOR(12 DOWNTO 0);
   
     DINA           : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
   
@@ -119,7 +119,7 @@ ARCHITECTURE xilinx OF conv_o_val_exdes IS
     RSTA       : IN STD_LOGIC;  --opt port
   
     WEA        : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    ADDRA      : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
+    ADDRA      : IN STD_LOGIC_VECTOR(12 DOWNTO 0);
   
     DINA       : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
   

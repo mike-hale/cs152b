@@ -51,7 +51,7 @@ conv_o_val your_instance_name (
   .clka(clka), // input clka
   .rsta(rsta), // input rsta
   .wea(wea), // input [0 : 0] wea
-  .addra(addra), // input [11 : 0] addra
+  .addra(addra), // input [12 : 0] addra
   .dina(dina), // input [31 : 0] dina
   .douta(douta) // output [31 : 0] douta
 );

@@ -65,7 +65,7 @@ output [31 : 0] douta;
     .C_DISABLE_WARN_BHV_COLL(0),
     .C_DISABLE_WARN_BHV_RANGE(0),
     .C_ENABLE_32BIT_ADDRESS(0),
-    .C_FAMILY("spartan6"),
+    .C_FAMILY("virtex5"),
     .C_HAS_AXI_ID(0),
     .C_HAS_ENA(0),
     .C_HAS_ENB(0),
@@ -81,11 +81,11 @@ output [31 : 0] douta;
     .C_HAS_SOFTECC_INPUT_REGS_A(0),
     .C_HAS_SOFTECC_OUTPUT_REGS_B(0),
     .C_INIT_FILE("BlankString"),
-    .C_INIT_FILE_NAME("no_coe_file_loaded"),
+    .C_INIT_FILE_NAME("conv_wt.mif"),
     .C_INITA_VAL("0"),
     .C_INITB_VAL("0"),
     .C_INTERFACE_TYPE(0),
-    .C_LOAD_INIT_FILE(0),
+    .C_LOAD_INIT_FILE(1),
     .C_MEM_TYPE(0),
     .C_MUX_PIPELINE_STAGES(0),
     .C_PRIM_TYPE(1),
@@ -102,7 +102,7 @@ output [31 : 0] douta;
     .C_USE_BRAM_BLOCK(0),
     .C_USE_BYTE_WEA(0),
     .C_USE_BYTE_WEB(0),
-    .C_USE_DEFAULT_DATA(1),
+    .C_USE_DEFAULT_DATA(0),
     .C_USE_ECC(0),
     .C_USE_SOFTECC(0),
     .C_WEA_WIDTH(1),
@@ -113,7 +113,7 @@ output [31 : 0] douta;
     .C_WRITE_MODE_B("WRITE_FIRST"),
     .C_WRITE_WIDTH_A(32),
     .C_WRITE_WIDTH_B(32),
-    .C_XDEVICEFAMILY("spartan6")
+    .C_XDEVICEFAMILY("virtex5")
   )
   inst (
     .CLKA(clka),

@@ -74,8 +74,8 @@
 -- Configured Core Parameter Values:
 -- (Refer to the SIM Parameters table in the datasheet for more information on
 -- the these parameters.)
---    C_FAMILY                    :  spartan6 
---    C_XDEVICEFAMILY             :  spartan6 
+--    C_FAMILY                    :  virtex5 
+--    C_XDEVICEFAMILY             :  virtex5 
 --    C_INTERFACE_TYPE            :  0 
 --    C_ENABLE_32BIT_ADDRESS      :  0 
 --    C_AXI_TYPE                  :  1 
@@ -101,9 +101,9 @@
 --    C_WRITE_MODE_A              :  WRITE_FIRST 
 --    C_WRITE_WIDTH_A             :  32 
 --    C_READ_WIDTH_A              :  32 
---    C_WRITE_DEPTH_A             :  4096 
---    C_READ_DEPTH_A              :  4096 
---    C_ADDRA_WIDTH               :  12 
+--    C_WRITE_DEPTH_A             :  8192 
+--    C_READ_DEPTH_A              :  8192 
+--    C_ADDRA_WIDTH               :  13 
 --    C_HAS_RSTB                  :  0 
 --    C_RST_PRIORITY_B            :  CE 
 --    C_RSTRAM_B                  :  0 
@@ -115,9 +115,9 @@
 --    C_WRITE_MODE_B              :  WRITE_FIRST 
 --    C_WRITE_WIDTH_B             :  32 
 --    C_READ_WIDTH_B              :  32 
---    C_WRITE_DEPTH_B             :  4096 
---    C_READ_DEPTH_B              :  4096 
---    C_ADDRB_WIDTH               :  12 
+--    C_WRITE_DEPTH_B             :  8192 
+--    C_READ_DEPTH_B              :  8192 
+--    C_ADDRB_WIDTH               :  13 
 --    C_HAS_MEM_OUTPUT_REGS_A     :  0 
 --    C_HAS_MEM_OUTPUT_REGS_B     :  0 
 --    C_HAS_MUX_OUTPUT_REGS_A     :  0 
@@ -156,7 +156,7 @@ ENTITY conv_o_val_prod IS
     ENA        : IN STD_LOGIC;  --optional port
     REGCEA     : IN STD_LOGIC;  --optional port
     WEA        : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    ADDRA      : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
+    ADDRA      : IN STD_LOGIC_VECTOR(12 DOWNTO 0);
     DINA       : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     DOUTA      : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 
@@ -166,7 +166,7 @@ ENTITY conv_o_val_prod IS
     ENB        : IN STD_LOGIC;  --optional port
     REGCEB     : IN STD_LOGIC;  --optional port
     WEB        : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    ADDRB      : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
+    ADDRB      : IN STD_LOGIC_VECTOR(12 DOWNTO 0);
     DINB       : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     DOUTB      : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 
@@ -175,7 +175,7 @@ ENTITY conv_o_val_prod IS
     INJECTDBITERR  : IN STD_LOGIC; --optional port
     SBITERR        : OUT STD_LOGIC; --optional port
     DBITERR        : OUT STD_LOGIC; --optional port
-    RDADDRECC      : OUT STD_LOGIC_VECTOR(11 DOWNTO 0); --optional port
+    RDADDRECC      : OUT STD_LOGIC_VECTOR(12 DOWNTO 0); --optional port
  -- AXI BMG Input and Output Port Declarations
 
     -- AXI Global Signals
@@ -217,7 +217,7 @@ ENTITY conv_o_val_prod IS
     S_AXI_INJECTDBITERR            : IN  STD_LOGIC;
     S_AXI_SBITERR                  : OUT STD_LOGIC;
     S_AXI_DBITERR                  : OUT STD_LOGIC;
-    S_AXI_RDADDRECC                : OUT STD_LOGIC_VECTOR(11  DOWNTO 0);
+    S_AXI_RDADDRECC                : OUT STD_LOGIC_VECTOR(12  DOWNTO 0);
     S_ARESETN                      : IN  STD_LOGIC
 
 
@@ -234,7 +234,7 @@ ARCHITECTURE xilinx OF conv_o_val_prod IS
     RSTA           : IN STD_LOGIC;  --opt port
   
     WEA            : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    ADDRA          : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
+    ADDRA          : IN STD_LOGIC_VECTOR(12 DOWNTO 0);
   
     DINA           : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
   

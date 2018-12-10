@@ -30,7 +30,7 @@ cp ../example_design/conv_wt_exdes.ucf results/
 cd results
 
 echo 'Running ngdbuild'
-ngdbuild -p xc6slx100t-fgg484-2 conv_wt_exdes
+ngdbuild -p xc5vlx50t-ff1136-2 conv_wt_exdes
 
 echo 'Running map'
 map conv_wt_exdes -o mapped.ncd -pr i

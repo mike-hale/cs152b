@@ -45,7 +45,7 @@
 # PART OF THIS FILE AT ALL TIMES.
 
 
-set device xc6slx100tfgg484-2
+set device xc5vlx50tff1136-2
 set projName conv_o_val
 set design conv_o_val
 set projDir [file dirname [info script]]

@@ -30,7 +30,7 @@ cp ../example_design/conv_lastin_exdes.ucf results/
 cd results
 
 echo 'Running ngdbuild'
-ngdbuild -p xc6slx100t-fgg484-2 conv_lastin_exdes
+ngdbuild -p xc5vlx50t-ff1136-2 conv_lastin_exdes
 
 echo 'Running map'
 map conv_lastin_exdes -o mapped.ncd -pr i

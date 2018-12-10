@@ -67,7 +67,7 @@ reg [63:0] temp;
 reg [31:0] rel_val;
 reg [31:0] max_val;
 reg [31:0] conv_in_val;
-reg offset_x, offset_y, computing;
+reg offset_x, offset_y;
 reg [2:0] state;
 
 // Status signals correspond to internal state
@@ -97,6 +97,15 @@ assign last_w_o_idx = wt_addr[O_ADDR_WIDTH + IN_ADDR_WIDTH + 5:IN_ADDR_WIDTH + 6
 assign last_w_in_idx = wt_addr[IN_ADDR_WIDTH + 5:6] == INPUT_DEPTH - 1;
 assign last_w_x = wt_addr[5:3] == KERNEL_SIZE - 1;
 assign last_w_y = wt_addr[2:0] == KERNEL_SIZE - 1;
+
+// Multiplier and adder module
+reg [31:0] add_i_a, add_i_b;
+wire [31:0] add_o;
+qadd #(15,32) adder (add_i_a, add_i_b, add_o);
+
+reg [31:0] mult_i_a, mult_i_b;
+wire [31:0] mult_o;
+qmult #(15,32) mult (mult_i_a, mult_i_b, mult_o);
 
 initial begin
     out_valid = 0;
@@ -166,11 +175,14 @@ always @(posedge clk) begin
                 if (last_input_x >= wt_addr[5:3] && last_input_x - wt_addr[5:3] < OUTPUT_SIZE &&
                     last_input_y >= wt_addr[2:0] && last_input_y - wt_addr[2:0] < OUTPUT_SIZE) begin
                     // If input coordinates and weight coordinates yield a valid output value
-                    // TODO: Fixed point
-                    temp = (wt_odata*lastin_idata) >> 16;
+                    mult_i_a = wt_odata;
+                    mult_i_b = lastin_idata;
+                    temp = mult_o;
                 end else
                     temp = 0;
-                o_val_idata <= o_val_odata + temp;
+                add_i_a = temp;
+                add_i_b = o_val_odata;
+                o_val_idata <= add_o;
                 o_val_we <= 1; // Next cycle we write
             end else begin // Otherwise we simply read the next output or change states
                 o_val_we <= 0;
@@ -214,7 +226,7 @@ always @(posedge clk) begin
         FW_SEND: begin  
             // If we are done performing previous computation, start sending
             // Must scan inputs over the pooling region before sending
-            if (o_val_odata > max_val) //TODO: Fixed point analysis
+            if (o_val_odata[31] == 0 && o_val_odata > max_val)
                 max_val = o_val_odata;
             if (last_o_idx == 1 && last_o_x == 1 && last_o_y == 1) begin
                 state <= BP_REC;
@@ -270,14 +282,14 @@ always @(posedge clk) begin
                 o_val_addr <= {conv_input_idx[O_ADDR_WIDTH - 1:0],conv_input_x[COORD_WIDTH - 1:0]*MAXPOOL,conv_input_y[COORD_WIDTH - 1:0]*MAXPOOL};
                 state <= BP_COMP;
                 max_val = 0;
-                rel_val = 'hFFFF;
+                rel_val <= 'hFFFF;
             end
         end
 
         /********** BACKPROP STAGE COMPUTATION **********/
         BP_COMP: begin
             if (rel_val == 'hFFFF) begin //If we haven't determined the correct value & offset
-                if (o_val_odata > max_val) begin //TODO: fixed point
+                if (o_val_odata[31] == 0 && o_val_odata > max_val) begin
                     max_val = o_val_odata;
                     offset_x = o_val_addr[2*COORD_WIDTH - 1:COORD_WIDTH] % MAXPOOL;
                     offset_y = o_val_addr[COORD_WIDTH - 1:0] % MAXPOOL;
@@ -295,12 +307,22 @@ always @(posedge clk) begin
                     o_val_addr[COORD_WIDTH - 1:0] <= o_val_addr[COORD_WIDTH - 1:0] + 1;
                 end
             end else begin
-                if (error_we == 0) begin // TODO: fixed point 
+                if (error_we == 0) begin
                     error_we <= 1;
                     wt_we <= 1;
                     if (max_val != 0) begin
-                        error_idata <= error_odata + wt_odata*conv_in_val;
-                        wt_idata <= wt_odata - lastin_odata*conv_in_val;
+                        // Update error data
+                        mult_i_a = wt_odata;
+                        mult_i_b = conv_in_val;
+                        add_i_a = mult_o;
+                        add_i_b = error_odata;
+                        error_idata <= add_o;
+                        // Update weights
+                        mult_i_a = lastin_odata;
+                        mult_i_b = conv_in_val;
+                        add_i_a = {~mult_o[31], 4'b0, mult_o[30:4]};
+                        add_i_b = wt_odata;
+                        wt_idata <= add_o;
                     end else begin
                         error_idata <= error_odata;
                         wt_idata <= wt_odata;

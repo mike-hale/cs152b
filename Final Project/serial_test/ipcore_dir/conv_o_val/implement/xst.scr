@@ -1,7 +1,7 @@
 run
 -ifmt VHDL
 -ent conv_o_val_exdes
--p xc6slx100t-fgg484-2
+-p xc5vlx50t-ff1136-2
 -ifn xst.prj
 -write_timing_constraints No
 -iobuf YES
