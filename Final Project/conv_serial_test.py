@@ -24,7 +24,7 @@ def save_image(image):
                 if image[i,j] >= 127:
                     val = (int(image[i,j]) & 0x7F) << 8
                 else:
-                    val = (127 - int(image[i,j])) << 8
+                    val = (128 - int(image[i,j])) << 8
                     val += (1 << 31)
             else:
                 val = 0
