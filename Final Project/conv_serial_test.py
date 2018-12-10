@@ -21,10 +21,10 @@ def save_image(image):
     for i in range(32):
         for j in range(32):
             if i < 28 and j < 28:
-                if image[i,j] > 127:
+                if image[i,j] >= 127:
                     val = (int(image[i,j]) & 0x7F) << 8
                 else:
-                    val = (127 - int(-image[i,j])) << 8
+                    val = (127 - int(image[i,j])) << 8
                     val += (1 << 31)
             else:
                 val = 0
