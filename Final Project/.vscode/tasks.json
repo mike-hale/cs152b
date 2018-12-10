@@ -16,7 +16,7 @@
         {
             "label": "CONV Testbench",
             "type": "shell",
-            "command": "iverilog -o conv.out conv.v conv_tb.v iverilog_sim/BLK_MEM_GEN_V7_3.v iverilog_sim/conv_error.v iverilog_sim/conv_lastin.v iverilog_sim/conv_o_val.v iverilog_sim/conv_wt.v & vvp conv.out",
+            "command": "iverilog -I serial_test -o conv.out conv.v conv_tb.v iverilog_sim/BLK_MEM_GEN_V7_3.v iverilog_sim/conv_error.v iverilog_sim/conv_lastin.v iverilog_sim/conv_o_val.v iverilog_sim/conv_wt.v iverilog_sim/input_image.v iverilog_sim/tb_output.v serial_test/uart_rx.v serial_test/uart_tx.v serial_test/baudgen_rx.v serial_test/baudgen_tx.v & vvp conv.out",
             "presentation": {
                 "reveal": "always",
                 "panel": "new"

@@ -12,7 +12,7 @@
     <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
   </header>
 
-  <version xil_pn:ise_version="14.6" xil_pn:schema_version="2"/>
+  <version xil_pn:ise_version="14.7" xil_pn:schema_version="2"/>
 
   <files>
     <file xil_pn:name="fc_o_val.ngc" xil_pn:type="FILE_NGC">
@@ -31,7 +31,7 @@
   <properties>
     <property xil_pn:name="Auto Implementation Top" xil_pn:value="false" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Device" xil_pn:value="xa6slx4" xil_pn:valueState="default"/>
-    <property xil_pn:name="Device Family" xil_pn:value="Automotive Spartan6" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="Device Family" xil_pn:value="Automotive Spartan6" xil_pn:valueState="default"/>
     <property xil_pn:name="Enable Internal Done Pipe" xil_pn:value="true" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Implementation Stop View" xil_pn:value="PreSynthesis" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Implementation Top" xil_pn:value="Module|fc_o_val" xil_pn:valueState="non-default"/>

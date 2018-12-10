@@ -45,28 +45,23 @@
 # THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
 # PART OF THIS FILE AT ALL TIMES.
 #--------------------------------------------------------------------------------
+
 cp ../../../input_image.mif .
 
 
-mkdir work
-echo "Compiling Core Verilog UNISIM/Behavioral model"
-ncvlog -work work ../../../input_image.v 
-ncvhdl -v93 -work work ../../example_design/input_image_exdes.vhd
+vlogcomp -work work ../../implement/results/routed.v
 
 echo "Compiling Test Bench Files"
 
-ncvhdl -v93 -work work    ../bmg_tb_pkg.vhd
-ncvhdl -v93 -work work    ../random.vhd
-ncvhdl -v93 -work work    ../data_gen.vhd
-ncvhdl -v93 -work work    ../addr_gen.vhd
-ncvhdl -v93 -work work    ../checker.vhd
-ncvhdl -v93 -work work    ../bmg_stim_gen.vhd
-ncvhdl -v93 -work work    ../input_image_synth.vhd 
-ncvhdl -v93 -work work    ../input_image_tb.vhd
+vhpcomp -work work    ../bmg_tb_pkg.vhd
+vhpcomp -work work    ../random.vhd
+vhpcomp -work work    ../data_gen.vhd
+vhpcomp -work work    ../addr_gen.vhd
+vhpcomp -work work    ../checker.vhd
+vhpcomp -work work    ../bmg_stim_gen.vhd
+vhpcomp -work work    ../input_image_synth.vhd 
+vhpcomp -work work    ../input_image_tb.vhd
 
-echo "Elaborating Design"
-ncvlog -work work $XILINX/verilog/src/glbl.v
-ncelab -access +rwc glbl work.input_image_tb
+    fuse -L simprims_ver work.input_image_tb work.glbl -o input_image_tb.exe
 
-echo "Simulating Design"
-ncsim -gui -input @"simvision -input wave_ncsim.sv" work.input_image_tb
+./input_image_tb.exe -sdftyp /input_image_tb/input_image_synth_inst/bmg_port=../../implement/results/routed.sdf -gui -tclbatch simcmds.tcl

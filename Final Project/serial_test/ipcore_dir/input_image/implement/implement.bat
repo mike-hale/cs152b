@@ -30,7 +30,7 @@ copy ..\example_design\input_image_exdes.ucf results\
 cd results
 
 echo 'Running ngdbuild'
-ngdbuild -p xc5vlx50t-ff1136-2 input_image_exdes
+ngdbuild -p xa6slx4-csg225-2 input_image_exdes
 
 echo 'Running map'
 map input_image_exdes -o mapped.ncd  -pr i

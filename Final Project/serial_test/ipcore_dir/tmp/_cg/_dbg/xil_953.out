@@ -4,7 +4,7 @@ SET_PARAMETER assume_synchronous_clk false
 SET_PARAMETER use_regcea_pin false
 SET_PARAMETER axi_id_width 4
 SET_PARAMETER softecc false
-SET_PARAMETER load_init_file false
+SET_PARAMETER load_init_file true
 SET_PARAMETER port_a_write_rate 50
 SET_PARAMETER disable_collision_warnings false
 SET_PARAMETER use_byte_write_enable false
@@ -31,7 +31,7 @@ SET_PARAMETER enable_a Always_Enabled
 SET_PARAMETER enable_b Always_Enabled
 SET_PARAMETER port_a_enable_rate 100
 SET_PARAMETER use_axi_id false
-SET_PARAMETER write_depth_a 8192
+SET_PARAMETER write_depth_a 512
 SET_PARAMETER algorithm Minimum_Area
 SET_PARAMETER use_bram_block Stand_Alone
 SET_PARAMETER output_reset_value_a 0
@@ -41,7 +41,7 @@ SET_PARAMETER port_b_write_rate 50
 SET_PARAMETER ecctype No_ECC
 SET_PARAMETER write_width_a 32
 SET_PARAMETER write_width_b 32
-SET_PARAMETER component_name conv_o_val
+SET_PARAMETER component_name conv_wt
 SET_PARAMETER reset_priority_a CE
 SET_PARAMETER reset_priority_b CE
 SET_PARAMETER operating_mode_a WRITE_FIRST
@@ -51,10 +51,10 @@ SET_PARAMETER interface_type Native
 SET_PARAMETER mem_file no_Mem_file_loaded
 SET_PARAMETER reset_type SYNC
 SET_PARAMETER register_portb_output_of_memory_primitives false
-SET_PARAMETER use_rsta_pin true
+SET_PARAMETER use_rsta_pin false
 SET_PARAMETER port_b_enable_rate 100
-SET_PARAMETER coe_file no_coe_file_loaded
-SET_PARAMETER fill_remaining_memory_locations true
+SET_PARAMETER coe_file C:\Users\CS152B\Desktop\cs152b\Final Project\weights.coe
+SET_PARAMETER fill_remaining_memory_locations false
 SET_PARAMETER axi_slave_type Memory_Slave
 SET_PARAMETER axi_type AXI4_Full
 SET_PARAMETER enable_32bit_address false

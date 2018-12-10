@@ -69,6 +69,7 @@ reg [31:0] max_val;
 reg [31:0] conv_in_val;
 reg offset_x, offset_y;
 reg [2:0] state;
+reg mem_valid;
 
 // Status signals correspond to internal state
 assign in_rdy = state == FW_REC || state == BP_REC;
@@ -207,6 +208,7 @@ always @(posedge clk) begin
                 // Get ready for computation stage
                 wt_addr <= {conv_input_idx[IN_ADDR_WIDTH - 1:0],3'b0,3'b0};
                 o_val_addr <= {conv_input_x[COORD_WIDTH - 1:0],conv_input_y[COORD_WIDTH - 1:0]};
+                mem_valid <= 0;
                 lastin_we <= 1;
                 lastin_idata <= conv_input;
                 lastin_addr <= {conv_input_idx,conv_input_x[COORD_WIDTH - 1:0],conv_input_y[COORD_WIDTH - 1:0]};
@@ -218,16 +220,20 @@ always @(posedge clk) begin
         FW_COMP: begin
             lastin_we <= 0;
             if (o_val_we == 0) begin // If we just read a value from o_val, we write that value plus temp
-                if (last_input_x >= wt_addr[5:3] && last_input_x - wt_addr[5:3] < OUTPUT_SIZE &&
-                    last_input_y >= wt_addr[2:0] && last_input_y - wt_addr[2:0] < OUTPUT_SIZE) begin
-                    // If input coordinates and weight coordinates yield a valid output value
-                    temp = qmult(wt_odata, conv_in_val);
-                end else
-                    temp = 0;               
-                o_val_idata <= qadd(temp,o_val_odata);
-                o_val_we <= 1; // Next cycle we write
+                if (mem_valid == 1) begin
+                    if (last_input_x >= wt_addr[5:3] && last_input_x - wt_addr[5:3] < OUTPUT_SIZE &&
+                        last_input_y >= wt_addr[2:0] && last_input_y - wt_addr[2:0] < OUTPUT_SIZE) begin
+                        // If input coordinates and weight coordinates yield a valid output value
+                        temp = qmult(wt_odata, conv_in_val);
+                    end else
+                        temp = 0;               
+                    o_val_idata <= qadd(temp,o_val_odata);
+                    o_val_we <= 1; // Next cycle we write
+                end else 
+                    mem_valid <= 1; // The next cycle our memory will be ready
             end else begin // Otherwise we simply read the next output or change states
                 o_val_we <= 0;
+                mem_valid <= 0;
                 if (last_w_y == 1 && last_w_x == 1 && last_w_o_idx == 1) begin // We've completed computation stage
                     if (last_input_idx == INPUT_DEPTH - 1 && last_input_x == INPUT_SIZE - 1 && last_input_y == INPUT_SIZE - 1) begin
                         // Move on to output stage 
@@ -242,7 +248,7 @@ always @(posedge clk) begin
                     if (last_w_y == 1) begin
                         if (last_w_x == 1) begin
                             // Reset x,y but increment output idx 
-                            wt_addr[O_ADDR_WIDTH + IN_ADDR_WIDTH + 5:IN_ADDR_WIDTH + 5] <= wt_addr[O_ADDR_WIDTH + IN_ADDR_WIDTH + 5:IN_ADDR_WIDTH + 5] + 1;
+                            wt_addr[O_ADDR_WIDTH + IN_ADDR_WIDTH + 5:IN_ADDR_WIDTH + 6] <= wt_addr[O_ADDR_WIDTH + IN_ADDR_WIDTH + 5:IN_ADDR_WIDTH + 6] + 1;
                             wt_addr[5:0] <= 6'b0;
                             // note o_val x,y coordinates reset to input coord values
                             o_val_addr[O_ADDR_WIDTH + 2*COORD_WIDTH - 1:2*COORD_WIDTH] <= o_val_addr[O_ADDR_WIDTH + 2*COORD_WIDTH - 1:2*COORD_WIDTH] + 1;

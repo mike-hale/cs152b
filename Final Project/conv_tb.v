@@ -1,15 +1,20 @@
 `timescale 1ns/1ps
 module conv_tb(
-  input clk,
+//  input clk,
   output [7:0] Led,
   input [7:0] sw,
   input rx,
   output tx
 );
 
+reg clk = 0;
+always begin
+  #5 clk <= ~clk;
+end
+
 // Weights
 wire wt_we;
-wire [8:0] wt_addr;
+wire [9:0] wt_addr;
 wire [31:0] wt_idata;
 wire [31:0] wt_odata;
 //Outputs
@@ -144,11 +149,11 @@ initial begin
   byte_idx = 0;
   start = 1;
   led7 = 0;
-  state = LOAD_IMAGE;
+  state = FW_SEND;
   image_idata = 0;
   image_addr = 0;
   image_we = 0;
-  in_valid = 1;
+  in_valid = 0;
   out_data = "7";
   out_rdy = 1;
   forward = 1;
@@ -191,7 +196,10 @@ always @(posedge clk) begin
          end
     end
     FW_SEND: begin
-        if (in_rdy == 1) begin
+	     if (in_valid == 0) begin
+		      in_valid <= 1;
+		      conv_input <= image_odata;
+        end else if (in_rdy == 1) begin
             conv_input <= image_odata;
             if (image_addr[4:0] == 27) begin
                 image_addr[9:5] <= image_addr[9:5] + 1;
@@ -217,6 +225,7 @@ always @(posedge clk) begin
             output_addr[3:0] <= conv_output_y;
             output_addr[7:4] <= conv_output_x;
             output_addr[10:8] <= conv_output_idx;
+            $display("(%d,%d,%d), %d.%d",conv_output_idx, conv_output_x,conv_output_y,conv_output[30:15],conv_output[14:0] );
             output_idata <= conv_output;
             output_we <= 1;
         end else if (output_addr[3:0] == 11 && output_addr[7:4] == 11 && output_addr[10:8] == 7) begin
