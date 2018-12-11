@@ -24,7 +24,6 @@ module softmax #(
     output [31:0] dbg4
 );
 
-wire [31:0] dbg_inner[WIDTH-1:0];
 
 
 
@@ -81,16 +80,17 @@ initial begin
 end
 
 
-genvar i;
+genvar i, k;
 generate
-    for (i = 0; i < WIDTH; i = i + 1) begin
+    for (i = 0; i < WIDTH; i = i + 1) begin:fraction
       exp calc_numerator( latched_input[i], numerator[i], start_exp[i], done_exp[i], clk);//,dbg_inner[i]);
       // take the bottom 32 bits! Number between 0 and 1 anyway
       qdiv #(15,44) calc_out(numerator[i], denominator, start_div, clk,last_output[i],div_done[i],ovf_div[i]); 
     end
 
-    for (i = 1; i < WIDTH; i = i + 1)
+    for (i = 1; i < WIDTH; i = i + 1) begin: summation
         fadd summation_denominator(numerator[i], current_summation[i-1],current_summation[i]);
+    end
 endgenerate 
 
 reg test;
@@ -98,12 +98,7 @@ assign dbg = state;
 assign dbg2 = latched_output[out_idx];
 assign dbg3 = out_idx;
 assign dbg4 = latched_output[3];
-always @(posedge rst) begin
-    max = 0; 
-    in_ready = 0;
-    state = IDLE;
-    out_idx = 0;
-end
+
 
 always @(posedge clk) begin
     case(state)

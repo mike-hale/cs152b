@@ -1,0 +1,1 @@
+verilog isim_temp "softmax_tb.v"

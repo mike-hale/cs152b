@@ -1,0 +1,35 @@
+Running: C:\Xilinx\14.6\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/CS152B/Desktop/cs152b/Final Project/softmax_test/softmax_tb_isim_beh.exe -prj C:/Users/CS152B/Desktop/cs152b/Final Project/softmax_test/softmax_tb_beh.prj work.softmax_tb work.glbl 
+ISim P.68d (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/CS152B/Desktop/cs152b/Final Project/softmax_test/../fixed_point_calc/verilog_source_code/qdiv.v" into library work
+Analyzing Verilog file "C:/Users/CS152B/Desktop/cs152b/Final Project/softmax_test/../fixed_point_calc/verilog_source_code/fmult.v" into library work
+Analyzing Verilog file "C:/Users/CS152B/Desktop/cs152b/Final Project/softmax_test/../fixed_point_calc/verilog_source_code/fadd.v" into library work
+Analyzing Verilog file "C:/Users/CS152B/Desktop/cs152b/Final Project/softmax_test/../fixed_point_calc/verilog_source_code/exp.v" into library work
+Analyzing Verilog file "C:/Users/CS152B/Desktop/cs152b/Final Project/softmax_test/../softmax.v" into library work
+WARNING:HDLCompiler:693 - "C:/Users/CS152B/Desktop/cs152b/Final Project/softmax_test/../softmax.v" Line 39: Parameter declaration becomes local in softmax with formal parameter declaration list
+WARNING:HDLCompiler:693 - "C:/Users/CS152B/Desktop/cs152b/Final Project/softmax_test/../softmax.v" Line 40: Parameter declaration becomes local in softmax with formal parameter declaration list
+WARNING:HDLCompiler:693 - "C:/Users/CS152B/Desktop/cs152b/Final Project/softmax_test/../softmax.v" Line 41: Parameter declaration becomes local in softmax with formal parameter declaration list
+WARNING:HDLCompiler:693 - "C:/Users/CS152B/Desktop/cs152b/Final Project/softmax_test/../softmax.v" Line 42: Parameter declaration becomes local in softmax with formal parameter declaration list
+WARNING:HDLCompiler:693 - "C:/Users/CS152B/Desktop/cs152b/Final Project/softmax_test/../softmax.v" Line 43: Parameter declaration becomes local in softmax with formal parameter declaration list
+WARNING:HDLCompiler:693 - "C:/Users/CS152B/Desktop/cs152b/Final Project/softmax_test/../softmax.v" Line 44: Parameter declaration becomes local in softmax with formal parameter declaration list
+Analyzing Verilog file "C:/Users/CS152B/Desktop/cs152b/Final Project/softmax_test/../test_softmax.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.6/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:189 - "C:/Users/CS152B/Desktop/cs152b/Final Project/softmax_test/../softmax.v" Line 88: Size mismatch in connection of port <i_dividend>. Formal port size is 44-bit while actual signal size is 32-bit.
+Completed static elaboration
+Compiling module fmult
+Compiling module qdiv
+Compiling module fadd
+Compiling module exp
+Compiling module qdiv(N=44)
+Compiling module softmax(WIDTH=4,IDX_WIDTH=3)
+Compiling module softmax_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 8 Verilog Units
+Built simulation executable C:/Users/CS152B/Desktop/cs152b/Final Project/softmax_test/softmax_tb_isim_beh.exe
+Fuse Memory Usage: 28596 KB
+Fuse CPU Usage: 436 ms

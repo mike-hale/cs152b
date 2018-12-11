@@ -1,0 +1,5 @@
+MO softmax NULL ../softmax.v vlg32/softmax.bin 1544564363
+MO fmult NULL ../fixed_point_calc/verilog_source_code/fmult.v vlg3C/fmult.bin 1544564363
+MO qdiv NULL ../fixed_point_calc/verilog_source_code/qdiv.v vlg74/qdiv.bin 1544564363
+MO fadd NULL ../fixed_point_calc/verilog_source_code/fadd.v vlg1F/fadd.bin 1544564363
+MO exp NULL ../fixed_point_calc/verilog_source_code/exp.v vlg25/exp.bin 1544564363

@@ -4,19 +4,14 @@ module tb();
     wire [31:0] y;
     reg clk;
     wire done;
-    wire [31:0] dbg[2:0];
     reg start;
     integer count;
-    real calc_out;
     exp uut(
         .x(x),
         .y(y),
         .start(start),
         .done(done),
-        .clk(clk),
-        .dbg(dbg[0]),
-        .dbg2(dbg[1]),
-        .dbg3(dbg[2])
+        .clk(clk)
     );
     always begin
         #1 clk  = ~clk;
@@ -32,7 +27,7 @@ module tb();
     
 
     always@(posedge clk) begin
-        $display("x: %h, y: %h, start: %b, done: %b, %h, %h, %h", x, y, start, done, dbg[0], dbg[1], dbg[2]);
+        $display("x: %h, y: %h, start: %b, done: %b,", x, y, start, done);
         count <= count + 1;
         if (count > 5) begin
             if (count == 550) begin

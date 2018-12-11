@@ -1,0 +1,6 @@
+verilog isim_temp "../fixed_point_calc/verilog_source_code/qdiv.v"
+verilog isim_temp "../fixed_point_calc/verilog_source_code/fmult.v"
+verilog isim_temp "../fixed_point_calc/verilog_source_code/fadd.v"
+verilog isim_temp "../fixed_point_calc/verilog_source_code/exp.v"
+verilog isim_temp "../fixed_point_calc/verilog_source_code/test_exp.v"
+verilog isim_temp "C:/Xilinx/14.6/ISE_DS/ISE//verilog/src/glbl.v"

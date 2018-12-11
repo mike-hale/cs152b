@@ -1,0 +1,7 @@
+verilog work "../fixed_point_calc/verilog_source_code/qdiv.v"
+verilog work "../fixed_point_calc/verilog_source_code/fmult.v"
+verilog work "../fixed_point_calc/verilog_source_code/fadd.v"
+verilog work "../fixed_point_calc/verilog_source_code/exp.v"
+verilog work "../softmax.v"
+verilog work "../test_softmax.v"
+verilog work "C:/Xilinx/14.6/ISE_DS/ISE//verilog/src/glbl.v"

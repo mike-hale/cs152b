@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module softmax_tb();
 
     reg clk;
@@ -57,7 +59,7 @@ module softmax_tb();
     always @(posedge clk) begin
         rst <= 0;
         count <= count + 1;
-        if (count == 500) 
+        if (count == 1000) 
             $finish;
         //Forward propagation
         if(in_ready && backprop_ctrl == 0) begin
