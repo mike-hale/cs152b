@@ -9,11 +9,14 @@ module softmax #(
     input [IDX_WIDTH - 1:0] sf_input_idx,
     input start,
     input rst,
+    input [IDX_WIDTH - 1:0] expected_label,
     output reg in_ready,
-
-    output reg [IDX_WIDTH - 1:0] max,
     output reg out_ready,
-    input out_received,
+    output reg [IDX_WIDTH - 1:0] max,
+    output reg max_ready,
+    output reg [IDX_WIDTH - 1:0] out_idx, // USED FOR BACKPROP
+    output wire [31:0] out_data,
+    //input out_received,
 
     output [31:0] dbg, 
     output [31:0] dbg2,
@@ -26,9 +29,9 @@ wire [31:0] dbg_inner[WIDTH-1:0];
 
 
 //topmodule internal registers
-reg [31:0] latch_input [WIDTH-1:0];
+reg [31:0] latched_input [WIDTH-1:0];
 wire [31:0] last_output [WIDTH - 1:0]; 
-reg [31:0] sf_output [WIDTH - 1: 0];
+reg [31:0] latched_output [WIDTH - 1: 0];
 reg done;
 
 
@@ -39,6 +42,7 @@ parameter EXP = 1; //All values for the nodes have been latched. Doing exponent 
 parameter SUM = 2; // Sum up values to make divisor
 parameter DIV = 3; //All values finished exponent, do division. Once done go to IDLE
 parameter MAX = 4; // Checks the maximum value. Could probably be absorved into the IDLE stage
+parameter BACKPROP = 5; 
 
 
 
@@ -66,46 +70,62 @@ reg[IDX_WIDTH-1:0] max_count;
 reg[31:0] max_num;
 
 
+assign out_data = ((out_idx) == expected_label) ? {1'b1, (31'h00008000 - latched_output[out_idx][30:0])} : latched_output[out_idx];
+
 
 initial begin
-     max = 0;
-     in_ready = 1;
+     max <= 0;
+     in_ready <= 1; 
+     out_ready <= 0;
+     state <= 0;
 end
 
 
 genvar i;
 generate
     for (i = 0; i < WIDTH; i = i + 1) begin
-      exp calc_numerator( latch_input[i], numerator[i], start_exp[i], done_exp[i], clk,dbg_inner[i]);
+      exp calc_numerator( latched_input[i], numerator[i], start_exp[i], done_exp[i], clk);//,dbg_inner[i]);
       // take the bottom 32 bits! Number between 0 and 1 anyway
       qdiv #(15,44) calc_out(numerator[i], denominator, start_div, clk,last_output[i],div_done[i],ovf_div[i]); 
     end
 
     for (i = 1; i < WIDTH; i = i + 1)
-        qadd summation_denominator(numerator[i], current_summation[i-1],current_summation[i]);
+        fadd summation_denominator(numerator[i], current_summation[i-1],current_summation[i]);
 endgenerate 
 
 reg test;
 assign dbg = state;
-assign dbg2 = latch_input[0];
-assign dbg3 = numerator[0];
-assign dbg4 = current_summation[0];
-
+assign dbg2 = latched_output[out_idx];
+assign dbg3 = out_idx;
+assign dbg4 = latched_output[3];
 always @(posedge rst) begin
     max = 0; 
     in_ready = 0;
     state = IDLE;
+    out_idx = 0;
 end
 
 always @(posedge clk) begin
     case(state)
         IDLE: begin
             in_ready <= 1;
-            latch_input[sf_input_idx] <= sf_input; 
-            start_exp[sf_input_idx] <= 1;
-            if (&start_exp) begin // all inputs have started exp
-                in_ready <= 0;
-                state <= EXP;
+            if (start == 1) begin
+                if (backprop_ctrl == 0) begin
+                    in_ready <= 1;
+                    latched_input[sf_input_idx] <= sf_input; 
+                    start_exp[sf_input_idx] <= 1;
+                    if (&start_exp) begin // all inputs have started exp
+                        in_ready <= 0;
+                        state <= EXP;
+                        //$display(Latched X: %h, %h, %h, %h", latched_input[0],latched_input[1],latched_input[2],latched_input[3]);
+                    end
+                    max_ready <= 0;
+                end else begin // start latch of first word to send here
+                    state <= BACKPROP;
+                    out_idx <= 0; // technically redundant
+             //       out_data <= (0 == expected_label) ? {1'b1, (31'h00008000 - latched_output[0])} : latched_output[0];
+                    out_ready <= 0;
+                end
             end
         end
 
@@ -128,24 +148,40 @@ always @(posedge clk) begin
                 max <= 0;
                 max_count <= 0;
                 state <= MAX;    
-            end
-            
+            end  
         end
 
         MAX: begin
-            if(max_count == WIDTH)
-                out_ready <= 1;
-            else begin
+            for (j = 0; j < WIDTH; j = j + 1) begin
+                latched_output[j] = last_output[j]; // store values
+            end 
+            if(max_count == WIDTH) begin
+                max_ready <= 1;
+            end else begin
                 if (last_output[max] < last_output[max_count])
                     max <= max_count;
                 else 
                     test <= 0;
                 max_count <= max_count + 1;
             end
-            if(out_received) begin
-                state <= IDLE;
-                in_ready <= 1;
-                out_ready <= 0;
+            if (max_ready) begin
+                    state <= IDLE;
+                    in_ready <= 1;
+                    out_ready <= 1;
+            end
+        end
+
+        BACKPROP: begin
+            if(start == 1) begin
+                if(out_idx == WIDTH-1) begin
+                    state <= IDLE;
+                    out_ready <= 0;
+                    out_idx <= 0;
+                end else begin
+                    out_idx <= out_idx + 1;
+       //             out_data <= ( (out_idx + 1) == expected_label) ? {1'b1, (31'h00008000 - latched_output[out_idx + 1][30:0])} : latched_output[out_idx + 1];
+                    out_ready <= 1;
+                end
             end
         end
     endcase

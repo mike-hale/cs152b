@@ -22,7 +22,7 @@ qadd#(15,32) sum_of_prod(
     .b(l_output_node),
     .c(poss_output_node)
 );
-assign dbg = prod_to_sum;3
+assign dbg = prod_to_sum;
 assign output_node = ovf ? 32'hFFFF :  poss_output_node;
 
 endmodule

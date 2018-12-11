@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module qadd #(
+module fadd #(
 	//Parameterized values
 	parameter Q = 15,
 	parameter N = 32

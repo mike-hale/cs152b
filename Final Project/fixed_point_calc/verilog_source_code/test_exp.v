@@ -25,16 +25,17 @@ module tb();
     initial begin
         clk <= 0;
         count <= 0;
-        x <= 32'h80048000;
+        //x <= 32'h80048000;
+        x <= 32'h00010f00;
         start <= 0;
     end
     
 
     always@(posedge clk) begin
-        //$display("x: %h, y: %h, start: %b, done: %b, %h, %h, %h", x, y, start, done, dbg[0], dbg[1], dbg[2]);
+        $display("x: %h, y: %h, start: %b, done: %b, %h, %h, %h", x, y, start, done, dbg[0], dbg[1], dbg[2]);
         count <= count + 1;
         if (count > 5) begin
-            if (count == 200) begin
+            if (count == 550) begin
                 $finish;
             end else begin
                 count <= count + 1;
@@ -50,6 +51,6 @@ module tb();
     always @ (posedge done) begin
         $display("Answer: %h, %h, %d", x, y, count);
         if(count > 6)
-            x = x - 32'hc000;
+            x = x - 32'ha000;
     end
 endmodule
