@@ -28,6 +28,28 @@ module exp #(
     reg [BIT_WIDTH - 1:0] int_count;
     reg int_done;
     
+    
+    
+    parameter e = 32'h00015bf0;
+    parameter [(BIT_WIDTH*NUM_TERMS)-1: 0] denominator = {32'h003c0000, 32'h00c0000, 32'h00030000, 32'h00010000, 32'h000008000};
+    reg [BIT_WIDTH - 1:0] num_a, num_b, div_a,  div_b,  add_a, add_b,  sum;
+    wire [BIT_WIDTH - 1:0] num_out, div_out, add_out;
+    wire complete_frac, ovf_frac, ovf_mult;
+    reg start_frac, ready;
+    reg [2:0] polynomial_ctr, numerator_ctr; 
+    reg start_latches,latch_to_int, latch_sum, latch_combine, latch_mult;
+    
+       /* Fractional calculation */
+    wire [14:0] latch_frac;
+    assign latch_frac = latch_x[14:0];
+    reg [BIT_WIDTH - 1:0] frac_exp;
+    reg polynomial_done;
+
+    reg  [BIT_WIDTH - 1:0] numerator [NUM_TERMS - 1:0];
+   // reg [31:0] sum_items[NUM_TERMS - 1:0]; 
+    reg [BIT_WIDTH - 1:0] compute_out;
+
+    
     initial begin
       int_done = 1;
       num_a = 0;
@@ -46,24 +68,8 @@ module exp #(
       latch_x = 0;
     end
  
-    /* Fractional calculation */
-    wire [14:0] latch_frac;
-    assign latch_frac = latch_x[14:0];
-    reg [BIT_WIDTH - 1:0] frac_exp;
-    reg polynomial_done;
-
-    reg  [BIT_WIDTH - 1:0] numerator [NUM_TERMS - 1:0];
-   // reg [31:0] sum_items[NUM_TERMS - 1:0]; 
-    reg [BIT_WIDTH - 1:0] compute_out;
-
-    parameter e = 32'h00015bf0;
-    parameter [(BIT_WIDTH*NUM_TERMS)-1: 0] denominator = {32'h003c0000, 32'h00c0000, 32'h00030000, 32'h00010000, 32'h000008000};
-    reg [BIT_WIDTH - 1:0] num_a, num_b, div_a,  div_b,  add_a, add_b,  sum;
-    wire [BIT_WIDTH - 1:0] num_out, div_out, add_out;
-    wire complete_frac, ovf_frac, ovf_mult;
-    reg start_frac, ready;
-    reg [2:0] polynomial_ctr, numerator_ctr; 
-    reg start_latches,latch_to_int, latch_sum, latch_combine, latch_mult;
+ 
+    
     generate
       fmult #(15, BIT_WIDTH) calc_num(num_a, num_b, num_out, ovf_mult);
       qdiv #(15, BIT_WIDTH) calc_frac(div_a, div_b, start_frac, clk, div_out, complete_frac, ovf_frac);

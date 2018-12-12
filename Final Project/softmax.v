@@ -37,6 +37,16 @@ parameter DIV = 2; //All values finished exponent, do division. Once done go to 
 parameter BACKPROP = 3; 
 
 
+reg [BIT_WIDTH - 1:0] add_a, add_b, div_numerator, div_denominator, exp_x;
+wire [BIT_WIDTH - 1:0] add_out, exp_out, div_out;
+reg [BIT_WIDTH - 1 :0] current_summation;
+reg [BIT_WIDTH + 4:0] denominator; // Maintaining the same fractional precision * 10 results in 4 additional bits for the highest case (0x7fffffff)
+reg latch_add, latch_exp, start_exp, start_div, ready_exp, ready_div, latch_max;
+wire done_exp, done_div, ovf_div;
+reg [IDX_WIDTH - 1:0] calc_idx;
+reg [BIT_WIDTH - 1:0] calc_array [WIDTH - 1:0];
+reg [WIDTH - 1: 0] sec_idx;
+reg latch_next_input;
 
 
 
@@ -69,16 +79,6 @@ generate
     end
 endgenerate 
 */
-reg [BIT_WIDTH - 1:0] add_a, add_b, div_numerator, div_denominator, exp_x;
-wire [BIT_WIDTH - 1:0] add_out, exp_out, div_out;
-reg [BIT_WIDTH - 1 :0] current_summation;
-reg [BIT_WIDTH + 4:0] denominator; // Maintaining the same fractional precision * 10 results in 4 additional bits for the highest case (0x7fffffff)
-reg latch_add, latch_exp, start_exp, start_div, ready_exp, ready_div, latch_max;
-wire done_exp, done_div, ovf_div;
-reg [IDX_WIDTH - 1:0] calc_idx;
-reg [BIT_WIDTH - 1:0] calc_array [WIDTH - 1:0];
-reg [WIDTH - 1: 0] sec_idx;
-reg latch_next_input;
 
 
 generate
