@@ -1,6 +1,5 @@
 import serial
 from mnist import MNIST
-from random
 
 port = 'COM4'
 baud = 9600
@@ -9,12 +8,10 @@ def main():
     data = MNIST('../../../../../dataset_imgs')
     images, labels = data.load_training()
     ser = serial.Serial(port, baud)
-    random.seed(1)
-    random.shuffle(images)
-    random.seed(1)
-    random.shuffle(labels)
+
     if ser.isOpen():
         print(ser.name + " is open")
+
     image_counter = 0
     while 1:
         serial_line = ser.read(1)
