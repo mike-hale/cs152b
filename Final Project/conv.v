@@ -240,9 +240,10 @@ always @(posedge clk) begin
                         state <= FW_SEND;
                         max_val = 0;
                         o_val_addr <= 'b0;
-                        conv_output_idx <= 'hFFFF;
                         conv_output_x <= (OUTPUT_SIZE - 1) / MAXPOOL;
                         conv_output_y <= (OUTPUT_SIZE - 1) / MAXPOOL;
+                        conv_output_idx <= 'hFFFF;
+					
                     end else begin
                         // Go back and wait for another input
                         state <= FW_REC;
@@ -275,14 +276,10 @@ always @(posedge clk) begin
 
         /********** FORWARD STAGE SENDING **********/
         FW_SEND: begin  
-            // Must scan inputs over the pooling region before sending
-            if (o_val_odata[31] == 0 && o_val_odata > max_val) begin
-                max_val = o_val_odata;
-            end
+            if (MAXPOOL > 1) begin		  
             // If we are done scanning, start sending
-            if (mem_valid == 1) begin
+            if (mem_valid == 1 && out_valid == 0) begin
                 conv_output <= max_val;
-                max_val = 0;
                 out_valid <= 1;
                 if (conv_output_y == (OUTPUT_SIZE - 1) / MAXPOOL) begin
                     if (conv_output_x == (OUTPUT_SIZE - 1) / MAXPOOL) begin
@@ -295,16 +292,25 @@ always @(posedge clk) begin
                     end
                  end else
                      conv_output_y <= conv_output_y + 1; 
-            end else
-              out_valid <= 0;            
+            end else if (out_rdy == 1) // If the next layer is ready, we move on 
+                out_valid <= 0;
 
-            if (out_valid == 1 && last_o_idx == 1 && last_o_x == 1 && last_o_y == 1) begin
-                state <= BP_REC;
+            // Must scan inputs over the pooling region before sending
+				if (o_val_addr[COORD_WIDTH - 1:0] % MAXPOOL == 0 && o_val_addr[2*COORD_WIDTH - 1:COORD_WIDTH] % MAXPOOL == 0)
+				    max_val = 0;
+			   else 
+                if (o_val_odata[31] == 0 && o_val_odata > max_val)
+                    max_val = o_val_odata;
+				 					 
+            if (out_rdy == 1 && out_valid == 1 && last_o_idx == 1 && last_o_x == 1 && last_o_y == 1) begin
+                state <= FW_REC;
                 o_val_addr <= 0;
+					 out_valid <= 0;
             end
             // Incrementing address is complex since we must sweep the maxpool region
             else if (o_val_addr[COORD_WIDTH - 1:0] % MAXPOOL == MAXPOOL - 1) begin
                 if (o_val_addr[2*COORD_WIDTH - 1:COORD_WIDTH] % MAXPOOL == MAXPOOL - 1) begin
+					     if (out_valid == 0) begin
                     if (o_val_addr[COORD_WIDTH - 1:0] == OUTPUT_SIZE - 1) begin
                         if (o_val_addr[2*COORD_WIDTH - 1:COORD_WIDTH] == OUTPUT_SIZE - 1) begin
                             // Reached the end of row and column (increment idx)
@@ -321,6 +327,7 @@ always @(posedge clk) begin
                         o_val_addr[2*COORD_WIDTH - 1:COORD_WIDTH] <= o_val_addr[2*COORD_WIDTH - 1:COORD_WIDTH] - MAXPOOL + 1;
                     end                          
                     mem_valid <= 1; // next cycle we must 
+						  end
                 end else begin
                     // Reached edge of maxpool region (increment x but subtract (MAXPOOL - 1) from y)
                     o_val_addr[COORD_WIDTH - 1:0] <= o_val_addr[COORD_WIDTH - 1:0] - MAXPOOL + 1;
@@ -331,6 +338,40 @@ always @(posedge clk) begin
                 // Default case, just increment y
                 o_val_addr[COORD_WIDTH - 1:0] <= o_val_addr[COORD_WIDTH - 1:0] + 1;
             end
+				end else begin // Not maxpooling
+				  if (out_rdy == 1 && out_valid == 1 && last_o_idx == 1 && last_o_x == 1 && last_o_y == 1) begin
+                state <= FW_REC;
+                o_val_addr <= 0;
+					 out_valid <= 0;
+              end
+				  if (mem_valid == 0)
+				      mem_valid <= 1;
+				  else if (out_valid == 0) begin
+				      out_valid <= 1;
+				      conv_output <= (o_val_odata[31] == 1) ? 0 : o_val_odata;
+						conv_output_y <= o_val_addr[COORD_WIDTH - 1:0];
+						conv_output_x <= o_val_addr[2*COORD_WIDTH - 1:0];
+						conv_output_idx <= o_val_addr[O_ADDR_WIDTH + 2*COORD_WIDTH - 1:2*COORD_WIDTH];
+				  end else if (out_rdy == 1) begin
+				      out_valid <= 0;
+						mem_valid <= 0;
+					   if (o_val_addr[COORD_WIDTH - 1:0] == OUTPUT_SIZE - 1) begin
+						    if (o_val_addr[2*COORD_WIDTH - 1:COORD_WIDTH] == OUTPUT_SIZE - 1) begin
+							     if (o_val_addr[O_ADDR_WIDTH + 2*COORD_WIDTH - 1:2*COORD_WIDTH] == OUTPUT_DEPTH - 1) begin
+								      state <= BP_REC;
+										o_val_addr <= 0;
+								  end else begin
+							         o_val_addr[O_ADDR_WIDTH + 2*COORD_WIDTH - 1:2*COORD_WIDTH] <= o_val_addr[O_ADDR_WIDTH + 2*COORD_WIDTH - 1:2*COORD_WIDTH] + 1;
+                              o_val_addr[2*COORD_WIDTH - 1:0] <= 'b0;
+								  end
+							 end else begin
+							     o_val_addr[COORD_WIDTH - 1:0] <= 0;
+								  o_val_addr[2*COORD_WIDTH - 1:COORD_WIDTH] <= o_val_addr[2*COORD_WIDTH - 1:COORD_WIDTH] + 1;
+							 end
+						end else
+						    o_val_addr[COORD_WIDTH - 1:0] <= o_val_addr[COORD_WIDTH - 1:0] + 1; 
+				    end
+				  end
         end
 
         /********** BACKPROP STAGE INPUT RECEPTION **********/
