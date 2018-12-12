@@ -1,0 +1,11 @@
+The set up for the board and peripherals for this project is very simple. The board simply requires the seven segment pmod to be plugged into a pmod port. This is to display the end result. To enable communication with the personal computer, an serial cable must be connected to the board and an RS232-USB adapter to the laptop (unless the laptop has a serial port for some reason). This completes the setup for large hardware components. 
+
+Most of the setup for this project included initializing modules within the FPGA itself. The RS232 Serial module, Block RAM cores, and Fixed Point modules all are crucial building blocks for the actual convolutional neural network. 
+
+RS232 Serial Module: There are actually two separate modules for RX and TX communications. It works by instantiating the modules and providing ready bits for when data can be read or written. Once these bits are flipped, the serial communication can begin. Writing out is a simple process of assigning to an output register, while reading places read data on a wire to be moved somewhere for use.
+
+Block RAM cores: These are generated using the Xilinx core generator. For this program we generate 12 block ram cores. These are variable in size depending on the number of weights/errors for each layer of the CNN.
+
+Fixed Point Modules: Fixed point modules are for performing fixed point operations. They can perform multiplication, addition, division, subtraction, and exponentiation. These were built to take two inputs and provide a single output with the correctly formatted fixed point byte size. Fixed point numbers are represented by 32 bits where 15 bits are fractional numbers, 16 bits are integers, and 1 bit is signed.
+
+Once these modules are set up, the CNN can be built using its own building blocks. These blocks are convolutional layers (including convolution, ReLU, and maxpool), a fully connected layer, and a softmax output layer. 
