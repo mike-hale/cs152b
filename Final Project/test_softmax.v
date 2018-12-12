@@ -11,7 +11,7 @@ module softmax_tb();
     wire max_ready;
     wire out_ready;
     reg [10:0] count;
-    wire [31:0] dbg[3:0];
+    //wire [31:0] dbg[3:0];
     reg rst;
     wire [2:0] max, out_idx;
     
@@ -29,11 +29,13 @@ module softmax_tb();
         .max_ready(max_ready),
         .out_ready(out_ready),
         .out_idx(out_idx),
-        .out_data(out),
+        .out_data(out)
+        /*
         .dbg(dbg[0]),
         .dbg2(dbg[1]),
         .dbg3(dbg[2]),
         .dbg4(dbg[3])
+        */
     );
 
     reg init; 
@@ -41,7 +43,7 @@ module softmax_tb();
     initial begin
         clk <= 0; 
         backprop_ctrl <= 0;
-        in <= 32'h00008000;
+        in <= 32'h0000000000008000;
         in_idx <= 0;
         count <= 0;
         start <=0;
@@ -59,7 +61,7 @@ module softmax_tb();
     always @(posedge clk) begin
         rst <= 0;
         count <= count + 1;
-        if (count == 1000) 
+        if (count == 6000) 
             $finish;
         //Forward propagation
         if(in_ready && backprop_ctrl == 0) begin
@@ -68,9 +70,9 @@ module softmax_tb();
                 $display("FORWARD %d, 0x%h", in_idx, in);
                 if (in_idx < 4) begin
                     in_idx <= in_idx + 1;
-                    in <= in + 'h8f00;
+                    in <= in + 32'h0000000000008f00;
                     if (sub)
-                        in <= in - 'hf0;
+                        in <= in - 32'h00000000000000f0;
                     start<= 0;
                 end
             end
@@ -81,7 +83,7 @@ module softmax_tb();
             if(~start)
                 start <= 1;
             else 
-                $display("BACKPROP %d, error_out: 0x%h, latched: 0x%h, %d", out_idx, out, dbg[1],label);
+                $display("BACKPROP %d, error_out: 0x%h, %d", out_idx, out,label);
             if(out_idx == 3)
                 backprop_ctrl <= 0;
                 sub <= ~sub;

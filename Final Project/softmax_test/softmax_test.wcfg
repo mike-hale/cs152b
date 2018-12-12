@@ -10,76 +10,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="61" />
-   <wvobject fp_name="/softmax_tb/in_ready" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">in_ready</obj_property>
-      <obj_property name="ObjectShortName">in_ready</obj_property>
-   </wvobject>
-   <wvobject fp_name="/softmax_tb/out" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">out[31:0]</obj_property>
-      <obj_property name="ObjectShortName">out[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/softmax_tb/max_ready" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">max_ready</obj_property>
-      <obj_property name="ObjectShortName">max_ready</obj_property>
-   </wvobject>
-   <wvobject fp_name="/softmax_tb/out_ready" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">out_ready</obj_property>
-      <obj_property name="ObjectShortName">out_ready</obj_property>
-   </wvobject>
-   <wvobject fp_name="/softmax_tb/dbg" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">dbg[3:0,31:0]</obj_property>
-      <obj_property name="ObjectShortName">dbg[3:0,31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/softmax_tb/max" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">max[2:0]</obj_property>
-      <obj_property name="ObjectShortName">max[2:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/softmax_tb/out_idx" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">out_idx[2:0]</obj_property>
-      <obj_property name="ObjectShortName">out_idx[2:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/softmax_tb/clk" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/softmax_tb/backprop_ctrl" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">backprop_ctrl</obj_property>
-      <obj_property name="ObjectShortName">backprop_ctrl</obj_property>
-   </wvobject>
-   <wvobject fp_name="/softmax_tb/start" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">start</obj_property>
-      <obj_property name="ObjectShortName">start</obj_property>
-   </wvobject>
-   <wvobject fp_name="/softmax_tb/in" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">in[31:0]</obj_property>
-      <obj_property name="ObjectShortName">in[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/softmax_tb/in_idx" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">in_idx[2:0]</obj_property>
-      <obj_property name="ObjectShortName">in_idx[2:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/softmax_tb/label" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">label[2:0]</obj_property>
-      <obj_property name="ObjectShortName">label[2:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/softmax_tb/count" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">count[10:0]</obj_property>
-      <obj_property name="ObjectShortName">count[10:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/softmax_tb/rst" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">rst</obj_property>
-      <obj_property name="ObjectShortName">rst</obj_property>
-   </wvobject>
-   <wvobject fp_name="/softmax_tb/init" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">init</obj_property>
-      <obj_property name="ObjectShortName">init</obj_property>
-   </wvobject>
-   <wvobject fp_name="/softmax_tb/sub" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">sub</obj_property>
-      <obj_property name="ObjectShortName">sub</obj_property>
-   </wvobject>
+   <WVObjectSize size="47" />
    <wvobject fp_name="/softmax_tb/uut/clk" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -89,8 +20,8 @@
       <obj_property name="ObjectShortName">backprop_ctrl</obj_property>
    </wvobject>
    <wvobject fp_name="/softmax_tb/uut/sf_input" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">sf_input[31:0]</obj_property>
-      <obj_property name="ObjectShortName">sf_input[31:0]</obj_property>
+      <obj_property name="ElementShortName">sf_input[63:0]</obj_property>
+      <obj_property name="ObjectShortName">sf_input[63:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/softmax_tb/uut/sf_input_idx" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">sf_input_idx[2:0]</obj_property>
@@ -109,48 +40,34 @@
       <obj_property name="ObjectShortName">expected_label[2:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/softmax_tb/uut/out_data" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">out_data[31:0]</obj_property>
-      <obj_property name="ObjectShortName">out_data[31:0]</obj_property>
+      <obj_property name="ElementShortName">out_data[63:0]</obj_property>
+      <obj_property name="ObjectShortName">out_data[63:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/softmax_tb/uut/dbg" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">dbg[31:0]</obj_property>
-      <obj_property name="ObjectShortName">dbg[31:0]</obj_property>
+   <wvobject fp_name="/softmax_tb/uut/add_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">add_out[63:0]</obj_property>
+      <obj_property name="ObjectShortName">add_out[63:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/softmax_tb/uut/dbg2" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">dbg2[31:0]</obj_property>
-      <obj_property name="ObjectShortName">dbg2[31:0]</obj_property>
+   <wvobject fp_name="/softmax_tb/uut/exp_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">exp_out[63:0]</obj_property>
+      <obj_property name="ObjectShortName">exp_out[63:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/softmax_tb/uut/dbg3" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">dbg3[31:0]</obj_property>
-      <obj_property name="ObjectShortName">dbg3[31:0]</obj_property>
+   <wvobject fp_name="/softmax_tb/uut/div_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">div_out[63:0]</obj_property>
+      <obj_property name="ObjectShortName">div_out[63:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/softmax_tb/uut/dbg4" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">dbg4[31:0]</obj_property>
-      <obj_property name="ObjectShortName">dbg4[31:0]</obj_property>
+   <wvobject fp_name="/softmax_tb/uut/done_exp" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">done_exp</obj_property>
+      <obj_property name="ObjectShortName">done_exp</obj_property>
    </wvobject>
-   <wvobject fp_name="/softmax_tb/uut/last_output" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">last_output[3:0,31:0]</obj_property>
-      <obj_property name="ObjectShortName">last_output[3:0,31:0]</obj_property>
+   <wvobject fp_name="/softmax_tb/uut/done_div" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">done_div</obj_property>
+      <obj_property name="ObjectShortName">done_div</obj_property>
    </wvobject>
-   <wvobject fp_name="/softmax_tb/uut/done_exp" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">done_exp[3:0]</obj_property>
-      <obj_property name="ObjectShortName">done_exp[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/softmax_tb/uut/numerator" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">numerator[3:0,31:0]</obj_property>
-      <obj_property name="ObjectShortName">numerator[3:0,31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/softmax_tb/uut/current_summation" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">current_summation[3:0,31:0]</obj_property>
-      <obj_property name="ObjectShortName">current_summation[3:0,31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/softmax_tb/uut/div_done" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">div_done[3:0]</obj_property>
-      <obj_property name="ObjectShortName">div_done[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/softmax_tb/uut/ovf_div" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">ovf_div[3:0]</obj_property>
-      <obj_property name="ObjectShortName">ovf_div[3:0]</obj_property>
+   <wvobject fp_name="/softmax_tb/uut/ovf_div" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ovf_div</obj_property>
+      <obj_property name="ObjectShortName">ovf_div</obj_property>
    </wvobject>
    <wvobject fp_name="/softmax_tb/uut/in_ready" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">in_ready</obj_property>
@@ -173,12 +90,33 @@
       <obj_property name="ObjectShortName">out_idx[2:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/softmax_tb/uut/latched_input" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">latched_input[3:0,31:0]</obj_property>
-      <obj_property name="ObjectShortName">latched_input[3:0,31:0]</obj_property>
+      <obj_property name="ElementShortName">latched_input[3:0,63:0]</obj_property>
+      <obj_property name="ObjectShortName">latched_input[3:0,63:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <wvobject fp_name="/softmax_tb/uut/latched_input[3]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[3,63:0]</obj_property>
+         <obj_property name="ObjectShortName">latched_input[3,63:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/softmax_tb/uut/latched_input[2]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[2,63:0]</obj_property>
+         <obj_property name="ObjectShortName">latched_input[2,63:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/softmax_tb/uut/latched_input[1]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[1,63:0]</obj_property>
+         <obj_property name="ObjectShortName">latched_input[1,63:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/softmax_tb/uut/latched_input[0]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[0,63:0]</obj_property>
+         <obj_property name="ObjectShortName">latched_input[0,63:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
    </wvobject>
    <wvobject fp_name="/softmax_tb/uut/latched_output" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">latched_output[3:0,31:0]</obj_property>
-      <obj_property name="ObjectShortName">latched_output[3:0,31:0]</obj_property>
+      <obj_property name="ElementShortName">latched_output[3:0,63:0]</obj_property>
+      <obj_property name="ObjectShortName">latched_output[3:0,63:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/softmax_tb/uut/done" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">done</obj_property>
@@ -188,41 +126,99 @@
       <obj_property name="ElementShortName">state[2:0]</obj_property>
       <obj_property name="ObjectShortName">state[2:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/softmax_tb/uut/start_exp" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">start_exp[3:0]</obj_property>
-      <obj_property name="ObjectShortName">start_exp[3:0]</obj_property>
+   <wvobject fp_name="/softmax_tb/uut/latch_add" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">latch_add</obj_property>
+      <obj_property name="ObjectShortName">latch_add</obj_property>
+   </wvobject>
+   <wvobject fp_name="/softmax_tb/uut/add_a" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">add_a[63:0]</obj_property>
+      <obj_property name="ObjectShortName">add_a[63:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/softmax_tb/uut/add_b" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">add_b[63:0]</obj_property>
+      <obj_property name="ObjectShortName">add_b[63:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/softmax_tb/uut/div_numerator" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">div_numerator[63:0]</obj_property>
+      <obj_property name="ObjectShortName">div_numerator[63:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/softmax_tb/uut/div_denominator" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">div_denominator[63:0]</obj_property>
+      <obj_property name="ObjectShortName">div_denominator[63:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/softmax_tb/uut/exp_x" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">exp_x[63:0]</obj_property>
+      <obj_property name="ObjectShortName">exp_x[63:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/softmax_tb/uut/current_summation" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">current_summation[63:0]</obj_property>
+      <obj_property name="ObjectShortName">current_summation[63:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/softmax_tb/uut/denominator" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">denominator[43:0]</obj_property>
-      <obj_property name="ObjectShortName">denominator[43:0]</obj_property>
+      <obj_property name="ElementShortName">denominator[68:0]</obj_property>
+      <obj_property name="ObjectShortName">denominator[68:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/softmax_tb/uut/exp_sum" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">exp_sum[3:0,31:0]</obj_property>
-      <obj_property name="ObjectShortName">exp_sum[3:0,31:0]</obj_property>
+   <wvobject fp_name="/softmax_tb/uut/latch_exp" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">latch_exp</obj_property>
+      <obj_property name="ObjectShortName">latch_exp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/softmax_tb/uut/start_exp" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">start_exp</obj_property>
+      <obj_property name="ObjectShortName">start_exp</obj_property>
    </wvobject>
    <wvobject fp_name="/softmax_tb/uut/start_div" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">start_div</obj_property>
       <obj_property name="ObjectShortName">start_div</obj_property>
    </wvobject>
-   <wvobject fp_name="/softmax_tb/uut/last_input_idx" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">last_input_idx[3:0]</obj_property>
-      <obj_property name="ObjectShortName">last_input_idx[3:0]</obj_property>
+   <wvobject fp_name="/softmax_tb/uut/ready_exp" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ready_exp</obj_property>
+      <obj_property name="ObjectShortName">ready_exp</obj_property>
    </wvobject>
-   <wvobject fp_name="/softmax_tb/uut/j" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">j[31:0]</obj_property>
-      <obj_property name="ObjectShortName">j[31:0]</obj_property>
+   <wvobject fp_name="/softmax_tb/uut/ready_div" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ready_div</obj_property>
+      <obj_property name="ObjectShortName">ready_div</obj_property>
    </wvobject>
-   <wvobject fp_name="/softmax_tb/uut/max_count" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">max_count[2:0]</obj_property>
-      <obj_property name="ObjectShortName">max_count[2:0]</obj_property>
+   <wvobject fp_name="/softmax_tb/uut/latch_max" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">latch_max</obj_property>
+      <obj_property name="ObjectShortName">latch_max</obj_property>
    </wvobject>
-   <wvobject fp_name="/softmax_tb/uut/max_num" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">max_num[31:0]</obj_property>
-      <obj_property name="ObjectShortName">max_num[31:0]</obj_property>
+   <wvobject fp_name="/softmax_tb/uut/calc_idx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">calc_idx[2:0]</obj_property>
+      <obj_property name="ObjectShortName">calc_idx[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/softmax_tb/uut/test" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">test</obj_property>
-      <obj_property name="ObjectShortName">test</obj_property>
+   <wvobject fp_name="/softmax_tb/uut/calc_array" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">calc_array[3:0,63:0]</obj_property>
+      <obj_property name="ObjectShortName">calc_array[3:0,63:0]</obj_property>
+      <wvobject fp_name="/softmax_tb/uut/calc_array[3]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[3,63:0]</obj_property>
+         <obj_property name="ObjectShortName">calc_array[3,63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/softmax_tb/uut/calc_array[2]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[2,63:0]</obj_property>
+         <obj_property name="ObjectShortName">calc_array[2,63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/softmax_tb/uut/calc_array[1]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[1,63:0]</obj_property>
+         <obj_property name="ObjectShortName">calc_array[1,63:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/softmax_tb/uut/calc_array[0]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[0,63:0]</obj_property>
+         <obj_property name="ObjectShortName">calc_array[0,63:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/softmax_tb/uut/sec_idx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sec_idx[3:0]</obj_property>
+      <obj_property name="ObjectShortName">sec_idx[3:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/softmax_tb/uut/WIDTH" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">WIDTH[31:0]</obj_property>
@@ -232,6 +228,10 @@
       <obj_property name="ElementShortName">IDX_WIDTH[31:0]</obj_property>
       <obj_property name="ObjectShortName">IDX_WIDTH[31:0]</obj_property>
    </wvobject>
+   <wvobject fp_name="/softmax_tb/uut/BIT_WIDTH" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">BIT_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BIT_WIDTH[31:0]</obj_property>
+   </wvobject>
    <wvobject fp_name="/softmax_tb/uut/IDLE" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">IDLE[31:0]</obj_property>
       <obj_property name="ObjectShortName">IDLE[31:0]</obj_property>
@@ -240,17 +240,9 @@
       <obj_property name="ElementShortName">EXP[31:0]</obj_property>
       <obj_property name="ObjectShortName">EXP[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/softmax_tb/uut/SUM" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">SUM[31:0]</obj_property>
-      <obj_property name="ObjectShortName">SUM[31:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/softmax_tb/uut/DIV" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">DIV[31:0]</obj_property>
       <obj_property name="ObjectShortName">DIV[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/softmax_tb/uut/MAX" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">MAX[31:0]</obj_property>
-      <obj_property name="ObjectShortName">MAX[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/softmax_tb/uut/BACKPROP" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">BACKPROP[31:0]</obj_property>
