@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/CS152B/Desktop/cs152b/Final Project/serial_test/conv_tb_isim_beh.exe" -prj "C:/Users/CS152B/Desktop/cs152b/Final Project/serial_test/conv_tb_beh.prj" "conv_tb" "work.glbl" 

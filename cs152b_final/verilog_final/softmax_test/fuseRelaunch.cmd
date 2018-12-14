@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/CS152B/Desktop/cs152b/Final Project/softmax_test/softmax_tb_isim_beh.exe" -prj "C:/Users/CS152B/Desktop/cs152b/Final Project/softmax_test/softmax_tb_beh.prj" "work.softmax_tb" "work.glbl" 

@@ -1,0 +1,34 @@
+Release 14.6 Map P.68d (nt64)
+Xilinx Mapping Report File for Design 'blk_mem_gen_v7_3'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc5vlx50t-ff1136-2 -w -logic_opt off -ol
+high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr
+off -lc off -power off -o blk_mem_gen_v7_3_map.ncd blk_mem_gen_v7_3.ngd
+blk_mem_gen_v7_3.pcf 
+Target Device  : xc5vlx50t
+Target Package : ff1136
+Target Speed   : -2
+Mapper Version : virtex5 -- $Revision: 1.55 $
+Mapped Date    : Wed Dec 05 12:07:52 2018
+
+Design Summary
+--------------
+Number of errors   :   2
+Number of warnings :   0
+
+Section 1 - Errors
+------------------
+ERROR:Map:116 - The design is empty.  No processing will be done.
+ERROR:Map:52 - Problem encountered processing RPMs. 
+
+Section 2 - Warnings
+--------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
+
+Section 3 - Informational
+-------------------------
+INFO:Security:54 - 'xc5vlx50t' is a WebPack part.

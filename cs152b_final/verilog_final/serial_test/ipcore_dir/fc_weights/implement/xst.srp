@@ -1,0 +1,58 @@
+Release 14.7 - xst P.20160913 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : VHDL
+Input File Name                    : "xst.prj"
+
+---- Target Parameters
+Target Device                      : xa6slx4-csg225-2
+Output File Name                   : "fc_weights_exdes"
+Output Format                      : NGC
+
+---- Source Options
+Entity Name                        : fc_weights_exdes
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100
+
+---- General Options
+Write Timing Constraints           : No
+Bus Delimiter                      : ()
+Hierarchy Separator                : /
+Case Specifier                     : Maintain
+
+=========================================================================
+
+WARNING:Xst:29 - Optimization Effort not specified
+The following parameters have been added:
+Optimization Goal                  : SPEED
+
+=========================================================================

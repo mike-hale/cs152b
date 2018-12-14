@@ -1,0 +1,28 @@
+Command line:
+   softmax_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49915
+
+Wed Dec 12 10:37:10 2018
+
+
+ Elaboration Time: 0.0468 sec
+
+ Current Memory Usage: 830.689 Meg
+
+ Total Signals          : 69
+ Total Nets             : 695
+ Total Signal Drivers   : 49
+ Total Blocks           : 9
+ Total Primitive Blocks : 6
+ Total Processes        : 82
+ Total Traceable Variables  : 127
+ Total Scalar Nets and Variables : 3714
+
+ Total Simulation Time: 0.078 sec
+
+ Current Memory Usage: 673.403 Meg
+
+Wed Dec 12 12:42:41 2018
+

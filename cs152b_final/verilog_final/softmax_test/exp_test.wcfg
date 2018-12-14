@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/CS152B/Desktop/cs152b/Final Project/softmax_test/tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="53" />
+   <wvobject fp_name="/tb/y" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">y[63:0]</obj_property>
+      <obj_property name="ObjectShortName">y[63:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/done" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/x" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">x[63:0]</obj_property>
+      <obj_property name="ObjectShortName">x[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/start" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/count" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">count[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/x" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">x[63:0]</obj_property>
+      <obj_property name="ObjectShortName">x[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/start" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/done" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/ovf_int" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ovf_int</obj_property>
+      <obj_property name="ObjectShortName">ovf_int</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/latch_int" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">latch_int[49:0]</obj_property>
+      <obj_property name="ObjectShortName">latch_int[49:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/latch_frac" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">latch_frac[14:0]</obj_property>
+      <obj_property name="ObjectShortName">latch_frac[14:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/num_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">num_out[63:0]</obj_property>
+      <obj_property name="ObjectShortName">num_out[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/div_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">div_out[63:0]</obj_property>
+      <obj_property name="ObjectShortName">div_out[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/add_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">add_out[63:0]</obj_property>
+      <obj_property name="ObjectShortName">add_out[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/complete_frac" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">complete_frac</obj_property>
+      <obj_property name="ObjectShortName">complete_frac</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/ovf_frac" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ovf_frac</obj_property>
+      <obj_property name="ObjectShortName">ovf_frac</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/ovf_mult" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ovf_mult</obj_property>
+      <obj_property name="ObjectShortName">ovf_mult</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/y" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">y[63:0]</obj_property>
+      <obj_property name="ObjectShortName">y[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/latch_x" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">latch_x[63:0]</obj_property>
+      <obj_property name="ObjectShortName">latch_x[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/e_int" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">e_int[63:0]</obj_property>
+      <obj_property name="ObjectShortName">e_int[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/int_count" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">int_count[63:0]</obj_property>
+      <obj_property name="ObjectShortName">int_count[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/int_done" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">int_done</obj_property>
+      <obj_property name="ObjectShortName">int_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/frac_exp" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">frac_exp[63:0]</obj_property>
+      <obj_property name="ObjectShortName">frac_exp[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/polynomial_done" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">polynomial_done</obj_property>
+      <obj_property name="ObjectShortName">polynomial_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/numerator" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">numerator[4:0,63:0]</obj_property>
+      <obj_property name="ObjectShortName">numerator[4:0,63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/compute_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">compute_out[63:0]</obj_property>
+      <obj_property name="ObjectShortName">compute_out[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/num_a" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">num_a[63:0]</obj_property>
+      <obj_property name="ObjectShortName">num_a[63:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/num_b" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">num_b[63:0]</obj_property>
+      <obj_property name="ObjectShortName">num_b[63:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/div_a" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">div_a[63:0]</obj_property>
+      <obj_property name="ObjectShortName">div_a[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/div_b" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">div_b[63:0]</obj_property>
+      <obj_property name="ObjectShortName">div_b[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/add_a" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">add_a[63:0]</obj_property>
+      <obj_property name="ObjectShortName">add_a[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/add_b" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">add_b[63:0]</obj_property>
+      <obj_property name="ObjectShortName">add_b[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/sum" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sum[63:0]</obj_property>
+      <obj_property name="ObjectShortName">sum[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/start_frac" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">start_frac</obj_property>
+      <obj_property name="ObjectShortName">start_frac</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/ready" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ready</obj_property>
+      <obj_property name="ObjectShortName">ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/polynomial_ctr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">polynomial_ctr[2:0]</obj_property>
+      <obj_property name="ObjectShortName">polynomial_ctr[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/numerator_ctr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">numerator_ctr[2:0]</obj_property>
+      <obj_property name="ObjectShortName">numerator_ctr[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/start_latches" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">start_latches</obj_property>
+      <obj_property name="ObjectShortName">start_latches</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/latch_to_int" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">latch_to_int</obj_property>
+      <obj_property name="ObjectShortName">latch_to_int</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/latch_sum" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">latch_sum</obj_property>
+      <obj_property name="ObjectShortName">latch_sum</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/latch_combine" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">latch_combine</obj_property>
+      <obj_property name="ObjectShortName">latch_combine</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/latch_mult" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">latch_mult</obj_property>
+      <obj_property name="ObjectShortName">latch_mult</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/state" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">state[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/BIT_WIDTH" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">BIT_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BIT_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/NUM_TERMS" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">NUM_TERMS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NUM_TERMS[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/e" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">e[63:0]</obj_property>
+      <obj_property name="ObjectShortName">e[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/denominator" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">denominator[319:0]</obj_property>
+      <obj_property name="ObjectShortName">denominator[319:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/IDLE" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">IDLE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IDLE[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/LATCH" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">LATCH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">LATCH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/CALC" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">CALC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CALC[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut/COMBINE" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">COMBINE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">COMBINE[31:0]</obj_property>
+   </wvobject>
+</wave_config>

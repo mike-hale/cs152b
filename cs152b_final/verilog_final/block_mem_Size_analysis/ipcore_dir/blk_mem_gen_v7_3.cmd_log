@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "C:/Users/CS152B/Desktop/cs152b/Final Project/block_mem_Size_analysis/ipcore_dir/blk_mem_gen_v7_3.xst" -ofn "C:/Users/CS152B/Desktop/cs152b/Final Project/block_mem_Size_analysis/ipcore_dir/blk_mem_gen_v7_3.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc5vlx50t-ff1136-2 "blk_mem_gen_v7_3.ngc" blk_mem_gen_v7_3.ngd  
+map -intstyle ise -p xc5vlx50t-ff1136-2 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o blk_mem_gen_v7_3_map.ncd blk_mem_gen_v7_3.ngd blk_mem_gen_v7_3.pcf 
+map -intstyle ise -p xc5vlx50t-ff1136-2 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o blk_mem_gen_v7_3_map.ncd blk_mem_gen_v7_3.ngd blk_mem_gen_v7_3.pcf 
