@@ -10,25 +10,24 @@ size = 28, 28
 
 port = 'COM4'
 baud = 9600
+ba = bytearray(784)
 
-def send():
-	global image1
+def send(img):
 	ser = serial.Serial(port, baud)
 	if ser.isOpen():
 		print(ser.name + " is open")
+	ser.write(img)
 
-	while 1:
-	    serial_line = ser.read(1)
-	    print(serial_line)
-	    if serial_line == b'7':
-	    	ser.write(image1)
+def clear():
+	global image1, cv, draw
+	cv.delete('all')
+	image1 = Image.new("L", (width, height))
 
 def save():
 	global image1
 	image1.thumbnail(size, Image.ANTIALIAS)
-	image1 = image1.tobytes()
-	send()
-	exit()
+	ba = image1.tobytes()
+	send(ba)
 
 def paint(event):
 	global cv, draw
@@ -41,7 +40,6 @@ def paint(event):
 def main():
 	global image1, cv, draw
 	root = Tk()
-
 	cv = Canvas(root, width=width, height=height, bg='black')
 	cv.pack()
 
@@ -51,8 +49,10 @@ def main():
 	cv.pack(expand=YES, fill=BOTH)
 	cv.bind("<B1-Motion>", paint)
 
-	button=Button(text="save",command=save)
-	button.pack()
+	button1=Button(text="save",command=save)
+	button2=Button(text="clear",command=clear)
+	button1.pack()
+	button2.pack()
 	root.mainloop()
 
 if __name__=='__main__':
